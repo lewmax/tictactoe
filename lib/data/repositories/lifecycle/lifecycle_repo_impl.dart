@@ -1,14 +1,14 @@
 import 'dart:async';
 
-import 'package:flutter/widgets.dart';
-import 'package:injectable/injectable.dart';
-import 'package:rxdart/rxdart.dart';
 import 'package:chat_app/core/utils/logger.dart';
 import 'package:chat_app/domain/models/lifecycle/lifecycle_events.dart';
 import 'package:chat_app/domain/repositories/lifecycle/lifecycle_repo.dart';
+import 'package:flutter/widgets.dart';
+import 'package:injectable/injectable.dart';
+import 'package:rxdart/rxdart.dart';
 
 @LazySingleton(as: LifecycleRepo)
-class LifecycleRepoImpl extends LifecycleRepo {
+final class LifecycleRepoImpl implements LifecycleRepo {
   late final AppLifecycleListener _listener;
   final _stateStreamController = PublishSubject<AppLifecycleState>();
 

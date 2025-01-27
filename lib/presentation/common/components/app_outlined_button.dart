@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:chat_app/presentation/common/components/loader.dart';
 import 'package:chat_app/presentation/common/theme/theme.dart';
+import 'package:flutter/material.dart';
 
 class AppOutlinedButton extends StatelessWidget {
   final Widget child;

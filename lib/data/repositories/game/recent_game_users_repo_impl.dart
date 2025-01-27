@@ -8,7 +8,7 @@ import 'package:rxdart/rxdart.dart';
 import 'package:useful_extensions/useful_extensions.dart';
 
 @LazySingleton(as: RecentGameUsersRepo)
-class RecentGameUsersRepoImpl extends RecentGameUsersRepo {
+final class RecentGameUsersRepoImpl implements RecentGameUsersRepo {
   final UserDataSource _userDataSource;
 
   RecentGameUsersRepoImpl(this._userDataSource) {

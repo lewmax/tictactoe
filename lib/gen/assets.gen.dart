@@ -13,8 +13,7 @@ class $AssetsIconsGen {
   const $AssetsIconsGen();
 
   /// File path: assets/icons/tic_tac_toe.png
-  AssetGenImage get ticTacToe =>
-      const AssetGenImage('assets/icons/tic_tac_toe.png');
+  AssetGenImage get ticTacToe => const AssetGenImage('assets/icons/tic_tac_toe.png');
 
   /// List of all assets
   List<AssetGenImage> get values => [ticTacToe];

@@ -2,27 +2,27 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:chat_app/core/utils/logger.dart';
+import 'package:chat_app/data/core/mixins/repository_validation_mixin.dart';
+import 'package:chat_app/data/datasources/user/user_data_source.dart';
+import 'package:chat_app/data/remote/network_response.dart';
+import 'package:chat_app/data/repositories/auth/auth_exception_handler.dart';
+import 'package:chat_app/domain/entities/auth/app_auth_state.dart';
+import 'package:chat_app/domain/entities/user/user.dart';
+import 'package:chat_app/domain/repositories/app/device_uuid_repository.dart';
+import 'package:chat_app/domain/repositories/auth/auth_repo.dart';
 import 'package:crypto/crypto.dart';
-import 'package:firebase_auth/firebase_auth.dart' hide User;
 import 'package:firebase_auth/firebase_auth.dart' as authh;
+import 'package:firebase_auth/firebase_auth.dart' hide User;
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:injectable/injectable.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
-import 'package:chat_app/core/utils/logger.dart';
-import 'package:chat_app/data/core/mixins/repository_validation_mixin.dart';
-import 'package:chat_app/data/datasources/user/user_data_source.dart';
-import 'package:chat_app/data/remote/network_response.dart';
-import 'package:chat_app/domain/repositories/app/device_uuid_repository.dart';
-import 'package:chat_app/data/repositories/auth/auth_exception_handler.dart';
-import 'package:chat_app/domain/entities/auth/app_auth_state.dart';
-import 'package:chat_app/domain/entities/user/user.dart';
-import 'package:chat_app/domain/repositories/auth/auth_repo.dart';
 import 'package:uuid/uuid.dart';
 
 @LazySingleton(as: AuthRepo)
-class AuthRepoImpl extends AuthRepo with RepositoryValidationMixin {
+final class AuthRepoImpl with RepositoryValidationMixin implements AuthRepo {
   final UserDataSource _userDataSource;
   final DeviceUuidRepository _deviceUuidRepository;
 
@@ -116,7 +116,7 @@ class AuthRepoImpl extends AuthRepo with RepositoryValidationMixin {
           scopes: [AppleIDAuthorizationScopes.email, AppleIDAuthorizationScopes.fullName],
           nonce: Platform.isIOS ? nonce : null,
           // webAuthenticationOptions:
-              // Platform.isIOS ? null : WebAuthenticationOptions(clientId: clientID, redirectUri: Uri.parse(redirectURL)),
+          // Platform.isIOS ? null : WebAuthenticationOptions(clientId: clientID, redirectUri: Uri.parse(redirectURL)),
         );
         final oauthCredential = AppleAuthProvider.credentialWithIDToken(
           appleCredential.identityToken!,

@@ -1,10 +1,10 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter/material.dart';
 import 'package:chat_app/core/utils/extensions/context_extensions.dart';
 import 'package:chat_app/domain/entities/game/game.dart';
 import 'package:chat_app/domain/entities/referal/deep_link.dart';
 import 'package:chat_app/presentation/common/components/app_button.dart';
 import 'package:chat_app/presentation/common/theme/theme.dart';
+import 'package:flutter/material.dart';
 
 class JoinGameDialog extends StatelessWidget {
   const JoinGameDialog({super.key, required this.controller, required this.onJoinGame});

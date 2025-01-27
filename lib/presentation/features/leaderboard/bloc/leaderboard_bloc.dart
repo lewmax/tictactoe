@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:chat_app/domain/dtos/game/get_leaderboard_period.dart';
 import 'package:chat_app/domain/entities/leaderboard/leaderboard_user.dart';
 import 'package:chat_app/domain/repositories/date/date_manager_repo.dart';
-import 'package:chat_app/domain/repositories/leaderboard_repo.dart';
+import 'package:chat_app/domain/repositories/leaderboard/leaderboard_repo.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';

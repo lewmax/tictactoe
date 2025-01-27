@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:chat_app/core/utils/logger.dart';
+import 'package:flutter/material.dart';
 
 class LoggerNavigatorObserver extends NavigatorObserver {
   @override

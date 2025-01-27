@@ -1,8 +1,6 @@
 import 'dart:io';
 
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter/material.dart';
-import 'package:sign_in_button/sign_in_button.dart';
 import 'package:chat_app/core/di/locator.dart';
 import 'package:chat_app/core/utils/extensions/context_extensions.dart';
 import 'package:chat_app/presentation/common/bloc/screen_bloc_provider_stateless.dart';
@@ -11,6 +9,8 @@ import 'package:chat_app/presentation/common/layout/expanded_single_child_scroll
 import 'package:chat_app/presentation/common/navigation/app_router.dart';
 import 'package:chat_app/presentation/common/theme/theme.dart';
 import 'package:chat_app/presentation/features/auth/sign/cubit/sign_cubit.dart';
+import 'package:flutter/material.dart';
+import 'package:sign_in_button/sign_in_button.dart';
 
 const _buttonsPadding = EdgeInsets.only(top: 16, bottom: 16, left: 8, right: 42);
 

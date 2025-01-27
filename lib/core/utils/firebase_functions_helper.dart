@@ -1,5 +1,5 @@
-import 'package:cloud_functions/cloud_functions.dart';
 import 'package:chat_app/data/remote/network_response.dart';
+import 'package:cloud_functions/cloud_functions.dart';
 
 abstract mixin class FirebaseFunctionsHelper {
   FirebaseFunctions get firebaseFunctions;

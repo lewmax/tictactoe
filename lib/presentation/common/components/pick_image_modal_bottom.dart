@@ -1,12 +1,12 @@
 // ignore_for_file: use_build_context_synchronously
 
-import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:chat_app/core/utils/extensions/context_extensions.dart';
 import 'package:chat_app/core/utils/image_picker_utils.dart';
 import 'package:chat_app/presentation/common/components/app_button.dart';
 import 'package:chat_app/presentation/common/theme/theme.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:image_picker/image_picker.dart';
 
 enum CallbackType {
   camera,

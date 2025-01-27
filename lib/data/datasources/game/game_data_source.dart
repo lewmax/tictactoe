@@ -103,8 +103,7 @@ class GameDataSource {
   }
 
   Future<void> terminateGame({required GameId id, required DateTime endedAt}) {
-    return _gameDocById(id)
-        .update({'gameStatus': GameStatus.userTerminated.firebaseStatus, 'endedAt': endedAt});
+    return _gameDocById(id).update({'gameStatus': GameStatus.userTerminated.firebaseStatus, 'endedAt': endedAt});
   }
 }
 

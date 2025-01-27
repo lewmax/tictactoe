@@ -1,6 +1,6 @@
 import 'package:chat_app/domain/models/app/config_keys.dart';
 
-abstract class RemoteConfigRepo {
+abstract interface class RemoteConfigRepo {
   List<String> getList(ConfigKeys key);
 
   String getString(ConfigKeys key);

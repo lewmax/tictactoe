@@ -58,8 +58,7 @@ mixin _$ResetPasswordEvent {
 
 /// @nodoc
 abstract class $ResetPasswordEventCopyWith<$Res> {
-  factory $ResetPasswordEventCopyWith(
-          ResetPasswordEvent value, $Res Function(ResetPasswordEvent) then) =
+  factory $ResetPasswordEventCopyWith(ResetPasswordEvent value, $Res Function(ResetPasswordEvent) then) =
       _$ResetPasswordEventCopyWithImpl<$Res, ResetPasswordEvent>;
 }
 
@@ -79,17 +78,14 @@ class _$ResetPasswordEventCopyWithImpl<$Res, $Val extends ResetPasswordEvent>
 
 /// @nodoc
 abstract class _$$ResetPasswordImplCopyWith<$Res> {
-  factory _$$ResetPasswordImplCopyWith(
-          _$ResetPasswordImpl value, $Res Function(_$ResetPasswordImpl) then) =
+  factory _$$ResetPasswordImplCopyWith(_$ResetPasswordImpl value, $Res Function(_$ResetPasswordImpl) then) =
       __$$ResetPasswordImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$ResetPasswordImplCopyWithImpl<$Res>
-    extends _$ResetPasswordEventCopyWithImpl<$Res, _$ResetPasswordImpl>
+class __$$ResetPasswordImplCopyWithImpl<$Res> extends _$ResetPasswordEventCopyWithImpl<$Res, _$ResetPasswordImpl>
     implements _$$ResetPasswordImplCopyWith<$Res> {
-  __$$ResetPasswordImplCopyWithImpl(
-      _$ResetPasswordImpl _value, $Res Function(_$ResetPasswordImpl) _then)
+  __$$ResetPasswordImplCopyWithImpl(_$ResetPasswordImpl _value, $Res Function(_$ResetPasswordImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of ResetPasswordEvent
@@ -108,8 +104,7 @@ class _$ResetPasswordImpl implements _ResetPassword {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$ResetPasswordImpl);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$ResetPasswordImpl);
   }
 
   @override
@@ -184,19 +179,16 @@ abstract class _ResetPassword implements ResetPasswordEvent {
 
 /// @nodoc
 abstract class _$$ClearEmailErrorImplCopyWith<$Res> {
-  factory _$$ClearEmailErrorImplCopyWith(_$ClearEmailErrorImpl value,
-          $Res Function(_$ClearEmailErrorImpl) then) =
+  factory _$$ClearEmailErrorImplCopyWith(_$ClearEmailErrorImpl value, $Res Function(_$ClearEmailErrorImpl) then) =
       __$$ClearEmailErrorImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String email});
 }
 
 /// @nodoc
-class __$$ClearEmailErrorImplCopyWithImpl<$Res>
-    extends _$ResetPasswordEventCopyWithImpl<$Res, _$ClearEmailErrorImpl>
+class __$$ClearEmailErrorImplCopyWithImpl<$Res> extends _$ResetPasswordEventCopyWithImpl<$Res, _$ClearEmailErrorImpl>
     implements _$$ClearEmailErrorImplCopyWith<$Res> {
-  __$$ClearEmailErrorImplCopyWithImpl(
-      _$ClearEmailErrorImpl _value, $Res Function(_$ClearEmailErrorImpl) _then)
+  __$$ClearEmailErrorImplCopyWithImpl(_$ClearEmailErrorImpl _value, $Res Function(_$ClearEmailErrorImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of ResetPasswordEvent
@@ -245,8 +237,7 @@ class _$ClearEmailErrorImpl implements _ClearEmailError {
   @override
   @pragma('vm:prefer-inline')
   _$$ClearEmailErrorImplCopyWith<_$ClearEmailErrorImpl> get copyWith =>
-      __$$ClearEmailErrorImplCopyWithImpl<_$ClearEmailErrorImpl>(
-          this, _$identity);
+      __$$ClearEmailErrorImplCopyWithImpl<_$ClearEmailErrorImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -319,8 +310,7 @@ abstract class _ClearEmailError implements ResetPasswordEvent {
   /// Create a copy of ResetPasswordEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ClearEmailErrorImplCopyWith<_$ClearEmailErrorImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ClearEmailErrorImplCopyWith<_$ClearEmailErrorImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -380,14 +370,12 @@ mixin _$ResetPasswordState {
   /// Create a copy of ResetPasswordState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ResetPasswordStateCopyWith<ResetPasswordState> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ResetPasswordStateCopyWith<ResetPasswordState> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ResetPasswordStateCopyWith<$Res> {
-  factory $ResetPasswordStateCopyWith(
-          ResetPasswordState value, $Res Function(ResetPasswordState) then) =
+  factory $ResetPasswordStateCopyWith(ResetPasswordState value, $Res Function(ResetPasswordState) then) =
       _$ResetPasswordStateCopyWithImpl<$Res, ResetPasswordState>;
   @useResult
   $Res call({String? emailError});
@@ -420,10 +408,8 @@ class _$ResetPasswordStateCopyWithImpl<$Res, $Val extends ResetPasswordState>
 }
 
 /// @nodoc
-abstract class _$$InitialImplCopyWith<$Res>
-    implements $ResetPasswordStateCopyWith<$Res> {
-  factory _$$InitialImplCopyWith(
-          _$InitialImpl value, $Res Function(_$InitialImpl) then) =
+abstract class _$$InitialImplCopyWith<$Res> implements $ResetPasswordStateCopyWith<$Res> {
+  factory _$$InitialImplCopyWith(_$InitialImpl value, $Res Function(_$InitialImpl) then) =
       __$$InitialImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -431,12 +417,9 @@ abstract class _$$InitialImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$InitialImplCopyWithImpl<$Res>
-    extends _$ResetPasswordStateCopyWithImpl<$Res, _$InitialImpl>
+class __$$InitialImplCopyWithImpl<$Res> extends _$ResetPasswordStateCopyWithImpl<$Res, _$InitialImpl>
     implements _$$InitialImplCopyWith<$Res> {
-  __$$InitialImplCopyWithImpl(
-      _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
-      : super(_value, _then);
+  __$$InitialImplCopyWithImpl(_$InitialImpl _value, $Res Function(_$InitialImpl) _then) : super(_value, _then);
 
   /// Create a copy of ResetPasswordState
   /// with the given fields replaced by the non-null parameter values.
@@ -472,8 +455,7 @@ class _$InitialImpl implements Initial {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$InitialImpl &&
-            (identical(other.emailError, emailError) ||
-                other.emailError == emailError));
+            (identical(other.emailError, emailError) || other.emailError == emailError));
   }
 
   @override
@@ -484,8 +466,7 @@ class _$InitialImpl implements Initial {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$InitialImplCopyWith<_$InitialImpl> get copyWith =>
-      __$$InitialImplCopyWithImpl<_$InitialImpl>(this, _$identity);
+  _$$InitialImplCopyWith<_$InitialImpl> get copyWith => __$$InitialImplCopyWithImpl<_$InitialImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -572,15 +553,12 @@ abstract class Initial implements ResetPasswordState {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$InitialImplCopyWith<_$InitialImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$InitialImplCopyWith<_$InitialImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$LoadingImplCopyWith<$Res>
-    implements $ResetPasswordStateCopyWith<$Res> {
-  factory _$$LoadingImplCopyWith(
-          _$LoadingImpl value, $Res Function(_$LoadingImpl) then) =
+abstract class _$$LoadingImplCopyWith<$Res> implements $ResetPasswordStateCopyWith<$Res> {
+  factory _$$LoadingImplCopyWith(_$LoadingImpl value, $Res Function(_$LoadingImpl) then) =
       __$$LoadingImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -588,12 +566,9 @@ abstract class _$$LoadingImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$LoadingImplCopyWithImpl<$Res>
-    extends _$ResetPasswordStateCopyWithImpl<$Res, _$LoadingImpl>
+class __$$LoadingImplCopyWithImpl<$Res> extends _$ResetPasswordStateCopyWithImpl<$Res, _$LoadingImpl>
     implements _$$LoadingImplCopyWith<$Res> {
-  __$$LoadingImplCopyWithImpl(
-      _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
-      : super(_value, _then);
+  __$$LoadingImplCopyWithImpl(_$LoadingImpl _value, $Res Function(_$LoadingImpl) _then) : super(_value, _then);
 
   /// Create a copy of ResetPasswordState
   /// with the given fields replaced by the non-null parameter values.
@@ -629,8 +604,7 @@ class _$LoadingImpl implements Loading {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LoadingImpl &&
-            (identical(other.emailError, emailError) ||
-                other.emailError == emailError));
+            (identical(other.emailError, emailError) || other.emailError == emailError));
   }
 
   @override
@@ -641,8 +615,7 @@ class _$LoadingImpl implements Loading {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$LoadingImplCopyWith<_$LoadingImpl> get copyWith =>
-      __$$LoadingImplCopyWithImpl<_$LoadingImpl>(this, _$identity);
+  _$$LoadingImplCopyWith<_$LoadingImpl> get copyWith => __$$LoadingImplCopyWithImpl<_$LoadingImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -729,28 +702,21 @@ abstract class Loading implements ResetPasswordState {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$LoadingImplCopyWith<_$LoadingImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$LoadingImplCopyWith<_$LoadingImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$ErrorImplCopyWith<$Res>
-    implements $ResetPasswordStateCopyWith<$Res> {
-  factory _$$ErrorImplCopyWith(
-          _$ErrorImpl value, $Res Function(_$ErrorImpl) then) =
-      __$$ErrorImplCopyWithImpl<$Res>;
+abstract class _$$ErrorImplCopyWith<$Res> implements $ResetPasswordStateCopyWith<$Res> {
+  factory _$$ErrorImplCopyWith(_$ErrorImpl value, $Res Function(_$ErrorImpl) then) = __$$ErrorImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? emailError, String? errorSnackbar});
 }
 
 /// @nodoc
-class __$$ErrorImplCopyWithImpl<$Res>
-    extends _$ResetPasswordStateCopyWithImpl<$Res, _$ErrorImpl>
+class __$$ErrorImplCopyWithImpl<$Res> extends _$ResetPasswordStateCopyWithImpl<$Res, _$ErrorImpl>
     implements _$$ErrorImplCopyWith<$Res> {
-  __$$ErrorImplCopyWithImpl(
-      _$ErrorImpl _value, $Res Function(_$ErrorImpl) _then)
-      : super(_value, _then);
+  __$$ErrorImplCopyWithImpl(_$ErrorImpl _value, $Res Function(_$ErrorImpl) _then) : super(_value, _then);
 
   /// Create a copy of ResetPasswordState
   /// with the given fields replaced by the non-null parameter values.
@@ -793,10 +759,8 @@ class _$ErrorImpl implements Error {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ErrorImpl &&
-            (identical(other.emailError, emailError) ||
-                other.emailError == emailError) &&
-            (identical(other.errorSnackbar, errorSnackbar) ||
-                other.errorSnackbar == errorSnackbar));
+            (identical(other.emailError, emailError) || other.emailError == emailError) &&
+            (identical(other.errorSnackbar, errorSnackbar) || other.errorSnackbar == errorSnackbar));
   }
 
   @override
@@ -807,8 +771,7 @@ class _$ErrorImpl implements Error {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
-      __$$ErrorImplCopyWithImpl<_$ErrorImpl>(this, _$identity);
+  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith => __$$ErrorImplCopyWithImpl<_$ErrorImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -886,8 +849,7 @@ class _$ErrorImpl implements Error {
 }
 
 abstract class Error implements ResetPasswordState {
-  const factory Error({final String? emailError, final String? errorSnackbar}) =
-      _$ErrorImpl;
+  const factory Error({final String? emailError, final String? errorSnackbar}) = _$ErrorImpl;
 
   @override
   String? get emailError;
@@ -897,15 +859,12 @@ abstract class Error implements ResetPasswordState {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$SuccessImplCopyWith<$Res>
-    implements $ResetPasswordStateCopyWith<$Res> {
-  factory _$$SuccessImplCopyWith(
-          _$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
+abstract class _$$SuccessImplCopyWith<$Res> implements $ResetPasswordStateCopyWith<$Res> {
+  factory _$$SuccessImplCopyWith(_$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
       __$$SuccessImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -913,12 +872,9 @@ abstract class _$$SuccessImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$SuccessImplCopyWithImpl<$Res>
-    extends _$ResetPasswordStateCopyWithImpl<$Res, _$SuccessImpl>
+class __$$SuccessImplCopyWithImpl<$Res> extends _$ResetPasswordStateCopyWithImpl<$Res, _$SuccessImpl>
     implements _$$SuccessImplCopyWith<$Res> {
-  __$$SuccessImplCopyWithImpl(
-      _$SuccessImpl _value, $Res Function(_$SuccessImpl) _then)
-      : super(_value, _then);
+  __$$SuccessImplCopyWithImpl(_$SuccessImpl _value, $Res Function(_$SuccessImpl) _then) : super(_value, _then);
 
   /// Create a copy of ResetPasswordState
   /// with the given fields replaced by the non-null parameter values.
@@ -954,8 +910,7 @@ class _$SuccessImpl implements Success {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SuccessImpl &&
-            (identical(other.emailError, emailError) ||
-                other.emailError == emailError));
+            (identical(other.emailError, emailError) || other.emailError == emailError));
   }
 
   @override
@@ -966,8 +921,7 @@ class _$SuccessImpl implements Success {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
-      __$$SuccessImplCopyWithImpl<_$SuccessImpl>(this, _$identity);
+  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith => __$$SuccessImplCopyWithImpl<_$SuccessImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1054,6 +1008,5 @@ abstract class Success implements ResetPasswordState {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith => throw _privateConstructorUsedError;
 }

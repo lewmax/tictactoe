@@ -1,9 +1,9 @@
+import 'package:chat_app/domain/repositories/app/device_uuid_repository.dart';
 import 'package:injectable/injectable.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:chat_app/domain/repositories/app/device_uuid_repository.dart';
 
 @LazySingleton(as: DeviceUuidRepository)
-class DeviceUuidRepoImpl extends DeviceUuidRepository {
+final class DeviceUuidRepoImpl implements DeviceUuidRepository {
   final SharedPreferences _sharedPreferences;
 
   static const _deviceUuidKey = 'device_uuid';

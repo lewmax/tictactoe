@@ -7,12 +7,12 @@ import 'package:chat_app/domain/entities/user/user.dart';
 import 'package:chat_app/domain/models/game/game_status.dart';
 import 'package:chat_app/domain/models/leaderboard/user_stats.dart';
 import 'package:chat_app/domain/repositories/game/recent_game_users_repo.dart';
-import 'package:chat_app/domain/repositories/leaderboard_repo.dart';
+import 'package:chat_app/domain/repositories/leaderboard/leaderboard_repo.dart';
 import 'package:injectable/injectable.dart';
 import 'package:rxdart/rxdart.dart';
 
 @LazySingleton(as: LeaderboardRepo)
-class LeaderboardRepoImpl extends RepositoryValidationMixin implements LeaderboardRepo {
+final class LeaderboardRepoImpl extends RepositoryValidationMixin implements LeaderboardRepo {
   final GameDataSource _gameDataSource;
   final RecentGameUsersRepo _recentGameUsersRepo;
 

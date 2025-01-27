@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter/material.dart';
 import 'package:chat_app/presentation/common/navigation/app_router.dart';
+import 'package:flutter/material.dart';
 
 class DontHaveAccountSection extends StatelessWidget {
   const DontHaveAccountSection({super.key, required this.onSignedIn});

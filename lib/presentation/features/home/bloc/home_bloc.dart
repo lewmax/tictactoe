@@ -13,7 +13,7 @@ import 'package:chat_app/domain/repositories/auth/auth_repo.dart';
 import 'package:chat_app/domain/repositories/date/date_manager_repo.dart';
 import 'package:chat_app/domain/repositories/force_update/force_update_repo.dart';
 import 'package:chat_app/domain/repositories/game/game_repo.dart';
-import 'package:chat_app/domain/repositories/leaderboard_repo.dart';
+import 'package:chat_app/domain/repositories/leaderboard/leaderboard_repo.dart';
 import 'package:chat_app/domain/repositories/referal/referal_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';

@@ -1,8 +1,8 @@
 import 'dart:io';
 
+import 'package:chat_app/presentation/common/components/platform_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:chat_app/presentation/common/components/platform_widget.dart';
 
 class PlatformAlertDialog extends PlatformWidget {
   const PlatformAlertDialog({

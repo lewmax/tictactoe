@@ -1,4 +1,4 @@
-abstract class DeviceUuidRepository {
+abstract interface class DeviceUuidRepository {
   String? getDeviceUuid();
 
   Future<void> setDeviceUuid(String uuid);

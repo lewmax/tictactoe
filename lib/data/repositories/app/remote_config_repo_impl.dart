@@ -1,15 +1,15 @@
 import 'dart:convert';
 
-import 'package:firebase_crashlytics/firebase_crashlytics.dart';
-import 'package:firebase_remote_config/firebase_remote_config.dart';
-import 'package:injectable/injectable.dart';
 import 'package:chat_app/core/utils/extensions/integer_extensions.dart';
 import 'package:chat_app/core/utils/logger.dart';
 import 'package:chat_app/domain/models/app/config_keys.dart';
 import 'package:chat_app/domain/repositories/app/remote_config_repo.dart';
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
+import 'package:firebase_remote_config/firebase_remote_config.dart';
+import 'package:injectable/injectable.dart';
 
 @LazySingleton(as: RemoteConfigRepo)
-class RemoteConfigRepoImpl implements RemoteConfigRepo {
+final class RemoteConfigRepoImpl implements RemoteConfigRepo {
   final FirebaseRemoteConfig _firebaseRemoteConfig;
 
   @FactoryMethod(preResolve: true)

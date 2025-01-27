@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter/material.dart';
 import 'package:chat_app/presentation/common/components/app_button.dart';
 import 'package:chat_app/presentation/common/theme/theme.dart';
+import 'package:flutter/material.dart';
 
 @RoutePage()
 class ForceUpdatePage extends StatelessWidget {

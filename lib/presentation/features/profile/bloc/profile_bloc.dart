@@ -1,14 +1,14 @@
 import 'dart:io';
 
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:injectable/injectable.dart';
-import 'package:rxdart/rxdart.dart';
 import 'package:chat_app/data/remote/network_response.dart';
 import 'package:chat_app/domain/entities/auth/app_auth_state.dart';
 import 'package:chat_app/domain/entities/user/user.dart';
 import 'package:chat_app/domain/repositories/auth/auth_repo.dart';
 import 'package:chat_app/presentation/common/validators/validators.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:injectable/injectable.dart';
+import 'package:rxdart/rxdart.dart';
 import 'package:useful_extensions/useful_extensions.dart';
 
 part 'profile_bloc.freezed.dart';

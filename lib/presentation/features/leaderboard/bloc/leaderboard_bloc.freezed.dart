@@ -58,14 +58,12 @@ mixin _$LeaderboardEvent {
 
 /// @nodoc
 abstract class $LeaderboardEventCopyWith<$Res> {
-  factory $LeaderboardEventCopyWith(
-          LeaderboardEvent value, $Res Function(LeaderboardEvent) then) =
+  factory $LeaderboardEventCopyWith(LeaderboardEvent value, $Res Function(LeaderboardEvent) then) =
       _$LeaderboardEventCopyWithImpl<$Res, LeaderboardEvent>;
 }
 
 /// @nodoc
-class _$LeaderboardEventCopyWithImpl<$Res, $Val extends LeaderboardEvent>
-    implements $LeaderboardEventCopyWith<$Res> {
+class _$LeaderboardEventCopyWithImpl<$Res, $Val extends LeaderboardEvent> implements $LeaderboardEventCopyWith<$Res> {
   _$LeaderboardEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -79,19 +77,16 @@ class _$LeaderboardEventCopyWithImpl<$Res, $Val extends LeaderboardEvent>
 
 /// @nodoc
 abstract class _$$DateUpdatedImplCopyWith<$Res> {
-  factory _$$DateUpdatedImplCopyWith(
-          _$DateUpdatedImpl value, $Res Function(_$DateUpdatedImpl) then) =
+  factory _$$DateUpdatedImplCopyWith(_$DateUpdatedImpl value, $Res Function(_$DateUpdatedImpl) then) =
       __$$DateUpdatedImplCopyWithImpl<$Res>;
   @useResult
   $Res call({DateTime dateTime});
 }
 
 /// @nodoc
-class __$$DateUpdatedImplCopyWithImpl<$Res>
-    extends _$LeaderboardEventCopyWithImpl<$Res, _$DateUpdatedImpl>
+class __$$DateUpdatedImplCopyWithImpl<$Res> extends _$LeaderboardEventCopyWithImpl<$Res, _$DateUpdatedImpl>
     implements _$$DateUpdatedImplCopyWith<$Res> {
-  __$$DateUpdatedImplCopyWithImpl(
-      _$DateUpdatedImpl _value, $Res Function(_$DateUpdatedImpl) _then)
+  __$$DateUpdatedImplCopyWithImpl(_$DateUpdatedImpl _value, $Res Function(_$DateUpdatedImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of LeaderboardEvent
@@ -128,8 +123,7 @@ class _$DateUpdatedImpl implements _DateUpdated {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DateUpdatedImpl &&
-            (identical(other.dateTime, dateTime) ||
-                other.dateTime == dateTime));
+            (identical(other.dateTime, dateTime) || other.dateTime == dateTime));
   }
 
   @override
@@ -214,25 +208,21 @@ abstract class _DateUpdated implements LeaderboardEvent {
   /// Create a copy of LeaderboardEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$DateUpdatedImplCopyWith<_$DateUpdatedImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$DateUpdatedImplCopyWith<_$DateUpdatedImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$TopUsersUpdatedImplCopyWith<$Res> {
-  factory _$$TopUsersUpdatedImplCopyWith(_$TopUsersUpdatedImpl value,
-          $Res Function(_$TopUsersUpdatedImpl) then) =
+  factory _$$TopUsersUpdatedImplCopyWith(_$TopUsersUpdatedImpl value, $Res Function(_$TopUsersUpdatedImpl) then) =
       __$$TopUsersUpdatedImplCopyWithImpl<$Res>;
   @useResult
   $Res call({List<LeaderboardUser> users});
 }
 
 /// @nodoc
-class __$$TopUsersUpdatedImplCopyWithImpl<$Res>
-    extends _$LeaderboardEventCopyWithImpl<$Res, _$TopUsersUpdatedImpl>
+class __$$TopUsersUpdatedImplCopyWithImpl<$Res> extends _$LeaderboardEventCopyWithImpl<$Res, _$TopUsersUpdatedImpl>
     implements _$$TopUsersUpdatedImplCopyWith<$Res> {
-  __$$TopUsersUpdatedImplCopyWithImpl(
-      _$TopUsersUpdatedImpl _value, $Res Function(_$TopUsersUpdatedImpl) _then)
+  __$$TopUsersUpdatedImplCopyWithImpl(_$TopUsersUpdatedImpl _value, $Res Function(_$TopUsersUpdatedImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of LeaderboardEvent
@@ -254,8 +244,7 @@ class __$$TopUsersUpdatedImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$TopUsersUpdatedImpl implements _TopUsersUpdated {
-  const _$TopUsersUpdatedImpl(final List<LeaderboardUser> users)
-      : _users = users;
+  const _$TopUsersUpdatedImpl(final List<LeaderboardUser> users) : _users = users;
 
   final List<LeaderboardUser> _users;
   @override
@@ -279,8 +268,7 @@ class _$TopUsersUpdatedImpl implements _TopUsersUpdated {
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_users));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_users));
 
   /// Create a copy of LeaderboardEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -288,8 +276,7 @@ class _$TopUsersUpdatedImpl implements _TopUsersUpdated {
   @override
   @pragma('vm:prefer-inline')
   _$$TopUsersUpdatedImplCopyWith<_$TopUsersUpdatedImpl> get copyWith =>
-      __$$TopUsersUpdatedImplCopyWithImpl<_$TopUsersUpdatedImpl>(
-          this, _$identity);
+      __$$TopUsersUpdatedImplCopyWithImpl<_$TopUsersUpdatedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -355,16 +342,14 @@ class _$TopUsersUpdatedImpl implements _TopUsersUpdated {
 }
 
 abstract class _TopUsersUpdated implements LeaderboardEvent {
-  const factory _TopUsersUpdated(final List<LeaderboardUser> users) =
-      _$TopUsersUpdatedImpl;
+  const factory _TopUsersUpdated(final List<LeaderboardUser> users) = _$TopUsersUpdatedImpl;
 
   List<LeaderboardUser> get users;
 
   /// Create a copy of LeaderboardEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$TopUsersUpdatedImplCopyWith<_$TopUsersUpdatedImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$TopUsersUpdatedImplCopyWith<_$TopUsersUpdatedImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -375,22 +360,19 @@ mixin _$LeaderboardState {
   /// Create a copy of LeaderboardState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $LeaderboardStateCopyWith<LeaderboardState> get copyWith =>
-      throw _privateConstructorUsedError;
+  $LeaderboardStateCopyWith<LeaderboardState> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $LeaderboardStateCopyWith<$Res> {
-  factory $LeaderboardStateCopyWith(
-          LeaderboardState value, $Res Function(LeaderboardState) then) =
+  factory $LeaderboardStateCopyWith(LeaderboardState value, $Res Function(LeaderboardState) then) =
       _$LeaderboardStateCopyWithImpl<$Res, LeaderboardState>;
   @useResult
   $Res call({DateTime datetime, List<LeaderboardUser> topUsers});
 }
 
 /// @nodoc
-class _$LeaderboardStateCopyWithImpl<$Res, $Val extends LeaderboardState>
-    implements $LeaderboardStateCopyWith<$Res> {
+class _$LeaderboardStateCopyWithImpl<$Res, $Val extends LeaderboardState> implements $LeaderboardStateCopyWith<$Res> {
   _$LeaderboardStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -420,10 +402,8 @@ class _$LeaderboardStateCopyWithImpl<$Res, $Val extends LeaderboardState>
 }
 
 /// @nodoc
-abstract class _$$LeaderboardStateImplCopyWith<$Res>
-    implements $LeaderboardStateCopyWith<$Res> {
-  factory _$$LeaderboardStateImplCopyWith(_$LeaderboardStateImpl value,
-          $Res Function(_$LeaderboardStateImpl) then) =
+abstract class _$$LeaderboardStateImplCopyWith<$Res> implements $LeaderboardStateCopyWith<$Res> {
+  factory _$$LeaderboardStateImplCopyWith(_$LeaderboardStateImpl value, $Res Function(_$LeaderboardStateImpl) then) =
       __$$LeaderboardStateImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -431,11 +411,9 @@ abstract class _$$LeaderboardStateImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$LeaderboardStateImplCopyWithImpl<$Res>
-    extends _$LeaderboardStateCopyWithImpl<$Res, _$LeaderboardStateImpl>
+class __$$LeaderboardStateImplCopyWithImpl<$Res> extends _$LeaderboardStateCopyWithImpl<$Res, _$LeaderboardStateImpl>
     implements _$$LeaderboardStateImplCopyWith<$Res> {
-  __$$LeaderboardStateImplCopyWithImpl(_$LeaderboardStateImpl _value,
-      $Res Function(_$LeaderboardStateImpl) _then)
+  __$$LeaderboardStateImplCopyWithImpl(_$LeaderboardStateImpl _value, $Res Function(_$LeaderboardStateImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of LeaderboardState
@@ -462,8 +440,7 @@ class __$$LeaderboardStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$LeaderboardStateImpl implements _LeaderboardState {
-  const _$LeaderboardStateImpl(
-      {required this.datetime, final List<LeaderboardUser> topUsers = const []})
+  const _$LeaderboardStateImpl({required this.datetime, final List<LeaderboardUser> topUsers = const []})
       : _topUsers = topUsers;
 
   @override
@@ -487,14 +464,12 @@ class _$LeaderboardStateImpl implements _LeaderboardState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LeaderboardStateImpl &&
-            (identical(other.datetime, datetime) ||
-                other.datetime == datetime) &&
+            (identical(other.datetime, datetime) || other.datetime == datetime) &&
             const DeepCollectionEquality().equals(other._topUsers, _topUsers));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, datetime, const DeepCollectionEquality().hash(_topUsers));
+  int get hashCode => Object.hash(runtimeType, datetime, const DeepCollectionEquality().hash(_topUsers));
 
   /// Create a copy of LeaderboardState
   /// with the given fields replaced by the non-null parameter values.
@@ -502,14 +477,12 @@ class _$LeaderboardStateImpl implements _LeaderboardState {
   @override
   @pragma('vm:prefer-inline')
   _$$LeaderboardStateImplCopyWith<_$LeaderboardStateImpl> get copyWith =>
-      __$$LeaderboardStateImplCopyWithImpl<_$LeaderboardStateImpl>(
-          this, _$identity);
+      __$$LeaderboardStateImplCopyWithImpl<_$LeaderboardStateImpl>(this, _$identity);
 }
 
 abstract class _LeaderboardState implements LeaderboardState {
-  const factory _LeaderboardState(
-      {required final DateTime datetime,
-      final List<LeaderboardUser> topUsers}) = _$LeaderboardStateImpl;
+  const factory _LeaderboardState({required final DateTime datetime, final List<LeaderboardUser> topUsers}) =
+      _$LeaderboardStateImpl;
 
   @override
   DateTime get datetime;
@@ -520,6 +493,5 @@ abstract class _LeaderboardState implements LeaderboardState {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$LeaderboardStateImplCopyWith<_$LeaderboardStateImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$LeaderboardStateImplCopyWith<_$LeaderboardStateImpl> get copyWith => throw _privateConstructorUsedError;
 }

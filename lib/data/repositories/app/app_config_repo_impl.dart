@@ -1,12 +1,12 @@
-import 'package:injectable/injectable.dart';
-import 'package:package_info_plus/package_info_plus.dart';
 import 'package:chat_app/core/utils/flavor_dependent_value.dart';
 import 'package:chat_app/domain/entities/app/app_config.dart';
 import 'package:chat_app/domain/entities/app/package_info_data.dart';
 import 'package:chat_app/domain/repositories/app/app_config_repo.dart';
+import 'package:injectable/injectable.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 
 @LazySingleton(as: AppConfigRepo)
-class AppConfigRepoImpl implements AppConfigRepo {
+final class AppConfigRepoImpl implements AppConfigRepo {
   @override
   AppConfig getAppConfig() {
     return AppConfig(

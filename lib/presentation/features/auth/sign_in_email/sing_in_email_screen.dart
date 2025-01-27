@@ -1,5 +1,4 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter/material.dart';
 import 'package:chat_app/core/di/locator.dart';
 import 'package:chat_app/core/utils/extensions/context_extensions.dart';
 import 'package:chat_app/presentation/common/bloc/screen_bloc_provider_stateless.dart';
@@ -10,6 +9,7 @@ import 'package:chat_app/presentation/common/layout/expanded_single_child_scroll
 import 'package:chat_app/presentation/common/navigation/app_router.dart';
 import 'package:chat_app/presentation/common/theme/theme.dart';
 import 'package:chat_app/presentation/features/auth/sign_in_email/bloc/sing_in_email_bloc.dart';
+import 'package:flutter/material.dart';
 import 'package:useful_extensions/useful_extensions.dart';
 
 @RoutePage()

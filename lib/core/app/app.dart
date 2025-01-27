@@ -1,14 +1,14 @@
 import 'dart:math' as math;
 
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:chat_app/core/app/navigation/logger_navigator_observer.dart';
 import 'package:chat_app/core/di/locator.dart';
 import 'package:chat_app/l10n/s.dart';
 import 'package:chat_app/presentation/common/navigation/app_router.dart';
 import 'package:chat_app/presentation/features/home/bloc/home_bloc.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 const _maxTextScaleFactor = 1.2;
 

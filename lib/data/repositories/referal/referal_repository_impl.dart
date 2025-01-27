@@ -8,7 +8,7 @@ import 'package:injectable/injectable.dart';
 import 'package:uuid/uuid.dart';
 
 @Singleton(as: ReferalRepo)
-class ReferalRepoImpl extends ReferalRepo {
+final class ReferalRepoImpl implements ReferalRepo {
   ReferalRepoImpl();
 
   @override

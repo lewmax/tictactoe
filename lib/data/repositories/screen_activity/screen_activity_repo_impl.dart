@@ -1,12 +1,12 @@
 import 'dart:async';
 
-import 'package:injectable/injectable.dart';
-import 'package:screen_state/screen_state.dart';
 import 'package:chat_app/core/utils/logger.dart';
 import 'package:chat_app/domain/repositories/screen_activity/screen_activity_repo.dart';
+import 'package:injectable/injectable.dart';
+import 'package:screen_state/screen_state.dart';
 
 @LazySingleton(as: ScreenActivityRepo)
-class ScreenActivityRepoImpl extends ScreenActivityRepo {
+final class ScreenActivityRepoImpl implements ScreenActivityRepo {
   final _screen = Screen();
 
   late final StreamSubscription<ScreenStateEvent> _subscr;

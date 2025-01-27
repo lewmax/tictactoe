@@ -58,14 +58,12 @@ mixin _$AiGameEvent {
 
 /// @nodoc
 abstract class $AiGameEventCopyWith<$Res> {
-  factory $AiGameEventCopyWith(
-          AiGameEvent value, $Res Function(AiGameEvent) then) =
+  factory $AiGameEventCopyWith(AiGameEvent value, $Res Function(AiGameEvent) then) =
       _$AiGameEventCopyWithImpl<$Res, AiGameEvent>;
 }
 
 /// @nodoc
-class _$AiGameEventCopyWithImpl<$Res, $Val extends AiGameEvent>
-    implements $AiGameEventCopyWith<$Res> {
+class _$AiGameEventCopyWithImpl<$Res, $Val extends AiGameEvent> implements $AiGameEventCopyWith<$Res> {
   _$AiGameEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -79,18 +77,14 @@ class _$AiGameEventCopyWithImpl<$Res, $Val extends AiGameEvent>
 
 /// @nodoc
 abstract class _$$StartedImplCopyWith<$Res> {
-  factory _$$StartedImplCopyWith(
-          _$StartedImpl value, $Res Function(_$StartedImpl) then) =
+  factory _$$StartedImplCopyWith(_$StartedImpl value, $Res Function(_$StartedImpl) then) =
       __$$StartedImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$StartedImplCopyWithImpl<$Res>
-    extends _$AiGameEventCopyWithImpl<$Res, _$StartedImpl>
+class __$$StartedImplCopyWithImpl<$Res> extends _$AiGameEventCopyWithImpl<$Res, _$StartedImpl>
     implements _$$StartedImplCopyWith<$Res> {
-  __$$StartedImplCopyWithImpl(
-      _$StartedImpl _value, $Res Function(_$StartedImpl) _then)
-      : super(_value, _then);
+  __$$StartedImplCopyWithImpl(_$StartedImpl _value, $Res Function(_$StartedImpl) _then) : super(_value, _then);
 
   /// Create a copy of AiGameEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -108,8 +102,7 @@ class _$StartedImpl implements _Started {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$StartedImpl);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$StartedImpl);
   }
 
   @override
@@ -184,20 +177,16 @@ abstract class _Started implements AiGameEvent {
 
 /// @nodoc
 abstract class _$$CellTappedImplCopyWith<$Res> {
-  factory _$$CellTappedImplCopyWith(
-          _$CellTappedImpl value, $Res Function(_$CellTappedImpl) then) =
+  factory _$$CellTappedImplCopyWith(_$CellTappedImpl value, $Res Function(_$CellTappedImpl) then) =
       __$$CellTappedImplCopyWithImpl<$Res>;
   @useResult
   $Res call({CellId cellId});
 }
 
 /// @nodoc
-class __$$CellTappedImplCopyWithImpl<$Res>
-    extends _$AiGameEventCopyWithImpl<$Res, _$CellTappedImpl>
+class __$$CellTappedImplCopyWithImpl<$Res> extends _$AiGameEventCopyWithImpl<$Res, _$CellTappedImpl>
     implements _$$CellTappedImplCopyWith<$Res> {
-  __$$CellTappedImplCopyWithImpl(
-      _$CellTappedImpl _value, $Res Function(_$CellTappedImpl) _then)
-      : super(_value, _then);
+  __$$CellTappedImplCopyWithImpl(_$CellTappedImpl _value, $Res Function(_$CellTappedImpl) _then) : super(_value, _then);
 
   /// Create a copy of AiGameEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -318,8 +307,7 @@ abstract class _CellTapped implements AiGameEvent {
   /// Create a copy of AiGameEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CellTappedImplCopyWith<_$CellTappedImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$CellTappedImplCopyWith<_$CellTappedImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -327,42 +315,24 @@ mixin _$AiGameState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
-    required TResult Function(
-            GameWarning? warning,
-            String? error,
-            Map<CellId, Cell?> board,
-            GameUser myUser,
-            GameUser opponentUser,
-            bool isGameOver,
-            CellState? winner)
+    required TResult Function(GameWarning? warning, String? error, Map<CellId, Cell?> board, GameUser myUser,
+            GameUser opponentUser, bool isGameOver, CellState? winner)
         playing,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
-    TResult? Function(
-            GameWarning? warning,
-            String? error,
-            Map<CellId, Cell?> board,
-            GameUser myUser,
-            GameUser opponentUser,
-            bool isGameOver,
-            CellState? winner)?
+    TResult? Function(GameWarning? warning, String? error, Map<CellId, Cell?> board, GameUser myUser,
+            GameUser opponentUser, bool isGameOver, CellState? winner)?
         playing,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
-    TResult Function(
-            GameWarning? warning,
-            String? error,
-            Map<CellId, Cell?> board,
-            GameUser myUser,
-            GameUser opponentUser,
-            bool isGameOver,
-            CellState? winner)?
+    TResult Function(GameWarning? warning, String? error, Map<CellId, Cell?> board, GameUser myUser,
+            GameUser opponentUser, bool isGameOver, CellState? winner)?
         playing,
     required TResult orElse(),
   }) =>
@@ -390,14 +360,12 @@ mixin _$AiGameState {
 
 /// @nodoc
 abstract class $AiGameStateCopyWith<$Res> {
-  factory $AiGameStateCopyWith(
-          AiGameState value, $Res Function(AiGameState) then) =
+  factory $AiGameStateCopyWith(AiGameState value, $Res Function(AiGameState) then) =
       _$AiGameStateCopyWithImpl<$Res, AiGameState>;
 }
 
 /// @nodoc
-class _$AiGameStateCopyWithImpl<$Res, $Val extends AiGameState>
-    implements $AiGameStateCopyWith<$Res> {
+class _$AiGameStateCopyWithImpl<$Res, $Val extends AiGameState> implements $AiGameStateCopyWith<$Res> {
   _$AiGameStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -411,18 +379,14 @@ class _$AiGameStateCopyWithImpl<$Res, $Val extends AiGameState>
 
 /// @nodoc
 abstract class _$$LoadingImplCopyWith<$Res> {
-  factory _$$LoadingImplCopyWith(
-          _$LoadingImpl value, $Res Function(_$LoadingImpl) then) =
+  factory _$$LoadingImplCopyWith(_$LoadingImpl value, $Res Function(_$LoadingImpl) then) =
       __$$LoadingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LoadingImplCopyWithImpl<$Res>
-    extends _$AiGameStateCopyWithImpl<$Res, _$LoadingImpl>
+class __$$LoadingImplCopyWithImpl<$Res> extends _$AiGameStateCopyWithImpl<$Res, _$LoadingImpl>
     implements _$$LoadingImplCopyWith<$Res> {
-  __$$LoadingImplCopyWithImpl(
-      _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
-      : super(_value, _then);
+  __$$LoadingImplCopyWithImpl(_$LoadingImpl _value, $Res Function(_$LoadingImpl) _then) : super(_value, _then);
 
   /// Create a copy of AiGameState
   /// with the given fields replaced by the non-null parameter values.
@@ -440,8 +404,7 @@ class _$LoadingImpl implements _Loading {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingImpl);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$LoadingImpl);
   }
 
   @override
@@ -451,14 +414,8 @@ class _$LoadingImpl implements _Loading {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
-    required TResult Function(
-            GameWarning? warning,
-            String? error,
-            Map<CellId, Cell?> board,
-            GameUser myUser,
-            GameUser opponentUser,
-            bool isGameOver,
-            CellState? winner)
+    required TResult Function(GameWarning? warning, String? error, Map<CellId, Cell?> board, GameUser myUser,
+            GameUser opponentUser, bool isGameOver, CellState? winner)
         playing,
   }) {
     return loading();
@@ -468,14 +425,8 @@ class _$LoadingImpl implements _Loading {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
-    TResult? Function(
-            GameWarning? warning,
-            String? error,
-            Map<CellId, Cell?> board,
-            GameUser myUser,
-            GameUser opponentUser,
-            bool isGameOver,
-            CellState? winner)?
+    TResult? Function(GameWarning? warning, String? error, Map<CellId, Cell?> board, GameUser myUser,
+            GameUser opponentUser, bool isGameOver, CellState? winner)?
         playing,
   }) {
     return loading?.call();
@@ -485,14 +436,8 @@ class _$LoadingImpl implements _Loading {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
-    TResult Function(
-            GameWarning? warning,
-            String? error,
-            Map<CellId, Cell?> board,
-            GameUser myUser,
-            GameUser opponentUser,
-            bool isGameOver,
-            CellState? winner)?
+    TResult Function(GameWarning? warning, String? error, Map<CellId, Cell?> board, GameUser myUser,
+            GameUser opponentUser, bool isGameOver, CellState? winner)?
         playing,
     required TResult orElse(),
   }) {
@@ -540,8 +485,7 @@ abstract class _Loading implements AiGameState {
 
 /// @nodoc
 abstract class _$$PlayingImplCopyWith<$Res> {
-  factory _$$PlayingImplCopyWith(
-          _$PlayingImpl value, $Res Function(_$PlayingImpl) then) =
+  factory _$$PlayingImplCopyWith(_$PlayingImpl value, $Res Function(_$PlayingImpl) then) =
       __$$PlayingImplCopyWithImpl<$Res>;
   @useResult
   $Res call(
@@ -555,12 +499,9 @@ abstract class _$$PlayingImplCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$PlayingImplCopyWithImpl<$Res>
-    extends _$AiGameStateCopyWithImpl<$Res, _$PlayingImpl>
+class __$$PlayingImplCopyWithImpl<$Res> extends _$AiGameStateCopyWithImpl<$Res, _$PlayingImpl>
     implements _$$PlayingImplCopyWith<$Res> {
-  __$$PlayingImplCopyWithImpl(
-      _$PlayingImpl _value, $Res Function(_$PlayingImpl) _then)
-      : super(_value, _then);
+  __$$PlayingImplCopyWithImpl(_$PlayingImpl _value, $Res Function(_$PlayingImpl) _then) : super(_value, _then);
 
   /// Create a copy of AiGameState
   /// with the given fields replaced by the non-null parameter values.
@@ -656,86 +597,55 @@ class _$PlayingImpl implements _Playing {
             (identical(other.error, error) || other.error == error) &&
             const DeepCollectionEquality().equals(other._board, _board) &&
             (identical(other.myUser, myUser) || other.myUser == myUser) &&
-            (identical(other.opponentUser, opponentUser) ||
-                other.opponentUser == opponentUser) &&
-            (identical(other.isGameOver, isGameOver) ||
-                other.isGameOver == isGameOver) &&
+            (identical(other.opponentUser, opponentUser) || other.opponentUser == opponentUser) &&
+            (identical(other.isGameOver, isGameOver) || other.isGameOver == isGameOver) &&
             (identical(other.winner, winner) || other.winner == winner));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      warning,
-      error,
-      const DeepCollectionEquality().hash(_board),
-      myUser,
-      opponentUser,
-      isGameOver,
-      winner);
+  int get hashCode => Object.hash(runtimeType, warning, error, const DeepCollectionEquality().hash(_board), myUser,
+      opponentUser, isGameOver, winner);
 
   /// Create a copy of AiGameState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$PlayingImplCopyWith<_$PlayingImpl> get copyWith =>
-      __$$PlayingImplCopyWithImpl<_$PlayingImpl>(this, _$identity);
+  _$$PlayingImplCopyWith<_$PlayingImpl> get copyWith => __$$PlayingImplCopyWithImpl<_$PlayingImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
-    required TResult Function(
-            GameWarning? warning,
-            String? error,
-            Map<CellId, Cell?> board,
-            GameUser myUser,
-            GameUser opponentUser,
-            bool isGameOver,
-            CellState? winner)
+    required TResult Function(GameWarning? warning, String? error, Map<CellId, Cell?> board, GameUser myUser,
+            GameUser opponentUser, bool isGameOver, CellState? winner)
         playing,
   }) {
-    return playing(
-        warning, error, board, myUser, opponentUser, isGameOver, winner);
+    return playing(warning, error, board, myUser, opponentUser, isGameOver, winner);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
-    TResult? Function(
-            GameWarning? warning,
-            String? error,
-            Map<CellId, Cell?> board,
-            GameUser myUser,
-            GameUser opponentUser,
-            bool isGameOver,
-            CellState? winner)?
+    TResult? Function(GameWarning? warning, String? error, Map<CellId, Cell?> board, GameUser myUser,
+            GameUser opponentUser, bool isGameOver, CellState? winner)?
         playing,
   }) {
-    return playing?.call(
-        warning, error, board, myUser, opponentUser, isGameOver, winner);
+    return playing?.call(warning, error, board, myUser, opponentUser, isGameOver, winner);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
-    TResult Function(
-            GameWarning? warning,
-            String? error,
-            Map<CellId, Cell?> board,
-            GameUser myUser,
-            GameUser opponentUser,
-            bool isGameOver,
-            CellState? winner)?
+    TResult Function(GameWarning? warning, String? error, Map<CellId, Cell?> board, GameUser myUser,
+            GameUser opponentUser, bool isGameOver, CellState? winner)?
         playing,
     required TResult orElse(),
   }) {
     if (playing != null) {
-      return playing(
-          warning, error, board, myUser, opponentUser, isGameOver, winner);
+      return playing(warning, error, board, myUser, opponentUser, isGameOver, winner);
     }
     return orElse();
   }
@@ -793,6 +703,5 @@ abstract class _Playing implements AiGameState {
   /// Create a copy of AiGameState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PlayingImplCopyWith<_$PlayingImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$PlayingImplCopyWith<_$PlayingImpl> get copyWith => throw _privateConstructorUsedError;
 }

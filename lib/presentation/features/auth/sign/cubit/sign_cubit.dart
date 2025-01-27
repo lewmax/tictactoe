@@ -1,11 +1,11 @@
+import 'package:chat_app/data/remote/network_response.dart';
+import 'package:chat_app/domain/repositories/auth/auth_repo.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
-import 'package:chat_app/data/remote/network_response.dart';
-import 'package:chat_app/domain/repositories/auth/auth_repo.dart';
 
-part 'sign_state.dart';
 part 'sign_cubit.freezed.dart';
+part 'sign_state.dart';
 
 @Injectable()
 class SignCubit extends Cubit<SignState> {

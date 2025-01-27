@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
 import 'package:chat_app/domain/models/lifecycle/lifecycle_events.dart';
+import 'package:flutter/material.dart';
 
-abstract class LifecycleRepo {
+abstract interface class LifecycleRepo {
   AppLifecycleState get currentState;
   LifecycleEvents get lifecycleEvent;
 

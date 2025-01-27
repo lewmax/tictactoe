@@ -1,7 +1,7 @@
-import 'package:json_annotation/json_annotation.dart';
 import 'package:chat_app/domain/common/model_id.dart';
 import 'package:chat_app/domain/entities/game/game_user.dart';
 import 'package:chat_app/domain/entities/user/user.dart';
+import 'package:json_annotation/json_annotation.dart';
 
 part 'game_user_dto.g.dart';
 

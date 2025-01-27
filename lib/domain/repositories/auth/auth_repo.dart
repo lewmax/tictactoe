@@ -1,11 +1,11 @@
 import 'dart:io';
 
-import 'package:rxdart/rxdart.dart';
 import 'package:chat_app/data/remote/network_response.dart';
 import 'package:chat_app/domain/entities/auth/app_auth_state.dart';
 import 'package:chat_app/domain/entities/user/user.dart';
+import 'package:rxdart/rxdart.dart';
 
-abstract class AuthRepo {
+abstract interface class AuthRepo {
   ValueStream<AppAuthState> get authState;
 
   User? get user;

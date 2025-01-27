@@ -1,16 +1,16 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:http/http.dart' as http;
-import 'package:injectable/injectable.dart';
-import 'package:rxdart/rxdart.dart';
 import 'package:chat_app/core/utils/extensions/integer_extensions.dart';
 import 'package:chat_app/data/core/mixins/repository_validation_mixin.dart';
 import 'package:chat_app/data/remote/network_response.dart';
 import 'package:chat_app/domain/repositories/date/date_manager_repo.dart';
+import 'package:http/http.dart' as http;
+import 'package:injectable/injectable.dart';
+import 'package:rxdart/rxdart.dart';
 
 @LazySingleton(as: DateManagerRepo)
-class DateManagerRepoImpl with RepositoryValidationMixin implements DateManagerRepo {
+final class DateManagerRepoImpl with RepositoryValidationMixin implements DateManagerRepo {
   @FactoryMethod(preResolve: true)
   static Future<DateManagerRepoImpl> create() async {
     final instance = DateManagerRepoImpl._();

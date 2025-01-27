@@ -1,13 +1,13 @@
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:injectable/injectable.dart';
 import 'package:chat_app/data/remote/network_response.dart';
 import 'package:chat_app/domain/repositories/auth/auth_repo.dart';
 import 'package:chat_app/presentation/common/validators/validators.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:injectable/injectable.dart';
 
+part 'reset_password_bloc.freezed.dart';
 part 'reset_password_event.dart';
 part 'reset_password_state.dart';
-part 'reset_password_bloc.freezed.dart';
 
 @Injectable()
 class ResetPasswordBloc extends Bloc<ResetPasswordEvent, ResetPasswordState> {

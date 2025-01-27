@@ -1,9 +1,9 @@
 import 'package:another_flushbar/flushbar.dart';
-import 'package:flutter/material.dart';
 import 'package:chat_app/core/utils/extensions/integer_extensions.dart';
 import 'package:chat_app/gen/assets.gen.dart';
 import 'package:chat_app/l10n/s.dart';
 import 'package:chat_app/presentation/common/theme/theme.dart';
+import 'package:flutter/material.dart';
 
 extension BuildContextExt on BuildContext {
   S get l10n => S.of(this)!;

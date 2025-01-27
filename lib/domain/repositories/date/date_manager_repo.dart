@@ -1,5 +1,5 @@
 import 'package:rxdart/streams.dart';
 
-abstract class DateManagerRepo {
+abstract interface class DateManagerRepo {
   ValueStream<DateTime> get currDayStream;
 }

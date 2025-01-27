@@ -1,13 +1,13 @@
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:injectable/injectable.dart';
 import 'package:chat_app/data/remote/network_response.dart';
 import 'package:chat_app/domain/repositories/auth/auth_repo.dart';
 import 'package:chat_app/presentation/common/validators/validators.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:injectable/injectable.dart';
 
+part 'sing_in_email_bloc.freezed.dart';
 part 'sing_in_email_event.dart';
 part 'sing_in_email_state.dart';
-part 'sing_in_email_bloc.freezed.dart';
 
 @Injectable()
 class SingInEmailBloc extends Bloc<SingInEmailEvent, SingInEmailState> {

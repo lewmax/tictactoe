@@ -1,9 +1,8 @@
+import 'package:chat_app/domain/common/model_id.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:json_annotation/json_annotation.dart';
-
-import 'package:chat_app/domain/common/model_id.dart';
 
 part 'user.g.dart';
 
@@ -42,7 +41,6 @@ class User extends Equatable {
       id: id ?? this.id,
       name: name ?? this.name,
       email: email ?? this.email,
-
       phone: phone ?? this.phone,
       imageUrl: imageUrl == null ? this.imageUrl : imageUrl(),
     );

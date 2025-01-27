@@ -1,12 +1,12 @@
 import 'dart:io';
 
+import 'package:chat_app/data/remote/network_response.dart';
+import 'package:chat_app/domain/repositories/auth/auth_repo.dart';
+import 'package:chat_app/presentation/common/validators/validators.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:injectable/injectable.dart';
-import 'package:chat_app/data/remote/network_response.dart';
-import 'package:chat_app/domain/repositories/auth/auth_repo.dart';
-import 'package:chat_app/presentation/common/validators/validators.dart';
 import 'package:useful_extensions/useful_extensions.dart';
 
 part 'sign_up_bloc.freezed.dart';

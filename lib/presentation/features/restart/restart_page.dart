@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:restart_app/restart_app.dart';
 import 'package:chat_app/presentation/common/components/app_button.dart';
 import 'package:chat_app/presentation/common/theme/theme.dart';
+import 'package:flutter/material.dart';
+import 'package:restart_app/restart_app.dart';
 
 class RestartPage extends StatelessWidget {
   const RestartPage({super.key});

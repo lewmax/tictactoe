@@ -5,7 +5,7 @@ import 'package:chat_app/domain/dtos/game/make_move_dto.dart';
 import 'package:chat_app/domain/entities/game/game.dart';
 import 'package:rxdart/rxdart.dart';
 
-abstract class GameRepo {
+abstract interface class GameRepo {
   void joinedGame(GameId gameId);
   void leaveGame();
   void clearGameRepo();

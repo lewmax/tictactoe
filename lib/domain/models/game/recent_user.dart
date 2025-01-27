@@ -1,5 +1,5 @@
-import 'package:equatable/equatable.dart';
 import 'package:chat_app/domain/entities/user/user.dart';
+import 'package:equatable/equatable.dart';
 
 class RecentUser extends Equatable {
   final User user;

@@ -1,7 +1,4 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:chat_app/core/di/locator.dart';
 import 'package:chat_app/data/repositories/auth/auth_repo_impl.dart';
 import 'package:chat_app/presentation/common/bloc/screen_bloc_provider_statefull.dart';
@@ -10,6 +7,9 @@ import 'package:chat_app/presentation/common/components/password_textfield.dart'
 import 'package:chat_app/presentation/common/mixins/snackbar_presenter.dart';
 import 'package:chat_app/presentation/common/theme/theme.dart';
 import 'package:chat_app/presentation/features/profile/delete_account/bloc/delete_account_bloc.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 @RoutePage()
 class DeleteAccountPage extends StatefulWidget {

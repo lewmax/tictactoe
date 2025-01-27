@@ -21,8 +21,7 @@ mixin _$ModelId<Id extends Object, RawValue extends Object> {
 
 /// @nodoc
 
-class _$ModelIdImpl<Id extends Object, RawValue extends Object>
-    extends _ModelId<Id, RawValue> {
+class _$ModelIdImpl<Id extends Object, RawValue extends Object> extends _ModelId<Id, RawValue> {
   const _$ModelIdImpl({required this.rawValue}) : super._();
 
   @override
@@ -42,14 +41,11 @@ class _$ModelIdImpl<Id extends Object, RawValue extends Object>
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(rawValue));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(rawValue));
 }
 
-abstract class _ModelId<Id extends Object, RawValue extends Object>
-    extends ModelId<Id, RawValue> {
-  const factory _ModelId({required final RawValue rawValue}) =
-      _$ModelIdImpl<Id, RawValue>;
+abstract class _ModelId<Id extends Object, RawValue extends Object> extends ModelId<Id, RawValue> {
+  const factory _ModelId({required final RawValue rawValue}) = _$ModelIdImpl<Id, RawValue>;
   const _ModelId._() : super._();
 
   @override

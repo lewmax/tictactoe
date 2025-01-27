@@ -1,15 +1,15 @@
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:injectable/injectable.dart';
 import 'package:chat_app/data/remote/network_response.dart';
 import 'package:chat_app/data/repositories/auth/auth_repo_impl.dart';
 import 'package:chat_app/domain/repositories/auth/auth_repo.dart';
 import 'package:chat_app/presentation/common/validators/validators.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:injectable/injectable.dart';
 
+part 'delete_account_bloc.freezed.dart';
 part 'delete_account_event.dart';
 part 'delete_account_state.dart';
-part 'delete_account_bloc.freezed.dart';
 
 @Injectable()
 class DeleteAccountBloc extends Bloc<DeleteAccountEvent, DeleteAccountState> {

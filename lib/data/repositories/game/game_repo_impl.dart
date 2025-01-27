@@ -23,7 +23,7 @@ import 'package:rxdart/rxdart.dart';
 import 'package:useful_extensions/useful_extensions.dart';
 
 @LazySingleton(as: GameRepo)
-class GameRepoImpl extends RepositoryValidationMixin with BoardSizeMixin implements GameRepo {
+final class GameRepoImpl extends RepositoryValidationMixin with BoardSizeMixin implements GameRepo {
   final GameDataSource _gameDataSource;
   final AuthRepo _authRepo;
   final ReferalRepo _referalRepository;

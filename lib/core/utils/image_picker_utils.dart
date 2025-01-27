@@ -1,8 +1,8 @@
+import 'package:chat_app/core/utils/extensions/context_extensions.dart';
+import 'package:chat_app/presentation/common/components/platform_alert_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:chat_app/core/utils/extensions/context_extensions.dart';
-import 'package:chat_app/presentation/common/components/platform_alert_dialog.dart';
 
 class ImagePickerUtils {
   static final _imagePicker = ImagePicker();

@@ -9,9 +9,7 @@ part of 'cell_dto.dart';
 CellDto _$CellDtoFromJson(Map<String, dynamic> json) => CellDto(
       id: CellId.fromJson(json['id'] as String),
       cellState: $enumDecode(_$CellStateEnumMap, json['cellState']),
-      winnerId: json['winnerId'] == null
-          ? null
-          : ModelId<User, String>.fromJson(json['winnerId']),
+      winnerId: json['winnerId'] == null ? null : ModelId<User, String>.fromJson(json['winnerId']),
     );
 
 Map<String, dynamic> _$CellDtoToJson(CellDto instance) => <String, dynamic>{

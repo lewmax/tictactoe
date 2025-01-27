@@ -19,13 +19,10 @@ class TicTacToeScript with GameValidationMixin {
   ]) {
     // Random move chance based on difficulty (1 - difficulty)
     if (Random().nextDouble() > difficulty) {
-      final emptyCells = board.entries
-          .where((entry) => entry.value == null)
-          .map((entry) => entry.key)
-          .toList();
-      
+      final emptyCells = board.entries.where((entry) => entry.value == null).map((entry) => entry.key).toList();
+
       if (emptyCells.isEmpty) throw Exception('No valid moves available');
-      
+
       final randomCell = emptyCells[Random().nextInt(emptyCells.length)];
       return (randomCell, false);
     }
