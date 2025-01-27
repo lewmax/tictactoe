@@ -1,0 +1,50 @@
+{
+  "configurations": [
+    {
+      "name": "dev",
+      "type": "dart",
+      "request": "launch",
+      "args": [
+        "--flavor",
+        "dev",
+        "--dart-define",
+        "environment=dev"
+      ],
+    },
+    {
+      "name": "prod",
+      "type": "dart",
+      "request": "launch",
+      "args": [
+        "--flavor",
+        "prod",
+        "--dart-define",
+        "environment=prod"
+      ],
+    },
+    {
+      "name": "dev profile",
+      "type": "dart",
+      "request": "launch",
+      "args": [
+        "--profile",
+        "--flavor",
+        "dev",
+        "--dart-define",
+        "environment=dev"
+      ],
+    },
+    {
+      "name": "prod profile",
+      "type": "dart",
+      "request": "launch",
+      "args": [
+        "--profile",
+        "--flavor",
+        "prod",
+        "--dart-define",
+        "environment=prod"
+      ],
+    },
+  ]
+}

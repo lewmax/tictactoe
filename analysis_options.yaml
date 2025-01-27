@@ -1,0 +1,18 @@
+include: package:lint/strict.yaml
+
+analyzer:
+  exclude:
+    - '**.freezed.dart'
+    - '**.g.dart'
+    - '**.config.dart'
+    - '**/firebase_options_*.dart'
+    - 'lib/generated/**'
+  errors:
+    invalid_annotation_target: ignore
+
+linter:
+  rules:
+    # Util classes are awesome!
+    avoid_classes_with_only_static_members: false
+    sort_pub_dependencies: false
+    sort_unnamed_constructors_first: false

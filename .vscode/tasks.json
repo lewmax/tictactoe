@@ -1,0 +1,167 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "flutter: analyze",
+            "type": "shell",
+            "command": "fvm flutter",
+            "group": "build",
+            "runOptions": {
+                "instanceLimit": 1,
+                "reevaluateOnRerun": false
+            },
+            "args": [
+                "analyze"
+            ],
+            "presentation": {
+                "echo": true,
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "flutter: pub get",
+            "type": "shell",
+            "command": "flutter",
+            "group": "build",
+            "runOptions": {
+                "instanceLimit": 1,
+                "reevaluateOnRerun": false
+            },
+            "args": [
+                "pub",
+                "get"
+            ],
+            "presentation": {
+                "echo": true,
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "flutter: clean",
+            "type": "shell",
+            "command": "flutter",
+            "group": "build",
+            "runOptions": {
+                "instanceLimit": 1,
+                "reevaluateOnRerun": false
+            },
+            "args": [
+                "clean"
+            ],
+            "presentation": {
+                "echo": true,
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "dart: build_runner",
+            "type": "shell",
+            "command": "dart",
+            "group": "build",
+            "runOptions": {
+                "instanceLimit": 1,
+                "reevaluateOnRerun": false
+            },
+            "args": [
+                "run",
+                "build_runner",
+                "build",
+                "--delete-conflicting-outputs"
+            ],
+            "presentation": {
+                "echo": true,
+                "focus": true,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "dart: format",
+            "type": "shell",
+            "command": "dart",
+            "group": "build",
+            "runOptions": {
+                "instanceLimit": 1,
+                "reevaluateOnRerun": false
+            },
+            "args": [
+                "format",
+                "lib"
+            ],
+            "presentation": {
+                "echo": true,
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "flutter: build dev apk",
+            "type": "shell",
+            "command": "flutter",
+            "group": "build",
+            "runOptions": {
+                "instanceLimit": 1,
+                "reevaluateOnRerun": false
+            },
+            "args": [
+                "build",
+                "apk",
+                "--flavor",
+                "dev",
+                "--dart-define",
+                "environment=dev"
+            ],
+            "presentation": {
+                "echo": true,
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "flutter: build prod apk",
+            "type": "shell",
+            "command": "flutter",
+            "group": "build",
+            "runOptions": {
+                "instanceLimit": 1,
+                "reevaluateOnRerun": false
+            },
+            "args": [
+                "build",
+                "apk",
+                "--flavor",
+                "prod",
+                "--dart-define",
+                "environment=prod"
+            ],
+            "presentation": {
+                "echo": true,
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}
