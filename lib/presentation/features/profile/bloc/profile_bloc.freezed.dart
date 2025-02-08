@@ -76,12 +76,14 @@ mixin _$ProfileEvent {
 
 /// @nodoc
 abstract class $ProfileEventCopyWith<$Res> {
-  factory $ProfileEventCopyWith(ProfileEvent value, $Res Function(ProfileEvent) then) =
+  factory $ProfileEventCopyWith(
+          ProfileEvent value, $Res Function(ProfileEvent) then) =
       _$ProfileEventCopyWithImpl<$Res, ProfileEvent>;
 }
 
 /// @nodoc
-class _$ProfileEventCopyWithImpl<$Res, $Val extends ProfileEvent> implements $ProfileEventCopyWith<$Res> {
+class _$ProfileEventCopyWithImpl<$Res, $Val extends ProfileEvent>
+    implements $ProfileEventCopyWith<$Res> {
   _$ProfileEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -95,16 +97,19 @@ class _$ProfileEventCopyWithImpl<$Res, $Val extends ProfileEvent> implements $Pr
 
 /// @nodoc
 abstract class _$$UserUpdatedImplCopyWith<$Res> {
-  factory _$$UserUpdatedImplCopyWith(_$UserUpdatedImpl value, $Res Function(_$UserUpdatedImpl) then) =
+  factory _$$UserUpdatedImplCopyWith(
+          _$UserUpdatedImpl value, $Res Function(_$UserUpdatedImpl) then) =
       __$$UserUpdatedImplCopyWithImpl<$Res>;
   @useResult
   $Res call({User? user});
 }
 
 /// @nodoc
-class __$$UserUpdatedImplCopyWithImpl<$Res> extends _$ProfileEventCopyWithImpl<$Res, _$UserUpdatedImpl>
+class __$$UserUpdatedImplCopyWithImpl<$Res>
+    extends _$ProfileEventCopyWithImpl<$Res, _$UserUpdatedImpl>
     implements _$$UserUpdatedImplCopyWith<$Res> {
-  __$$UserUpdatedImplCopyWithImpl(_$UserUpdatedImpl _value, $Res Function(_$UserUpdatedImpl) _then)
+  __$$UserUpdatedImplCopyWithImpl(
+      _$UserUpdatedImpl _value, $Res Function(_$UserUpdatedImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of ProfileEvent
@@ -244,21 +249,26 @@ abstract class _UserUpdated implements ProfileEvent {
   /// Create a copy of ProfileEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$UserUpdatedImplCopyWith<_$UserUpdatedImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$UserUpdatedImplCopyWith<_$UserUpdatedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$EditNameImplCopyWith<$Res> {
-  factory _$$EditNameImplCopyWith(_$EditNameImpl value, $Res Function(_$EditNameImpl) then) =
+  factory _$$EditNameImplCopyWith(
+          _$EditNameImpl value, $Res Function(_$EditNameImpl) then) =
       __$$EditNameImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String name});
 }
 
 /// @nodoc
-class __$$EditNameImplCopyWithImpl<$Res> extends _$ProfileEventCopyWithImpl<$Res, _$EditNameImpl>
+class __$$EditNameImplCopyWithImpl<$Res>
+    extends _$ProfileEventCopyWithImpl<$Res, _$EditNameImpl>
     implements _$$EditNameImplCopyWith<$Res> {
-  __$$EditNameImplCopyWithImpl(_$EditNameImpl _value, $Res Function(_$EditNameImpl) _then) : super(_value, _then);
+  __$$EditNameImplCopyWithImpl(
+      _$EditNameImpl _value, $Res Function(_$EditNameImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of ProfileEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -397,12 +407,14 @@ abstract class _EditName implements ProfileEvent {
   /// Create a copy of ProfileEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$EditNameImplCopyWith<_$EditNameImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$EditNameImplCopyWith<_$EditNameImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$EditImageImplCopyWith<$Res> {
-  factory _$$EditImageImplCopyWith(_$EditImageImpl value, $Res Function(_$EditImageImpl) then) =
+  factory _$$EditImageImplCopyWith(
+          _$EditImageImpl value, $Res Function(_$EditImageImpl) then) =
       __$$EditImageImplCopyWithImpl<$Res>;
   @useResult
   $Res call({ImageFile? image});
@@ -411,9 +423,12 @@ abstract class _$$EditImageImplCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$EditImageImplCopyWithImpl<$Res> extends _$ProfileEventCopyWithImpl<$Res, _$EditImageImpl>
+class __$$EditImageImplCopyWithImpl<$Res>
+    extends _$ProfileEventCopyWithImpl<$Res, _$EditImageImpl>
     implements _$$EditImageImplCopyWith<$Res> {
-  __$$EditImageImplCopyWithImpl(_$EditImageImpl _value, $Res Function(_$EditImageImpl) _then) : super(_value, _then);
+  __$$EditImageImplCopyWithImpl(
+      _$EditImageImpl _value, $Res Function(_$EditImageImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of ProfileEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -566,18 +581,23 @@ abstract class _EditImage implements ProfileEvent {
   /// Create a copy of ProfileEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$EditImageImplCopyWith<_$EditImageImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$EditImageImplCopyWith<_$EditImageImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$SaveImplCopyWith<$Res> {
-  factory _$$SaveImplCopyWith(_$SaveImpl value, $Res Function(_$SaveImpl) then) = __$$SaveImplCopyWithImpl<$Res>;
+  factory _$$SaveImplCopyWith(
+          _$SaveImpl value, $Res Function(_$SaveImpl) then) =
+      __$$SaveImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$SaveImplCopyWithImpl<$Res> extends _$ProfileEventCopyWithImpl<$Res, _$SaveImpl>
+class __$$SaveImplCopyWithImpl<$Res>
+    extends _$ProfileEventCopyWithImpl<$Res, _$SaveImpl>
     implements _$$SaveImplCopyWith<$Res> {
-  __$$SaveImplCopyWithImpl(_$SaveImpl _value, $Res Function(_$SaveImpl) _then) : super(_value, _then);
+  __$$SaveImplCopyWithImpl(_$SaveImpl _value, $Res Function(_$SaveImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of ProfileEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -595,7 +615,8 @@ class _$SaveImpl implements _Save {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is _$SaveImpl);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$SaveImpl);
   }
 
   @override
@@ -688,14 +709,18 @@ abstract class _Save implements ProfileEvent {
 
 /// @nodoc
 abstract class _$$LogoutImplCopyWith<$Res> {
-  factory _$$LogoutImplCopyWith(_$LogoutImpl value, $Res Function(_$LogoutImpl) then) =
+  factory _$$LogoutImplCopyWith(
+          _$LogoutImpl value, $Res Function(_$LogoutImpl) then) =
       __$$LogoutImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LogoutImplCopyWithImpl<$Res> extends _$ProfileEventCopyWithImpl<$Res, _$LogoutImpl>
+class __$$LogoutImplCopyWithImpl<$Res>
+    extends _$ProfileEventCopyWithImpl<$Res, _$LogoutImpl>
     implements _$$LogoutImplCopyWith<$Res> {
-  __$$LogoutImplCopyWithImpl(_$LogoutImpl _value, $Res Function(_$LogoutImpl) _then) : super(_value, _then);
+  __$$LogoutImplCopyWithImpl(
+      _$LogoutImpl _value, $Res Function(_$LogoutImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of ProfileEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -713,7 +738,8 @@ class _$LogoutImpl implements _Logout {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is _$LogoutImpl);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$LogoutImpl);
   }
 
   @override
@@ -809,24 +835,48 @@ mixin _$ProfileState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() failure,
-    required TResult Function(String name, String? nameError, String email, String phone, ImageFile? image,
-            bool loading, String? error, bool isSuccess, bool isUnauthenticated)
+    required TResult Function(
+            String name,
+            String? nameError,
+            String email,
+            String phone,
+            ImageFile? image,
+            bool loading,
+            String? error,
+            bool isSuccess,
+            bool isUnauthenticated)
         success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? failure,
-    TResult? Function(String name, String? nameError, String email, String phone, ImageFile? image, bool loading,
-            String? error, bool isSuccess, bool isUnauthenticated)?
+    TResult? Function(
+            String name,
+            String? nameError,
+            String email,
+            String phone,
+            ImageFile? image,
+            bool loading,
+            String? error,
+            bool isSuccess,
+            bool isUnauthenticated)?
         success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? failure,
-    TResult Function(String name, String? nameError, String email, String phone, ImageFile? image, bool loading,
-            String? error, bool isSuccess, bool isUnauthenticated)?
+    TResult Function(
+            String name,
+            String? nameError,
+            String email,
+            String phone,
+            ImageFile? image,
+            bool loading,
+            String? error,
+            bool isSuccess,
+            bool isUnauthenticated)?
         success,
     required TResult orElse(),
   }) =>
@@ -854,12 +904,14 @@ mixin _$ProfileState {
 
 /// @nodoc
 abstract class $ProfileStateCopyWith<$Res> {
-  factory $ProfileStateCopyWith(ProfileState value, $Res Function(ProfileState) then) =
+  factory $ProfileStateCopyWith(
+          ProfileState value, $Res Function(ProfileState) then) =
       _$ProfileStateCopyWithImpl<$Res, ProfileState>;
 }
 
 /// @nodoc
-class _$ProfileStateCopyWithImpl<$Res, $Val extends ProfileState> implements $ProfileStateCopyWith<$Res> {
+class _$ProfileStateCopyWithImpl<$Res, $Val extends ProfileState>
+    implements $ProfileStateCopyWith<$Res> {
   _$ProfileStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -873,16 +925,17 @@ class _$ProfileStateCopyWithImpl<$Res, $Val extends ProfileState> implements $Pr
 
 /// @nodoc
 abstract class _$$ProfileStateFailureImplCopyWith<$Res> {
-  factory _$$ProfileStateFailureImplCopyWith(
-          _$ProfileStateFailureImpl value, $Res Function(_$ProfileStateFailureImpl) then) =
+  factory _$$ProfileStateFailureImplCopyWith(_$ProfileStateFailureImpl value,
+          $Res Function(_$ProfileStateFailureImpl) then) =
       __$$ProfileStateFailureImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$ProfileStateFailureImplCopyWithImpl<$Res> extends _$ProfileStateCopyWithImpl<$Res, _$ProfileStateFailureImpl>
+class __$$ProfileStateFailureImplCopyWithImpl<$Res>
+    extends _$ProfileStateCopyWithImpl<$Res, _$ProfileStateFailureImpl>
     implements _$$ProfileStateFailureImplCopyWith<$Res> {
-  __$$ProfileStateFailureImplCopyWithImpl(
-      _$ProfileStateFailureImpl _value, $Res Function(_$ProfileStateFailureImpl) _then)
+  __$$ProfileStateFailureImplCopyWithImpl(_$ProfileStateFailureImpl _value,
+      $Res Function(_$ProfileStateFailureImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of ProfileState
@@ -901,7 +954,9 @@ class _$ProfileStateFailureImpl implements ProfileStateFailure {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is _$ProfileStateFailureImpl);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ProfileStateFailureImpl);
   }
 
   @override
@@ -911,8 +966,16 @@ class _$ProfileStateFailureImpl implements ProfileStateFailure {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() failure,
-    required TResult Function(String name, String? nameError, String email, String phone, ImageFile? image,
-            bool loading, String? error, bool isSuccess, bool isUnauthenticated)
+    required TResult Function(
+            String name,
+            String? nameError,
+            String email,
+            String phone,
+            ImageFile? image,
+            bool loading,
+            String? error,
+            bool isSuccess,
+            bool isUnauthenticated)
         success,
   }) {
     return failure();
@@ -922,8 +985,16 @@ class _$ProfileStateFailureImpl implements ProfileStateFailure {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? failure,
-    TResult? Function(String name, String? nameError, String email, String phone, ImageFile? image, bool loading,
-            String? error, bool isSuccess, bool isUnauthenticated)?
+    TResult? Function(
+            String name,
+            String? nameError,
+            String email,
+            String phone,
+            ImageFile? image,
+            bool loading,
+            String? error,
+            bool isSuccess,
+            bool isUnauthenticated)?
         success,
   }) {
     return failure?.call();
@@ -933,8 +1004,16 @@ class _$ProfileStateFailureImpl implements ProfileStateFailure {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? failure,
-    TResult Function(String name, String? nameError, String email, String phone, ImageFile? image, bool loading,
-            String? error, bool isSuccess, bool isUnauthenticated)?
+    TResult Function(
+            String name,
+            String? nameError,
+            String email,
+            String phone,
+            ImageFile? image,
+            bool loading,
+            String? error,
+            bool isSuccess,
+            bool isUnauthenticated)?
         success,
     required TResult orElse(),
   }) {
@@ -982,8 +1061,8 @@ abstract class ProfileStateFailure implements ProfileState {
 
 /// @nodoc
 abstract class _$$ProfileStateSuccessImplCopyWith<$Res> {
-  factory _$$ProfileStateSuccessImplCopyWith(
-          _$ProfileStateSuccessImpl value, $Res Function(_$ProfileStateSuccessImpl) then) =
+  factory _$$ProfileStateSuccessImplCopyWith(_$ProfileStateSuccessImpl value,
+          $Res Function(_$ProfileStateSuccessImpl) then) =
       __$$ProfileStateSuccessImplCopyWithImpl<$Res>;
   @useResult
   $Res call(
@@ -1001,10 +1080,11 @@ abstract class _$$ProfileStateSuccessImplCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$ProfileStateSuccessImplCopyWithImpl<$Res> extends _$ProfileStateCopyWithImpl<$Res, _$ProfileStateSuccessImpl>
+class __$$ProfileStateSuccessImplCopyWithImpl<$Res>
+    extends _$ProfileStateCopyWithImpl<$Res, _$ProfileStateSuccessImpl>
     implements _$$ProfileStateSuccessImplCopyWith<$Res> {
-  __$$ProfileStateSuccessImplCopyWithImpl(
-      _$ProfileStateSuccessImpl _value, $Res Function(_$ProfileStateSuccessImpl) _then)
+  __$$ProfileStateSuccessImplCopyWithImpl(_$ProfileStateSuccessImpl _value,
+      $Res Function(_$ProfileStateSuccessImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of ProfileState
@@ -1121,19 +1201,22 @@ class _$ProfileStateSuccessImpl implements ProfileStateSuccess {
         (other.runtimeType == runtimeType &&
             other is _$ProfileStateSuccessImpl &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.nameError, nameError) || other.nameError == nameError) &&
+            (identical(other.nameError, nameError) ||
+                other.nameError == nameError) &&
             (identical(other.email, email) || other.email == email) &&
             (identical(other.phone, phone) || other.phone == phone) &&
             (identical(other.image, image) || other.image == image) &&
             (identical(other.loading, loading) || other.loading == loading) &&
             (identical(other.error, error) || other.error == error) &&
-            (identical(other.isSuccess, isSuccess) || other.isSuccess == isSuccess) &&
-            (identical(other.isUnauthenticated, isUnauthenticated) || other.isUnauthenticated == isUnauthenticated));
+            (identical(other.isSuccess, isSuccess) ||
+                other.isSuccess == isSuccess) &&
+            (identical(other.isUnauthenticated, isUnauthenticated) ||
+                other.isUnauthenticated == isUnauthenticated));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, name, nameError, email, phone, image, loading, error, isSuccess, isUnauthenticated);
+  int get hashCode => Object.hash(runtimeType, name, nameError, email, phone,
+      image, loading, error, isSuccess, isUnauthenticated);
 
   /// Create a copy of ProfileState
   /// with the given fields replaced by the non-null parameter values.
@@ -1141,41 +1224,69 @@ class _$ProfileStateSuccessImpl implements ProfileStateSuccess {
   @override
   @pragma('vm:prefer-inline')
   _$$ProfileStateSuccessImplCopyWith<_$ProfileStateSuccessImpl> get copyWith =>
-      __$$ProfileStateSuccessImplCopyWithImpl<_$ProfileStateSuccessImpl>(this, _$identity);
+      __$$ProfileStateSuccessImplCopyWithImpl<_$ProfileStateSuccessImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() failure,
-    required TResult Function(String name, String? nameError, String email, String phone, ImageFile? image,
-            bool loading, String? error, bool isSuccess, bool isUnauthenticated)
+    required TResult Function(
+            String name,
+            String? nameError,
+            String email,
+            String phone,
+            ImageFile? image,
+            bool loading,
+            String? error,
+            bool isSuccess,
+            bool isUnauthenticated)
         success,
   }) {
-    return success(name, nameError, email, phone, image, loading, error, isSuccess, isUnauthenticated);
+    return success(name, nameError, email, phone, image, loading, error,
+        isSuccess, isUnauthenticated);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? failure,
-    TResult? Function(String name, String? nameError, String email, String phone, ImageFile? image, bool loading,
-            String? error, bool isSuccess, bool isUnauthenticated)?
+    TResult? Function(
+            String name,
+            String? nameError,
+            String email,
+            String phone,
+            ImageFile? image,
+            bool loading,
+            String? error,
+            bool isSuccess,
+            bool isUnauthenticated)?
         success,
   }) {
-    return success?.call(name, nameError, email, phone, image, loading, error, isSuccess, isUnauthenticated);
+    return success?.call(name, nameError, email, phone, image, loading, error,
+        isSuccess, isUnauthenticated);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? failure,
-    TResult Function(String name, String? nameError, String email, String phone, ImageFile? image, bool loading,
-            String? error, bool isSuccess, bool isUnauthenticated)?
+    TResult Function(
+            String name,
+            String? nameError,
+            String email,
+            String phone,
+            ImageFile? image,
+            bool loading,
+            String? error,
+            bool isSuccess,
+            bool isUnauthenticated)?
         success,
     required TResult orElse(),
   }) {
     if (success != null) {
-      return success(name, nameError, email, phone, image, loading, error, isSuccess, isUnauthenticated);
+      return success(name, nameError, email, phone, image, loading, error,
+          isSuccess, isUnauthenticated);
     }
     return orElse();
   }
@@ -1237,7 +1348,8 @@ abstract class ProfileStateSuccess implements ProfileState {
   /// Create a copy of ProfileState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ProfileStateSuccessImplCopyWith<_$ProfileStateSuccessImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$ProfileStateSuccessImplCopyWith<_$ProfileStateSuccessImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1284,11 +1396,13 @@ mixin _$ImageFile {
 
 /// @nodoc
 abstract class $ImageFileCopyWith<$Res> {
-  factory $ImageFileCopyWith(ImageFile value, $Res Function(ImageFile) then) = _$ImageFileCopyWithImpl<$Res, ImageFile>;
+  factory $ImageFileCopyWith(ImageFile value, $Res Function(ImageFile) then) =
+      _$ImageFileCopyWithImpl<$Res, ImageFile>;
 }
 
 /// @nodoc
-class _$ImageFileCopyWithImpl<$Res, $Val extends ImageFile> implements $ImageFileCopyWith<$Res> {
+class _$ImageFileCopyWithImpl<$Res, $Val extends ImageFile>
+    implements $ImageFileCopyWith<$Res> {
   _$ImageFileCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -1302,16 +1416,19 @@ class _$ImageFileCopyWithImpl<$Res, $Val extends ImageFile> implements $ImageFil
 
 /// @nodoc
 abstract class _$$RemoteImageImplCopyWith<$Res> {
-  factory _$$RemoteImageImplCopyWith(_$RemoteImageImpl value, $Res Function(_$RemoteImageImpl) then) =
+  factory _$$RemoteImageImplCopyWith(
+          _$RemoteImageImpl value, $Res Function(_$RemoteImageImpl) then) =
       __$$RemoteImageImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String url});
 }
 
 /// @nodoc
-class __$$RemoteImageImplCopyWithImpl<$Res> extends _$ImageFileCopyWithImpl<$Res, _$RemoteImageImpl>
+class __$$RemoteImageImplCopyWithImpl<$Res>
+    extends _$ImageFileCopyWithImpl<$Res, _$RemoteImageImpl>
     implements _$$RemoteImageImplCopyWith<$Res> {
-  __$$RemoteImageImplCopyWithImpl(_$RemoteImageImpl _value, $Res Function(_$RemoteImageImpl) _then)
+  __$$RemoteImageImplCopyWithImpl(
+      _$RemoteImageImpl _value, $Res Function(_$RemoteImageImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of ImageFile
@@ -1433,21 +1550,26 @@ abstract class RemoteImage implements ImageFile {
   /// Create a copy of ImageFile
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$RemoteImageImplCopyWith<_$RemoteImageImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$RemoteImageImplCopyWith<_$RemoteImageImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$LocalImageImplCopyWith<$Res> {
-  factory _$$LocalImageImplCopyWith(_$LocalImageImpl value, $Res Function(_$LocalImageImpl) then) =
+  factory _$$LocalImageImplCopyWith(
+          _$LocalImageImpl value, $Res Function(_$LocalImageImpl) then) =
       __$$LocalImageImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String path});
 }
 
 /// @nodoc
-class __$$LocalImageImplCopyWithImpl<$Res> extends _$ImageFileCopyWithImpl<$Res, _$LocalImageImpl>
+class __$$LocalImageImplCopyWithImpl<$Res>
+    extends _$ImageFileCopyWithImpl<$Res, _$LocalImageImpl>
     implements _$$LocalImageImplCopyWith<$Res> {
-  __$$LocalImageImplCopyWithImpl(_$LocalImageImpl _value, $Res Function(_$LocalImageImpl) _then) : super(_value, _then);
+  __$$LocalImageImplCopyWithImpl(
+      _$LocalImageImpl _value, $Res Function(_$LocalImageImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of ImageFile
   /// with the given fields replaced by the non-null parameter values.
@@ -1568,5 +1690,6 @@ abstract class LocalImage implements ImageFile {
   /// Create a copy of ImageFile
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$LocalImageImplCopyWith<_$LocalImageImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$LocalImageImplCopyWith<_$LocalImageImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

@@ -210,8 +210,8 @@ extension _GameRepoImpl on GameRepoImpl {
     return Game(
       id: dto.id,
       url: dto.url,
-      createdAt: dto.createdAt,
-      endedAt: dto.endedAt,
+      createdAt: dto.timeCreatedAt,
+      endedAt: dto.timeEndedAt,
       myUser: myGameUser,
       teammateUser: teamateGameUser,
       gameStatus: dto.gameStatus,

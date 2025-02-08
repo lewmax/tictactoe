@@ -64,12 +64,14 @@ mixin _$SingInEmailEvent {
 
 /// @nodoc
 abstract class $SingInEmailEventCopyWith<$Res> {
-  factory $SingInEmailEventCopyWith(SingInEmailEvent value, $Res Function(SingInEmailEvent) then) =
+  factory $SingInEmailEventCopyWith(
+          SingInEmailEvent value, $Res Function(SingInEmailEvent) then) =
       _$SingInEmailEventCopyWithImpl<$Res, SingInEmailEvent>;
 }
 
 /// @nodoc
-class _$SingInEmailEventCopyWithImpl<$Res, $Val extends SingInEmailEvent> implements $SingInEmailEventCopyWith<$Res> {
+class _$SingInEmailEventCopyWithImpl<$Res, $Val extends SingInEmailEvent>
+    implements $SingInEmailEventCopyWith<$Res> {
   _$SingInEmailEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -83,14 +85,18 @@ class _$SingInEmailEventCopyWithImpl<$Res, $Val extends SingInEmailEvent> implem
 
 /// @nodoc
 abstract class _$$SignInImplCopyWith<$Res> {
-  factory _$$SignInImplCopyWith(_$SignInImpl value, $Res Function(_$SignInImpl) then) =
+  factory _$$SignInImplCopyWith(
+          _$SignInImpl value, $Res Function(_$SignInImpl) then) =
       __$$SignInImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$SignInImplCopyWithImpl<$Res> extends _$SingInEmailEventCopyWithImpl<$Res, _$SignInImpl>
+class __$$SignInImplCopyWithImpl<$Res>
+    extends _$SingInEmailEventCopyWithImpl<$Res, _$SignInImpl>
     implements _$$SignInImplCopyWith<$Res> {
-  __$$SignInImplCopyWithImpl(_$SignInImpl _value, $Res Function(_$SignInImpl) _then) : super(_value, _then);
+  __$$SignInImplCopyWithImpl(
+      _$SignInImpl _value, $Res Function(_$SignInImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of SingInEmailEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -108,7 +114,8 @@ class _$SignInImpl implements _SignIn {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is _$SignInImpl);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$SignInImpl);
   }
 
   @override
@@ -189,16 +196,19 @@ abstract class _SignIn implements SingInEmailEvent {
 
 /// @nodoc
 abstract class _$$ClearEmailErrorImplCopyWith<$Res> {
-  factory _$$ClearEmailErrorImplCopyWith(_$ClearEmailErrorImpl value, $Res Function(_$ClearEmailErrorImpl) then) =
+  factory _$$ClearEmailErrorImplCopyWith(_$ClearEmailErrorImpl value,
+          $Res Function(_$ClearEmailErrorImpl) then) =
       __$$ClearEmailErrorImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String email});
 }
 
 /// @nodoc
-class __$$ClearEmailErrorImplCopyWithImpl<$Res> extends _$SingInEmailEventCopyWithImpl<$Res, _$ClearEmailErrorImpl>
+class __$$ClearEmailErrorImplCopyWithImpl<$Res>
+    extends _$SingInEmailEventCopyWithImpl<$Res, _$ClearEmailErrorImpl>
     implements _$$ClearEmailErrorImplCopyWith<$Res> {
-  __$$ClearEmailErrorImplCopyWithImpl(_$ClearEmailErrorImpl _value, $Res Function(_$ClearEmailErrorImpl) _then)
+  __$$ClearEmailErrorImplCopyWithImpl(
+      _$ClearEmailErrorImpl _value, $Res Function(_$ClearEmailErrorImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of SingInEmailEvent
@@ -247,7 +257,8 @@ class _$ClearEmailErrorImpl implements _ClearEmailError {
   @override
   @pragma('vm:prefer-inline')
   _$$ClearEmailErrorImplCopyWith<_$ClearEmailErrorImpl> get copyWith =>
-      __$$ClearEmailErrorImplCopyWithImpl<_$ClearEmailErrorImpl>(this, _$identity);
+      __$$ClearEmailErrorImplCopyWithImpl<_$ClearEmailErrorImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -326,21 +337,25 @@ abstract class _ClearEmailError implements SingInEmailEvent {
   /// Create a copy of SingInEmailEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ClearEmailErrorImplCopyWith<_$ClearEmailErrorImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$ClearEmailErrorImplCopyWith<_$ClearEmailErrorImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$ClearPassErrorImplCopyWith<$Res> {
-  factory _$$ClearPassErrorImplCopyWith(_$ClearPassErrorImpl value, $Res Function(_$ClearPassErrorImpl) then) =
+  factory _$$ClearPassErrorImplCopyWith(_$ClearPassErrorImpl value,
+          $Res Function(_$ClearPassErrorImpl) then) =
       __$$ClearPassErrorImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String password});
 }
 
 /// @nodoc
-class __$$ClearPassErrorImplCopyWithImpl<$Res> extends _$SingInEmailEventCopyWithImpl<$Res, _$ClearPassErrorImpl>
+class __$$ClearPassErrorImplCopyWithImpl<$Res>
+    extends _$SingInEmailEventCopyWithImpl<$Res, _$ClearPassErrorImpl>
     implements _$$ClearPassErrorImplCopyWith<$Res> {
-  __$$ClearPassErrorImplCopyWithImpl(_$ClearPassErrorImpl _value, $Res Function(_$ClearPassErrorImpl) _then)
+  __$$ClearPassErrorImplCopyWithImpl(
+      _$ClearPassErrorImpl _value, $Res Function(_$ClearPassErrorImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of SingInEmailEvent
@@ -377,7 +392,8 @@ class _$ClearPassErrorImpl implements _ClearPassError {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ClearPassErrorImpl &&
-            (identical(other.password, password) || other.password == password));
+            (identical(other.password, password) ||
+                other.password == password));
   }
 
   @override
@@ -389,7 +405,8 @@ class _$ClearPassErrorImpl implements _ClearPassError {
   @override
   @pragma('vm:prefer-inline')
   _$$ClearPassErrorImplCopyWith<_$ClearPassErrorImpl> get copyWith =>
-      __$$ClearPassErrorImplCopyWithImpl<_$ClearPassErrorImpl>(this, _$identity);
+      __$$ClearPassErrorImplCopyWithImpl<_$ClearPassErrorImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -468,7 +485,8 @@ abstract class _ClearPassError implements SingInEmailEvent {
   /// Create a copy of SingInEmailEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ClearPassErrorImplCopyWith<_$ClearPassErrorImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$ClearPassErrorImplCopyWith<_$ClearPassErrorImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -479,7 +497,9 @@ mixin _$SingInEmailState {
   TResult when<TResult extends Object?>({
     required TResult Function(String? emailError, String? passordError) initial,
     required TResult Function(String? emailError, String? passordError) loading,
-    required TResult Function(String? emailError, String? passordError, String? errorSnackbar) error,
+    required TResult Function(
+            String? emailError, String? passordError, String? errorSnackbar)
+        error,
     required TResult Function(String? emailError, String? passordError) success,
   }) =>
       throw _privateConstructorUsedError;
@@ -487,7 +507,9 @@ mixin _$SingInEmailState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String? emailError, String? passordError)? initial,
     TResult? Function(String? emailError, String? passordError)? loading,
-    TResult? Function(String? emailError, String? passordError, String? errorSnackbar)? error,
+    TResult? Function(
+            String? emailError, String? passordError, String? errorSnackbar)?
+        error,
     TResult? Function(String? emailError, String? passordError)? success,
   }) =>
       throw _privateConstructorUsedError;
@@ -495,7 +517,9 @@ mixin _$SingInEmailState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String? emailError, String? passordError)? initial,
     TResult Function(String? emailError, String? passordError)? loading,
-    TResult Function(String? emailError, String? passordError, String? errorSnackbar)? error,
+    TResult Function(
+            String? emailError, String? passordError, String? errorSnackbar)?
+        error,
     TResult Function(String? emailError, String? passordError)? success,
     required TResult orElse(),
   }) =>
@@ -529,19 +553,22 @@ mixin _$SingInEmailState {
   /// Create a copy of SingInEmailState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $SingInEmailStateCopyWith<SingInEmailState> get copyWith => throw _privateConstructorUsedError;
+  $SingInEmailStateCopyWith<SingInEmailState> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $SingInEmailStateCopyWith<$Res> {
-  factory $SingInEmailStateCopyWith(SingInEmailState value, $Res Function(SingInEmailState) then) =
+  factory $SingInEmailStateCopyWith(
+          SingInEmailState value, $Res Function(SingInEmailState) then) =
       _$SingInEmailStateCopyWithImpl<$Res, SingInEmailState>;
   @useResult
   $Res call({String? emailError, String? passordError});
 }
 
 /// @nodoc
-class _$SingInEmailStateCopyWithImpl<$Res, $Val extends SingInEmailState> implements $SingInEmailStateCopyWith<$Res> {
+class _$SingInEmailStateCopyWithImpl<$Res, $Val extends SingInEmailState>
+    implements $SingInEmailStateCopyWith<$Res> {
   _$SingInEmailStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -571,8 +598,10 @@ class _$SingInEmailStateCopyWithImpl<$Res, $Val extends SingInEmailState> implem
 }
 
 /// @nodoc
-abstract class _$$InitialImplCopyWith<$Res> implements $SingInEmailStateCopyWith<$Res> {
-  factory _$$InitialImplCopyWith(_$InitialImpl value, $Res Function(_$InitialImpl) then) =
+abstract class _$$InitialImplCopyWith<$Res>
+    implements $SingInEmailStateCopyWith<$Res> {
+  factory _$$InitialImplCopyWith(
+          _$InitialImpl value, $Res Function(_$InitialImpl) then) =
       __$$InitialImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -580,9 +609,12 @@ abstract class _$$InitialImplCopyWith<$Res> implements $SingInEmailStateCopyWith
 }
 
 /// @nodoc
-class __$$InitialImplCopyWithImpl<$Res> extends _$SingInEmailStateCopyWithImpl<$Res, _$InitialImpl>
+class __$$InitialImplCopyWithImpl<$Res>
+    extends _$SingInEmailStateCopyWithImpl<$Res, _$InitialImpl>
     implements _$$InitialImplCopyWith<$Res> {
-  __$$InitialImplCopyWithImpl(_$InitialImpl _value, $Res Function(_$InitialImpl) _then) : super(_value, _then);
+  __$$InitialImplCopyWithImpl(
+      _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of SingInEmailState
   /// with the given fields replaced by the non-null parameter values.
@@ -625,8 +657,10 @@ class _$InitialImpl implements Initial {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$InitialImpl &&
-            (identical(other.emailError, emailError) || other.emailError == emailError) &&
-            (identical(other.passordError, passordError) || other.passordError == passordError));
+            (identical(other.emailError, emailError) ||
+                other.emailError == emailError) &&
+            (identical(other.passordError, passordError) ||
+                other.passordError == passordError));
   }
 
   @override
@@ -637,14 +671,17 @@ class _$InitialImpl implements Initial {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$InitialImplCopyWith<_$InitialImpl> get copyWith => __$$InitialImplCopyWithImpl<_$InitialImpl>(this, _$identity);
+  _$$InitialImplCopyWith<_$InitialImpl> get copyWith =>
+      __$$InitialImplCopyWithImpl<_$InitialImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String? emailError, String? passordError) initial,
     required TResult Function(String? emailError, String? passordError) loading,
-    required TResult Function(String? emailError, String? passordError, String? errorSnackbar) error,
+    required TResult Function(
+            String? emailError, String? passordError, String? errorSnackbar)
+        error,
     required TResult Function(String? emailError, String? passordError) success,
   }) {
     return initial(emailError, passordError);
@@ -655,7 +692,9 @@ class _$InitialImpl implements Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String? emailError, String? passordError)? initial,
     TResult? Function(String? emailError, String? passordError)? loading,
-    TResult? Function(String? emailError, String? passordError, String? errorSnackbar)? error,
+    TResult? Function(
+            String? emailError, String? passordError, String? errorSnackbar)?
+        error,
     TResult? Function(String? emailError, String? passordError)? success,
   }) {
     return initial?.call(emailError, passordError);
@@ -666,7 +705,9 @@ class _$InitialImpl implements Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String? emailError, String? passordError)? initial,
     TResult Function(String? emailError, String? passordError)? loading,
-    TResult Function(String? emailError, String? passordError, String? errorSnackbar)? error,
+    TResult Function(
+            String? emailError, String? passordError, String? errorSnackbar)?
+        error,
     TResult Function(String? emailError, String? passordError)? success,
     required TResult orElse(),
   }) {
@@ -715,7 +756,8 @@ class _$InitialImpl implements Initial {
 }
 
 abstract class Initial implements SingInEmailState {
-  const factory Initial({final String? emailError, final String? passordError}) = _$InitialImpl;
+  const factory Initial(
+      {final String? emailError, final String? passordError}) = _$InitialImpl;
 
   @override
   String? get emailError;
@@ -726,12 +768,15 @@ abstract class Initial implements SingInEmailState {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$InitialImplCopyWith<_$InitialImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$InitialImplCopyWith<_$InitialImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$LoadingImplCopyWith<$Res> implements $SingInEmailStateCopyWith<$Res> {
-  factory _$$LoadingImplCopyWith(_$LoadingImpl value, $Res Function(_$LoadingImpl) then) =
+abstract class _$$LoadingImplCopyWith<$Res>
+    implements $SingInEmailStateCopyWith<$Res> {
+  factory _$$LoadingImplCopyWith(
+          _$LoadingImpl value, $Res Function(_$LoadingImpl) then) =
       __$$LoadingImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -739,9 +784,12 @@ abstract class _$$LoadingImplCopyWith<$Res> implements $SingInEmailStateCopyWith
 }
 
 /// @nodoc
-class __$$LoadingImplCopyWithImpl<$Res> extends _$SingInEmailStateCopyWithImpl<$Res, _$LoadingImpl>
+class __$$LoadingImplCopyWithImpl<$Res>
+    extends _$SingInEmailStateCopyWithImpl<$Res, _$LoadingImpl>
     implements _$$LoadingImplCopyWith<$Res> {
-  __$$LoadingImplCopyWithImpl(_$LoadingImpl _value, $Res Function(_$LoadingImpl) _then) : super(_value, _then);
+  __$$LoadingImplCopyWithImpl(
+      _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of SingInEmailState
   /// with the given fields replaced by the non-null parameter values.
@@ -784,8 +832,10 @@ class _$LoadingImpl implements Loading {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LoadingImpl &&
-            (identical(other.emailError, emailError) || other.emailError == emailError) &&
-            (identical(other.passordError, passordError) || other.passordError == passordError));
+            (identical(other.emailError, emailError) ||
+                other.emailError == emailError) &&
+            (identical(other.passordError, passordError) ||
+                other.passordError == passordError));
   }
 
   @override
@@ -796,14 +846,17 @@ class _$LoadingImpl implements Loading {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$LoadingImplCopyWith<_$LoadingImpl> get copyWith => __$$LoadingImplCopyWithImpl<_$LoadingImpl>(this, _$identity);
+  _$$LoadingImplCopyWith<_$LoadingImpl> get copyWith =>
+      __$$LoadingImplCopyWithImpl<_$LoadingImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String? emailError, String? passordError) initial,
     required TResult Function(String? emailError, String? passordError) loading,
-    required TResult Function(String? emailError, String? passordError, String? errorSnackbar) error,
+    required TResult Function(
+            String? emailError, String? passordError, String? errorSnackbar)
+        error,
     required TResult Function(String? emailError, String? passordError) success,
   }) {
     return loading(emailError, passordError);
@@ -814,7 +867,9 @@ class _$LoadingImpl implements Loading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String? emailError, String? passordError)? initial,
     TResult? Function(String? emailError, String? passordError)? loading,
-    TResult? Function(String? emailError, String? passordError, String? errorSnackbar)? error,
+    TResult? Function(
+            String? emailError, String? passordError, String? errorSnackbar)?
+        error,
     TResult? Function(String? emailError, String? passordError)? success,
   }) {
     return loading?.call(emailError, passordError);
@@ -825,7 +880,9 @@ class _$LoadingImpl implements Loading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String? emailError, String? passordError)? initial,
     TResult Function(String? emailError, String? passordError)? loading,
-    TResult Function(String? emailError, String? passordError, String? errorSnackbar)? error,
+    TResult Function(
+            String? emailError, String? passordError, String? errorSnackbar)?
+        error,
     TResult Function(String? emailError, String? passordError)? success,
     required TResult orElse(),
   }) {
@@ -874,7 +931,8 @@ class _$LoadingImpl implements Loading {
 }
 
 abstract class Loading implements SingInEmailState {
-  const factory Loading({final String? emailError, final String? passordError}) = _$LoadingImpl;
+  const factory Loading(
+      {final String? emailError, final String? passordError}) = _$LoadingImpl;
 
   @override
   String? get emailError;
@@ -885,21 +943,28 @@ abstract class Loading implements SingInEmailState {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$LoadingImplCopyWith<_$LoadingImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$LoadingImplCopyWith<_$LoadingImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$ErrorImplCopyWith<$Res> implements $SingInEmailStateCopyWith<$Res> {
-  factory _$$ErrorImplCopyWith(_$ErrorImpl value, $Res Function(_$ErrorImpl) then) = __$$ErrorImplCopyWithImpl<$Res>;
+abstract class _$$ErrorImplCopyWith<$Res>
+    implements $SingInEmailStateCopyWith<$Res> {
+  factory _$$ErrorImplCopyWith(
+          _$ErrorImpl value, $Res Function(_$ErrorImpl) then) =
+      __$$ErrorImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? emailError, String? passordError, String? errorSnackbar});
 }
 
 /// @nodoc
-class __$$ErrorImplCopyWithImpl<$Res> extends _$SingInEmailStateCopyWithImpl<$Res, _$ErrorImpl>
+class __$$ErrorImplCopyWithImpl<$Res>
+    extends _$SingInEmailStateCopyWithImpl<$Res, _$ErrorImpl>
     implements _$$ErrorImplCopyWith<$Res> {
-  __$$ErrorImplCopyWithImpl(_$ErrorImpl _value, $Res Function(_$ErrorImpl) _then) : super(_value, _then);
+  __$$ErrorImplCopyWithImpl(
+      _$ErrorImpl _value, $Res Function(_$ErrorImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of SingInEmailState
   /// with the given fields replaced by the non-null parameter values.
@@ -949,27 +1014,34 @@ class _$ErrorImpl implements Error {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ErrorImpl &&
-            (identical(other.emailError, emailError) || other.emailError == emailError) &&
-            (identical(other.passordError, passordError) || other.passordError == passordError) &&
-            (identical(other.errorSnackbar, errorSnackbar) || other.errorSnackbar == errorSnackbar));
+            (identical(other.emailError, emailError) ||
+                other.emailError == emailError) &&
+            (identical(other.passordError, passordError) ||
+                other.passordError == passordError) &&
+            (identical(other.errorSnackbar, errorSnackbar) ||
+                other.errorSnackbar == errorSnackbar));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, emailError, passordError, errorSnackbar);
+  int get hashCode =>
+      Object.hash(runtimeType, emailError, passordError, errorSnackbar);
 
   /// Create a copy of SingInEmailState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith => __$$ErrorImplCopyWithImpl<_$ErrorImpl>(this, _$identity);
+  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
+      __$$ErrorImplCopyWithImpl<_$ErrorImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String? emailError, String? passordError) initial,
     required TResult Function(String? emailError, String? passordError) loading,
-    required TResult Function(String? emailError, String? passordError, String? errorSnackbar) error,
+    required TResult Function(
+            String? emailError, String? passordError, String? errorSnackbar)
+        error,
     required TResult Function(String? emailError, String? passordError) success,
   }) {
     return error(emailError, passordError, errorSnackbar);
@@ -980,7 +1052,9 @@ class _$ErrorImpl implements Error {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String? emailError, String? passordError)? initial,
     TResult? Function(String? emailError, String? passordError)? loading,
-    TResult? Function(String? emailError, String? passordError, String? errorSnackbar)? error,
+    TResult? Function(
+            String? emailError, String? passordError, String? errorSnackbar)?
+        error,
     TResult? Function(String? emailError, String? passordError)? success,
   }) {
     return error?.call(emailError, passordError, errorSnackbar);
@@ -991,7 +1065,9 @@ class _$ErrorImpl implements Error {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String? emailError, String? passordError)? initial,
     TResult Function(String? emailError, String? passordError)? loading,
-    TResult Function(String? emailError, String? passordError, String? errorSnackbar)? error,
+    TResult Function(
+            String? emailError, String? passordError, String? errorSnackbar)?
+        error,
     TResult Function(String? emailError, String? passordError)? success,
     required TResult orElse(),
   }) {
@@ -1040,8 +1116,10 @@ class _$ErrorImpl implements Error {
 }
 
 abstract class Error implements SingInEmailState {
-  const factory Error({final String? emailError, final String? passordError, final String? errorSnackbar}) =
-      _$ErrorImpl;
+  const factory Error(
+      {final String? emailError,
+      final String? passordError,
+      final String? errorSnackbar}) = _$ErrorImpl;
 
   @override
   String? get emailError;
@@ -1053,12 +1131,15 @@ abstract class Error implements SingInEmailState {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$SuccessImplCopyWith<$Res> implements $SingInEmailStateCopyWith<$Res> {
-  factory _$$SuccessImplCopyWith(_$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
+abstract class _$$SuccessImplCopyWith<$Res>
+    implements $SingInEmailStateCopyWith<$Res> {
+  factory _$$SuccessImplCopyWith(
+          _$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
       __$$SuccessImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -1066,9 +1147,12 @@ abstract class _$$SuccessImplCopyWith<$Res> implements $SingInEmailStateCopyWith
 }
 
 /// @nodoc
-class __$$SuccessImplCopyWithImpl<$Res> extends _$SingInEmailStateCopyWithImpl<$Res, _$SuccessImpl>
+class __$$SuccessImplCopyWithImpl<$Res>
+    extends _$SingInEmailStateCopyWithImpl<$Res, _$SuccessImpl>
     implements _$$SuccessImplCopyWith<$Res> {
-  __$$SuccessImplCopyWithImpl(_$SuccessImpl _value, $Res Function(_$SuccessImpl) _then) : super(_value, _then);
+  __$$SuccessImplCopyWithImpl(
+      _$SuccessImpl _value, $Res Function(_$SuccessImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of SingInEmailState
   /// with the given fields replaced by the non-null parameter values.
@@ -1111,8 +1195,10 @@ class _$SuccessImpl implements Success {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SuccessImpl &&
-            (identical(other.emailError, emailError) || other.emailError == emailError) &&
-            (identical(other.passordError, passordError) || other.passordError == passordError));
+            (identical(other.emailError, emailError) ||
+                other.emailError == emailError) &&
+            (identical(other.passordError, passordError) ||
+                other.passordError == passordError));
   }
 
   @override
@@ -1123,14 +1209,17 @@ class _$SuccessImpl implements Success {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith => __$$SuccessImplCopyWithImpl<_$SuccessImpl>(this, _$identity);
+  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
+      __$$SuccessImplCopyWithImpl<_$SuccessImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String? emailError, String? passordError) initial,
     required TResult Function(String? emailError, String? passordError) loading,
-    required TResult Function(String? emailError, String? passordError, String? errorSnackbar) error,
+    required TResult Function(
+            String? emailError, String? passordError, String? errorSnackbar)
+        error,
     required TResult Function(String? emailError, String? passordError) success,
   }) {
     return success(emailError, passordError);
@@ -1141,7 +1230,9 @@ class _$SuccessImpl implements Success {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String? emailError, String? passordError)? initial,
     TResult? Function(String? emailError, String? passordError)? loading,
-    TResult? Function(String? emailError, String? passordError, String? errorSnackbar)? error,
+    TResult? Function(
+            String? emailError, String? passordError, String? errorSnackbar)?
+        error,
     TResult? Function(String? emailError, String? passordError)? success,
   }) {
     return success?.call(emailError, passordError);
@@ -1152,7 +1243,9 @@ class _$SuccessImpl implements Success {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String? emailError, String? passordError)? initial,
     TResult Function(String? emailError, String? passordError)? loading,
-    TResult Function(String? emailError, String? passordError, String? errorSnackbar)? error,
+    TResult Function(
+            String? emailError, String? passordError, String? errorSnackbar)?
+        error,
     TResult Function(String? emailError, String? passordError)? success,
     required TResult orElse(),
   }) {
@@ -1201,7 +1294,8 @@ class _$SuccessImpl implements Success {
 }
 
 abstract class Success implements SingInEmailState {
-  const factory Success({final String? emailError, final String? passordError}) = _$SuccessImpl;
+  const factory Success(
+      {final String? emailError, final String? passordError}) = _$SuccessImpl;
 
   @override
   String? get emailError;
@@ -1212,5 +1306,6 @@ abstract class Success implements SingInEmailState {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

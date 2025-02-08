@@ -16,10 +16,10 @@ part 'game_dto.g.dart';
 class GameDto {
   final GameId id;
   final String url;
-  @JsonKey(fromJson: FirebaseDateConverter.datetimeMapFromJson, toJson: FirebaseDateConverter.datetimeMapToJson)
-  final DateTime createdAt;
-  @JsonKey(fromJson: FirebaseDateConverter.datetimeMapFromJson, toJson: FirebaseDateConverter.datetimeMapToJson)
-  final DateTime? endedAt;
+  @JsonKey(toJson: FirebaseDateConverter.datetimeMapToJson, fromJson: FirebaseDateConverter.datetimeMapFromJson)
+  final DateTime timeCreatedAt;
+  @JsonKey(toJson: _datetimeMapToJson, fromJson: _datetimeMapFromJson)
+  final DateTime? timeEndedAt;
   final GameUserDto owner;
   final GameUserDto? opponent;
   final GameStatus gameStatus;
@@ -32,8 +32,8 @@ class GameDto {
   GameDto({
     required this.id,
     required this.url,
-    required this.createdAt,
-    required this.endedAt,
+    required this.timeCreatedAt,
+    required this.timeEndedAt,
     required this.owner,
     required this.opponent,
     required this.gameStatus,
@@ -50,8 +50,8 @@ class GameDto {
     return GameDto(
       id: game.id,
       url: game.url,
-      createdAt: game.createdAt,
-      endedAt: game.endedAt,
+      timeCreatedAt: game.createdAt,
+      timeEndedAt: game.endedAt,
       owner: GameUserDto(id: ownerId),
       opponent: game.teammateUser?.let((user) => GameUserDto(id: user.id)),
       gameStatus: game.gameStatus,
@@ -65,8 +65,8 @@ class GameDto {
   GameDto copyWith({
     GameId? id,
     String? url,
-    DateTime? createdAt,
-    DateTime? endedAt,
+    DateTime? timeCreatedAt,
+    DateTime? timeEndedAt,
     GameUserDto? owner,
     GameUserDto? opponent,
     GameStatus? gameStatus,
@@ -76,8 +76,8 @@ class GameDto {
     return GameDto(
       id: id ?? this.id,
       url: url ?? this.url,
-      createdAt: createdAt ?? this.createdAt,
-      endedAt: endedAt ?? this.endedAt,
+      timeCreatedAt: timeCreatedAt ?? this.timeCreatedAt,
+      timeEndedAt: timeEndedAt ?? this.timeEndedAt,
       owner: owner ?? this.owner,
       opponent: opponent ?? this.opponent,
       gameStatus: gameStatus ?? this.gameStatus,
@@ -85,4 +85,9 @@ class GameDto {
       boardMap: boardMap ?? this.boardMap,
     );
   }
+
+  static int? _datetimeMapToJson(DateTime? dateTime) =>
+      dateTime == null ? null : FirebaseDateConverter.datetimeMapToJson(dateTime);
+  static DateTime? _datetimeMapFromJson(dynamic timeStamp) =>
+      timeStamp == null ? null : FirebaseDateConverter.datetimeMapFromJson(timeStamp);
 }

@@ -53,12 +53,14 @@ mixin _$DeleteAccountEvent {
   /// Create a copy of DeleteAccountEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $DeleteAccountEventCopyWith<DeleteAccountEvent> get copyWith => throw _privateConstructorUsedError;
+  $DeleteAccountEventCopyWith<DeleteAccountEvent> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $DeleteAccountEventCopyWith<$Res> {
-  factory $DeleteAccountEventCopyWith(DeleteAccountEvent value, $Res Function(DeleteAccountEvent) then) =
+  factory $DeleteAccountEventCopyWith(
+          DeleteAccountEvent value, $Res Function(DeleteAccountEvent) then) =
       _$DeleteAccountEventCopyWithImpl<$Res, DeleteAccountEvent>;
   @useResult
   $Res call({String password});
@@ -91,8 +93,10 @@ class _$DeleteAccountEventCopyWithImpl<$Res, $Val extends DeleteAccountEvent>
 }
 
 /// @nodoc
-abstract class _$$DeleteAccountImplCopyWith<$Res> implements $DeleteAccountEventCopyWith<$Res> {
-  factory _$$DeleteAccountImplCopyWith(_$DeleteAccountImpl value, $Res Function(_$DeleteAccountImpl) then) =
+abstract class _$$DeleteAccountImplCopyWith<$Res>
+    implements $DeleteAccountEventCopyWith<$Res> {
+  factory _$$DeleteAccountImplCopyWith(
+          _$DeleteAccountImpl value, $Res Function(_$DeleteAccountImpl) then) =
       __$$DeleteAccountImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -100,9 +104,11 @@ abstract class _$$DeleteAccountImplCopyWith<$Res> implements $DeleteAccountEvent
 }
 
 /// @nodoc
-class __$$DeleteAccountImplCopyWithImpl<$Res> extends _$DeleteAccountEventCopyWithImpl<$Res, _$DeleteAccountImpl>
+class __$$DeleteAccountImplCopyWithImpl<$Res>
+    extends _$DeleteAccountEventCopyWithImpl<$Res, _$DeleteAccountImpl>
     implements _$$DeleteAccountImplCopyWith<$Res> {
-  __$$DeleteAccountImplCopyWithImpl(_$DeleteAccountImpl _value, $Res Function(_$DeleteAccountImpl) _then)
+  __$$DeleteAccountImplCopyWithImpl(
+      _$DeleteAccountImpl _value, $Res Function(_$DeleteAccountImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of DeleteAccountEvent
@@ -139,7 +145,8 @@ class _$DeleteAccountImpl implements _DeleteAccount {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DeleteAccountImpl &&
-            (identical(other.password, password) || other.password == password));
+            (identical(other.password, password) ||
+                other.password == password));
   }
 
   @override
@@ -220,7 +227,8 @@ abstract class _DeleteAccount implements DeleteAccountEvent {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$DeleteAccountImplCopyWith<_$DeleteAccountImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$DeleteAccountImplCopyWith<_$DeleteAccountImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -279,7 +287,8 @@ mixin _$DeleteAccountState {
 
 /// @nodoc
 abstract class $DeleteAccountStateCopyWith<$Res> {
-  factory $DeleteAccountStateCopyWith(DeleteAccountState value, $Res Function(DeleteAccountState) then) =
+  factory $DeleteAccountStateCopyWith(
+          DeleteAccountState value, $Res Function(DeleteAccountState) then) =
       _$DeleteAccountStateCopyWithImpl<$Res, DeleteAccountState>;
 }
 
@@ -299,14 +308,18 @@ class _$DeleteAccountStateCopyWithImpl<$Res, $Val extends DeleteAccountState>
 
 /// @nodoc
 abstract class _$$InitialImplCopyWith<$Res> {
-  factory _$$InitialImplCopyWith(_$InitialImpl value, $Res Function(_$InitialImpl) then) =
+  factory _$$InitialImplCopyWith(
+          _$InitialImpl value, $Res Function(_$InitialImpl) then) =
       __$$InitialImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$InitialImplCopyWithImpl<$Res> extends _$DeleteAccountStateCopyWithImpl<$Res, _$InitialImpl>
+class __$$InitialImplCopyWithImpl<$Res>
+    extends _$DeleteAccountStateCopyWithImpl<$Res, _$InitialImpl>
     implements _$$InitialImplCopyWith<$Res> {
-  __$$InitialImplCopyWithImpl(_$InitialImpl _value, $Res Function(_$InitialImpl) _then) : super(_value, _then);
+  __$$InitialImplCopyWithImpl(
+      _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of DeleteAccountState
   /// with the given fields replaced by the non-null parameter values.
@@ -324,7 +337,8 @@ class _$InitialImpl implements _Initial {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is _$InitialImpl);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$InitialImpl);
   }
 
   @override
@@ -411,14 +425,18 @@ abstract class _Initial implements DeleteAccountState {
 
 /// @nodoc
 abstract class _$$LoadingImplCopyWith<$Res> {
-  factory _$$LoadingImplCopyWith(_$LoadingImpl value, $Res Function(_$LoadingImpl) then) =
+  factory _$$LoadingImplCopyWith(
+          _$LoadingImpl value, $Res Function(_$LoadingImpl) then) =
       __$$LoadingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LoadingImplCopyWithImpl<$Res> extends _$DeleteAccountStateCopyWithImpl<$Res, _$LoadingImpl>
+class __$$LoadingImplCopyWithImpl<$Res>
+    extends _$DeleteAccountStateCopyWithImpl<$Res, _$LoadingImpl>
     implements _$$LoadingImplCopyWith<$Res> {
-  __$$LoadingImplCopyWithImpl(_$LoadingImpl _value, $Res Function(_$LoadingImpl) _then) : super(_value, _then);
+  __$$LoadingImplCopyWithImpl(
+      _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of DeleteAccountState
   /// with the given fields replaced by the non-null parameter values.
@@ -436,7 +454,8 @@ class _$LoadingImpl implements _Loading {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is _$LoadingImpl);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$LoadingImpl);
   }
 
   @override
@@ -523,14 +542,18 @@ abstract class _Loading implements DeleteAccountState {
 
 /// @nodoc
 abstract class _$$SuccessImplCopyWith<$Res> {
-  factory _$$SuccessImplCopyWith(_$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
+  factory _$$SuccessImplCopyWith(
+          _$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
       __$$SuccessImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$SuccessImplCopyWithImpl<$Res> extends _$DeleteAccountStateCopyWithImpl<$Res, _$SuccessImpl>
+class __$$SuccessImplCopyWithImpl<$Res>
+    extends _$DeleteAccountStateCopyWithImpl<$Res, _$SuccessImpl>
     implements _$$SuccessImplCopyWith<$Res> {
-  __$$SuccessImplCopyWithImpl(_$SuccessImpl _value, $Res Function(_$SuccessImpl) _then) : super(_value, _then);
+  __$$SuccessImplCopyWithImpl(
+      _$SuccessImpl _value, $Res Function(_$SuccessImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of DeleteAccountState
   /// with the given fields replaced by the non-null parameter values.
@@ -548,7 +571,8 @@ class _$SuccessImpl implements _Success {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is _$SuccessImpl);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$SuccessImpl);
   }
 
   @override
@@ -635,15 +659,20 @@ abstract class _Success implements DeleteAccountState {
 
 /// @nodoc
 abstract class _$$ErrorImplCopyWith<$Res> {
-  factory _$$ErrorImplCopyWith(_$ErrorImpl value, $Res Function(_$ErrorImpl) then) = __$$ErrorImplCopyWithImpl<$Res>;
+  factory _$$ErrorImplCopyWith(
+          _$ErrorImpl value, $Res Function(_$ErrorImpl) then) =
+      __$$ErrorImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String error});
 }
 
 /// @nodoc
-class __$$ErrorImplCopyWithImpl<$Res> extends _$DeleteAccountStateCopyWithImpl<$Res, _$ErrorImpl>
+class __$$ErrorImplCopyWithImpl<$Res>
+    extends _$DeleteAccountStateCopyWithImpl<$Res, _$ErrorImpl>
     implements _$$ErrorImplCopyWith<$Res> {
-  __$$ErrorImplCopyWithImpl(_$ErrorImpl _value, $Res Function(_$ErrorImpl) _then) : super(_value, _then);
+  __$$ErrorImplCopyWithImpl(
+      _$ErrorImpl _value, $Res Function(_$ErrorImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of DeleteAccountState
   /// with the given fields replaced by the non-null parameter values.
@@ -690,7 +719,8 @@ class _$ErrorImpl implements _Error {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith => __$$ErrorImplCopyWithImpl<_$ErrorImpl>(this, _$identity);
+  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
+      __$$ErrorImplCopyWithImpl<_$ErrorImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -775,5 +805,6 @@ abstract class _Error implements DeleteAccountState {
   /// Create a copy of DeleteAccountState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

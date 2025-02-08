@@ -77,7 +77,7 @@ class AiGameServiceImpl implements AiGameService {
         (i) => List.generate(
           3,
           (j) {
-            final cellId = CellId(i - 1, j - 1);
+            final cellId = CellId(i, j);
             final cell = board[cellId];
             if (cell == null) return 0.0;
             return cell == CellState.owner ? 1.0 : -1.0;
@@ -89,8 +89,8 @@ class AiGameServiceImpl implements AiGameService {
   }
 
   CellId _indexToCellId(int index) {
-    final row = (index ~/ 3) - 1;
-    final col = (index % 3) - 1;
+    final row = index ~/ 3;
+    final col = index % 3;
     return CellId(row, col);
   }
 
