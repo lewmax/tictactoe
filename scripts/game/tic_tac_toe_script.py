@@ -3,15 +3,11 @@ import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 
 from typing import Optional, Tuple
-import numpy as np
 from scripts.game.tic_tac_toe_game import TicTacToeGame
 import random
 import math
 
-import tensorflow as tf
-from tensorflow.keras import layers, models
 import os
-from tqdm import tqdm
 
 class TicTacToeScript:
     @staticmethod

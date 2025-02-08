@@ -18,10 +18,7 @@ class GameDto {
   final String url;
   @JsonKey(fromJson: FirebaseDateConverter.datetimeMapFromJson, toJson: FirebaseDateConverter.datetimeMapToJson)
   final DateTime createdAt;
-  @JsonKey(
-    fromJson: FirebaseDateConverter.datetimeMapFromJsonNullable,
-    toJson: FirebaseDateConverter.datetimeMapToJsonNullable,
-  )
+  @JsonKey(fromJson: FirebaseDateConverter.datetimeMapFromJson, toJson: FirebaseDateConverter.datetimeMapToJson)
   final DateTime? endedAt;
   final GameUserDto owner;
   final GameUserDto? opponent;

@@ -83,25 +83,20 @@ class TicTacToeModel:
         self.game_states = []
         self.move_history = []
 
-    def save_as_tflite(self, output_path: str):
-        """Converts and saves the model in TFLite format with optimizations."""
-        print("\nConverting to TFLite...")
+    def save_model(self, filepath: str):
+        """Saves the model to a file"""
+        self.model.save(filepath)
+
+    def save_as_tflite(self, filepath: str):
+        """Saves the model in TFLite format"""
         converter = tf.lite.TFLiteConverter.from_keras_model(self.model)
-        
-        # Enable optimizations
-        converter.optimizations = [tf.lite.Optimize.DEFAULT]
-        converter.target_spec.supported_types = [tf.float16]
-        
-        # Enable quantization
-        converter.optimizations = [tf.lite.Optimize.DEFAULT]
-        converter.target_spec.supported_ops = [
-            tf.lite.OpsSet.TFLITE_BUILTINS,
-            tf.lite.OpsSet.SELECT_TF_OPS
-        ]
-        
         tflite_model = converter.convert()
-        
-        print(f"Saving model to {output_path}")
-        with open(output_path, 'wb') as f:
+        with open(filepath, 'wb') as f:
             f.write(tflite_model)
-        print(f"Model size: {os.path.getsize(output_path) / 1024:.1f} KB")
+
+    @classmethod
+    def load_model(cls, filepath: str) -> 'TicTacToeModel':
+        """Loads a model from a file"""
+        instance = cls()
+        instance.model = tf.keras.models.load_model(filepath)
+        return instance

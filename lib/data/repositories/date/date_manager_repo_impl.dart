@@ -14,33 +14,47 @@ final class DateManagerRepoImpl with RepositoryValidationMixin implements DateMa
   @FactoryMethod(preResolve: true)
   static Future<DateManagerRepoImpl> create() async {
     final instance = DateManagerRepoImpl._();
-    await instance._init(true);
+    await instance._init();
     return instance;
   }
 
   DateManagerRepoImpl._();
 
+  late final Duration _serverLocalTimeDiff;
   final _currDay = BehaviorSubject<DateTime>();
 
   @override
-  ValueStream<DateTime> get currDayStream => _currDay.stream;
+  ValueStream<DateTime> get currDayStream {
+    _updateCurrentTime();
+    return _currDay.stream;
+  }
 
   Timer? _timer;
 
-  Future<void> _init(bool isInitial) async {
-    final resp = await getCurrentServerDate();
-    if (resp.failure != null && isInitial) throw Exception('Failed to get current server date');
-    final now = resp.success ?? (_currDay.valueOrNull?.add(1.days) ?? DateTime.now().toUtc());
-
-    final tomorrow = DateTime(now.year, now.month, now.day + 1, 0, 10); // Next day at 00:10
-    final durationUntilMidnight = tomorrow.difference(now);
-    _timer?.cancel();
-    _timer = Timer(durationUntilMidnight, () => _init(false));
-
+  void _updateCurrentTime() {
+    final now = DateTime.now().toUtc().subtract(_serverLocalTimeDiff);
+    if (_currDay.hasValue && _currDay.value.hour == now.hour && _currDay.value.minute == now.minute) return;
     _currDay.value = now;
   }
 
-  Future<NetworkResponse<DateTime>> getCurrentServerDate() async {
+  Future<void> _init() async {
+    final resp = await _getCurrentServerDate();
+
+    if (resp.failure != null) throw Exception('Failed to get current server date');
+
+    final now = resp.successOrThrow;
+    _serverLocalTimeDiff = DateTime.now().toUtc().difference(now);
+
+    _updateCurrentTime();
+
+    // Schedule periodic updates
+    _timer?.cancel();
+    _timer = Timer.periodic(1.hours, (_) {
+      _updateCurrentTime();
+    });
+  }
+
+  Future<NetworkResponse<DateTime>> _getCurrentServerDate() async {
     return handleRequest(
       () async {
         const apiKey = 'B3D611IK0DOO';
@@ -54,8 +68,8 @@ final class DateManagerRepoImpl with RepositoryValidationMixin implements DateMa
           if (response.statusCode == 200) {
             final data = jsonDecode(response.body) as Map<String, dynamic>;
             if (data['status'] == 'OK') {
-              final dateTimeString = data['formatted'] as String;
-              final date = DateTime.parse(dateTimeString);
+              final timestamp = data['timestamp'] as int;
+              final date = DateTime.fromMillisecondsSinceEpoch(timestamp * 1000, isUtc: true);
               return NetworkResponse.success(date);
             } else {
               return NetworkResponse.failure(data['message'] as String);
