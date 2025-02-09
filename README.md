@@ -15,9 +15,7 @@ A sleek and modern implementation of the classic Tic-Tac-Toe game with multiple 
   <img src="https://github.com/user-attachments/assets/a4e4f583-694f-4767-bca7-0660c68770eb" width="160" />
   <img src="https://github.com/user-attachments/assets/8ddf1a86-4ee2-4b87-bc68-63a8a2f8e840" width="160" />
   <img src="https://github.com/user-attachments/assets/d3218c69-26eb-4464-a361-916acfd8df77" width="160" />
-
-
-</div>!
+</div>
 
 ### Multiple Game Modes
 
