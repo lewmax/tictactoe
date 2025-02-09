@@ -23,17 +23,13 @@ import '../../data/repositories/app/device_uuid_repo_impl.dart' as _i194;
 import '../../data/repositories/app/remote_config_repo_impl.dart' as _i784;
 import '../../data/repositories/auth/auth_repo_impl.dart' as _i909;
 import '../../data/repositories/date/date_manager_repo_impl.dart' as _i5;
-import '../../data/repositories/force_update/force_update_repo_impl.dart'
-    as _i529;
+import '../../data/repositories/force_update/force_update_repo_impl.dart' as _i529;
 import '../../data/repositories/game/game_repo_impl.dart' as _i381;
-import '../../data/repositories/game/recent_game_users_repo_impl.dart'
-    as _i1069;
-import '../../data/repositories/leaderboard/leaderboard_repo_impl.dart'
-    as _i921;
+import '../../data/repositories/game/recent_game_users_repo_impl.dart' as _i1069;
+import '../../data/repositories/leaderboard/leaderboard_repo_impl.dart' as _i921;
 import '../../data/repositories/lifecycle/lifecycle_repo_impl.dart' as _i340;
 import '../../data/repositories/referal/referal_repository_impl.dart' as _i520;
-import '../../data/repositories/screen_activity/screen_activity_repo_impl.dart'
-    as _i968;
+import '../../data/repositories/screen_activity/screen_activity_repo_impl.dart' as _i968;
 import '../../domain/entities/game/game.dart' as _i719;
 import '../../domain/repositories/app/app_config_repo.dart' as _i665;
 import '../../domain/repositories/app/device_uuid_repository.dart' as _i1006;
@@ -46,30 +42,20 @@ import '../../domain/repositories/game/recent_game_users_repo.dart' as _i723;
 import '../../domain/repositories/leaderboard/leaderboard_repo.dart' as _i452;
 import '../../domain/repositories/lifecycle/lifecycle_repo.dart' as _i663;
 import '../../domain/repositories/referal/referal_repository.dart' as _i1067;
-import '../../domain/repositories/screen_activity/screen_activity_repo.dart'
-    as _i675;
+import '../../domain/repositories/screen_activity/screen_activity_repo.dart' as _i675;
 import '../../domain/services/ai_game_service.dart' as _i1000;
-import '../../presentation/features/auth/reset_password/bloc/reset_password_bloc.dart'
-    as _i920;
+import '../../presentation/features/auth/reset_password/bloc/reset_password_bloc.dart' as _i920;
 import '../../presentation/features/auth/sign/cubit/sign_cubit.dart' as _i604;
-import '../../presentation/features/auth/sign_in_email/bloc/sing_in_email_bloc.dart'
-    as _i304;
-import '../../presentation/features/auth/sign_up/bloc/sign_up_bloc.dart'
-    as _i981;
-import '../../presentation/features/game/ai_tensorflow/bloc/ai_game_bloc.dart'
-    as _i799;
-import '../../presentation/features/game/offline_multiplayer/bloc/offline_multiplayer_bloc.dart'
-    as _i257;
-import '../../presentation/features/game/offline_script/bloc/offline_game_bloc.dart'
-    as _i460;
-import '../../presentation/features/game/online_multiplayer/bloc/game_bloc.dart'
-    as _i350;
+import '../../presentation/features/auth/sign_in_email/bloc/sing_in_email_bloc.dart' as _i304;
+import '../../presentation/features/auth/sign_up/bloc/sign_up_bloc.dart' as _i981;
+import '../../presentation/features/game/ai_tensorflow/bloc/ai_game_bloc.dart' as _i799;
+import '../../presentation/features/game/offline_multiplayer/bloc/offline_multiplayer_bloc.dart' as _i257;
+import '../../presentation/features/game/offline_script/bloc/offline_game_bloc.dart' as _i460;
+import '../../presentation/features/game/online_multiplayer/bloc/game_bloc.dart' as _i350;
 import '../../presentation/features/home/bloc/home_bloc.dart' as _i635;
-import '../../presentation/features/leaderboard/bloc/leaderboard_bloc.dart'
-    as _i972;
+import '../../presentation/features/leaderboard/bloc/leaderboard_bloc.dart' as _i972;
 import '../../presentation/features/profile/bloc/profile_bloc.dart' as _i930;
-import '../../presentation/features/profile/delete_account/bloc/delete_account_bloc.dart'
-    as _i548;
+import '../../presentation/features/profile/delete_account/bloc/delete_account_bloc.dart' as _i548;
 import 'modules/firebase_module.dart' as _i398;
 import 'modules/storage_module.dart' as _i148;
 
@@ -86,10 +72,8 @@ Future<_i174.GetIt> $configure(
   );
   final firebaseModule = _$FirebaseModule();
   final appStorageModule = _$AppStorageModule();
-  gh.factory<_i627.FirebaseRemoteConfig>(
-      () => firebaseModule.firebaseRemoteConfig());
-  gh.factory<_i257.OfflineMultiplayerBloc>(
-      () => _i257.OfflineMultiplayerBloc());
+  gh.factory<_i627.FirebaseRemoteConfig>(() => firebaseModule.firebaseRemoteConfig());
+  gh.factory<_i257.OfflineMultiplayerBloc>(() => _i257.OfflineMultiplayerBloc());
   await gh.singletonAsync<_i460.SharedPreferences>(
     () => appStorageModule.sharedPreferences,
     preResolve: true,
@@ -99,14 +83,11 @@ Future<_i174.GetIt> $configure(
     preResolve: true,
   );
   gh.singleton<_i215.GameDataSource>(() => _i215.GameDataSource());
-  gh.lazySingleton<_i892.FirebaseMessaging>(
-      () => firebaseModule.firebaseMessaging());
-  gh.lazySingleton<_i809.FirebaseFunctions>(
-      () => firebaseModule.firebaseFunctions());
+  gh.lazySingleton<_i892.FirebaseMessaging>(() => firebaseModule.firebaseMessaging());
+  gh.lazySingleton<_i809.FirebaseFunctions>(() => firebaseModule.firebaseFunctions());
   gh.lazySingleton<_i488.UserDataSource>(() => _i488.UserDataSource());
   gh.lazySingleton<_i665.AppConfigRepo>(() => _i203.AppConfigRepoImpl());
-  gh.lazySingleton<_i1006.DeviceUuidRepository>(
-      () => _i194.DeviceUuidRepoImpl(gh<_i460.SharedPreferences>()));
+  gh.lazySingleton<_i1006.DeviceUuidRepository>(() => _i194.DeviceUuidRepoImpl(gh<_i460.SharedPreferences>()));
   gh.lazySingleton<_i663.LifecycleRepo>(
     () => _i340.LifecycleRepoImpl(),
     dispose: (i) => i.dispose(),
@@ -128,8 +109,7 @@ Future<_i174.GetIt> $configure(
     () => _i784.RemoteConfigRepoImpl.create(gh<_i627.FirebaseRemoteConfig>()),
     preResolve: true,
   );
-  gh.lazySingleton<_i723.RecentGameUsersRepo>(
-      () => _i1069.RecentGameUsersRepoImpl(gh<_i488.UserDataSource>()));
+  gh.lazySingleton<_i723.RecentGameUsersRepo>(() => _i1069.RecentGameUsersRepoImpl(gh<_i488.UserDataSource>()));
   await gh.lazySingletonAsync<_i628.AuthRepo>(
     () => _i909.AuthRepoImpl.create(
       gh<_i488.UserDataSource>(),
@@ -143,8 +123,7 @@ Future<_i174.GetIt> $configure(
         referalRepository: gh<_i1067.ReferalRepo>(),
         recentGameUsersRepo: gh<_i723.RecentGameUsersRepo>(),
       ));
-  gh.factory<_i460.OfflineGameBloc>(
-      () => _i460.OfflineGameBloc(gh<_i628.AuthRepo>()));
+  gh.factory<_i460.OfflineGameBloc>(() => _i460.OfflineGameBloc(gh<_i628.AuthRepo>()));
   gh.factoryParam<_i350.GameBloc, _i719.GameId?, dynamic>((
     _gameId,
     _,
@@ -154,19 +133,15 @@ Future<_i174.GetIt> $configure(
         gh<_i628.AuthRepo>(),
         _gameId,
       ));
-  gh.factory<_i604.SignCubit>(
-      () => _i604.SignCubit(authRepo: gh<_i628.AuthRepo>()));
+  gh.factory<_i604.SignCubit>(() => _i604.SignCubit(authRepo: gh<_i628.AuthRepo>()));
   gh.lazySingleton<_i893.ForceUpdateRepo>(() => _i529.ForceUpdateRepoImpl(
         gh<_i222.RemoteConfigRepo>(),
         gh<_i665.AppConfigRepo>(),
       ));
-  gh.factory<_i920.ResetPasswordBloc>(
-      () => _i920.ResetPasswordBloc(gh<_i628.AuthRepo>()));
-  gh.factory<_i304.SingInEmailBloc>(
-      () => _i304.SingInEmailBloc(gh<_i628.AuthRepo>()));
+  gh.factory<_i920.ResetPasswordBloc>(() => _i920.ResetPasswordBloc(gh<_i628.AuthRepo>()));
+  gh.factory<_i304.SingInEmailBloc>(() => _i304.SingInEmailBloc(gh<_i628.AuthRepo>()));
   gh.factory<_i981.SignUpBloc>(() => _i981.SignUpBloc(gh<_i628.AuthRepo>()));
-  gh.factory<_i548.DeleteAccountBloc>(
-      () => _i548.DeleteAccountBloc(gh<_i628.AuthRepo>()));
+  gh.factory<_i548.DeleteAccountBloc>(() => _i548.DeleteAccountBloc(gh<_i628.AuthRepo>()));
   gh.factory<_i930.ProfileBloc>(() => _i930.ProfileBloc(gh<_i628.AuthRepo>()));
   gh.factory<_i799.AiGameBloc>(() => _i799.AiGameBloc(
         gh<_i1000.AiGameService>(),

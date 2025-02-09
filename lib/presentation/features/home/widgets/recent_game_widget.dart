@@ -103,5 +103,6 @@ class RecentGameWidget extends StatelessWidget {
     );
   }
 
-  Text _finishTime(BuildContext context) => Text(game.endedAt?.let((date) => DateFormat('dd/MM/yy').format(date)) ?? '', style: context.textStyles.mulish16);
+  Text _finishTime(BuildContext context) =>
+      Text(game.endedAt?.let((date) => DateFormat('dd/MM/yy').format(date)) ?? '', style: context.textStyles.mulish16);
 }

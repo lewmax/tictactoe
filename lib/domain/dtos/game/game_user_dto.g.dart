@@ -10,7 +10,6 @@ GameUserDto _$GameUserDtoFromJson(Map<String, dynamic> json) => GameUserDto(
       id: ModelId<User, String>.fromJson(json['id']),
     );
 
-Map<String, dynamic> _$GameUserDtoToJson(GameUserDto instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$GameUserDtoToJson(GameUserDto instance) => <String, dynamic>{
       'id': instance.id.toJson(),
     };

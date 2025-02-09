@@ -32,7 +32,8 @@ class JoinGameDialog extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 18),
-            Text(context.l10n.home_join_dialog_text, style: context.textStyles.mulish15Bold, textAlign: TextAlign.center),
+            Text(context.l10n.home_join_dialog_text,
+                style: context.textStyles.mulish15Bold, textAlign: TextAlign.center),
             TextField(
               controller: controller,
               style: context.textStyles.mulish15Medium.copyWith(color: context.colors.grey1),

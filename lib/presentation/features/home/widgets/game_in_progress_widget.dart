@@ -53,8 +53,8 @@ class GameInProgressWidget extends StatelessWidget {
                       CirleUserImage.network(image: myUser.imageUrl, name: myUser.name, radius: 14),
                       const SizedBox(width: 10),
                       Expanded(
-                          child:
-                              Text(myUser.name, style: context.textStyles.mulish16, overflow: TextOverflow.ellipsis),),
+                        child: Text(myUser.name, style: context.textStyles.mulish16, overflow: TextOverflow.ellipsis),
+                      ),
                     ],
                   ),
                 ),
@@ -63,8 +63,10 @@ class GameInProgressWidget extends StatelessWidget {
                   child: Center(
                     child: GestureDetector(
                       onTap: () => context.router.push(GameRoute(gameId: game.id)),
-                      child: Text(context.l10n.home_rejoinBtn,
-                          style: context.textStyles.mulish16Bold.copyWith(color: context.colors.blue),),
+                      child: Text(
+                        context.l10n.home_rejoinBtn,
+                        style: context.textStyles.mulish16Bold.copyWith(color: context.colors.blue),
+                      ),
                     ),
                   ),
                 ),

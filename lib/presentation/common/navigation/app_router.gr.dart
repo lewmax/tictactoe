@@ -83,8 +83,7 @@ class GameRoute extends PageRouteInfo<GameRouteArgs> {
   static PageInfo page = PageInfo(
     name,
     builder: (data) {
-      final args =
-          data.argsAs<GameRouteArgs>(orElse: () => const GameRouteArgs());
+      final args = data.argsAs<GameRouteArgs>(orElse: () => const GameRouteArgs());
       return GamePage(gameId: args.gameId);
     },
   );

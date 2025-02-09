@@ -88,14 +88,12 @@ mixin _$SignUpEvent {
 
 /// @nodoc
 abstract class $SignUpEventCopyWith<$Res> {
-  factory $SignUpEventCopyWith(
-          SignUpEvent value, $Res Function(SignUpEvent) then) =
+  factory $SignUpEventCopyWith(SignUpEvent value, $Res Function(SignUpEvent) then) =
       _$SignUpEventCopyWithImpl<$Res, SignUpEvent>;
 }
 
 /// @nodoc
-class _$SignUpEventCopyWithImpl<$Res, $Val extends SignUpEvent>
-    implements $SignUpEventCopyWith<$Res> {
+class _$SignUpEventCopyWithImpl<$Res, $Val extends SignUpEvent> implements $SignUpEventCopyWith<$Res> {
   _$SignUpEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -109,18 +107,14 @@ class _$SignUpEventCopyWithImpl<$Res, $Val extends SignUpEvent>
 
 /// @nodoc
 abstract class _$$SignUpImplCopyWith<$Res> {
-  factory _$$SignUpImplCopyWith(
-          _$SignUpImpl value, $Res Function(_$SignUpImpl) then) =
+  factory _$$SignUpImplCopyWith(_$SignUpImpl value, $Res Function(_$SignUpImpl) then) =
       __$$SignUpImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$SignUpImplCopyWithImpl<$Res>
-    extends _$SignUpEventCopyWithImpl<$Res, _$SignUpImpl>
+class __$$SignUpImplCopyWithImpl<$Res> extends _$SignUpEventCopyWithImpl<$Res, _$SignUpImpl>
     implements _$$SignUpImplCopyWith<$Res> {
-  __$$SignUpImplCopyWithImpl(
-      _$SignUpImpl _value, $Res Function(_$SignUpImpl) _then)
-      : super(_value, _then);
+  __$$SignUpImplCopyWithImpl(_$SignUpImpl _value, $Res Function(_$SignUpImpl) _then) : super(_value, _then);
 
   /// Create a copy of SignUpEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -138,8 +132,7 @@ class _$SignUpImpl implements _SignUp {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SignUpImpl);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$SignUpImpl);
   }
 
   @override
@@ -244,19 +237,16 @@ abstract class _SignUp implements SignUpEvent {
 
 /// @nodoc
 abstract class _$$ClearEmailErrorImplCopyWith<$Res> {
-  factory _$$ClearEmailErrorImplCopyWith(_$ClearEmailErrorImpl value,
-          $Res Function(_$ClearEmailErrorImpl) then) =
+  factory _$$ClearEmailErrorImplCopyWith(_$ClearEmailErrorImpl value, $Res Function(_$ClearEmailErrorImpl) then) =
       __$$ClearEmailErrorImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String email});
 }
 
 /// @nodoc
-class __$$ClearEmailErrorImplCopyWithImpl<$Res>
-    extends _$SignUpEventCopyWithImpl<$Res, _$ClearEmailErrorImpl>
+class __$$ClearEmailErrorImplCopyWithImpl<$Res> extends _$SignUpEventCopyWithImpl<$Res, _$ClearEmailErrorImpl>
     implements _$$ClearEmailErrorImplCopyWith<$Res> {
-  __$$ClearEmailErrorImplCopyWithImpl(
-      _$ClearEmailErrorImpl _value, $Res Function(_$ClearEmailErrorImpl) _then)
+  __$$ClearEmailErrorImplCopyWithImpl(_$ClearEmailErrorImpl _value, $Res Function(_$ClearEmailErrorImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of SignUpEvent
@@ -305,8 +295,7 @@ class _$ClearEmailErrorImpl implements _ClearEmailError {
   @override
   @pragma('vm:prefer-inline')
   _$$ClearEmailErrorImplCopyWith<_$ClearEmailErrorImpl> get copyWith =>
-      __$$ClearEmailErrorImplCopyWithImpl<_$ClearEmailErrorImpl>(
-          this, _$identity);
+      __$$ClearEmailErrorImplCopyWithImpl<_$ClearEmailErrorImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -409,25 +398,22 @@ abstract class _ClearEmailError implements SignUpEvent {
   /// Create a copy of SignUpEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ClearEmailErrorImplCopyWith<_$ClearEmailErrorImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ClearEmailErrorImplCopyWith<_$ClearEmailErrorImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$ClearFullnameErrorImplCopyWith<$Res> {
-  factory _$$ClearFullnameErrorImplCopyWith(_$ClearFullnameErrorImpl value,
-          $Res Function(_$ClearFullnameErrorImpl) then) =
+  factory _$$ClearFullnameErrorImplCopyWith(
+          _$ClearFullnameErrorImpl value, $Res Function(_$ClearFullnameErrorImpl) then) =
       __$$ClearFullnameErrorImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String fullname});
 }
 
 /// @nodoc
-class __$$ClearFullnameErrorImplCopyWithImpl<$Res>
-    extends _$SignUpEventCopyWithImpl<$Res, _$ClearFullnameErrorImpl>
+class __$$ClearFullnameErrorImplCopyWithImpl<$Res> extends _$SignUpEventCopyWithImpl<$Res, _$ClearFullnameErrorImpl>
     implements _$$ClearFullnameErrorImplCopyWith<$Res> {
-  __$$ClearFullnameErrorImplCopyWithImpl(_$ClearFullnameErrorImpl _value,
-      $Res Function(_$ClearFullnameErrorImpl) _then)
+  __$$ClearFullnameErrorImplCopyWithImpl(_$ClearFullnameErrorImpl _value, $Res Function(_$ClearFullnameErrorImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of SignUpEvent
@@ -464,8 +450,7 @@ class _$ClearFullnameErrorImpl implements _ClearFullnameError {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ClearFullnameErrorImpl &&
-            (identical(other.fullname, fullname) ||
-                other.fullname == fullname));
+            (identical(other.fullname, fullname) || other.fullname == fullname));
   }
 
   @override
@@ -477,8 +462,7 @@ class _$ClearFullnameErrorImpl implements _ClearFullnameError {
   @override
   @pragma('vm:prefer-inline')
   _$$ClearFullnameErrorImplCopyWith<_$ClearFullnameErrorImpl> get copyWith =>
-      __$$ClearFullnameErrorImplCopyWithImpl<_$ClearFullnameErrorImpl>(
-          this, _$identity);
+      __$$ClearFullnameErrorImplCopyWithImpl<_$ClearFullnameErrorImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -574,33 +558,28 @@ class _$ClearFullnameErrorImpl implements _ClearFullnameError {
 }
 
 abstract class _ClearFullnameError implements SignUpEvent {
-  const factory _ClearFullnameError(final String fullname) =
-      _$ClearFullnameErrorImpl;
+  const factory _ClearFullnameError(final String fullname) = _$ClearFullnameErrorImpl;
 
   String get fullname;
 
   /// Create a copy of SignUpEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ClearFullnameErrorImplCopyWith<_$ClearFullnameErrorImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ClearFullnameErrorImplCopyWith<_$ClearFullnameErrorImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$ChangeImageImplCopyWith<$Res> {
-  factory _$$ChangeImageImplCopyWith(
-          _$ChangeImageImpl value, $Res Function(_$ChangeImageImpl) then) =
+  factory _$$ChangeImageImplCopyWith(_$ChangeImageImpl value, $Res Function(_$ChangeImageImpl) then) =
       __$$ChangeImageImplCopyWithImpl<$Res>;
   @useResult
   $Res call({XFile? image});
 }
 
 /// @nodoc
-class __$$ChangeImageImplCopyWithImpl<$Res>
-    extends _$SignUpEventCopyWithImpl<$Res, _$ChangeImageImpl>
+class __$$ChangeImageImplCopyWithImpl<$Res> extends _$SignUpEventCopyWithImpl<$Res, _$ChangeImageImpl>
     implements _$$ChangeImageImplCopyWith<$Res> {
-  __$$ChangeImageImplCopyWithImpl(
-      _$ChangeImageImpl _value, $Res Function(_$ChangeImageImpl) _then)
+  __$$ChangeImageImplCopyWithImpl(_$ChangeImageImpl _value, $Res Function(_$ChangeImageImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of SignUpEvent
@@ -752,25 +731,21 @@ abstract class _ChangeImage implements SignUpEvent {
   /// Create a copy of SignUpEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ChangeImageImplCopyWith<_$ChangeImageImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ChangeImageImplCopyWith<_$ChangeImageImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$ChangePhoneNumberImplCopyWith<$Res> {
-  factory _$$ChangePhoneNumberImplCopyWith(_$ChangePhoneNumberImpl value,
-          $Res Function(_$ChangePhoneNumberImpl) then) =
+  factory _$$ChangePhoneNumberImplCopyWith(_$ChangePhoneNumberImpl value, $Res Function(_$ChangePhoneNumberImpl) then) =
       __$$ChangePhoneNumberImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String phone});
 }
 
 /// @nodoc
-class __$$ChangePhoneNumberImplCopyWithImpl<$Res>
-    extends _$SignUpEventCopyWithImpl<$Res, _$ChangePhoneNumberImpl>
+class __$$ChangePhoneNumberImplCopyWithImpl<$Res> extends _$SignUpEventCopyWithImpl<$Res, _$ChangePhoneNumberImpl>
     implements _$$ChangePhoneNumberImplCopyWith<$Res> {
-  __$$ChangePhoneNumberImplCopyWithImpl(_$ChangePhoneNumberImpl _value,
-      $Res Function(_$ChangePhoneNumberImpl) _then)
+  __$$ChangePhoneNumberImplCopyWithImpl(_$ChangePhoneNumberImpl _value, $Res Function(_$ChangePhoneNumberImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of SignUpEvent
@@ -819,8 +794,7 @@ class _$ChangePhoneNumberImpl implements _ChangePhoneNumber {
   @override
   @pragma('vm:prefer-inline')
   _$$ChangePhoneNumberImplCopyWith<_$ChangePhoneNumberImpl> get copyWith =>
-      __$$ChangePhoneNumberImplCopyWithImpl<_$ChangePhoneNumberImpl>(
-          this, _$identity);
+      __$$ChangePhoneNumberImplCopyWithImpl<_$ChangePhoneNumberImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -916,33 +890,28 @@ class _$ChangePhoneNumberImpl implements _ChangePhoneNumber {
 }
 
 abstract class _ChangePhoneNumber implements SignUpEvent {
-  const factory _ChangePhoneNumber(final String phone) =
-      _$ChangePhoneNumberImpl;
+  const factory _ChangePhoneNumber(final String phone) = _$ChangePhoneNumberImpl;
 
   String get phone;
 
   /// Create a copy of SignUpEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ChangePhoneNumberImplCopyWith<_$ChangePhoneNumberImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ChangePhoneNumberImplCopyWith<_$ChangePhoneNumberImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$PhoneCountryCodeImplCopyWith<$Res> {
-  factory _$$PhoneCountryCodeImplCopyWith(_$PhoneCountryCodeImpl value,
-          $Res Function(_$PhoneCountryCodeImpl) then) =
+  factory _$$PhoneCountryCodeImplCopyWith(_$PhoneCountryCodeImpl value, $Res Function(_$PhoneCountryCodeImpl) then) =
       __$$PhoneCountryCodeImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String countryCode});
 }
 
 /// @nodoc
-class __$$PhoneCountryCodeImplCopyWithImpl<$Res>
-    extends _$SignUpEventCopyWithImpl<$Res, _$PhoneCountryCodeImpl>
+class __$$PhoneCountryCodeImplCopyWithImpl<$Res> extends _$SignUpEventCopyWithImpl<$Res, _$PhoneCountryCodeImpl>
     implements _$$PhoneCountryCodeImplCopyWith<$Res> {
-  __$$PhoneCountryCodeImplCopyWithImpl(_$PhoneCountryCodeImpl _value,
-      $Res Function(_$PhoneCountryCodeImpl) _then)
+  __$$PhoneCountryCodeImplCopyWithImpl(_$PhoneCountryCodeImpl _value, $Res Function(_$PhoneCountryCodeImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of SignUpEvent
@@ -979,8 +948,7 @@ class _$PhoneCountryCodeImpl implements _PhoneCountryCode {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PhoneCountryCodeImpl &&
-            (identical(other.countryCode, countryCode) ||
-                other.countryCode == countryCode));
+            (identical(other.countryCode, countryCode) || other.countryCode == countryCode));
   }
 
   @override
@@ -992,8 +960,7 @@ class _$PhoneCountryCodeImpl implements _PhoneCountryCode {
   @override
   @pragma('vm:prefer-inline')
   _$$PhoneCountryCodeImplCopyWith<_$PhoneCountryCodeImpl> get copyWith =>
-      __$$PhoneCountryCodeImplCopyWithImpl<_$PhoneCountryCodeImpl>(
-          this, _$identity);
+      __$$PhoneCountryCodeImplCopyWithImpl<_$PhoneCountryCodeImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1089,33 +1056,28 @@ class _$PhoneCountryCodeImpl implements _PhoneCountryCode {
 }
 
 abstract class _PhoneCountryCode implements SignUpEvent {
-  const factory _PhoneCountryCode(final String countryCode) =
-      _$PhoneCountryCodeImpl;
+  const factory _PhoneCountryCode(final String countryCode) = _$PhoneCountryCodeImpl;
 
   String get countryCode;
 
   /// Create a copy of SignUpEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PhoneCountryCodeImplCopyWith<_$PhoneCountryCodeImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$PhoneCountryCodeImplCopyWith<_$PhoneCountryCodeImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$ClearPassErrorImplCopyWith<$Res> {
-  factory _$$ClearPassErrorImplCopyWith(_$ClearPassErrorImpl value,
-          $Res Function(_$ClearPassErrorImpl) then) =
+  factory _$$ClearPassErrorImplCopyWith(_$ClearPassErrorImpl value, $Res Function(_$ClearPassErrorImpl) then) =
       __$$ClearPassErrorImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String password});
 }
 
 /// @nodoc
-class __$$ClearPassErrorImplCopyWithImpl<$Res>
-    extends _$SignUpEventCopyWithImpl<$Res, _$ClearPassErrorImpl>
+class __$$ClearPassErrorImplCopyWithImpl<$Res> extends _$SignUpEventCopyWithImpl<$Res, _$ClearPassErrorImpl>
     implements _$$ClearPassErrorImplCopyWith<$Res> {
-  __$$ClearPassErrorImplCopyWithImpl(
-      _$ClearPassErrorImpl _value, $Res Function(_$ClearPassErrorImpl) _then)
+  __$$ClearPassErrorImplCopyWithImpl(_$ClearPassErrorImpl _value, $Res Function(_$ClearPassErrorImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of SignUpEvent
@@ -1152,8 +1114,7 @@ class _$ClearPassErrorImpl implements _ClearPassError {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ClearPassErrorImpl &&
-            (identical(other.password, password) ||
-                other.password == password));
+            (identical(other.password, password) || other.password == password));
   }
 
   @override
@@ -1165,8 +1126,7 @@ class _$ClearPassErrorImpl implements _ClearPassError {
   @override
   @pragma('vm:prefer-inline')
   _$$ClearPassErrorImplCopyWith<_$ClearPassErrorImpl> get copyWith =>
-      __$$ClearPassErrorImplCopyWithImpl<_$ClearPassErrorImpl>(
-          this, _$identity);
+      __$$ClearPassErrorImplCopyWithImpl<_$ClearPassErrorImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1269,8 +1229,7 @@ abstract class _ClearPassError implements SignUpEvent {
   /// Create a copy of SignUpEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ClearPassErrorImplCopyWith<_$ClearPassErrorImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ClearPassErrorImplCopyWith<_$ClearPassErrorImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1279,87 +1238,53 @@ mixin _$SignUpState {
   XFile? get image => throw _privateConstructorUsedError;
   String? get emailError => throw _privateConstructorUsedError;
   String? get fullNameError => throw _privateConstructorUsedError;
-  String? get passordError =>
-      throw _privateConstructorUsedError; // String? passordRepeatError,
+  String? get passordError => throw _privateConstructorUsedError; // String? passordRepeatError,
   String? get phoneError => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(
-            String countryCode,
-            XFile? image,
-            String? emailError,
-            String? fullNameError,
-            String? passordError,
-            String? phoneError)
+    required TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError,
+            String? passordError, String? phoneError)
         initial,
-    required TResult Function(
-            String countryCode,
-            XFile? image,
-            String? emailError,
-            String? fullNameError,
-            String? passordError,
-            String? phoneError)
+    required TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError,
+            String? passordError, String? phoneError)
         loading,
-    required TResult Function(
-            String countryCode,
-            XFile? image,
-            String? emailError,
-            String? fullNameError,
-            String? passordError,
-            String? phoneError,
-            String? errorSnackbar)
+    required TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError,
+            String? passordError, String? phoneError, String? errorSnackbar)
         error,
-    required TResult Function(
-            String countryCode,
-            XFile? image,
-            String? emailError,
-            String? fullNameError,
-            String? passordError,
-            String? phoneError)
+    required TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError,
+            String? passordError, String? phoneError)
         success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String countryCode, XFile? image, String? emailError,
-            String? fullNameError, String? passordError, String? phoneError)?
+    TResult? Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError)?
         initial,
-    TResult? Function(String countryCode, XFile? image, String? emailError,
-            String? fullNameError, String? passordError, String? phoneError)?
+    TResult? Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError)?
         loading,
-    TResult? Function(
-            String countryCode,
-            XFile? image,
-            String? emailError,
-            String? fullNameError,
-            String? passordError,
-            String? phoneError,
-            String? errorSnackbar)?
+    TResult? Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError, String? errorSnackbar)?
         error,
-    TResult? Function(String countryCode, XFile? image, String? emailError,
-            String? fullNameError, String? passordError, String? phoneError)?
+    TResult? Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError)?
         success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String countryCode, XFile? image, String? emailError,
-            String? fullNameError, String? passordError, String? phoneError)?
+    TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError)?
         initial,
-    TResult Function(String countryCode, XFile? image, String? emailError,
-            String? fullNameError, String? passordError, String? phoneError)?
+    TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError)?
         loading,
-    TResult Function(
-            String countryCode,
-            XFile? image,
-            String? emailError,
-            String? fullNameError,
-            String? passordError,
-            String? phoneError,
-            String? errorSnackbar)?
+    TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError, String? errorSnackbar)?
         error,
-    TResult Function(String countryCode, XFile? image, String? emailError,
-            String? fullNameError, String? passordError, String? phoneError)?
+    TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError)?
         success,
     required TResult orElse(),
   }) =>
@@ -1393,14 +1318,12 @@ mixin _$SignUpState {
   /// Create a copy of SignUpState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $SignUpStateCopyWith<SignUpState> get copyWith =>
-      throw _privateConstructorUsedError;
+  $SignUpStateCopyWith<SignUpState> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $SignUpStateCopyWith<$Res> {
-  factory $SignUpStateCopyWith(
-          SignUpState value, $Res Function(SignUpState) then) =
+  factory $SignUpStateCopyWith(SignUpState value, $Res Function(SignUpState) then) =
       _$SignUpStateCopyWithImpl<$Res, SignUpState>;
   @useResult
   $Res call(
@@ -1413,8 +1336,7 @@ abstract class $SignUpStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SignUpStateCopyWithImpl<$Res, $Val extends SignUpState>
-    implements $SignUpStateCopyWith<$Res> {
+class _$SignUpStateCopyWithImpl<$Res, $Val extends SignUpState> implements $SignUpStateCopyWith<$Res> {
   _$SignUpStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -1464,10 +1386,8 @@ class _$SignUpStateCopyWithImpl<$Res, $Val extends SignUpState>
 }
 
 /// @nodoc
-abstract class _$$InitialImplCopyWith<$Res>
-    implements $SignUpStateCopyWith<$Res> {
-  factory _$$InitialImplCopyWith(
-          _$InitialImpl value, $Res Function(_$InitialImpl) then) =
+abstract class _$$InitialImplCopyWith<$Res> implements $SignUpStateCopyWith<$Res> {
+  factory _$$InitialImplCopyWith(_$InitialImpl value, $Res Function(_$InitialImpl) then) =
       __$$InitialImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -1481,12 +1401,9 @@ abstract class _$$InitialImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$InitialImplCopyWithImpl<$Res>
-    extends _$SignUpStateCopyWithImpl<$Res, _$InitialImpl>
+class __$$InitialImplCopyWithImpl<$Res> extends _$SignUpStateCopyWithImpl<$Res, _$InitialImpl>
     implements _$$InitialImplCopyWith<$Res> {
-  __$$InitialImplCopyWithImpl(
-      _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
-      : super(_value, _then);
+  __$$InitialImplCopyWithImpl(_$InitialImpl _value, $Res Function(_$InitialImpl) _then) : super(_value, _then);
 
   /// Create a copy of SignUpState
   /// with the given fields replaced by the non-null parameter values.
@@ -1564,124 +1481,81 @@ class _$InitialImpl implements Initial {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$InitialImpl &&
-            (identical(other.countryCode, countryCode) ||
-                other.countryCode == countryCode) &&
+            (identical(other.countryCode, countryCode) || other.countryCode == countryCode) &&
             (identical(other.image, image) || other.image == image) &&
-            (identical(other.emailError, emailError) ||
-                other.emailError == emailError) &&
-            (identical(other.fullNameError, fullNameError) ||
-                other.fullNameError == fullNameError) &&
-            (identical(other.passordError, passordError) ||
-                other.passordError == passordError) &&
-            (identical(other.phoneError, phoneError) ||
-                other.phoneError == phoneError));
+            (identical(other.emailError, emailError) || other.emailError == emailError) &&
+            (identical(other.fullNameError, fullNameError) || other.fullNameError == fullNameError) &&
+            (identical(other.passordError, passordError) || other.passordError == passordError) &&
+            (identical(other.phoneError, phoneError) || other.phoneError == phoneError));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, countryCode, image, emailError,
-      fullNameError, passordError, phoneError);
+  int get hashCode => Object.hash(runtimeType, countryCode, image, emailError, fullNameError, passordError, phoneError);
 
   /// Create a copy of SignUpState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$InitialImplCopyWith<_$InitialImpl> get copyWith =>
-      __$$InitialImplCopyWithImpl<_$InitialImpl>(this, _$identity);
+  _$$InitialImplCopyWith<_$InitialImpl> get copyWith => __$$InitialImplCopyWithImpl<_$InitialImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(
-            String countryCode,
-            XFile? image,
-            String? emailError,
-            String? fullNameError,
-            String? passordError,
-            String? phoneError)
+    required TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError,
+            String? passordError, String? phoneError)
         initial,
-    required TResult Function(
-            String countryCode,
-            XFile? image,
-            String? emailError,
-            String? fullNameError,
-            String? passordError,
-            String? phoneError)
+    required TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError,
+            String? passordError, String? phoneError)
         loading,
-    required TResult Function(
-            String countryCode,
-            XFile? image,
-            String? emailError,
-            String? fullNameError,
-            String? passordError,
-            String? phoneError,
-            String? errorSnackbar)
+    required TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError,
+            String? passordError, String? phoneError, String? errorSnackbar)
         error,
-    required TResult Function(
-            String countryCode,
-            XFile? image,
-            String? emailError,
-            String? fullNameError,
-            String? passordError,
-            String? phoneError)
+    required TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError,
+            String? passordError, String? phoneError)
         success,
   }) {
-    return initial(countryCode, image, emailError, fullNameError, passordError,
-        phoneError);
+    return initial(countryCode, image, emailError, fullNameError, passordError, phoneError);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String countryCode, XFile? image, String? emailError,
-            String? fullNameError, String? passordError, String? phoneError)?
+    TResult? Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError)?
         initial,
-    TResult? Function(String countryCode, XFile? image, String? emailError,
-            String? fullNameError, String? passordError, String? phoneError)?
+    TResult? Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError)?
         loading,
-    TResult? Function(
-            String countryCode,
-            XFile? image,
-            String? emailError,
-            String? fullNameError,
-            String? passordError,
-            String? phoneError,
-            String? errorSnackbar)?
+    TResult? Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError, String? errorSnackbar)?
         error,
-    TResult? Function(String countryCode, XFile? image, String? emailError,
-            String? fullNameError, String? passordError, String? phoneError)?
+    TResult? Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError)?
         success,
   }) {
-    return initial?.call(countryCode, image, emailError, fullNameError,
-        passordError, phoneError);
+    return initial?.call(countryCode, image, emailError, fullNameError, passordError, phoneError);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String countryCode, XFile? image, String? emailError,
-            String? fullNameError, String? passordError, String? phoneError)?
+    TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError)?
         initial,
-    TResult Function(String countryCode, XFile? image, String? emailError,
-            String? fullNameError, String? passordError, String? phoneError)?
+    TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError)?
         loading,
-    TResult Function(
-            String countryCode,
-            XFile? image,
-            String? emailError,
-            String? fullNameError,
-            String? passordError,
-            String? phoneError,
-            String? errorSnackbar)?
+    TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError, String? errorSnackbar)?
         error,
-    TResult Function(String countryCode, XFile? image, String? emailError,
-            String? fullNameError, String? passordError, String? phoneError)?
+    TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError)?
         success,
     required TResult orElse(),
   }) {
     if (initial != null) {
-      return initial(countryCode, image, emailError, fullNameError,
-          passordError, phoneError);
+      return initial(countryCode, image, emailError, fullNameError, passordError, phoneError);
     }
     return orElse();
   }
@@ -1750,15 +1624,12 @@ abstract class Initial implements SignUpState {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$InitialImplCopyWith<_$InitialImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$InitialImplCopyWith<_$InitialImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$LoadingImplCopyWith<$Res>
-    implements $SignUpStateCopyWith<$Res> {
-  factory _$$LoadingImplCopyWith(
-          _$LoadingImpl value, $Res Function(_$LoadingImpl) then) =
+abstract class _$$LoadingImplCopyWith<$Res> implements $SignUpStateCopyWith<$Res> {
+  factory _$$LoadingImplCopyWith(_$LoadingImpl value, $Res Function(_$LoadingImpl) then) =
       __$$LoadingImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -1772,12 +1643,9 @@ abstract class _$$LoadingImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$LoadingImplCopyWithImpl<$Res>
-    extends _$SignUpStateCopyWithImpl<$Res, _$LoadingImpl>
+class __$$LoadingImplCopyWithImpl<$Res> extends _$SignUpStateCopyWithImpl<$Res, _$LoadingImpl>
     implements _$$LoadingImplCopyWith<$Res> {
-  __$$LoadingImplCopyWithImpl(
-      _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
-      : super(_value, _then);
+  __$$LoadingImplCopyWithImpl(_$LoadingImpl _value, $Res Function(_$LoadingImpl) _then) : super(_value, _then);
 
   /// Create a copy of SignUpState
   /// with the given fields replaced by the non-null parameter values.
@@ -1855,124 +1723,81 @@ class _$LoadingImpl implements Loading {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LoadingImpl &&
-            (identical(other.countryCode, countryCode) ||
-                other.countryCode == countryCode) &&
+            (identical(other.countryCode, countryCode) || other.countryCode == countryCode) &&
             (identical(other.image, image) || other.image == image) &&
-            (identical(other.emailError, emailError) ||
-                other.emailError == emailError) &&
-            (identical(other.fullNameError, fullNameError) ||
-                other.fullNameError == fullNameError) &&
-            (identical(other.passordError, passordError) ||
-                other.passordError == passordError) &&
-            (identical(other.phoneError, phoneError) ||
-                other.phoneError == phoneError));
+            (identical(other.emailError, emailError) || other.emailError == emailError) &&
+            (identical(other.fullNameError, fullNameError) || other.fullNameError == fullNameError) &&
+            (identical(other.passordError, passordError) || other.passordError == passordError) &&
+            (identical(other.phoneError, phoneError) || other.phoneError == phoneError));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, countryCode, image, emailError,
-      fullNameError, passordError, phoneError);
+  int get hashCode => Object.hash(runtimeType, countryCode, image, emailError, fullNameError, passordError, phoneError);
 
   /// Create a copy of SignUpState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$LoadingImplCopyWith<_$LoadingImpl> get copyWith =>
-      __$$LoadingImplCopyWithImpl<_$LoadingImpl>(this, _$identity);
+  _$$LoadingImplCopyWith<_$LoadingImpl> get copyWith => __$$LoadingImplCopyWithImpl<_$LoadingImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(
-            String countryCode,
-            XFile? image,
-            String? emailError,
-            String? fullNameError,
-            String? passordError,
-            String? phoneError)
+    required TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError,
+            String? passordError, String? phoneError)
         initial,
-    required TResult Function(
-            String countryCode,
-            XFile? image,
-            String? emailError,
-            String? fullNameError,
-            String? passordError,
-            String? phoneError)
+    required TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError,
+            String? passordError, String? phoneError)
         loading,
-    required TResult Function(
-            String countryCode,
-            XFile? image,
-            String? emailError,
-            String? fullNameError,
-            String? passordError,
-            String? phoneError,
-            String? errorSnackbar)
+    required TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError,
+            String? passordError, String? phoneError, String? errorSnackbar)
         error,
-    required TResult Function(
-            String countryCode,
-            XFile? image,
-            String? emailError,
-            String? fullNameError,
-            String? passordError,
-            String? phoneError)
+    required TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError,
+            String? passordError, String? phoneError)
         success,
   }) {
-    return loading(countryCode, image, emailError, fullNameError, passordError,
-        phoneError);
+    return loading(countryCode, image, emailError, fullNameError, passordError, phoneError);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String countryCode, XFile? image, String? emailError,
-            String? fullNameError, String? passordError, String? phoneError)?
+    TResult? Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError)?
         initial,
-    TResult? Function(String countryCode, XFile? image, String? emailError,
-            String? fullNameError, String? passordError, String? phoneError)?
+    TResult? Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError)?
         loading,
-    TResult? Function(
-            String countryCode,
-            XFile? image,
-            String? emailError,
-            String? fullNameError,
-            String? passordError,
-            String? phoneError,
-            String? errorSnackbar)?
+    TResult? Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError, String? errorSnackbar)?
         error,
-    TResult? Function(String countryCode, XFile? image, String? emailError,
-            String? fullNameError, String? passordError, String? phoneError)?
+    TResult? Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError)?
         success,
   }) {
-    return loading?.call(countryCode, image, emailError, fullNameError,
-        passordError, phoneError);
+    return loading?.call(countryCode, image, emailError, fullNameError, passordError, phoneError);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String countryCode, XFile? image, String? emailError,
-            String? fullNameError, String? passordError, String? phoneError)?
+    TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError)?
         initial,
-    TResult Function(String countryCode, XFile? image, String? emailError,
-            String? fullNameError, String? passordError, String? phoneError)?
+    TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError)?
         loading,
-    TResult Function(
-            String countryCode,
-            XFile? image,
-            String? emailError,
-            String? fullNameError,
-            String? passordError,
-            String? phoneError,
-            String? errorSnackbar)?
+    TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError, String? errorSnackbar)?
         error,
-    TResult Function(String countryCode, XFile? image, String? emailError,
-            String? fullNameError, String? passordError, String? phoneError)?
+    TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError)?
         success,
     required TResult orElse(),
   }) {
     if (loading != null) {
-      return loading(countryCode, image, emailError, fullNameError,
-          passordError, phoneError);
+      return loading(countryCode, image, emailError, fullNameError, passordError, phoneError);
     }
     return orElse();
   }
@@ -2041,16 +1866,12 @@ abstract class Loading implements SignUpState {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$LoadingImplCopyWith<_$LoadingImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$LoadingImplCopyWith<_$LoadingImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$ErrorImplCopyWith<$Res>
-    implements $SignUpStateCopyWith<$Res> {
-  factory _$$ErrorImplCopyWith(
-          _$ErrorImpl value, $Res Function(_$ErrorImpl) then) =
-      __$$ErrorImplCopyWithImpl<$Res>;
+abstract class _$$ErrorImplCopyWith<$Res> implements $SignUpStateCopyWith<$Res> {
+  factory _$$ErrorImplCopyWith(_$ErrorImpl value, $Res Function(_$ErrorImpl) then) = __$$ErrorImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -2064,12 +1885,9 @@ abstract class _$$ErrorImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$ErrorImplCopyWithImpl<$Res>
-    extends _$SignUpStateCopyWithImpl<$Res, _$ErrorImpl>
+class __$$ErrorImplCopyWithImpl<$Res> extends _$SignUpStateCopyWithImpl<$Res, _$ErrorImpl>
     implements _$$ErrorImplCopyWith<$Res> {
-  __$$ErrorImplCopyWithImpl(
-      _$ErrorImpl _value, $Res Function(_$ErrorImpl) _then)
-      : super(_value, _then);
+  __$$ErrorImplCopyWithImpl(_$ErrorImpl _value, $Res Function(_$ErrorImpl) _then) : super(_value, _then);
 
   /// Create a copy of SignUpState
   /// with the given fields replaced by the non-null parameter values.
@@ -2155,126 +1973,83 @@ class _$ErrorImpl implements Error {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ErrorImpl &&
-            (identical(other.countryCode, countryCode) ||
-                other.countryCode == countryCode) &&
+            (identical(other.countryCode, countryCode) || other.countryCode == countryCode) &&
             (identical(other.image, image) || other.image == image) &&
-            (identical(other.emailError, emailError) ||
-                other.emailError == emailError) &&
-            (identical(other.fullNameError, fullNameError) ||
-                other.fullNameError == fullNameError) &&
-            (identical(other.passordError, passordError) ||
-                other.passordError == passordError) &&
-            (identical(other.phoneError, phoneError) ||
-                other.phoneError == phoneError) &&
-            (identical(other.errorSnackbar, errorSnackbar) ||
-                other.errorSnackbar == errorSnackbar));
+            (identical(other.emailError, emailError) || other.emailError == emailError) &&
+            (identical(other.fullNameError, fullNameError) || other.fullNameError == fullNameError) &&
+            (identical(other.passordError, passordError) || other.passordError == passordError) &&
+            (identical(other.phoneError, phoneError) || other.phoneError == phoneError) &&
+            (identical(other.errorSnackbar, errorSnackbar) || other.errorSnackbar == errorSnackbar));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, countryCode, image, emailError,
-      fullNameError, passordError, phoneError, errorSnackbar);
+  int get hashCode =>
+      Object.hash(runtimeType, countryCode, image, emailError, fullNameError, passordError, phoneError, errorSnackbar);
 
   /// Create a copy of SignUpState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
-      __$$ErrorImplCopyWithImpl<_$ErrorImpl>(this, _$identity);
+  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith => __$$ErrorImplCopyWithImpl<_$ErrorImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(
-            String countryCode,
-            XFile? image,
-            String? emailError,
-            String? fullNameError,
-            String? passordError,
-            String? phoneError)
+    required TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError,
+            String? passordError, String? phoneError)
         initial,
-    required TResult Function(
-            String countryCode,
-            XFile? image,
-            String? emailError,
-            String? fullNameError,
-            String? passordError,
-            String? phoneError)
+    required TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError,
+            String? passordError, String? phoneError)
         loading,
-    required TResult Function(
-            String countryCode,
-            XFile? image,
-            String? emailError,
-            String? fullNameError,
-            String? passordError,
-            String? phoneError,
-            String? errorSnackbar)
+    required TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError,
+            String? passordError, String? phoneError, String? errorSnackbar)
         error,
-    required TResult Function(
-            String countryCode,
-            XFile? image,
-            String? emailError,
-            String? fullNameError,
-            String? passordError,
-            String? phoneError)
+    required TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError,
+            String? passordError, String? phoneError)
         success,
   }) {
-    return error(countryCode, image, emailError, fullNameError, passordError,
-        phoneError, errorSnackbar);
+    return error(countryCode, image, emailError, fullNameError, passordError, phoneError, errorSnackbar);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String countryCode, XFile? image, String? emailError,
-            String? fullNameError, String? passordError, String? phoneError)?
+    TResult? Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError)?
         initial,
-    TResult? Function(String countryCode, XFile? image, String? emailError,
-            String? fullNameError, String? passordError, String? phoneError)?
+    TResult? Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError)?
         loading,
-    TResult? Function(
-            String countryCode,
-            XFile? image,
-            String? emailError,
-            String? fullNameError,
-            String? passordError,
-            String? phoneError,
-            String? errorSnackbar)?
+    TResult? Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError, String? errorSnackbar)?
         error,
-    TResult? Function(String countryCode, XFile? image, String? emailError,
-            String? fullNameError, String? passordError, String? phoneError)?
+    TResult? Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError)?
         success,
   }) {
-    return error?.call(countryCode, image, emailError, fullNameError,
-        passordError, phoneError, errorSnackbar);
+    return error?.call(countryCode, image, emailError, fullNameError, passordError, phoneError, errorSnackbar);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String countryCode, XFile? image, String? emailError,
-            String? fullNameError, String? passordError, String? phoneError)?
+    TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError)?
         initial,
-    TResult Function(String countryCode, XFile? image, String? emailError,
-            String? fullNameError, String? passordError, String? phoneError)?
+    TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError)?
         loading,
-    TResult Function(
-            String countryCode,
-            XFile? image,
-            String? emailError,
-            String? fullNameError,
-            String? passordError,
-            String? phoneError,
-            String? errorSnackbar)?
+    TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError, String? errorSnackbar)?
         error,
-    TResult Function(String countryCode, XFile? image, String? emailError,
-            String? fullNameError, String? passordError, String? phoneError)?
+    TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError)?
         success,
     required TResult orElse(),
   }) {
     if (error != null) {
-      return error(countryCode, image, emailError, fullNameError, passordError,
-          phoneError, errorSnackbar);
+      return error(countryCode, image, emailError, fullNameError, passordError, phoneError, errorSnackbar);
     }
     return orElse();
   }
@@ -2345,15 +2120,12 @@ abstract class Error implements SignUpState {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$SuccessImplCopyWith<$Res>
-    implements $SignUpStateCopyWith<$Res> {
-  factory _$$SuccessImplCopyWith(
-          _$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
+abstract class _$$SuccessImplCopyWith<$Res> implements $SignUpStateCopyWith<$Res> {
+  factory _$$SuccessImplCopyWith(_$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
       __$$SuccessImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -2367,12 +2139,9 @@ abstract class _$$SuccessImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$SuccessImplCopyWithImpl<$Res>
-    extends _$SignUpStateCopyWithImpl<$Res, _$SuccessImpl>
+class __$$SuccessImplCopyWithImpl<$Res> extends _$SignUpStateCopyWithImpl<$Res, _$SuccessImpl>
     implements _$$SuccessImplCopyWith<$Res> {
-  __$$SuccessImplCopyWithImpl(
-      _$SuccessImpl _value, $Res Function(_$SuccessImpl) _then)
-      : super(_value, _then);
+  __$$SuccessImplCopyWithImpl(_$SuccessImpl _value, $Res Function(_$SuccessImpl) _then) : super(_value, _then);
 
   /// Create a copy of SignUpState
   /// with the given fields replaced by the non-null parameter values.
@@ -2450,124 +2219,81 @@ class _$SuccessImpl implements Success {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SuccessImpl &&
-            (identical(other.countryCode, countryCode) ||
-                other.countryCode == countryCode) &&
+            (identical(other.countryCode, countryCode) || other.countryCode == countryCode) &&
             (identical(other.image, image) || other.image == image) &&
-            (identical(other.emailError, emailError) ||
-                other.emailError == emailError) &&
-            (identical(other.fullNameError, fullNameError) ||
-                other.fullNameError == fullNameError) &&
-            (identical(other.passordError, passordError) ||
-                other.passordError == passordError) &&
-            (identical(other.phoneError, phoneError) ||
-                other.phoneError == phoneError));
+            (identical(other.emailError, emailError) || other.emailError == emailError) &&
+            (identical(other.fullNameError, fullNameError) || other.fullNameError == fullNameError) &&
+            (identical(other.passordError, passordError) || other.passordError == passordError) &&
+            (identical(other.phoneError, phoneError) || other.phoneError == phoneError));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, countryCode, image, emailError,
-      fullNameError, passordError, phoneError);
+  int get hashCode => Object.hash(runtimeType, countryCode, image, emailError, fullNameError, passordError, phoneError);
 
   /// Create a copy of SignUpState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
-      __$$SuccessImplCopyWithImpl<_$SuccessImpl>(this, _$identity);
+  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith => __$$SuccessImplCopyWithImpl<_$SuccessImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(
-            String countryCode,
-            XFile? image,
-            String? emailError,
-            String? fullNameError,
-            String? passordError,
-            String? phoneError)
+    required TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError,
+            String? passordError, String? phoneError)
         initial,
-    required TResult Function(
-            String countryCode,
-            XFile? image,
-            String? emailError,
-            String? fullNameError,
-            String? passordError,
-            String? phoneError)
+    required TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError,
+            String? passordError, String? phoneError)
         loading,
-    required TResult Function(
-            String countryCode,
-            XFile? image,
-            String? emailError,
-            String? fullNameError,
-            String? passordError,
-            String? phoneError,
-            String? errorSnackbar)
+    required TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError,
+            String? passordError, String? phoneError, String? errorSnackbar)
         error,
-    required TResult Function(
-            String countryCode,
-            XFile? image,
-            String? emailError,
-            String? fullNameError,
-            String? passordError,
-            String? phoneError)
+    required TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError,
+            String? passordError, String? phoneError)
         success,
   }) {
-    return success(countryCode, image, emailError, fullNameError, passordError,
-        phoneError);
+    return success(countryCode, image, emailError, fullNameError, passordError, phoneError);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String countryCode, XFile? image, String? emailError,
-            String? fullNameError, String? passordError, String? phoneError)?
+    TResult? Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError)?
         initial,
-    TResult? Function(String countryCode, XFile? image, String? emailError,
-            String? fullNameError, String? passordError, String? phoneError)?
+    TResult? Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError)?
         loading,
-    TResult? Function(
-            String countryCode,
-            XFile? image,
-            String? emailError,
-            String? fullNameError,
-            String? passordError,
-            String? phoneError,
-            String? errorSnackbar)?
+    TResult? Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError, String? errorSnackbar)?
         error,
-    TResult? Function(String countryCode, XFile? image, String? emailError,
-            String? fullNameError, String? passordError, String? phoneError)?
+    TResult? Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError)?
         success,
   }) {
-    return success?.call(countryCode, image, emailError, fullNameError,
-        passordError, phoneError);
+    return success?.call(countryCode, image, emailError, fullNameError, passordError, phoneError);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String countryCode, XFile? image, String? emailError,
-            String? fullNameError, String? passordError, String? phoneError)?
+    TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError)?
         initial,
-    TResult Function(String countryCode, XFile? image, String? emailError,
-            String? fullNameError, String? passordError, String? phoneError)?
+    TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError)?
         loading,
-    TResult Function(
-            String countryCode,
-            XFile? image,
-            String? emailError,
-            String? fullNameError,
-            String? passordError,
-            String? phoneError,
-            String? errorSnackbar)?
+    TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError, String? errorSnackbar)?
         error,
-    TResult Function(String countryCode, XFile? image, String? emailError,
-            String? fullNameError, String? passordError, String? phoneError)?
+    TResult Function(String countryCode, XFile? image, String? emailError, String? fullNameError, String? passordError,
+            String? phoneError)?
         success,
     required TResult orElse(),
   }) {
     if (success != null) {
-      return success(countryCode, image, emailError, fullNameError,
-          passordError, phoneError);
+      return success(countryCode, image, emailError, fullNameError, passordError, phoneError);
     }
     return orElse();
   }
@@ -2636,6 +2362,5 @@ abstract class Success implements SignUpState {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith => throw _privateConstructorUsedError;
 }

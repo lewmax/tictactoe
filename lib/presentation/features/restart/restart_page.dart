@@ -17,8 +17,11 @@ class RestartPage extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text('Some issues happened, try to restart the app!!!',
-                    style: context.textStyles.mulish18, textAlign: TextAlign.center,),
+                Text(
+                  'Some issues happened, try to restart the app!!!',
+                  style: context.textStyles.mulish18,
+                  textAlign: TextAlign.center,
+                ),
                 const SizedBox(height: 24),
                 AppButton(
                   title: 'Restart',

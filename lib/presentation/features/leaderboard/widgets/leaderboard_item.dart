@@ -16,7 +16,10 @@ class LeaderboardItem extends StatelessWidget {
       child: Row(
         children: [
           const SizedBox(width: 12),
-          Container(alignment: Alignment.center, width: 20, child: Text((i + 1).toString(), style: context.textStyles.mulish16)),
+          Container(
+              alignment: Alignment.center,
+              width: 20,
+              child: Text((i + 1).toString(), style: context.textStyles.mulish16)),
           const SizedBox(width: 24),
           Expanded(
             child: Row(

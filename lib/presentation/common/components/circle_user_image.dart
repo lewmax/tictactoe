@@ -29,7 +29,8 @@ class CirleUserImage extends StatelessWidget {
       backgroundImage: backgroundImage,
       radius: radius,
       child: image == null
-          ? Text(name?[0] ?? 'U', style: context.textStyles.mulish16.copyWith(color: context.colors.white, fontSize: textSize))
+          ? Text(name?[0] ?? 'U',
+              style: context.textStyles.mulish16.copyWith(color: context.colors.white, fontSize: textSize))
           : null,
     );
   }

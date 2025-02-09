@@ -22,7 +22,10 @@ class HomeLeaderboardWidget extends StatelessWidget {
             Divider(height: 0, thickness: 1, color: context.colors.grey4),
             const SizedBox(height: 12),
             Text(context.l10n.home_todaysLeaderboard, style: context.textStyles.mulish18),
-            if (topPlayers.isEmpty) _youCouldBeHere(context) else ...topPlayers.mapIndexed((i, user) => _topPlayer(context, i, user)),
+            if (topPlayers.isEmpty)
+              _youCouldBeHere(context)
+            else
+              ...topPlayers.mapIndexed((i, user) => _topPlayer(context, i, user)),
             Row(
               children: [
                 const Spacer(flex: 6),
@@ -32,7 +35,8 @@ class HomeLeaderboardWidget extends StatelessWidget {
                     onTap: onTap,
                     child: Padding(
                       padding: const EdgeInsets.all(6),
-                      child: Text('See all', style: context.textStyles.mulish14Bold.copyWith(color: context.colors.blue)),
+                      child:
+                          Text('See all', style: context.textStyles.mulish14Bold.copyWith(color: context.colors.blue)),
                     ),
                   ),
                 ),

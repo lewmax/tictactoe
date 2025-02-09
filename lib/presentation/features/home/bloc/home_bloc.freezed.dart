@@ -21,11 +21,10 @@ mixin _$HomeEvent {
     required TResult Function(User? user) userUpdated,
     required TResult Function(DateTime dateTime) dateUpdated,
     required TResult Function(ModelId<Game, String> id) openGame,
-    required TResult Function(Map<ModelId<Game, String>, Game> gamesInProgress,
-            Map<ModelId<Game, String>, Game> recentGames)
+    required TResult Function(
+            Map<ModelId<Game, String>, Game> gamesInProgress, Map<ModelId<Game, String>, Game> recentGames)
         gamesUpdated,
-    required TResult Function(List<LeaderboardUser> leaderboardUsers)
-        topLeaderboardUpdated,
+    required TResult Function(List<LeaderboardUser> leaderboardUsers) topLeaderboardUpdated,
     required TResult Function() sendFeedback,
     required TResult Function() requiresUpdate,
     required TResult Function(String error) errorReceived,
@@ -36,11 +35,9 @@ mixin _$HomeEvent {
     TResult? Function(User? user)? userUpdated,
     TResult? Function(DateTime dateTime)? dateUpdated,
     TResult? Function(ModelId<Game, String> id)? openGame,
-    TResult? Function(Map<ModelId<Game, String>, Game> gamesInProgress,
-            Map<ModelId<Game, String>, Game> recentGames)?
+    TResult? Function(Map<ModelId<Game, String>, Game> gamesInProgress, Map<ModelId<Game, String>, Game> recentGames)?
         gamesUpdated,
-    TResult? Function(List<LeaderboardUser> leaderboardUsers)?
-        topLeaderboardUpdated,
+    TResult? Function(List<LeaderboardUser> leaderboardUsers)? topLeaderboardUpdated,
     TResult? Function()? sendFeedback,
     TResult? Function()? requiresUpdate,
     TResult? Function(String error)? errorReceived,
@@ -51,11 +48,9 @@ mixin _$HomeEvent {
     TResult Function(User? user)? userUpdated,
     TResult Function(DateTime dateTime)? dateUpdated,
     TResult Function(ModelId<Game, String> id)? openGame,
-    TResult Function(Map<ModelId<Game, String>, Game> gamesInProgress,
-            Map<ModelId<Game, String>, Game> recentGames)?
+    TResult Function(Map<ModelId<Game, String>, Game> gamesInProgress, Map<ModelId<Game, String>, Game> recentGames)?
         gamesUpdated,
-    TResult Function(List<LeaderboardUser> leaderboardUsers)?
-        topLeaderboardUpdated,
+    TResult Function(List<LeaderboardUser> leaderboardUsers)? topLeaderboardUpdated,
     TResult Function()? sendFeedback,
     TResult Function()? requiresUpdate,
     TResult Function(String error)? errorReceived,
@@ -68,8 +63,7 @@ mixin _$HomeEvent {
     required TResult Function(_DateUpdated value) dateUpdated,
     required TResult Function(_OpenGame value) openGame,
     required TResult Function(_GamesUpdated value) gamesUpdated,
-    required TResult Function(_TopLeaderboardUpdated value)
-        topLeaderboardUpdated,
+    required TResult Function(_TopLeaderboardUpdated value) topLeaderboardUpdated,
     required TResult Function(_SendFeedback value) sendFeedback,
     required TResult Function(_RequiresUpdate value) requiresUpdate,
     required TResult Function(_ErrorReceived value) errorReceived,
@@ -104,13 +98,11 @@ mixin _$HomeEvent {
 
 /// @nodoc
 abstract class $HomeEventCopyWith<$Res> {
-  factory $HomeEventCopyWith(HomeEvent value, $Res Function(HomeEvent) then) =
-      _$HomeEventCopyWithImpl<$Res, HomeEvent>;
+  factory $HomeEventCopyWith(HomeEvent value, $Res Function(HomeEvent) then) = _$HomeEventCopyWithImpl<$Res, HomeEvent>;
 }
 
 /// @nodoc
-class _$HomeEventCopyWithImpl<$Res, $Val extends HomeEvent>
-    implements $HomeEventCopyWith<$Res> {
+class _$HomeEventCopyWithImpl<$Res, $Val extends HomeEvent> implements $HomeEventCopyWith<$Res> {
   _$HomeEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -124,19 +116,16 @@ class _$HomeEventCopyWithImpl<$Res, $Val extends HomeEvent>
 
 /// @nodoc
 abstract class _$$UserUpdatedImplCopyWith<$Res> {
-  factory _$$UserUpdatedImplCopyWith(
-          _$UserUpdatedImpl value, $Res Function(_$UserUpdatedImpl) then) =
+  factory _$$UserUpdatedImplCopyWith(_$UserUpdatedImpl value, $Res Function(_$UserUpdatedImpl) then) =
       __$$UserUpdatedImplCopyWithImpl<$Res>;
   @useResult
   $Res call({User? user});
 }
 
 /// @nodoc
-class __$$UserUpdatedImplCopyWithImpl<$Res>
-    extends _$HomeEventCopyWithImpl<$Res, _$UserUpdatedImpl>
+class __$$UserUpdatedImplCopyWithImpl<$Res> extends _$HomeEventCopyWithImpl<$Res, _$UserUpdatedImpl>
     implements _$$UserUpdatedImplCopyWith<$Res> {
-  __$$UserUpdatedImplCopyWithImpl(
-      _$UserUpdatedImpl _value, $Res Function(_$UserUpdatedImpl) _then)
+  __$$UserUpdatedImplCopyWithImpl(_$UserUpdatedImpl _value, $Res Function(_$UserUpdatedImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of HomeEvent
@@ -193,11 +182,10 @@ class _$UserUpdatedImpl implements _UserUpdated {
     required TResult Function(User? user) userUpdated,
     required TResult Function(DateTime dateTime) dateUpdated,
     required TResult Function(ModelId<Game, String> id) openGame,
-    required TResult Function(Map<ModelId<Game, String>, Game> gamesInProgress,
-            Map<ModelId<Game, String>, Game> recentGames)
+    required TResult Function(
+            Map<ModelId<Game, String>, Game> gamesInProgress, Map<ModelId<Game, String>, Game> recentGames)
         gamesUpdated,
-    required TResult Function(List<LeaderboardUser> leaderboardUsers)
-        topLeaderboardUpdated,
+    required TResult Function(List<LeaderboardUser> leaderboardUsers) topLeaderboardUpdated,
     required TResult Function() sendFeedback,
     required TResult Function() requiresUpdate,
     required TResult Function(String error) errorReceived,
@@ -211,11 +199,9 @@ class _$UserUpdatedImpl implements _UserUpdated {
     TResult? Function(User? user)? userUpdated,
     TResult? Function(DateTime dateTime)? dateUpdated,
     TResult? Function(ModelId<Game, String> id)? openGame,
-    TResult? Function(Map<ModelId<Game, String>, Game> gamesInProgress,
-            Map<ModelId<Game, String>, Game> recentGames)?
+    TResult? Function(Map<ModelId<Game, String>, Game> gamesInProgress, Map<ModelId<Game, String>, Game> recentGames)?
         gamesUpdated,
-    TResult? Function(List<LeaderboardUser> leaderboardUsers)?
-        topLeaderboardUpdated,
+    TResult? Function(List<LeaderboardUser> leaderboardUsers)? topLeaderboardUpdated,
     TResult? Function()? sendFeedback,
     TResult? Function()? requiresUpdate,
     TResult? Function(String error)? errorReceived,
@@ -229,11 +215,9 @@ class _$UserUpdatedImpl implements _UserUpdated {
     TResult Function(User? user)? userUpdated,
     TResult Function(DateTime dateTime)? dateUpdated,
     TResult Function(ModelId<Game, String> id)? openGame,
-    TResult Function(Map<ModelId<Game, String>, Game> gamesInProgress,
-            Map<ModelId<Game, String>, Game> recentGames)?
+    TResult Function(Map<ModelId<Game, String>, Game> gamesInProgress, Map<ModelId<Game, String>, Game> recentGames)?
         gamesUpdated,
-    TResult Function(List<LeaderboardUser> leaderboardUsers)?
-        topLeaderboardUpdated,
+    TResult Function(List<LeaderboardUser> leaderboardUsers)? topLeaderboardUpdated,
     TResult Function()? sendFeedback,
     TResult Function()? requiresUpdate,
     TResult Function(String error)? errorReceived,
@@ -252,8 +236,7 @@ class _$UserUpdatedImpl implements _UserUpdated {
     required TResult Function(_DateUpdated value) dateUpdated,
     required TResult Function(_OpenGame value) openGame,
     required TResult Function(_GamesUpdated value) gamesUpdated,
-    required TResult Function(_TopLeaderboardUpdated value)
-        topLeaderboardUpdated,
+    required TResult Function(_TopLeaderboardUpdated value) topLeaderboardUpdated,
     required TResult Function(_SendFeedback value) sendFeedback,
     required TResult Function(_RequiresUpdate value) requiresUpdate,
     required TResult Function(_ErrorReceived value) errorReceived,
@@ -304,25 +287,21 @@ abstract class _UserUpdated implements HomeEvent {
   /// Create a copy of HomeEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$UserUpdatedImplCopyWith<_$UserUpdatedImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$UserUpdatedImplCopyWith<_$UserUpdatedImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$DateUpdatedImplCopyWith<$Res> {
-  factory _$$DateUpdatedImplCopyWith(
-          _$DateUpdatedImpl value, $Res Function(_$DateUpdatedImpl) then) =
+  factory _$$DateUpdatedImplCopyWith(_$DateUpdatedImpl value, $Res Function(_$DateUpdatedImpl) then) =
       __$$DateUpdatedImplCopyWithImpl<$Res>;
   @useResult
   $Res call({DateTime dateTime});
 }
 
 /// @nodoc
-class __$$DateUpdatedImplCopyWithImpl<$Res>
-    extends _$HomeEventCopyWithImpl<$Res, _$DateUpdatedImpl>
+class __$$DateUpdatedImplCopyWithImpl<$Res> extends _$HomeEventCopyWithImpl<$Res, _$DateUpdatedImpl>
     implements _$$DateUpdatedImplCopyWith<$Res> {
-  __$$DateUpdatedImplCopyWithImpl(
-      _$DateUpdatedImpl _value, $Res Function(_$DateUpdatedImpl) _then)
+  __$$DateUpdatedImplCopyWithImpl(_$DateUpdatedImpl _value, $Res Function(_$DateUpdatedImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of HomeEvent
@@ -359,8 +338,7 @@ class _$DateUpdatedImpl implements _DateUpdated {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DateUpdatedImpl &&
-            (identical(other.dateTime, dateTime) ||
-                other.dateTime == dateTime));
+            (identical(other.dateTime, dateTime) || other.dateTime == dateTime));
   }
 
   @override
@@ -380,11 +358,10 @@ class _$DateUpdatedImpl implements _DateUpdated {
     required TResult Function(User? user) userUpdated,
     required TResult Function(DateTime dateTime) dateUpdated,
     required TResult Function(ModelId<Game, String> id) openGame,
-    required TResult Function(Map<ModelId<Game, String>, Game> gamesInProgress,
-            Map<ModelId<Game, String>, Game> recentGames)
+    required TResult Function(
+            Map<ModelId<Game, String>, Game> gamesInProgress, Map<ModelId<Game, String>, Game> recentGames)
         gamesUpdated,
-    required TResult Function(List<LeaderboardUser> leaderboardUsers)
-        topLeaderboardUpdated,
+    required TResult Function(List<LeaderboardUser> leaderboardUsers) topLeaderboardUpdated,
     required TResult Function() sendFeedback,
     required TResult Function() requiresUpdate,
     required TResult Function(String error) errorReceived,
@@ -398,11 +375,9 @@ class _$DateUpdatedImpl implements _DateUpdated {
     TResult? Function(User? user)? userUpdated,
     TResult? Function(DateTime dateTime)? dateUpdated,
     TResult? Function(ModelId<Game, String> id)? openGame,
-    TResult? Function(Map<ModelId<Game, String>, Game> gamesInProgress,
-            Map<ModelId<Game, String>, Game> recentGames)?
+    TResult? Function(Map<ModelId<Game, String>, Game> gamesInProgress, Map<ModelId<Game, String>, Game> recentGames)?
         gamesUpdated,
-    TResult? Function(List<LeaderboardUser> leaderboardUsers)?
-        topLeaderboardUpdated,
+    TResult? Function(List<LeaderboardUser> leaderboardUsers)? topLeaderboardUpdated,
     TResult? Function()? sendFeedback,
     TResult? Function()? requiresUpdate,
     TResult? Function(String error)? errorReceived,
@@ -416,11 +391,9 @@ class _$DateUpdatedImpl implements _DateUpdated {
     TResult Function(User? user)? userUpdated,
     TResult Function(DateTime dateTime)? dateUpdated,
     TResult Function(ModelId<Game, String> id)? openGame,
-    TResult Function(Map<ModelId<Game, String>, Game> gamesInProgress,
-            Map<ModelId<Game, String>, Game> recentGames)?
+    TResult Function(Map<ModelId<Game, String>, Game> gamesInProgress, Map<ModelId<Game, String>, Game> recentGames)?
         gamesUpdated,
-    TResult Function(List<LeaderboardUser> leaderboardUsers)?
-        topLeaderboardUpdated,
+    TResult Function(List<LeaderboardUser> leaderboardUsers)? topLeaderboardUpdated,
     TResult Function()? sendFeedback,
     TResult Function()? requiresUpdate,
     TResult Function(String error)? errorReceived,
@@ -439,8 +412,7 @@ class _$DateUpdatedImpl implements _DateUpdated {
     required TResult Function(_DateUpdated value) dateUpdated,
     required TResult Function(_OpenGame value) openGame,
     required TResult Function(_GamesUpdated value) gamesUpdated,
-    required TResult Function(_TopLeaderboardUpdated value)
-        topLeaderboardUpdated,
+    required TResult Function(_TopLeaderboardUpdated value) topLeaderboardUpdated,
     required TResult Function(_SendFeedback value) sendFeedback,
     required TResult Function(_RequiresUpdate value) requiresUpdate,
     required TResult Function(_ErrorReceived value) errorReceived,
@@ -491,26 +463,21 @@ abstract class _DateUpdated implements HomeEvent {
   /// Create a copy of HomeEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$DateUpdatedImplCopyWith<_$DateUpdatedImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$DateUpdatedImplCopyWith<_$DateUpdatedImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$OpenGameImplCopyWith<$Res> {
-  factory _$$OpenGameImplCopyWith(
-          _$OpenGameImpl value, $Res Function(_$OpenGameImpl) then) =
+  factory _$$OpenGameImplCopyWith(_$OpenGameImpl value, $Res Function(_$OpenGameImpl) then) =
       __$$OpenGameImplCopyWithImpl<$Res>;
   @useResult
   $Res call({ModelId<Game, String> id});
 }
 
 /// @nodoc
-class __$$OpenGameImplCopyWithImpl<$Res>
-    extends _$HomeEventCopyWithImpl<$Res, _$OpenGameImpl>
+class __$$OpenGameImplCopyWithImpl<$Res> extends _$HomeEventCopyWithImpl<$Res, _$OpenGameImpl>
     implements _$$OpenGameImplCopyWith<$Res> {
-  __$$OpenGameImplCopyWithImpl(
-      _$OpenGameImpl _value, $Res Function(_$OpenGameImpl) _then)
-      : super(_value, _then);
+  __$$OpenGameImplCopyWithImpl(_$OpenGameImpl _value, $Res Function(_$OpenGameImpl) _then) : super(_value, _then);
 
   /// Create a copy of HomeEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -544,9 +511,7 @@ class _$OpenGameImpl implements _OpenGame {
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$OpenGameImpl &&
-            (identical(other.id, id) || other.id == id));
+        (other.runtimeType == runtimeType && other is _$OpenGameImpl && (identical(other.id, id) || other.id == id));
   }
 
   @override
@@ -566,11 +531,10 @@ class _$OpenGameImpl implements _OpenGame {
     required TResult Function(User? user) userUpdated,
     required TResult Function(DateTime dateTime) dateUpdated,
     required TResult Function(ModelId<Game, String> id) openGame,
-    required TResult Function(Map<ModelId<Game, String>, Game> gamesInProgress,
-            Map<ModelId<Game, String>, Game> recentGames)
+    required TResult Function(
+            Map<ModelId<Game, String>, Game> gamesInProgress, Map<ModelId<Game, String>, Game> recentGames)
         gamesUpdated,
-    required TResult Function(List<LeaderboardUser> leaderboardUsers)
-        topLeaderboardUpdated,
+    required TResult Function(List<LeaderboardUser> leaderboardUsers) topLeaderboardUpdated,
     required TResult Function() sendFeedback,
     required TResult Function() requiresUpdate,
     required TResult Function(String error) errorReceived,
@@ -584,11 +548,9 @@ class _$OpenGameImpl implements _OpenGame {
     TResult? Function(User? user)? userUpdated,
     TResult? Function(DateTime dateTime)? dateUpdated,
     TResult? Function(ModelId<Game, String> id)? openGame,
-    TResult? Function(Map<ModelId<Game, String>, Game> gamesInProgress,
-            Map<ModelId<Game, String>, Game> recentGames)?
+    TResult? Function(Map<ModelId<Game, String>, Game> gamesInProgress, Map<ModelId<Game, String>, Game> recentGames)?
         gamesUpdated,
-    TResult? Function(List<LeaderboardUser> leaderboardUsers)?
-        topLeaderboardUpdated,
+    TResult? Function(List<LeaderboardUser> leaderboardUsers)? topLeaderboardUpdated,
     TResult? Function()? sendFeedback,
     TResult? Function()? requiresUpdate,
     TResult? Function(String error)? errorReceived,
@@ -602,11 +564,9 @@ class _$OpenGameImpl implements _OpenGame {
     TResult Function(User? user)? userUpdated,
     TResult Function(DateTime dateTime)? dateUpdated,
     TResult Function(ModelId<Game, String> id)? openGame,
-    TResult Function(Map<ModelId<Game, String>, Game> gamesInProgress,
-            Map<ModelId<Game, String>, Game> recentGames)?
+    TResult Function(Map<ModelId<Game, String>, Game> gamesInProgress, Map<ModelId<Game, String>, Game> recentGames)?
         gamesUpdated,
-    TResult Function(List<LeaderboardUser> leaderboardUsers)?
-        topLeaderboardUpdated,
+    TResult Function(List<LeaderboardUser> leaderboardUsers)? topLeaderboardUpdated,
     TResult Function()? sendFeedback,
     TResult Function()? requiresUpdate,
     TResult Function(String error)? errorReceived,
@@ -625,8 +585,7 @@ class _$OpenGameImpl implements _OpenGame {
     required TResult Function(_DateUpdated value) dateUpdated,
     required TResult Function(_OpenGame value) openGame,
     required TResult Function(_GamesUpdated value) gamesUpdated,
-    required TResult Function(_TopLeaderboardUpdated value)
-        topLeaderboardUpdated,
+    required TResult Function(_TopLeaderboardUpdated value) topLeaderboardUpdated,
     required TResult Function(_SendFeedback value) sendFeedback,
     required TResult Function(_RequiresUpdate value) requiresUpdate,
     required TResult Function(_ErrorReceived value) errorReceived,
@@ -677,27 +636,21 @@ abstract class _OpenGame implements HomeEvent {
   /// Create a copy of HomeEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$OpenGameImplCopyWith<_$OpenGameImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$OpenGameImplCopyWith<_$OpenGameImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$GamesUpdatedImplCopyWith<$Res> {
-  factory _$$GamesUpdatedImplCopyWith(
-          _$GamesUpdatedImpl value, $Res Function(_$GamesUpdatedImpl) then) =
+  factory _$$GamesUpdatedImplCopyWith(_$GamesUpdatedImpl value, $Res Function(_$GamesUpdatedImpl) then) =
       __$$GamesUpdatedImplCopyWithImpl<$Res>;
   @useResult
-  $Res call(
-      {Map<ModelId<Game, String>, Game> gamesInProgress,
-      Map<ModelId<Game, String>, Game> recentGames});
+  $Res call({Map<ModelId<Game, String>, Game> gamesInProgress, Map<ModelId<Game, String>, Game> recentGames});
 }
 
 /// @nodoc
-class __$$GamesUpdatedImplCopyWithImpl<$Res>
-    extends _$HomeEventCopyWithImpl<$Res, _$GamesUpdatedImpl>
+class __$$GamesUpdatedImplCopyWithImpl<$Res> extends _$HomeEventCopyWithImpl<$Res, _$GamesUpdatedImpl>
     implements _$$GamesUpdatedImplCopyWith<$Res> {
-  __$$GamesUpdatedImplCopyWithImpl(
-      _$GamesUpdatedImpl _value, $Res Function(_$GamesUpdatedImpl) _then)
+  __$$GamesUpdatedImplCopyWithImpl(_$GamesUpdatedImpl _value, $Res Function(_$GamesUpdatedImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of HomeEvent
@@ -725,8 +678,7 @@ class __$$GamesUpdatedImplCopyWithImpl<$Res>
 
 class _$GamesUpdatedImpl implements _GamesUpdated {
   const _$GamesUpdatedImpl(
-      final Map<ModelId<Game, String>, Game> gamesInProgress,
-      final Map<ModelId<Game, String>, Game> recentGames)
+      final Map<ModelId<Game, String>, Game> gamesInProgress, final Map<ModelId<Game, String>, Game> recentGames)
       : _gamesInProgress = gamesInProgress,
         _recentGames = recentGames;
 
@@ -756,16 +708,12 @@ class _$GamesUpdatedImpl implements _GamesUpdated {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GamesUpdatedImpl &&
-            const DeepCollectionEquality()
-                .equals(other._gamesInProgress, _gamesInProgress) &&
-            const DeepCollectionEquality()
-                .equals(other._recentGames, _recentGames));
+            const DeepCollectionEquality().equals(other._gamesInProgress, _gamesInProgress) &&
+            const DeepCollectionEquality().equals(other._recentGames, _recentGames));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(_gamesInProgress),
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_gamesInProgress),
       const DeepCollectionEquality().hash(_recentGames));
 
   /// Create a copy of HomeEvent
@@ -782,11 +730,10 @@ class _$GamesUpdatedImpl implements _GamesUpdated {
     required TResult Function(User? user) userUpdated,
     required TResult Function(DateTime dateTime) dateUpdated,
     required TResult Function(ModelId<Game, String> id) openGame,
-    required TResult Function(Map<ModelId<Game, String>, Game> gamesInProgress,
-            Map<ModelId<Game, String>, Game> recentGames)
+    required TResult Function(
+            Map<ModelId<Game, String>, Game> gamesInProgress, Map<ModelId<Game, String>, Game> recentGames)
         gamesUpdated,
-    required TResult Function(List<LeaderboardUser> leaderboardUsers)
-        topLeaderboardUpdated,
+    required TResult Function(List<LeaderboardUser> leaderboardUsers) topLeaderboardUpdated,
     required TResult Function() sendFeedback,
     required TResult Function() requiresUpdate,
     required TResult Function(String error) errorReceived,
@@ -800,11 +747,9 @@ class _$GamesUpdatedImpl implements _GamesUpdated {
     TResult? Function(User? user)? userUpdated,
     TResult? Function(DateTime dateTime)? dateUpdated,
     TResult? Function(ModelId<Game, String> id)? openGame,
-    TResult? Function(Map<ModelId<Game, String>, Game> gamesInProgress,
-            Map<ModelId<Game, String>, Game> recentGames)?
+    TResult? Function(Map<ModelId<Game, String>, Game> gamesInProgress, Map<ModelId<Game, String>, Game> recentGames)?
         gamesUpdated,
-    TResult? Function(List<LeaderboardUser> leaderboardUsers)?
-        topLeaderboardUpdated,
+    TResult? Function(List<LeaderboardUser> leaderboardUsers)? topLeaderboardUpdated,
     TResult? Function()? sendFeedback,
     TResult? Function()? requiresUpdate,
     TResult? Function(String error)? errorReceived,
@@ -818,11 +763,9 @@ class _$GamesUpdatedImpl implements _GamesUpdated {
     TResult Function(User? user)? userUpdated,
     TResult Function(DateTime dateTime)? dateUpdated,
     TResult Function(ModelId<Game, String> id)? openGame,
-    TResult Function(Map<ModelId<Game, String>, Game> gamesInProgress,
-            Map<ModelId<Game, String>, Game> recentGames)?
+    TResult Function(Map<ModelId<Game, String>, Game> gamesInProgress, Map<ModelId<Game, String>, Game> recentGames)?
         gamesUpdated,
-    TResult Function(List<LeaderboardUser> leaderboardUsers)?
-        topLeaderboardUpdated,
+    TResult Function(List<LeaderboardUser> leaderboardUsers)? topLeaderboardUpdated,
     TResult Function()? sendFeedback,
     TResult Function()? requiresUpdate,
     TResult Function(String error)? errorReceived,
@@ -841,8 +784,7 @@ class _$GamesUpdatedImpl implements _GamesUpdated {
     required TResult Function(_DateUpdated value) dateUpdated,
     required TResult Function(_OpenGame value) openGame,
     required TResult Function(_GamesUpdated value) gamesUpdated,
-    required TResult Function(_TopLeaderboardUpdated value)
-        topLeaderboardUpdated,
+    required TResult Function(_TopLeaderboardUpdated value) topLeaderboardUpdated,
     required TResult Function(_SendFeedback value) sendFeedback,
     required TResult Function(_RequiresUpdate value) requiresUpdate,
     required TResult Function(_ErrorReceived value) errorReceived,
@@ -887,8 +829,8 @@ class _$GamesUpdatedImpl implements _GamesUpdated {
 
 abstract class _GamesUpdated implements HomeEvent {
   const factory _GamesUpdated(
-      final Map<ModelId<Game, String>, Game> gamesInProgress,
-      final Map<ModelId<Game, String>, Game> recentGames) = _$GamesUpdatedImpl;
+          final Map<ModelId<Game, String>, Game> gamesInProgress, final Map<ModelId<Game, String>, Game> recentGames) =
+      _$GamesUpdatedImpl;
 
   Map<ModelId<Game, String>, Game> get gamesInProgress;
   Map<ModelId<Game, String>, Game> get recentGames;
@@ -896,26 +838,23 @@ abstract class _GamesUpdated implements HomeEvent {
   /// Create a copy of HomeEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GamesUpdatedImplCopyWith<_$GamesUpdatedImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$GamesUpdatedImplCopyWith<_$GamesUpdatedImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$TopLeaderboardUpdatedImplCopyWith<$Res> {
   factory _$$TopLeaderboardUpdatedImplCopyWith(
-          _$TopLeaderboardUpdatedImpl value,
-          $Res Function(_$TopLeaderboardUpdatedImpl) then) =
+          _$TopLeaderboardUpdatedImpl value, $Res Function(_$TopLeaderboardUpdatedImpl) then) =
       __$$TopLeaderboardUpdatedImplCopyWithImpl<$Res>;
   @useResult
   $Res call({List<LeaderboardUser> leaderboardUsers});
 }
 
 /// @nodoc
-class __$$TopLeaderboardUpdatedImplCopyWithImpl<$Res>
-    extends _$HomeEventCopyWithImpl<$Res, _$TopLeaderboardUpdatedImpl>
+class __$$TopLeaderboardUpdatedImplCopyWithImpl<$Res> extends _$HomeEventCopyWithImpl<$Res, _$TopLeaderboardUpdatedImpl>
     implements _$$TopLeaderboardUpdatedImplCopyWith<$Res> {
-  __$$TopLeaderboardUpdatedImplCopyWithImpl(_$TopLeaderboardUpdatedImpl _value,
-      $Res Function(_$TopLeaderboardUpdatedImpl) _then)
+  __$$TopLeaderboardUpdatedImplCopyWithImpl(
+      _$TopLeaderboardUpdatedImpl _value, $Res Function(_$TopLeaderboardUpdatedImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of HomeEvent
@@ -937,15 +876,13 @@ class __$$TopLeaderboardUpdatedImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$TopLeaderboardUpdatedImpl implements _TopLeaderboardUpdated {
-  const _$TopLeaderboardUpdatedImpl(
-      final List<LeaderboardUser> leaderboardUsers)
+  const _$TopLeaderboardUpdatedImpl(final List<LeaderboardUser> leaderboardUsers)
       : _leaderboardUsers = leaderboardUsers;
 
   final List<LeaderboardUser> _leaderboardUsers;
   @override
   List<LeaderboardUser> get leaderboardUsers {
-    if (_leaderboardUsers is EqualUnmodifiableListView)
-      return _leaderboardUsers;
+    if (_leaderboardUsers is EqualUnmodifiableListView) return _leaderboardUsers;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_leaderboardUsers);
   }
@@ -960,22 +897,19 @@ class _$TopLeaderboardUpdatedImpl implements _TopLeaderboardUpdated {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TopLeaderboardUpdatedImpl &&
-            const DeepCollectionEquality()
-                .equals(other._leaderboardUsers, _leaderboardUsers));
+            const DeepCollectionEquality().equals(other._leaderboardUsers, _leaderboardUsers));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_leaderboardUsers));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_leaderboardUsers));
 
   /// Create a copy of HomeEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$TopLeaderboardUpdatedImplCopyWith<_$TopLeaderboardUpdatedImpl>
-      get copyWith => __$$TopLeaderboardUpdatedImplCopyWithImpl<
-          _$TopLeaderboardUpdatedImpl>(this, _$identity);
+  _$$TopLeaderboardUpdatedImplCopyWith<_$TopLeaderboardUpdatedImpl> get copyWith =>
+      __$$TopLeaderboardUpdatedImplCopyWithImpl<_$TopLeaderboardUpdatedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -983,11 +917,10 @@ class _$TopLeaderboardUpdatedImpl implements _TopLeaderboardUpdated {
     required TResult Function(User? user) userUpdated,
     required TResult Function(DateTime dateTime) dateUpdated,
     required TResult Function(ModelId<Game, String> id) openGame,
-    required TResult Function(Map<ModelId<Game, String>, Game> gamesInProgress,
-            Map<ModelId<Game, String>, Game> recentGames)
+    required TResult Function(
+            Map<ModelId<Game, String>, Game> gamesInProgress, Map<ModelId<Game, String>, Game> recentGames)
         gamesUpdated,
-    required TResult Function(List<LeaderboardUser> leaderboardUsers)
-        topLeaderboardUpdated,
+    required TResult Function(List<LeaderboardUser> leaderboardUsers) topLeaderboardUpdated,
     required TResult Function() sendFeedback,
     required TResult Function() requiresUpdate,
     required TResult Function(String error) errorReceived,
@@ -1001,11 +934,9 @@ class _$TopLeaderboardUpdatedImpl implements _TopLeaderboardUpdated {
     TResult? Function(User? user)? userUpdated,
     TResult? Function(DateTime dateTime)? dateUpdated,
     TResult? Function(ModelId<Game, String> id)? openGame,
-    TResult? Function(Map<ModelId<Game, String>, Game> gamesInProgress,
-            Map<ModelId<Game, String>, Game> recentGames)?
+    TResult? Function(Map<ModelId<Game, String>, Game> gamesInProgress, Map<ModelId<Game, String>, Game> recentGames)?
         gamesUpdated,
-    TResult? Function(List<LeaderboardUser> leaderboardUsers)?
-        topLeaderboardUpdated,
+    TResult? Function(List<LeaderboardUser> leaderboardUsers)? topLeaderboardUpdated,
     TResult? Function()? sendFeedback,
     TResult? Function()? requiresUpdate,
     TResult? Function(String error)? errorReceived,
@@ -1019,11 +950,9 @@ class _$TopLeaderboardUpdatedImpl implements _TopLeaderboardUpdated {
     TResult Function(User? user)? userUpdated,
     TResult Function(DateTime dateTime)? dateUpdated,
     TResult Function(ModelId<Game, String> id)? openGame,
-    TResult Function(Map<ModelId<Game, String>, Game> gamesInProgress,
-            Map<ModelId<Game, String>, Game> recentGames)?
+    TResult Function(Map<ModelId<Game, String>, Game> gamesInProgress, Map<ModelId<Game, String>, Game> recentGames)?
         gamesUpdated,
-    TResult Function(List<LeaderboardUser> leaderboardUsers)?
-        topLeaderboardUpdated,
+    TResult Function(List<LeaderboardUser> leaderboardUsers)? topLeaderboardUpdated,
     TResult Function()? sendFeedback,
     TResult Function()? requiresUpdate,
     TResult Function(String error)? errorReceived,
@@ -1042,8 +971,7 @@ class _$TopLeaderboardUpdatedImpl implements _TopLeaderboardUpdated {
     required TResult Function(_DateUpdated value) dateUpdated,
     required TResult Function(_OpenGame value) openGame,
     required TResult Function(_GamesUpdated value) gamesUpdated,
-    required TResult Function(_TopLeaderboardUpdated value)
-        topLeaderboardUpdated,
+    required TResult Function(_TopLeaderboardUpdated value) topLeaderboardUpdated,
     required TResult Function(_SendFeedback value) sendFeedback,
     required TResult Function(_RequiresUpdate value) requiresUpdate,
     required TResult Function(_ErrorReceived value) errorReceived,
@@ -1087,32 +1015,26 @@ class _$TopLeaderboardUpdatedImpl implements _TopLeaderboardUpdated {
 }
 
 abstract class _TopLeaderboardUpdated implements HomeEvent {
-  const factory _TopLeaderboardUpdated(
-          final List<LeaderboardUser> leaderboardUsers) =
-      _$TopLeaderboardUpdatedImpl;
+  const factory _TopLeaderboardUpdated(final List<LeaderboardUser> leaderboardUsers) = _$TopLeaderboardUpdatedImpl;
 
   List<LeaderboardUser> get leaderboardUsers;
 
   /// Create a copy of HomeEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$TopLeaderboardUpdatedImplCopyWith<_$TopLeaderboardUpdatedImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$TopLeaderboardUpdatedImplCopyWith<_$TopLeaderboardUpdatedImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$SendFeedbackImplCopyWith<$Res> {
-  factory _$$SendFeedbackImplCopyWith(
-          _$SendFeedbackImpl value, $Res Function(_$SendFeedbackImpl) then) =
+  factory _$$SendFeedbackImplCopyWith(_$SendFeedbackImpl value, $Res Function(_$SendFeedbackImpl) then) =
       __$$SendFeedbackImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$SendFeedbackImplCopyWithImpl<$Res>
-    extends _$HomeEventCopyWithImpl<$Res, _$SendFeedbackImpl>
+class __$$SendFeedbackImplCopyWithImpl<$Res> extends _$HomeEventCopyWithImpl<$Res, _$SendFeedbackImpl>
     implements _$$SendFeedbackImplCopyWith<$Res> {
-  __$$SendFeedbackImplCopyWithImpl(
-      _$SendFeedbackImpl _value, $Res Function(_$SendFeedbackImpl) _then)
+  __$$SendFeedbackImplCopyWithImpl(_$SendFeedbackImpl _value, $Res Function(_$SendFeedbackImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of HomeEvent
@@ -1131,8 +1053,7 @@ class _$SendFeedbackImpl implements _SendFeedback {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SendFeedbackImpl);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$SendFeedbackImpl);
   }
 
   @override
@@ -1144,11 +1065,10 @@ class _$SendFeedbackImpl implements _SendFeedback {
     required TResult Function(User? user) userUpdated,
     required TResult Function(DateTime dateTime) dateUpdated,
     required TResult Function(ModelId<Game, String> id) openGame,
-    required TResult Function(Map<ModelId<Game, String>, Game> gamesInProgress,
-            Map<ModelId<Game, String>, Game> recentGames)
+    required TResult Function(
+            Map<ModelId<Game, String>, Game> gamesInProgress, Map<ModelId<Game, String>, Game> recentGames)
         gamesUpdated,
-    required TResult Function(List<LeaderboardUser> leaderboardUsers)
-        topLeaderboardUpdated,
+    required TResult Function(List<LeaderboardUser> leaderboardUsers) topLeaderboardUpdated,
     required TResult Function() sendFeedback,
     required TResult Function() requiresUpdate,
     required TResult Function(String error) errorReceived,
@@ -1162,11 +1082,9 @@ class _$SendFeedbackImpl implements _SendFeedback {
     TResult? Function(User? user)? userUpdated,
     TResult? Function(DateTime dateTime)? dateUpdated,
     TResult? Function(ModelId<Game, String> id)? openGame,
-    TResult? Function(Map<ModelId<Game, String>, Game> gamesInProgress,
-            Map<ModelId<Game, String>, Game> recentGames)?
+    TResult? Function(Map<ModelId<Game, String>, Game> gamesInProgress, Map<ModelId<Game, String>, Game> recentGames)?
         gamesUpdated,
-    TResult? Function(List<LeaderboardUser> leaderboardUsers)?
-        topLeaderboardUpdated,
+    TResult? Function(List<LeaderboardUser> leaderboardUsers)? topLeaderboardUpdated,
     TResult? Function()? sendFeedback,
     TResult? Function()? requiresUpdate,
     TResult? Function(String error)? errorReceived,
@@ -1180,11 +1098,9 @@ class _$SendFeedbackImpl implements _SendFeedback {
     TResult Function(User? user)? userUpdated,
     TResult Function(DateTime dateTime)? dateUpdated,
     TResult Function(ModelId<Game, String> id)? openGame,
-    TResult Function(Map<ModelId<Game, String>, Game> gamesInProgress,
-            Map<ModelId<Game, String>, Game> recentGames)?
+    TResult Function(Map<ModelId<Game, String>, Game> gamesInProgress, Map<ModelId<Game, String>, Game> recentGames)?
         gamesUpdated,
-    TResult Function(List<LeaderboardUser> leaderboardUsers)?
-        topLeaderboardUpdated,
+    TResult Function(List<LeaderboardUser> leaderboardUsers)? topLeaderboardUpdated,
     TResult Function()? sendFeedback,
     TResult Function()? requiresUpdate,
     TResult Function(String error)? errorReceived,
@@ -1203,8 +1119,7 @@ class _$SendFeedbackImpl implements _SendFeedback {
     required TResult Function(_DateUpdated value) dateUpdated,
     required TResult Function(_OpenGame value) openGame,
     required TResult Function(_GamesUpdated value) gamesUpdated,
-    required TResult Function(_TopLeaderboardUpdated value)
-        topLeaderboardUpdated,
+    required TResult Function(_TopLeaderboardUpdated value) topLeaderboardUpdated,
     required TResult Function(_SendFeedback value) sendFeedback,
     required TResult Function(_RequiresUpdate value) requiresUpdate,
     required TResult Function(_ErrorReceived value) errorReceived,
@@ -1253,17 +1168,14 @@ abstract class _SendFeedback implements HomeEvent {
 
 /// @nodoc
 abstract class _$$RequiresUpdateImplCopyWith<$Res> {
-  factory _$$RequiresUpdateImplCopyWith(_$RequiresUpdateImpl value,
-          $Res Function(_$RequiresUpdateImpl) then) =
+  factory _$$RequiresUpdateImplCopyWith(_$RequiresUpdateImpl value, $Res Function(_$RequiresUpdateImpl) then) =
       __$$RequiresUpdateImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$RequiresUpdateImplCopyWithImpl<$Res>
-    extends _$HomeEventCopyWithImpl<$Res, _$RequiresUpdateImpl>
+class __$$RequiresUpdateImplCopyWithImpl<$Res> extends _$HomeEventCopyWithImpl<$Res, _$RequiresUpdateImpl>
     implements _$$RequiresUpdateImplCopyWith<$Res> {
-  __$$RequiresUpdateImplCopyWithImpl(
-      _$RequiresUpdateImpl _value, $Res Function(_$RequiresUpdateImpl) _then)
+  __$$RequiresUpdateImplCopyWithImpl(_$RequiresUpdateImpl _value, $Res Function(_$RequiresUpdateImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of HomeEvent
@@ -1282,8 +1194,7 @@ class _$RequiresUpdateImpl implements _RequiresUpdate {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$RequiresUpdateImpl);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$RequiresUpdateImpl);
   }
 
   @override
@@ -1295,11 +1206,10 @@ class _$RequiresUpdateImpl implements _RequiresUpdate {
     required TResult Function(User? user) userUpdated,
     required TResult Function(DateTime dateTime) dateUpdated,
     required TResult Function(ModelId<Game, String> id) openGame,
-    required TResult Function(Map<ModelId<Game, String>, Game> gamesInProgress,
-            Map<ModelId<Game, String>, Game> recentGames)
+    required TResult Function(
+            Map<ModelId<Game, String>, Game> gamesInProgress, Map<ModelId<Game, String>, Game> recentGames)
         gamesUpdated,
-    required TResult Function(List<LeaderboardUser> leaderboardUsers)
-        topLeaderboardUpdated,
+    required TResult Function(List<LeaderboardUser> leaderboardUsers) topLeaderboardUpdated,
     required TResult Function() sendFeedback,
     required TResult Function() requiresUpdate,
     required TResult Function(String error) errorReceived,
@@ -1313,11 +1223,9 @@ class _$RequiresUpdateImpl implements _RequiresUpdate {
     TResult? Function(User? user)? userUpdated,
     TResult? Function(DateTime dateTime)? dateUpdated,
     TResult? Function(ModelId<Game, String> id)? openGame,
-    TResult? Function(Map<ModelId<Game, String>, Game> gamesInProgress,
-            Map<ModelId<Game, String>, Game> recentGames)?
+    TResult? Function(Map<ModelId<Game, String>, Game> gamesInProgress, Map<ModelId<Game, String>, Game> recentGames)?
         gamesUpdated,
-    TResult? Function(List<LeaderboardUser> leaderboardUsers)?
-        topLeaderboardUpdated,
+    TResult? Function(List<LeaderboardUser> leaderboardUsers)? topLeaderboardUpdated,
     TResult? Function()? sendFeedback,
     TResult? Function()? requiresUpdate,
     TResult? Function(String error)? errorReceived,
@@ -1331,11 +1239,9 @@ class _$RequiresUpdateImpl implements _RequiresUpdate {
     TResult Function(User? user)? userUpdated,
     TResult Function(DateTime dateTime)? dateUpdated,
     TResult Function(ModelId<Game, String> id)? openGame,
-    TResult Function(Map<ModelId<Game, String>, Game> gamesInProgress,
-            Map<ModelId<Game, String>, Game> recentGames)?
+    TResult Function(Map<ModelId<Game, String>, Game> gamesInProgress, Map<ModelId<Game, String>, Game> recentGames)?
         gamesUpdated,
-    TResult Function(List<LeaderboardUser> leaderboardUsers)?
-        topLeaderboardUpdated,
+    TResult Function(List<LeaderboardUser> leaderboardUsers)? topLeaderboardUpdated,
     TResult Function()? sendFeedback,
     TResult Function()? requiresUpdate,
     TResult Function(String error)? errorReceived,
@@ -1354,8 +1260,7 @@ class _$RequiresUpdateImpl implements _RequiresUpdate {
     required TResult Function(_DateUpdated value) dateUpdated,
     required TResult Function(_OpenGame value) openGame,
     required TResult Function(_GamesUpdated value) gamesUpdated,
-    required TResult Function(_TopLeaderboardUpdated value)
-        topLeaderboardUpdated,
+    required TResult Function(_TopLeaderboardUpdated value) topLeaderboardUpdated,
     required TResult Function(_SendFeedback value) sendFeedback,
     required TResult Function(_RequiresUpdate value) requiresUpdate,
     required TResult Function(_ErrorReceived value) errorReceived,
@@ -1404,19 +1309,16 @@ abstract class _RequiresUpdate implements HomeEvent {
 
 /// @nodoc
 abstract class _$$ErrorReceivedImplCopyWith<$Res> {
-  factory _$$ErrorReceivedImplCopyWith(
-          _$ErrorReceivedImpl value, $Res Function(_$ErrorReceivedImpl) then) =
+  factory _$$ErrorReceivedImplCopyWith(_$ErrorReceivedImpl value, $Res Function(_$ErrorReceivedImpl) then) =
       __$$ErrorReceivedImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String error});
 }
 
 /// @nodoc
-class __$$ErrorReceivedImplCopyWithImpl<$Res>
-    extends _$HomeEventCopyWithImpl<$Res, _$ErrorReceivedImpl>
+class __$$ErrorReceivedImplCopyWithImpl<$Res> extends _$HomeEventCopyWithImpl<$Res, _$ErrorReceivedImpl>
     implements _$$ErrorReceivedImplCopyWith<$Res> {
-  __$$ErrorReceivedImplCopyWithImpl(
-      _$ErrorReceivedImpl _value, $Res Function(_$ErrorReceivedImpl) _then)
+  __$$ErrorReceivedImplCopyWithImpl(_$ErrorReceivedImpl _value, $Res Function(_$ErrorReceivedImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of HomeEvent
@@ -1473,11 +1375,10 @@ class _$ErrorReceivedImpl implements _ErrorReceived {
     required TResult Function(User? user) userUpdated,
     required TResult Function(DateTime dateTime) dateUpdated,
     required TResult Function(ModelId<Game, String> id) openGame,
-    required TResult Function(Map<ModelId<Game, String>, Game> gamesInProgress,
-            Map<ModelId<Game, String>, Game> recentGames)
+    required TResult Function(
+            Map<ModelId<Game, String>, Game> gamesInProgress, Map<ModelId<Game, String>, Game> recentGames)
         gamesUpdated,
-    required TResult Function(List<LeaderboardUser> leaderboardUsers)
-        topLeaderboardUpdated,
+    required TResult Function(List<LeaderboardUser> leaderboardUsers) topLeaderboardUpdated,
     required TResult Function() sendFeedback,
     required TResult Function() requiresUpdate,
     required TResult Function(String error) errorReceived,
@@ -1491,11 +1392,9 @@ class _$ErrorReceivedImpl implements _ErrorReceived {
     TResult? Function(User? user)? userUpdated,
     TResult? Function(DateTime dateTime)? dateUpdated,
     TResult? Function(ModelId<Game, String> id)? openGame,
-    TResult? Function(Map<ModelId<Game, String>, Game> gamesInProgress,
-            Map<ModelId<Game, String>, Game> recentGames)?
+    TResult? Function(Map<ModelId<Game, String>, Game> gamesInProgress, Map<ModelId<Game, String>, Game> recentGames)?
         gamesUpdated,
-    TResult? Function(List<LeaderboardUser> leaderboardUsers)?
-        topLeaderboardUpdated,
+    TResult? Function(List<LeaderboardUser> leaderboardUsers)? topLeaderboardUpdated,
     TResult? Function()? sendFeedback,
     TResult? Function()? requiresUpdate,
     TResult? Function(String error)? errorReceived,
@@ -1509,11 +1408,9 @@ class _$ErrorReceivedImpl implements _ErrorReceived {
     TResult Function(User? user)? userUpdated,
     TResult Function(DateTime dateTime)? dateUpdated,
     TResult Function(ModelId<Game, String> id)? openGame,
-    TResult Function(Map<ModelId<Game, String>, Game> gamesInProgress,
-            Map<ModelId<Game, String>, Game> recentGames)?
+    TResult Function(Map<ModelId<Game, String>, Game> gamesInProgress, Map<ModelId<Game, String>, Game> recentGames)?
         gamesUpdated,
-    TResult Function(List<LeaderboardUser> leaderboardUsers)?
-        topLeaderboardUpdated,
+    TResult Function(List<LeaderboardUser> leaderboardUsers)? topLeaderboardUpdated,
     TResult Function()? sendFeedback,
     TResult Function()? requiresUpdate,
     TResult Function(String error)? errorReceived,
@@ -1532,8 +1429,7 @@ class _$ErrorReceivedImpl implements _ErrorReceived {
     required TResult Function(_DateUpdated value) dateUpdated,
     required TResult Function(_OpenGame value) openGame,
     required TResult Function(_GamesUpdated value) gamesUpdated,
-    required TResult Function(_TopLeaderboardUpdated value)
-        topLeaderboardUpdated,
+    required TResult Function(_TopLeaderboardUpdated value) topLeaderboardUpdated,
     required TResult Function(_SendFeedback value) sendFeedback,
     required TResult Function(_RequiresUpdate value) requiresUpdate,
     required TResult Function(_ErrorReceived value) errorReceived,
@@ -1584,8 +1480,7 @@ abstract class _ErrorReceived implements HomeEvent {
   /// Create a copy of HomeEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ErrorReceivedImplCopyWith<_$ErrorReceivedImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ErrorReceivedImplCopyWith<_$ErrorReceivedImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1594,51 +1489,29 @@ mixin _$HomeState {
   String? get error => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(
-            User user,
-            DateTime datetime,
-            ModelId<Game, String>? gameToOpen,
-            List<LeaderboardUser> topPlayers,
-            List<Game> gamesInProgress,
-            List<Game> recentGames,
-            String? error)
+    required TResult Function(User user, DateTime datetime, ModelId<Game, String>? gameToOpen,
+            List<LeaderboardUser> topPlayers, List<Game> gamesInProgress, List<Game> recentGames, String? error)
         user,
-    required TResult Function(List<LeaderboardUser> topPlayers, String? error)
-        noUser,
-    required TResult Function(String? error, List<LeaderboardUser> topPlayers)
-        requiresUpdate,
+    required TResult Function(List<LeaderboardUser> topPlayers, String? error) noUser,
+    required TResult Function(String? error, List<LeaderboardUser> topPlayers) requiresUpdate,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(
-            User user,
-            DateTime datetime,
-            ModelId<Game, String>? gameToOpen,
-            List<LeaderboardUser> topPlayers,
-            List<Game> gamesInProgress,
-            List<Game> recentGames,
-            String? error)?
+    TResult? Function(User user, DateTime datetime, ModelId<Game, String>? gameToOpen, List<LeaderboardUser> topPlayers,
+            List<Game> gamesInProgress, List<Game> recentGames, String? error)?
         user,
     TResult? Function(List<LeaderboardUser> topPlayers, String? error)? noUser,
-    TResult? Function(String? error, List<LeaderboardUser> topPlayers)?
-        requiresUpdate,
+    TResult? Function(String? error, List<LeaderboardUser> topPlayers)? requiresUpdate,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            User user,
-            DateTime datetime,
-            ModelId<Game, String>? gameToOpen,
-            List<LeaderboardUser> topPlayers,
-            List<Game> gamesInProgress,
-            List<Game> recentGames,
-            String? error)?
+    TResult Function(User user, DateTime datetime, ModelId<Game, String>? gameToOpen, List<LeaderboardUser> topPlayers,
+            List<Game> gamesInProgress, List<Game> recentGames, String? error)?
         user,
     TResult Function(List<LeaderboardUser> topPlayers, String? error)? noUser,
-    TResult Function(String? error, List<LeaderboardUser> topPlayers)?
-        requiresUpdate,
+    TResult Function(String? error, List<LeaderboardUser> topPlayers)? requiresUpdate,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -1668,21 +1541,18 @@ mixin _$HomeState {
   /// Create a copy of HomeState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $HomeStateCopyWith<HomeState> get copyWith =>
-      throw _privateConstructorUsedError;
+  $HomeStateCopyWith<HomeState> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $HomeStateCopyWith<$Res> {
-  factory $HomeStateCopyWith(HomeState value, $Res Function(HomeState) then) =
-      _$HomeStateCopyWithImpl<$Res, HomeState>;
+  factory $HomeStateCopyWith(HomeState value, $Res Function(HomeState) then) = _$HomeStateCopyWithImpl<$Res, HomeState>;
   @useResult
   $Res call({List<LeaderboardUser> topPlayers, String? error});
 }
 
 /// @nodoc
-class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
-    implements $HomeStateCopyWith<$Res> {
+class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState> implements $HomeStateCopyWith<$Res> {
   _$HomeStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -1712,10 +1582,8 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
 }
 
 /// @nodoc
-abstract class _$$HomeStateUserImplCopyWith<$Res>
-    implements $HomeStateCopyWith<$Res> {
-  factory _$$HomeStateUserImplCopyWith(
-          _$HomeStateUserImpl value, $Res Function(_$HomeStateUserImpl) then) =
+abstract class _$$HomeStateUserImplCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
+  factory _$$HomeStateUserImplCopyWith(_$HomeStateUserImpl value, $Res Function(_$HomeStateUserImpl) then) =
       __$$HomeStateUserImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -1730,11 +1598,9 @@ abstract class _$$HomeStateUserImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$HomeStateUserImplCopyWithImpl<$Res>
-    extends _$HomeStateCopyWithImpl<$Res, _$HomeStateUserImpl>
+class __$$HomeStateUserImplCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res, _$HomeStateUserImpl>
     implements _$$HomeStateUserImplCopyWith<$Res> {
-  __$$HomeStateUserImplCopyWithImpl(
-      _$HomeStateUserImpl _value, $Res Function(_$HomeStateUserImpl) _then)
+  __$$HomeStateUserImplCopyWithImpl(_$HomeStateUserImpl _value, $Res Function(_$HomeStateUserImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of HomeState
@@ -1844,16 +1710,11 @@ class _$HomeStateUserImpl implements HomeStateUser {
         (other.runtimeType == runtimeType &&
             other is _$HomeStateUserImpl &&
             (identical(other.user, user) || other.user == user) &&
-            (identical(other.datetime, datetime) ||
-                other.datetime == datetime) &&
-            (identical(other.gameToOpen, gameToOpen) ||
-                other.gameToOpen == gameToOpen) &&
-            const DeepCollectionEquality()
-                .equals(other._topPlayers, _topPlayers) &&
-            const DeepCollectionEquality()
-                .equals(other._gamesInProgress, _gamesInProgress) &&
-            const DeepCollectionEquality()
-                .equals(other._recentGames, _recentGames) &&
+            (identical(other.datetime, datetime) || other.datetime == datetime) &&
+            (identical(other.gameToOpen, gameToOpen) || other.gameToOpen == gameToOpen) &&
+            const DeepCollectionEquality().equals(other._topPlayers, _topPlayers) &&
+            const DeepCollectionEquality().equals(other._gamesInProgress, _gamesInProgress) &&
+            const DeepCollectionEquality().equals(other._recentGames, _recentGames) &&
             (identical(other.error, error) || other.error == error));
   }
 
@@ -1879,64 +1740,39 @@ class _$HomeStateUserImpl implements HomeStateUser {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(
-            User user,
-            DateTime datetime,
-            ModelId<Game, String>? gameToOpen,
-            List<LeaderboardUser> topPlayers,
-            List<Game> gamesInProgress,
-            List<Game> recentGames,
-            String? error)
+    required TResult Function(User user, DateTime datetime, ModelId<Game, String>? gameToOpen,
+            List<LeaderboardUser> topPlayers, List<Game> gamesInProgress, List<Game> recentGames, String? error)
         user,
-    required TResult Function(List<LeaderboardUser> topPlayers, String? error)
-        noUser,
-    required TResult Function(String? error, List<LeaderboardUser> topPlayers)
-        requiresUpdate,
+    required TResult Function(List<LeaderboardUser> topPlayers, String? error) noUser,
+    required TResult Function(String? error, List<LeaderboardUser> topPlayers) requiresUpdate,
   }) {
-    return user(this.user, datetime, gameToOpen, topPlayers, gamesInProgress,
-        recentGames, error);
+    return user(this.user, datetime, gameToOpen, topPlayers, gamesInProgress, recentGames, error);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(
-            User user,
-            DateTime datetime,
-            ModelId<Game, String>? gameToOpen,
-            List<LeaderboardUser> topPlayers,
-            List<Game> gamesInProgress,
-            List<Game> recentGames,
-            String? error)?
+    TResult? Function(User user, DateTime datetime, ModelId<Game, String>? gameToOpen, List<LeaderboardUser> topPlayers,
+            List<Game> gamesInProgress, List<Game> recentGames, String? error)?
         user,
     TResult? Function(List<LeaderboardUser> topPlayers, String? error)? noUser,
-    TResult? Function(String? error, List<LeaderboardUser> topPlayers)?
-        requiresUpdate,
+    TResult? Function(String? error, List<LeaderboardUser> topPlayers)? requiresUpdate,
   }) {
-    return user?.call(this.user, datetime, gameToOpen, topPlayers,
-        gamesInProgress, recentGames, error);
+    return user?.call(this.user, datetime, gameToOpen, topPlayers, gamesInProgress, recentGames, error);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            User user,
-            DateTime datetime,
-            ModelId<Game, String>? gameToOpen,
-            List<LeaderboardUser> topPlayers,
-            List<Game> gamesInProgress,
-            List<Game> recentGames,
-            String? error)?
+    TResult Function(User user, DateTime datetime, ModelId<Game, String>? gameToOpen, List<LeaderboardUser> topPlayers,
+            List<Game> gamesInProgress, List<Game> recentGames, String? error)?
         user,
     TResult Function(List<LeaderboardUser> topPlayers, String? error)? noUser,
-    TResult Function(String? error, List<LeaderboardUser> topPlayers)?
-        requiresUpdate,
+    TResult Function(String? error, List<LeaderboardUser> topPlayers)? requiresUpdate,
     required TResult orElse(),
   }) {
     if (user != null) {
-      return user(this.user, datetime, gameToOpen, topPlayers, gamesInProgress,
-          recentGames, error);
+      return user(this.user, datetime, gameToOpen, topPlayers, gamesInProgress, recentGames, error);
     }
     return orElse();
   }
@@ -2000,15 +1836,12 @@ abstract class HomeStateUser implements HomeState {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$HomeStateUserImplCopyWith<_$HomeStateUserImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$HomeStateUserImplCopyWith<_$HomeStateUserImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$HomeStateNoUserImplCopyWith<$Res>
-    implements $HomeStateCopyWith<$Res> {
-  factory _$$HomeStateNoUserImplCopyWith(_$HomeStateNoUserImpl value,
-          $Res Function(_$HomeStateNoUserImpl) then) =
+abstract class _$$HomeStateNoUserImplCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
+  factory _$$HomeStateNoUserImplCopyWith(_$HomeStateNoUserImpl value, $Res Function(_$HomeStateNoUserImpl) then) =
       __$$HomeStateNoUserImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -2016,11 +1849,9 @@ abstract class _$$HomeStateNoUserImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$HomeStateNoUserImplCopyWithImpl<$Res>
-    extends _$HomeStateCopyWithImpl<$Res, _$HomeStateNoUserImpl>
+class __$$HomeStateNoUserImplCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res, _$HomeStateNoUserImpl>
     implements _$$HomeStateNoUserImplCopyWith<$Res> {
-  __$$HomeStateNoUserImplCopyWithImpl(
-      _$HomeStateNoUserImpl _value, $Res Function(_$HomeStateNoUserImpl) _then)
+  __$$HomeStateNoUserImplCopyWithImpl(_$HomeStateNoUserImpl _value, $Res Function(_$HomeStateNoUserImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of HomeState
@@ -2047,8 +1878,7 @@ class __$$HomeStateNoUserImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$HomeStateNoUserImpl implements HomeStateNoUser {
-  const _$HomeStateNoUserImpl(
-      {required final List<LeaderboardUser> topPlayers, required this.error})
+  const _$HomeStateNoUserImpl({required final List<LeaderboardUser> topPlayers, required this.error})
       : _topPlayers = topPlayers;
 
   final List<LeaderboardUser> _topPlayers;
@@ -2072,14 +1902,12 @@ class _$HomeStateNoUserImpl implements HomeStateNoUser {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$HomeStateNoUserImpl &&
-            const DeepCollectionEquality()
-                .equals(other._topPlayers, _topPlayers) &&
+            const DeepCollectionEquality().equals(other._topPlayers, _topPlayers) &&
             (identical(other.error, error) || other.error == error));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_topPlayers), error);
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_topPlayers), error);
 
   /// Create a copy of HomeState
   /// with the given fields replaced by the non-null parameter values.
@@ -2087,25 +1915,16 @@ class _$HomeStateNoUserImpl implements HomeStateNoUser {
   @override
   @pragma('vm:prefer-inline')
   _$$HomeStateNoUserImplCopyWith<_$HomeStateNoUserImpl> get copyWith =>
-      __$$HomeStateNoUserImplCopyWithImpl<_$HomeStateNoUserImpl>(
-          this, _$identity);
+      __$$HomeStateNoUserImplCopyWithImpl<_$HomeStateNoUserImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(
-            User user,
-            DateTime datetime,
-            ModelId<Game, String>? gameToOpen,
-            List<LeaderboardUser> topPlayers,
-            List<Game> gamesInProgress,
-            List<Game> recentGames,
-            String? error)
+    required TResult Function(User user, DateTime datetime, ModelId<Game, String>? gameToOpen,
+            List<LeaderboardUser> topPlayers, List<Game> gamesInProgress, List<Game> recentGames, String? error)
         user,
-    required TResult Function(List<LeaderboardUser> topPlayers, String? error)
-        noUser,
-    required TResult Function(String? error, List<LeaderboardUser> topPlayers)
-        requiresUpdate,
+    required TResult Function(List<LeaderboardUser> topPlayers, String? error) noUser,
+    required TResult Function(String? error, List<LeaderboardUser> topPlayers) requiresUpdate,
   }) {
     return noUser(topPlayers, error);
   }
@@ -2113,18 +1932,11 @@ class _$HomeStateNoUserImpl implements HomeStateNoUser {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(
-            User user,
-            DateTime datetime,
-            ModelId<Game, String>? gameToOpen,
-            List<LeaderboardUser> topPlayers,
-            List<Game> gamesInProgress,
-            List<Game> recentGames,
-            String? error)?
+    TResult? Function(User user, DateTime datetime, ModelId<Game, String>? gameToOpen, List<LeaderboardUser> topPlayers,
+            List<Game> gamesInProgress, List<Game> recentGames, String? error)?
         user,
     TResult? Function(List<LeaderboardUser> topPlayers, String? error)? noUser,
-    TResult? Function(String? error, List<LeaderboardUser> topPlayers)?
-        requiresUpdate,
+    TResult? Function(String? error, List<LeaderboardUser> topPlayers)? requiresUpdate,
   }) {
     return noUser?.call(topPlayers, error);
   }
@@ -2132,18 +1944,11 @@ class _$HomeStateNoUserImpl implements HomeStateNoUser {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            User user,
-            DateTime datetime,
-            ModelId<Game, String>? gameToOpen,
-            List<LeaderboardUser> topPlayers,
-            List<Game> gamesInProgress,
-            List<Game> recentGames,
-            String? error)?
+    TResult Function(User user, DateTime datetime, ModelId<Game, String>? gameToOpen, List<LeaderboardUser> topPlayers,
+            List<Game> gamesInProgress, List<Game> recentGames, String? error)?
         user,
     TResult Function(List<LeaderboardUser> topPlayers, String? error)? noUser,
-    TResult Function(String? error, List<LeaderboardUser> topPlayers)?
-        requiresUpdate,
+    TResult Function(String? error, List<LeaderboardUser> topPlayers)? requiresUpdate,
     required TResult orElse(),
   }) {
     if (noUser != null) {
@@ -2188,9 +1993,8 @@ class _$HomeStateNoUserImpl implements HomeStateNoUser {
 }
 
 abstract class HomeStateNoUser implements HomeState {
-  const factory HomeStateNoUser(
-      {required final List<LeaderboardUser> topPlayers,
-      required final String? error}) = _$HomeStateNoUserImpl;
+  const factory HomeStateNoUser({required final List<LeaderboardUser> topPlayers, required final String? error}) =
+      _$HomeStateNoUserImpl;
 
   @override
   List<LeaderboardUser> get topPlayers;
@@ -2201,16 +2005,13 @@ abstract class HomeStateNoUser implements HomeState {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$HomeStateNoUserImplCopyWith<_$HomeStateNoUserImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$HomeStateNoUserImplCopyWith<_$HomeStateNoUserImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$HomeStateRequiresUpdateImplCopyWith<$Res>
-    implements $HomeStateCopyWith<$Res> {
+abstract class _$$HomeStateRequiresUpdateImplCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
   factory _$$HomeStateRequiresUpdateImplCopyWith(
-          _$HomeStateRequiresUpdateImpl value,
-          $Res Function(_$HomeStateRequiresUpdateImpl) then) =
+          _$HomeStateRequiresUpdateImpl value, $Res Function(_$HomeStateRequiresUpdateImpl) then) =
       __$$HomeStateRequiresUpdateImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -2222,8 +2023,7 @@ class __$$HomeStateRequiresUpdateImplCopyWithImpl<$Res>
     extends _$HomeStateCopyWithImpl<$Res, _$HomeStateRequiresUpdateImpl>
     implements _$$HomeStateRequiresUpdateImplCopyWith<$Res> {
   __$$HomeStateRequiresUpdateImplCopyWithImpl(
-      _$HomeStateRequiresUpdateImpl _value,
-      $Res Function(_$HomeStateRequiresUpdateImpl) _then)
+      _$HomeStateRequiresUpdateImpl _value, $Res Function(_$HomeStateRequiresUpdateImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of HomeState
@@ -2250,8 +2050,7 @@ class __$$HomeStateRequiresUpdateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$HomeStateRequiresUpdateImpl implements HomeStateRequiresUpdate {
-  const _$HomeStateRequiresUpdateImpl(
-      {required this.error, required final List<LeaderboardUser> topPlayers})
+  const _$HomeStateRequiresUpdateImpl({required this.error, required final List<LeaderboardUser> topPlayers})
       : _topPlayers = topPlayers;
 
   @override
@@ -2275,39 +2074,28 @@ class _$HomeStateRequiresUpdateImpl implements HomeStateRequiresUpdate {
         (other.runtimeType == runtimeType &&
             other is _$HomeStateRequiresUpdateImpl &&
             (identical(other.error, error) || other.error == error) &&
-            const DeepCollectionEquality()
-                .equals(other._topPlayers, _topPlayers));
+            const DeepCollectionEquality().equals(other._topPlayers, _topPlayers));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, error, const DeepCollectionEquality().hash(_topPlayers));
+  int get hashCode => Object.hash(runtimeType, error, const DeepCollectionEquality().hash(_topPlayers));
 
   /// Create a copy of HomeState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$HomeStateRequiresUpdateImplCopyWith<_$HomeStateRequiresUpdateImpl>
-      get copyWith => __$$HomeStateRequiresUpdateImplCopyWithImpl<
-          _$HomeStateRequiresUpdateImpl>(this, _$identity);
+  _$$HomeStateRequiresUpdateImplCopyWith<_$HomeStateRequiresUpdateImpl> get copyWith =>
+      __$$HomeStateRequiresUpdateImplCopyWithImpl<_$HomeStateRequiresUpdateImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(
-            User user,
-            DateTime datetime,
-            ModelId<Game, String>? gameToOpen,
-            List<LeaderboardUser> topPlayers,
-            List<Game> gamesInProgress,
-            List<Game> recentGames,
-            String? error)
+    required TResult Function(User user, DateTime datetime, ModelId<Game, String>? gameToOpen,
+            List<LeaderboardUser> topPlayers, List<Game> gamesInProgress, List<Game> recentGames, String? error)
         user,
-    required TResult Function(List<LeaderboardUser> topPlayers, String? error)
-        noUser,
-    required TResult Function(String? error, List<LeaderboardUser> topPlayers)
-        requiresUpdate,
+    required TResult Function(List<LeaderboardUser> topPlayers, String? error) noUser,
+    required TResult Function(String? error, List<LeaderboardUser> topPlayers) requiresUpdate,
   }) {
     return requiresUpdate(error, topPlayers);
   }
@@ -2315,18 +2103,11 @@ class _$HomeStateRequiresUpdateImpl implements HomeStateRequiresUpdate {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(
-            User user,
-            DateTime datetime,
-            ModelId<Game, String>? gameToOpen,
-            List<LeaderboardUser> topPlayers,
-            List<Game> gamesInProgress,
-            List<Game> recentGames,
-            String? error)?
+    TResult? Function(User user, DateTime datetime, ModelId<Game, String>? gameToOpen, List<LeaderboardUser> topPlayers,
+            List<Game> gamesInProgress, List<Game> recentGames, String? error)?
         user,
     TResult? Function(List<LeaderboardUser> topPlayers, String? error)? noUser,
-    TResult? Function(String? error, List<LeaderboardUser> topPlayers)?
-        requiresUpdate,
+    TResult? Function(String? error, List<LeaderboardUser> topPlayers)? requiresUpdate,
   }) {
     return requiresUpdate?.call(error, topPlayers);
   }
@@ -2334,18 +2115,11 @@ class _$HomeStateRequiresUpdateImpl implements HomeStateRequiresUpdate {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            User user,
-            DateTime datetime,
-            ModelId<Game, String>? gameToOpen,
-            List<LeaderboardUser> topPlayers,
-            List<Game> gamesInProgress,
-            List<Game> recentGames,
-            String? error)?
+    TResult Function(User user, DateTime datetime, ModelId<Game, String>? gameToOpen, List<LeaderboardUser> topPlayers,
+            List<Game> gamesInProgress, List<Game> recentGames, String? error)?
         user,
     TResult Function(List<LeaderboardUser> topPlayers, String? error)? noUser,
-    TResult Function(String? error, List<LeaderboardUser> topPlayers)?
-        requiresUpdate,
+    TResult Function(String? error, List<LeaderboardUser> topPlayers)? requiresUpdate,
     required TResult orElse(),
   }) {
     if (requiresUpdate != null) {
@@ -2391,9 +2165,7 @@ class _$HomeStateRequiresUpdateImpl implements HomeStateRequiresUpdate {
 
 abstract class HomeStateRequiresUpdate implements HomeState {
   const factory HomeStateRequiresUpdate(
-          {required final String? error,
-          required final List<LeaderboardUser> topPlayers}) =
-      _$HomeStateRequiresUpdateImpl;
+      {required final String? error, required final List<LeaderboardUser> topPlayers}) = _$HomeStateRequiresUpdateImpl;
 
   @override
   String? get error;
@@ -2404,6 +2176,6 @@ abstract class HomeStateRequiresUpdate implements HomeState {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$HomeStateRequiresUpdateImplCopyWith<_$HomeStateRequiresUpdateImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$HomeStateRequiresUpdateImplCopyWith<_$HomeStateRequiresUpdateImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

@@ -38,11 +38,14 @@ class PlayersRowWidget extends StatelessWidget {
               children: [
                 _userImage(context, myUser),
                 const SizedBox(width: 12),
-                Expanded(child: Text(myUser?.name ?? '', style: context.textStyles.mulish14Semi, overflow: TextOverflow.ellipsis)),
+                Expanded(
+                    child: Text(myUser?.name ?? '',
+                        style: context.textStyles.mulish14Semi, overflow: TextOverflow.ellipsis)),
               ],
             ),
           ),
-          if (result != null) Text('${result?.player1Wins} - ${result?.player2Wins}', style: context.textStyles.mulish17Bold),
+          if (result != null)
+            Text('${result?.player1Wins} - ${result?.player2Wins}', style: context.textStyles.mulish17Bold),
           Expanded(
             flex: 7,
             child: Align(
