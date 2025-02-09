@@ -6,10 +6,10 @@ A sleek and modern implementation of the classic Tic-Tac-Toe game with multiple 
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/91482454-b81a-4ea6-ac41-0adc637b4627" width="160" />
-  <img src="https://github.com/user-attachments/assets/4a7b4953-1fc5-4542-a0a8-4e24017f5deb" width="160" />
   <img src="https://github.com/user-attachments/assets/217849cc-cb8c-4f2b-b6a5-ad5874e0bd0a" width="160" />
-  <img src="https://github.com/user-attachments/assets/d3218c69-26eb-4464-a361-916acfd8df77" width="160" />
   <img src="https://github.com/user-attachments/assets/a0025514-731e-4cea-a8c0-495e8386bf86" width="160" />
+  <img src="https://github.com/user-attachments/assets/4a7b4953-1fc5-4542-a0a8-4e24017f5deb" width="160" />
+  <img src="https://github.com/user-attachments/assets/d3218c69-26eb-4464-a361-916acfd8df77" width="160" />
   <img src="https://github.com/user-attachments/assets/19269b67-55c2-42a2-8ac8-6fdbede1d7eb" width="160" />
   <img src="https://github.com/user-attachments/assets/a4e4f583-694f-4767-bca7-0660c68770eb" width="160" />
   <img src="https://github.com/user-attachments/assets/8ddf1a86-4ee2-4b87-bc68-63a8a2f8e840" width="160" />
