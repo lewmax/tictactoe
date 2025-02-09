@@ -6,7 +6,6 @@ import 'package:chat_app/presentation/common/components/app_button.dart';
 import 'package:chat_app/presentation/common/components/circle_user_image.dart';
 import 'package:chat_app/presentation/common/components/pick_image_modal_bottom.dart';
 import 'package:chat_app/presentation/common/layout/expanded_single_child_scroll_view.dart';
-import 'package:chat_app/presentation/common/navigation/app_router.dart';
 import 'package:chat_app/presentation/features/profile/bloc/profile_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -157,8 +156,6 @@ class _ProfileScreenState extends ScreenBlocProviderStateful<ProfileScreen, Prof
         ),
         const SizedBox(height: 18),
         Text(state.email, style: context.textStyles.mulish16),
-        // const SizedBox(height: 12),
-        // Text('+${state.phone}', style: context.textStyles.profilePhone),
         const SizedBox(height: 40),
         GestureDetector(
           onTap: () {
@@ -166,32 +163,14 @@ class _ProfileScreenState extends ScreenBlocProviderStateful<ProfileScreen, Prof
           },
           child: Text(
             context.l10n.profile_log_out,
-            style: context.textStyles.mulish14Semi.copyWith(color: context.colors.red1),
+            style: context.textStyles.mulish14Semi.copyWith(color: context.colors.accentColor),
           ),
         ),
         const SizedBox(height: 18),
         const Spacer(),
-        _divider(context),
-        GestureDetector(
-          onTap: () {
-            context.router.push(const DeleteAccountRoute());
-          },
-          child: const Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Row(
-              children: [
-                Spacer(),
-                Text('Data and Privacy'),
-                Expanded(child: Align(alignment: Alignment.centerRight, child: Icon(Icons.keyboard_arrow_right))),
-              ],
-            ),
-          ),
-        ),
-        _divider(context),
-        const Spacer(),
         AppButton(
           title: context.l10n.profile_saveBtn,
-          color: context.colors.blue1,
+          color: context.colors.primaryColor,
           style: context.textStyles.mulish14.copyWith(color: context.colors.white),
           onTap: state.loading || !bloc.shouldSave ? null : () => bloc.add(const ProfileEvent.save()),
           loading: state.loading,
@@ -201,6 +180,4 @@ class _ProfileScreenState extends ScreenBlocProviderStateful<ProfileScreen, Prof
       ],
     );
   }
-
-  Divider _divider(BuildContext context) => Divider(color: context.colors.grey9, height: 0, thickness: 1);
 }

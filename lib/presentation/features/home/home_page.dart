@@ -77,7 +77,7 @@ class _HomePageState extends BlocedState<HomePage, HomeBloc, HomeState> with Sna
                   child: AppButton(
                     title: 'Play with a Friend Online',
                     style: context.textStyles.mulish17Bold.copyWith(color: context.colors.white),
-                    color: context.colors.blue1,
+                    color: context.colors.primaryColor,
                     padding: EdgeInsets.zero,
                     isContentCentered: true,
                     onTap: () {
@@ -94,7 +94,7 @@ class _HomePageState extends BlocedState<HomePage, HomeBloc, HomeState> with Sna
                   child: AppButton(
                     title: 'Play with a Friend Offline',
                     style: context.textStyles.mulish17Bold.copyWith(color: context.colors.white),
-                    color: context.colors.red2,
+                    color: context.colors.accentColor,
                     padding: EdgeInsets.zero,
                     isContentCentered: true,
                     onTap: () {
@@ -111,7 +111,7 @@ class _HomePageState extends BlocedState<HomePage, HomeBloc, HomeState> with Sna
                   child: AppButton(
                     title: 'Play with AI',
                     style: context.textStyles.mulish17Bold.copyWith(color: context.colors.white),
-                    color: context.colors.blue1,
+                    color: context.colors.primaryColor,
                     padding: EdgeInsets.zero,
                     isContentCentered: true,
                     onTap: () {
@@ -128,7 +128,7 @@ class _HomePageState extends BlocedState<HomePage, HomeBloc, HomeState> with Sna
                   child: AppButton(
                     title: 'Play with Script',
                     style: context.textStyles.mulish17Bold.copyWith(color: context.colors.white),
-                    color: context.colors.red2,
+                    color: context.colors.accentColor,
                     padding: EdgeInsets.zero,
                     isContentCentered: true,
                     onTap: () {
@@ -188,32 +188,11 @@ class _HomePageState extends BlocedState<HomePage, HomeBloc, HomeState> with Sna
                   return _recentGames(recentGames, context);
                 },
               ),
-              const SizedBox(height: 14),
-              _feedback(),
               const SizedBox(height: 44),
             ],
           ),
         ),
       ),
-    );
-  }
-
-  Row _feedback() {
-    return Row(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Text('We love feedback!', style: context.textStyles.mulish16),
-        Material(
-          color: Colors.transparent,
-          child: InkWell(
-            onTap: () => bloc.add(const HomeEvent.sendFeedback()),
-            child: Padding(
-              padding: const EdgeInsets.all(6),
-              child: Text('Contact us', style: context.textStyles.mulish16.copyWith(color: context.colors.blue)),
-            ),
-          ),
-        ),
-      ],
     );
   }
 

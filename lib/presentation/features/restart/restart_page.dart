@@ -26,11 +26,10 @@ class RestartPage extends StatelessWidget {
                 AppButton(
                   title: 'Restart',
                   style: context.textStyles.mulish17Bold.copyWith(color: context.colors.white),
-                  color: context.colors.blue1,
+                  color: context.colors.primaryColor,
                   isContentCentered: true,
                   onTap: () {
                     Restart.restartApp(
-                      // Customizing the notification message only on iOS
                       notificationTitle: 'Restarting App',
                       notificationBody: 'Please tap here to open the app again.',
                     );

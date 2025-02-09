@@ -14,6 +14,7 @@ import 'package:chat_app/domain/models/game/game_error.dart';
 import 'package:chat_app/domain/models/game/game_status.dart';
 import 'package:chat_app/domain/models/game/game_warning.dart';
 import 'package:chat_app/domain/repositories/auth/auth_repo.dart';
+import 'package:chat_app/domain/repositories/date/date_manager_repo.dart';
 import 'package:chat_app/domain/repositories/game/game_repo.dart';
 import 'package:chat_app/presentation/common/mixins/game_validation_mixin.dart';
 import 'package:chat_app/presentation/features/game/utils/board_size_manager.dart';
@@ -32,6 +33,7 @@ final _boardSizeManager = BoardSizeManager();
 class GameBloc extends Bloc<GameEvent, GameState> with GameValidationMixin {
   final GameRepo _gameRepo;
   final AuthRepo _authRepo;
+  final DateManagerRepo _dateManagerRepo;
   GameId? _gameId;
   bool isMyUserOwner = false;
   GameDeepLink? gameUrl;
@@ -41,7 +43,7 @@ class GameBloc extends Bloc<GameEvent, GameState> with GameValidationMixin {
 
   User? get _user => _authRepo.user;
 
-  GameBloc(this._gameRepo, this._authRepo, @factoryParam this._gameId)
+  GameBloc(this._gameRepo, this._authRepo, @factoryParam this._gameId, this._dateManagerRepo)
       : super(
           GameState.initial(
             board: _boardSizeManager.generateEmptyBoard(_boardSizeManager.boardAxisLength),
@@ -148,9 +150,19 @@ class GameBloc extends Bloc<GameEvent, GameState> with GameValidationMixin {
 
         board[cellId] = WinnerCell(cellId: cellId, cellState: cell.cellState, winnerId: user.id);
       }
-      moveDto = MakeMoveFinishDto(gameId: _gameId!, boardMap: board, endedAt: DateTime.now(), winnerId: user.id);
+      moveDto = MakeMoveFinishDto(
+        gameId: _gameId!,
+        boardMap: board,
+        endedAt: _dateManagerRepo.currDayStream.value,
+        winnerId: user.id,
+      );
     } else if (isBoardFull(board, _boardSizeManager.boardAxisLength)) {
-      moveDto = MakeMoveFinishDto(gameId: _gameId!, boardMap: board, endedAt: DateTime.now(), winnerId: null);
+      moveDto = MakeMoveFinishDto(
+        gameId: _gameId!,
+        boardMap: board,
+        endedAt: _dateManagerRepo.currDayStream.value,
+        winnerId: null,
+      );
     } else {
       moveDto = MakeMoveGeneralDto(gameId: _gameId!, boardMap: board, isOwnerTurn: !isMyUserOwner);
     }

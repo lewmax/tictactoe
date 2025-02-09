@@ -70,11 +70,13 @@ mixin _$GameEvent {
 
 /// @nodoc
 abstract class $GameEventCopyWith<$Res> {
-  factory $GameEventCopyWith(GameEvent value, $Res Function(GameEvent) then) = _$GameEventCopyWithImpl<$Res, GameEvent>;
+  factory $GameEventCopyWith(GameEvent value, $Res Function(GameEvent) then) =
+      _$GameEventCopyWithImpl<$Res, GameEvent>;
 }
 
 /// @nodoc
-class _$GameEventCopyWithImpl<$Res, $Val extends GameEvent> implements $GameEventCopyWith<$Res> {
+class _$GameEventCopyWithImpl<$Res, $Val extends GameEvent>
+    implements $GameEventCopyWith<$Res> {
   _$GameEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -88,14 +90,18 @@ class _$GameEventCopyWithImpl<$Res, $Val extends GameEvent> implements $GameEven
 
 /// @nodoc
 abstract class _$$FetchGameImplCopyWith<$Res> {
-  factory _$$FetchGameImplCopyWith(_$FetchGameImpl value, $Res Function(_$FetchGameImpl) then) =
+  factory _$$FetchGameImplCopyWith(
+          _$FetchGameImpl value, $Res Function(_$FetchGameImpl) then) =
       __$$FetchGameImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$FetchGameImplCopyWithImpl<$Res> extends _$GameEventCopyWithImpl<$Res, _$FetchGameImpl>
+class __$$FetchGameImplCopyWithImpl<$Res>
+    extends _$GameEventCopyWithImpl<$Res, _$FetchGameImpl>
     implements _$$FetchGameImplCopyWith<$Res> {
-  __$$FetchGameImplCopyWithImpl(_$FetchGameImpl _value, $Res Function(_$FetchGameImpl) _then) : super(_value, _then);
+  __$$FetchGameImplCopyWithImpl(
+      _$FetchGameImpl _value, $Res Function(_$FetchGameImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of GameEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -113,7 +119,8 @@ class _$FetchGameImpl implements _FetchGame {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is _$FetchGameImpl);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$FetchGameImpl);
   }
 
   @override
@@ -200,16 +207,19 @@ abstract class _FetchGame implements GameEvent {
 
 /// @nodoc
 abstract class _$$GameUpdatedImplCopyWith<$Res> {
-  factory _$$GameUpdatedImplCopyWith(_$GameUpdatedImpl value, $Res Function(_$GameUpdatedImpl) then) =
+  factory _$$GameUpdatedImplCopyWith(
+          _$GameUpdatedImpl value, $Res Function(_$GameUpdatedImpl) then) =
       __$$GameUpdatedImplCopyWithImpl<$Res>;
   @useResult
   $Res call({Game game});
 }
 
 /// @nodoc
-class __$$GameUpdatedImplCopyWithImpl<$Res> extends _$GameEventCopyWithImpl<$Res, _$GameUpdatedImpl>
+class __$$GameUpdatedImplCopyWithImpl<$Res>
+    extends _$GameEventCopyWithImpl<$Res, _$GameUpdatedImpl>
     implements _$$GameUpdatedImplCopyWith<$Res> {
-  __$$GameUpdatedImplCopyWithImpl(_$GameUpdatedImpl _value, $Res Function(_$GameUpdatedImpl) _then)
+  __$$GameUpdatedImplCopyWithImpl(
+      _$GameUpdatedImpl _value, $Res Function(_$GameUpdatedImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of GameEvent
@@ -343,19 +353,23 @@ abstract class _GameUpdated implements GameEvent {
   /// Create a copy of GameEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GameUpdatedImplCopyWith<_$GameUpdatedImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$GameUpdatedImplCopyWith<_$GameUpdatedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$TerminateGameImplCopyWith<$Res> {
-  factory _$$TerminateGameImplCopyWith(_$TerminateGameImpl value, $Res Function(_$TerminateGameImpl) then) =
+  factory _$$TerminateGameImplCopyWith(
+          _$TerminateGameImpl value, $Res Function(_$TerminateGameImpl) then) =
       __$$TerminateGameImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$TerminateGameImplCopyWithImpl<$Res> extends _$GameEventCopyWithImpl<$Res, _$TerminateGameImpl>
+class __$$TerminateGameImplCopyWithImpl<$Res>
+    extends _$GameEventCopyWithImpl<$Res, _$TerminateGameImpl>
     implements _$$TerminateGameImplCopyWith<$Res> {
-  __$$TerminateGameImplCopyWithImpl(_$TerminateGameImpl _value, $Res Function(_$TerminateGameImpl) _then)
+  __$$TerminateGameImplCopyWithImpl(
+      _$TerminateGameImpl _value, $Res Function(_$TerminateGameImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of GameEvent
@@ -374,7 +388,8 @@ class _$TerminateGameImpl implements _TerminateGame {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is _$TerminateGameImpl);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$TerminateGameImpl);
   }
 
   @override
@@ -461,16 +476,20 @@ abstract class _TerminateGame implements GameEvent {
 
 /// @nodoc
 abstract class _$$MakeMoveImplCopyWith<$Res> {
-  factory _$$MakeMoveImplCopyWith(_$MakeMoveImpl value, $Res Function(_$MakeMoveImpl) then) =
+  factory _$$MakeMoveImplCopyWith(
+          _$MakeMoveImpl value, $Res Function(_$MakeMoveImpl) then) =
       __$$MakeMoveImplCopyWithImpl<$Res>;
   @useResult
   $Res call({CellId cellId});
 }
 
 /// @nodoc
-class __$$MakeMoveImplCopyWithImpl<$Res> extends _$GameEventCopyWithImpl<$Res, _$MakeMoveImpl>
+class __$$MakeMoveImplCopyWithImpl<$Res>
+    extends _$GameEventCopyWithImpl<$Res, _$MakeMoveImpl>
     implements _$$MakeMoveImplCopyWith<$Res> {
-  __$$MakeMoveImplCopyWithImpl(_$MakeMoveImpl _value, $Res Function(_$MakeMoveImpl) _then) : super(_value, _then);
+  __$$MakeMoveImplCopyWithImpl(
+      _$MakeMoveImpl _value, $Res Function(_$MakeMoveImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of GameEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -603,7 +622,8 @@ abstract class _MakeMove implements GameEvent {
   /// Create a copy of GameEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$MakeMoveImplCopyWith<_$MakeMoveImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$MakeMoveImplCopyWith<_$MakeMoveImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -616,58 +636,133 @@ mixin _$GameState {
   bool get showInviteDialog => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)
+    required TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)
         initial,
-    required TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)
+    required TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)
         myTurn,
-    required TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)
+    required TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)
         opponentTurn,
-    required TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)
+    required TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)
         gameOver,
-    required TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)
+    required TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)
         gameDiscontinued,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult? Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         initial,
-    TResult? Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult? Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         myTurn,
-    TResult? Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult? Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         opponentTurn,
-    TResult? Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult? Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         gameOver,
-    TResult? Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult? Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         gameDiscontinued,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         initial,
-    TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         myTurn,
-    TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         opponentTurn,
-    TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         gameOver,
-    TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         gameDiscontinued,
     required TResult orElse(),
   }) =>
@@ -704,12 +799,14 @@ mixin _$GameState {
   /// Create a copy of GameState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $GameStateCopyWith<GameState> get copyWith => throw _privateConstructorUsedError;
+  $GameStateCopyWith<GameState> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $GameStateCopyWith<$Res> {
-  factory $GameStateCopyWith(GameState value, $Res Function(GameState) then) = _$GameStateCopyWithImpl<$Res, GameState>;
+  factory $GameStateCopyWith(GameState value, $Res Function(GameState) then) =
+      _$GameStateCopyWithImpl<$Res, GameState>;
   @useResult
   $Res call(
       {GameWarning? gameWarning,
@@ -721,7 +818,8 @@ abstract class $GameStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$GameStateCopyWithImpl<$Res, $Val extends GameState> implements $GameStateCopyWith<$Res> {
+class _$GameStateCopyWithImpl<$Res, $Val extends GameState>
+    implements $GameStateCopyWith<$Res> {
   _$GameStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -771,8 +869,10 @@ class _$GameStateCopyWithImpl<$Res, $Val extends GameState> implements $GameStat
 }
 
 /// @nodoc
-abstract class _$$GameStateInitialImplCopyWith<$Res> implements $GameStateCopyWith<$Res> {
-  factory _$$GameStateInitialImplCopyWith(_$GameStateInitialImpl value, $Res Function(_$GameStateInitialImpl) then) =
+abstract class _$$GameStateInitialImplCopyWith<$Res>
+    implements $GameStateCopyWith<$Res> {
+  factory _$$GameStateInitialImplCopyWith(_$GameStateInitialImpl value,
+          $Res Function(_$GameStateInitialImpl) then) =
       __$$GameStateInitialImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -786,9 +886,11 @@ abstract class _$$GameStateInitialImplCopyWith<$Res> implements $GameStateCopyWi
 }
 
 /// @nodoc
-class __$$GameStateInitialImplCopyWithImpl<$Res> extends _$GameStateCopyWithImpl<$Res, _$GameStateInitialImpl>
+class __$$GameStateInitialImplCopyWithImpl<$Res>
+    extends _$GameStateCopyWithImpl<$Res, _$GameStateInitialImpl>
     implements _$$GameStateInitialImplCopyWith<$Res> {
-  __$$GameStateInitialImplCopyWithImpl(_$GameStateInitialImpl _value, $Res Function(_$GameStateInitialImpl) _then)
+  __$$GameStateInitialImplCopyWithImpl(_$GameStateInitialImpl _value,
+      $Res Function(_$GameStateInitialImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of GameState
@@ -873,17 +975,27 @@ class _$GameStateInitialImpl implements GameStateInitial {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GameStateInitialImpl &&
-            (identical(other.gameWarning, gameWarning) || other.gameWarning == gameWarning) &&
-            (identical(other.gameError, gameError) || other.gameError == gameError) &&
+            (identical(other.gameWarning, gameWarning) ||
+                other.gameWarning == gameWarning) &&
+            (identical(other.gameError, gameError) ||
+                other.gameError == gameError) &&
             const DeepCollectionEquality().equals(other._board, _board) &&
             (identical(other.myUser, myUser) || other.myUser == myUser) &&
-            (identical(other.teammateUser, teammateUser) || other.teammateUser == teammateUser) &&
-            (identical(other.showInviteDialog, showInviteDialog) || other.showInviteDialog == showInviteDialog));
+            (identical(other.teammateUser, teammateUser) ||
+                other.teammateUser == teammateUser) &&
+            (identical(other.showInviteDialog, showInviteDialog) ||
+                other.showInviteDialog == showInviteDialog));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, gameWarning, gameError, const DeepCollectionEquality().hash(_board),
-      myUser, teammateUser, showInviteDialog);
+  int get hashCode => Object.hash(
+      runtimeType,
+      gameWarning,
+      gameError,
+      const DeepCollectionEquality().hash(_board),
+      myUser,
+      teammateUser,
+      showInviteDialog);
 
   /// Create a copy of GameState
   /// with the given fields replaced by the non-null parameter values.
@@ -891,74 +1003,153 @@ class _$GameStateInitialImpl implements GameStateInitial {
   @override
   @pragma('vm:prefer-inline')
   _$$GameStateInitialImplCopyWith<_$GameStateInitialImpl> get copyWith =>
-      __$$GameStateInitialImplCopyWithImpl<_$GameStateInitialImpl>(this, _$identity);
+      __$$GameStateInitialImplCopyWithImpl<_$GameStateInitialImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)
+    required TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)
         initial,
-    required TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)
+    required TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)
         myTurn,
-    required TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)
+    required TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)
         opponentTurn,
-    required TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)
+    required TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)
         gameOver,
-    required TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)
+    required TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)
         gameDiscontinued,
   }) {
-    return initial(gameWarning, gameError, board, myUser, teammateUser, showInviteDialog);
+    return initial(
+        gameWarning, gameError, board, myUser, teammateUser, showInviteDialog);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult? Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         initial,
-    TResult? Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult? Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         myTurn,
-    TResult? Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult? Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         opponentTurn,
-    TResult? Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult? Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         gameOver,
-    TResult? Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult? Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         gameDiscontinued,
   }) {
-    return initial?.call(gameWarning, gameError, board, myUser, teammateUser, showInviteDialog);
+    return initial?.call(
+        gameWarning, gameError, board, myUser, teammateUser, showInviteDialog);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         initial,
-    TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         myTurn,
-    TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         opponentTurn,
-    TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         gameOver,
-    TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         gameDiscontinued,
     required TResult orElse(),
   }) {
     if (initial != null) {
-      return initial(gameWarning, gameError, board, myUser, teammateUser, showInviteDialog);
+      return initial(gameWarning, gameError, board, myUser, teammateUser,
+          showInviteDialog);
     }
     return orElse();
   }
@@ -1030,12 +1221,15 @@ abstract class GameStateInitial implements GameState {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GameStateInitialImplCopyWith<_$GameStateInitialImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$GameStateInitialImplCopyWith<_$GameStateInitialImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$GameStateMyTurnImplCopyWith<$Res> implements $GameStateCopyWith<$Res> {
-  factory _$$GameStateMyTurnImplCopyWith(_$GameStateMyTurnImpl value, $Res Function(_$GameStateMyTurnImpl) then) =
+abstract class _$$GameStateMyTurnImplCopyWith<$Res>
+    implements $GameStateCopyWith<$Res> {
+  factory _$$GameStateMyTurnImplCopyWith(_$GameStateMyTurnImpl value,
+          $Res Function(_$GameStateMyTurnImpl) then) =
       __$$GameStateMyTurnImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -1049,9 +1243,11 @@ abstract class _$$GameStateMyTurnImplCopyWith<$Res> implements $GameStateCopyWit
 }
 
 /// @nodoc
-class __$$GameStateMyTurnImplCopyWithImpl<$Res> extends _$GameStateCopyWithImpl<$Res, _$GameStateMyTurnImpl>
+class __$$GameStateMyTurnImplCopyWithImpl<$Res>
+    extends _$GameStateCopyWithImpl<$Res, _$GameStateMyTurnImpl>
     implements _$$GameStateMyTurnImplCopyWith<$Res> {
-  __$$GameStateMyTurnImplCopyWithImpl(_$GameStateMyTurnImpl _value, $Res Function(_$GameStateMyTurnImpl) _then)
+  __$$GameStateMyTurnImplCopyWithImpl(
+      _$GameStateMyTurnImpl _value, $Res Function(_$GameStateMyTurnImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of GameState
@@ -1136,17 +1332,27 @@ class _$GameStateMyTurnImpl implements GameStateMyTurn {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GameStateMyTurnImpl &&
-            (identical(other.gameWarning, gameWarning) || other.gameWarning == gameWarning) &&
-            (identical(other.gameError, gameError) || other.gameError == gameError) &&
+            (identical(other.gameWarning, gameWarning) ||
+                other.gameWarning == gameWarning) &&
+            (identical(other.gameError, gameError) ||
+                other.gameError == gameError) &&
             const DeepCollectionEquality().equals(other._board, _board) &&
             (identical(other.myUser, myUser) || other.myUser == myUser) &&
-            (identical(other.teammateUser, teammateUser) || other.teammateUser == teammateUser) &&
-            (identical(other.showInviteDialog, showInviteDialog) || other.showInviteDialog == showInviteDialog));
+            (identical(other.teammateUser, teammateUser) ||
+                other.teammateUser == teammateUser) &&
+            (identical(other.showInviteDialog, showInviteDialog) ||
+                other.showInviteDialog == showInviteDialog));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, gameWarning, gameError, const DeepCollectionEquality().hash(_board),
-      myUser, teammateUser, showInviteDialog);
+  int get hashCode => Object.hash(
+      runtimeType,
+      gameWarning,
+      gameError,
+      const DeepCollectionEquality().hash(_board),
+      myUser,
+      teammateUser,
+      showInviteDialog);
 
   /// Create a copy of GameState
   /// with the given fields replaced by the non-null parameter values.
@@ -1154,74 +1360,153 @@ class _$GameStateMyTurnImpl implements GameStateMyTurn {
   @override
   @pragma('vm:prefer-inline')
   _$$GameStateMyTurnImplCopyWith<_$GameStateMyTurnImpl> get copyWith =>
-      __$$GameStateMyTurnImplCopyWithImpl<_$GameStateMyTurnImpl>(this, _$identity);
+      __$$GameStateMyTurnImplCopyWithImpl<_$GameStateMyTurnImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)
+    required TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)
         initial,
-    required TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)
+    required TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)
         myTurn,
-    required TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)
+    required TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)
         opponentTurn,
-    required TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)
+    required TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)
         gameOver,
-    required TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)
+    required TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)
         gameDiscontinued,
   }) {
-    return myTurn(gameWarning, gameError, board, myUser, teammateUser, showInviteDialog);
+    return myTurn(
+        gameWarning, gameError, board, myUser, teammateUser, showInviteDialog);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult? Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         initial,
-    TResult? Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult? Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         myTurn,
-    TResult? Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult? Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         opponentTurn,
-    TResult? Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult? Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         gameOver,
-    TResult? Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult? Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         gameDiscontinued,
   }) {
-    return myTurn?.call(gameWarning, gameError, board, myUser, teammateUser, showInviteDialog);
+    return myTurn?.call(
+        gameWarning, gameError, board, myUser, teammateUser, showInviteDialog);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         initial,
-    TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         myTurn,
-    TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         opponentTurn,
-    TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         gameOver,
-    TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         gameDiscontinued,
     required TResult orElse(),
   }) {
     if (myTurn != null) {
-      return myTurn(gameWarning, gameError, board, myUser, teammateUser, showInviteDialog);
+      return myTurn(gameWarning, gameError, board, myUser, teammateUser,
+          showInviteDialog);
     }
     return orElse();
   }
@@ -1293,13 +1578,16 @@ abstract class GameStateMyTurn implements GameState {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GameStateMyTurnImplCopyWith<_$GameStateMyTurnImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$GameStateMyTurnImplCopyWith<_$GameStateMyTurnImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$GameStateOpponentTurnImplCopyWith<$Res> implements $GameStateCopyWith<$Res> {
+abstract class _$$GameStateOpponentTurnImplCopyWith<$Res>
+    implements $GameStateCopyWith<$Res> {
   factory _$$GameStateOpponentTurnImplCopyWith(
-          _$GameStateOpponentTurnImpl value, $Res Function(_$GameStateOpponentTurnImpl) then) =
+          _$GameStateOpponentTurnImpl value,
+          $Res Function(_$GameStateOpponentTurnImpl) then) =
       __$$GameStateOpponentTurnImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -1313,10 +1601,11 @@ abstract class _$$GameStateOpponentTurnImplCopyWith<$Res> implements $GameStateC
 }
 
 /// @nodoc
-class __$$GameStateOpponentTurnImplCopyWithImpl<$Res> extends _$GameStateCopyWithImpl<$Res, _$GameStateOpponentTurnImpl>
+class __$$GameStateOpponentTurnImplCopyWithImpl<$Res>
+    extends _$GameStateCopyWithImpl<$Res, _$GameStateOpponentTurnImpl>
     implements _$$GameStateOpponentTurnImplCopyWith<$Res> {
-  __$$GameStateOpponentTurnImplCopyWithImpl(
-      _$GameStateOpponentTurnImpl _value, $Res Function(_$GameStateOpponentTurnImpl) _then)
+  __$$GameStateOpponentTurnImplCopyWithImpl(_$GameStateOpponentTurnImpl _value,
+      $Res Function(_$GameStateOpponentTurnImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of GameState
@@ -1401,92 +1690,181 @@ class _$GameStateOpponentTurnImpl implements GameStateOpponentTurn {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GameStateOpponentTurnImpl &&
-            (identical(other.gameWarning, gameWarning) || other.gameWarning == gameWarning) &&
-            (identical(other.gameError, gameError) || other.gameError == gameError) &&
+            (identical(other.gameWarning, gameWarning) ||
+                other.gameWarning == gameWarning) &&
+            (identical(other.gameError, gameError) ||
+                other.gameError == gameError) &&
             const DeepCollectionEquality().equals(other._board, _board) &&
             (identical(other.myUser, myUser) || other.myUser == myUser) &&
-            (identical(other.teammateUser, teammateUser) || other.teammateUser == teammateUser) &&
-            (identical(other.showInviteDialog, showInviteDialog) || other.showInviteDialog == showInviteDialog));
+            (identical(other.teammateUser, teammateUser) ||
+                other.teammateUser == teammateUser) &&
+            (identical(other.showInviteDialog, showInviteDialog) ||
+                other.showInviteDialog == showInviteDialog));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, gameWarning, gameError, const DeepCollectionEquality().hash(_board),
-      myUser, teammateUser, showInviteDialog);
+  int get hashCode => Object.hash(
+      runtimeType,
+      gameWarning,
+      gameError,
+      const DeepCollectionEquality().hash(_board),
+      myUser,
+      teammateUser,
+      showInviteDialog);
 
   /// Create a copy of GameState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$GameStateOpponentTurnImplCopyWith<_$GameStateOpponentTurnImpl> get copyWith =>
-      __$$GameStateOpponentTurnImplCopyWithImpl<_$GameStateOpponentTurnImpl>(this, _$identity);
+  _$$GameStateOpponentTurnImplCopyWith<_$GameStateOpponentTurnImpl>
+      get copyWith => __$$GameStateOpponentTurnImplCopyWithImpl<
+          _$GameStateOpponentTurnImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)
+    required TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)
         initial,
-    required TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)
+    required TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)
         myTurn,
-    required TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)
+    required TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)
         opponentTurn,
-    required TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)
+    required TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)
         gameOver,
-    required TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)
+    required TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)
         gameDiscontinued,
   }) {
-    return opponentTurn(gameWarning, gameError, board, myUser, teammateUser, showInviteDialog);
+    return opponentTurn(
+        gameWarning, gameError, board, myUser, teammateUser, showInviteDialog);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult? Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         initial,
-    TResult? Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult? Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         myTurn,
-    TResult? Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult? Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         opponentTurn,
-    TResult? Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult? Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         gameOver,
-    TResult? Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult? Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         gameDiscontinued,
   }) {
-    return opponentTurn?.call(gameWarning, gameError, board, myUser, teammateUser, showInviteDialog);
+    return opponentTurn?.call(
+        gameWarning, gameError, board, myUser, teammateUser, showInviteDialog);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         initial,
-    TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         myTurn,
-    TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         opponentTurn,
-    TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         gameOver,
-    TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         gameDiscontinued,
     required TResult orElse(),
   }) {
     if (opponentTurn != null) {
-      return opponentTurn(gameWarning, gameError, board, myUser, teammateUser, showInviteDialog);
+      return opponentTurn(gameWarning, gameError, board, myUser, teammateUser,
+          showInviteDialog);
     }
     return orElse();
   }
@@ -1558,12 +1936,15 @@ abstract class GameStateOpponentTurn implements GameState {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GameStateOpponentTurnImplCopyWith<_$GameStateOpponentTurnImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$GameStateOpponentTurnImplCopyWith<_$GameStateOpponentTurnImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$GameStateGameOverImplCopyWith<$Res> implements $GameStateCopyWith<$Res> {
-  factory _$$GameStateGameOverImplCopyWith(_$GameStateGameOverImpl value, $Res Function(_$GameStateGameOverImpl) then) =
+abstract class _$$GameStateGameOverImplCopyWith<$Res>
+    implements $GameStateCopyWith<$Res> {
+  factory _$$GameStateGameOverImplCopyWith(_$GameStateGameOverImpl value,
+          $Res Function(_$GameStateGameOverImpl) then) =
       __$$GameStateGameOverImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -1577,9 +1958,11 @@ abstract class _$$GameStateGameOverImplCopyWith<$Res> implements $GameStateCopyW
 }
 
 /// @nodoc
-class __$$GameStateGameOverImplCopyWithImpl<$Res> extends _$GameStateCopyWithImpl<$Res, _$GameStateGameOverImpl>
+class __$$GameStateGameOverImplCopyWithImpl<$Res>
+    extends _$GameStateCopyWithImpl<$Res, _$GameStateGameOverImpl>
     implements _$$GameStateGameOverImplCopyWith<$Res> {
-  __$$GameStateGameOverImplCopyWithImpl(_$GameStateGameOverImpl _value, $Res Function(_$GameStateGameOverImpl) _then)
+  __$$GameStateGameOverImplCopyWithImpl(_$GameStateGameOverImpl _value,
+      $Res Function(_$GameStateGameOverImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of GameState
@@ -1664,17 +2047,27 @@ class _$GameStateGameOverImpl implements GameStateGameOver {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GameStateGameOverImpl &&
-            (identical(other.gameWarning, gameWarning) || other.gameWarning == gameWarning) &&
-            (identical(other.gameError, gameError) || other.gameError == gameError) &&
+            (identical(other.gameWarning, gameWarning) ||
+                other.gameWarning == gameWarning) &&
+            (identical(other.gameError, gameError) ||
+                other.gameError == gameError) &&
             const DeepCollectionEquality().equals(other._board, _board) &&
             (identical(other.myUser, myUser) || other.myUser == myUser) &&
-            (identical(other.teammateUser, teammateUser) || other.teammateUser == teammateUser) &&
-            (identical(other.showInviteDialog, showInviteDialog) || other.showInviteDialog == showInviteDialog));
+            (identical(other.teammateUser, teammateUser) ||
+                other.teammateUser == teammateUser) &&
+            (identical(other.showInviteDialog, showInviteDialog) ||
+                other.showInviteDialog == showInviteDialog));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, gameWarning, gameError, const DeepCollectionEquality().hash(_board),
-      myUser, teammateUser, showInviteDialog);
+  int get hashCode => Object.hash(
+      runtimeType,
+      gameWarning,
+      gameError,
+      const DeepCollectionEquality().hash(_board),
+      myUser,
+      teammateUser,
+      showInviteDialog);
 
   /// Create a copy of GameState
   /// with the given fields replaced by the non-null parameter values.
@@ -1682,74 +2075,153 @@ class _$GameStateGameOverImpl implements GameStateGameOver {
   @override
   @pragma('vm:prefer-inline')
   _$$GameStateGameOverImplCopyWith<_$GameStateGameOverImpl> get copyWith =>
-      __$$GameStateGameOverImplCopyWithImpl<_$GameStateGameOverImpl>(this, _$identity);
+      __$$GameStateGameOverImplCopyWithImpl<_$GameStateGameOverImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)
+    required TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)
         initial,
-    required TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)
+    required TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)
         myTurn,
-    required TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)
+    required TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)
         opponentTurn,
-    required TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)
+    required TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)
         gameOver,
-    required TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)
+    required TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)
         gameDiscontinued,
   }) {
-    return gameOver(gameWarning, gameError, board, myUser, teammateUser, showInviteDialog);
+    return gameOver(
+        gameWarning, gameError, board, myUser, teammateUser, showInviteDialog);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult? Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         initial,
-    TResult? Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult? Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         myTurn,
-    TResult? Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult? Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         opponentTurn,
-    TResult? Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult? Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         gameOver,
-    TResult? Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult? Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         gameDiscontinued,
   }) {
-    return gameOver?.call(gameWarning, gameError, board, myUser, teammateUser, showInviteDialog);
+    return gameOver?.call(
+        gameWarning, gameError, board, myUser, teammateUser, showInviteDialog);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         initial,
-    TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         myTurn,
-    TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         opponentTurn,
-    TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         gameOver,
-    TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         gameDiscontinued,
     required TResult orElse(),
   }) {
     if (gameOver != null) {
-      return gameOver(gameWarning, gameError, board, myUser, teammateUser, showInviteDialog);
+      return gameOver(gameWarning, gameError, board, myUser, teammateUser,
+          showInviteDialog);
     }
     return orElse();
   }
@@ -1821,13 +2293,16 @@ abstract class GameStateGameOver implements GameState {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GameStateGameOverImplCopyWith<_$GameStateGameOverImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$GameStateGameOverImplCopyWith<_$GameStateGameOverImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$GameStateGameDiscontinuedImplCopyWith<$Res> implements $GameStateCopyWith<$Res> {
+abstract class _$$GameStateGameDiscontinuedImplCopyWith<$Res>
+    implements $GameStateCopyWith<$Res> {
   factory _$$GameStateGameDiscontinuedImplCopyWith(
-          _$GameStateGameDiscontinuedImpl value, $Res Function(_$GameStateGameDiscontinuedImpl) then) =
+          _$GameStateGameDiscontinuedImpl value,
+          $Res Function(_$GameStateGameDiscontinuedImpl) then) =
       __$$GameStateGameDiscontinuedImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -1845,7 +2320,8 @@ class __$$GameStateGameDiscontinuedImplCopyWithImpl<$Res>
     extends _$GameStateCopyWithImpl<$Res, _$GameStateGameDiscontinuedImpl>
     implements _$$GameStateGameDiscontinuedImplCopyWith<$Res> {
   __$$GameStateGameDiscontinuedImplCopyWithImpl(
-      _$GameStateGameDiscontinuedImpl _value, $Res Function(_$GameStateGameDiscontinuedImpl) _then)
+      _$GameStateGameDiscontinuedImpl _value,
+      $Res Function(_$GameStateGameDiscontinuedImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of GameState
@@ -1930,92 +2406,181 @@ class _$GameStateGameDiscontinuedImpl implements GameStateGameDiscontinued {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GameStateGameDiscontinuedImpl &&
-            (identical(other.gameWarning, gameWarning) || other.gameWarning == gameWarning) &&
-            (identical(other.gameError, gameError) || other.gameError == gameError) &&
+            (identical(other.gameWarning, gameWarning) ||
+                other.gameWarning == gameWarning) &&
+            (identical(other.gameError, gameError) ||
+                other.gameError == gameError) &&
             const DeepCollectionEquality().equals(other._board, _board) &&
             (identical(other.myUser, myUser) || other.myUser == myUser) &&
-            (identical(other.teammateUser, teammateUser) || other.teammateUser == teammateUser) &&
-            (identical(other.showInviteDialog, showInviteDialog) || other.showInviteDialog == showInviteDialog));
+            (identical(other.teammateUser, teammateUser) ||
+                other.teammateUser == teammateUser) &&
+            (identical(other.showInviteDialog, showInviteDialog) ||
+                other.showInviteDialog == showInviteDialog));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, gameWarning, gameError, const DeepCollectionEquality().hash(_board),
-      myUser, teammateUser, showInviteDialog);
+  int get hashCode => Object.hash(
+      runtimeType,
+      gameWarning,
+      gameError,
+      const DeepCollectionEquality().hash(_board),
+      myUser,
+      teammateUser,
+      showInviteDialog);
 
   /// Create a copy of GameState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$GameStateGameDiscontinuedImplCopyWith<_$GameStateGameDiscontinuedImpl> get copyWith =>
-      __$$GameStateGameDiscontinuedImplCopyWithImpl<_$GameStateGameDiscontinuedImpl>(this, _$identity);
+  _$$GameStateGameDiscontinuedImplCopyWith<_$GameStateGameDiscontinuedImpl>
+      get copyWith => __$$GameStateGameDiscontinuedImplCopyWithImpl<
+          _$GameStateGameDiscontinuedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)
+    required TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)
         initial,
-    required TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)
+    required TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)
         myTurn,
-    required TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)
+    required TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)
         opponentTurn,
-    required TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)
+    required TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)
         gameOver,
-    required TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)
+    required TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)
         gameDiscontinued,
   }) {
-    return gameDiscontinued(gameWarning, gameError, board, myUser, teammateUser, showInviteDialog);
+    return gameDiscontinued(
+        gameWarning, gameError, board, myUser, teammateUser, showInviteDialog);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult? Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         initial,
-    TResult? Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult? Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         myTurn,
-    TResult? Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult? Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         opponentTurn,
-    TResult? Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult? Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         gameOver,
-    TResult? Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult? Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         gameDiscontinued,
   }) {
-    return gameDiscontinued?.call(gameWarning, gameError, board, myUser, teammateUser, showInviteDialog);
+    return gameDiscontinued?.call(
+        gameWarning, gameError, board, myUser, teammateUser, showInviteDialog);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         initial,
-    TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         myTurn,
-    TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         opponentTurn,
-    TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         gameOver,
-    TResult Function(GameWarning? gameWarning, GameError? gameError, Map<CellId, Cell?> board, GameUser myUser,
-            GameUser? teammateUser, bool showInviteDialog)?
+    TResult Function(
+            GameWarning? gameWarning,
+            GameError? gameError,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser? teammateUser,
+            bool showInviteDialog)?
         gameDiscontinued,
     required TResult orElse(),
   }) {
     if (gameDiscontinued != null) {
-      return gameDiscontinued(gameWarning, gameError, board, myUser, teammateUser, showInviteDialog);
+      return gameDiscontinued(gameWarning, gameError, board, myUser,
+          teammateUser, showInviteDialog);
     }
     return orElse();
   }
@@ -2087,6 +2652,6 @@ abstract class GameStateGameDiscontinued implements GameState {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GameStateGameDiscontinuedImplCopyWith<_$GameStateGameDiscontinuedImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$GameStateGameDiscontinuedImplCopyWith<_$GameStateGameDiscontinuedImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

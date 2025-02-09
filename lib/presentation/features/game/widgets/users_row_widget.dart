@@ -28,7 +28,7 @@ class UsersRowWidget extends BlocedWidget<GameBloc, GameState> {
                 Text(
                   context.l10n.game_invite,
                   style: context.textStyles.mulish14Semi.copyWith(
-                    color: context.colors.blue1,
+                    color: context.colors.primaryColor,
                     decorationColor: Colors.blue,
                     decoration: TextDecoration.underline,
                   ),

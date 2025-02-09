@@ -42,13 +42,14 @@ class AppColors {
   factory AppColors.instance() {
     return _instance ??= AppColors._();
   }
+  final primaryColor = const Color(0xFF155E95);
+  final accentColor = const Color(0xFF7268af);
 
   final white = const Color(0xFFFFFFFF);
   final whiteBg = const Color(0xFFF7F7FC);
   final black = const Color(0xFF000000);
   final black1 = const Color(0xFF020202);
-  final blue = const Color(0xFF4F75FB);
-  final blue1 = const Color(0xFF002DE3);
+
   final grey = const Color(0xFFE2E4EE);
   final grey1 = const Color(0xFF414141);
   final grey2 = const Color(0xFF9D9D9D);
@@ -56,11 +57,11 @@ class AppColors {
   final grey6 = const Color(0xFFA1A1A1);
   final grey8 = const Color(0xFFD9D9D9);
   final grey9 = const Color(0xFF979696);
+
   final green = const Color(0xFF6BAA64);
   final green1 = const Color(0xFF79A86B);
   final lightGreen = const Color(0xFF60BE79);
   final lightGreen1 = const Color(0xFFB4F8B3);
   final red = const Color(0xFFE30036);
-  final red1 = const Color(0xFFF01F1F);
-  final red2 = const Color(0xFFFF5B51);
+  final blue = const Color(0xFF4F75FB);
 }

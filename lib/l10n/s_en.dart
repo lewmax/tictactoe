@@ -49,7 +49,7 @@ class SEn extends S {
   String get home_didntJoinYet => 'Didn\'t join yet';
 
   @override
-  String get home_join_dialog_title => 'Welcome to today\'s Tic Tac Toe';
+  String get home_join_dialog_title => 'Welcome to Tic Tac Toe';
 
   @override
   String get home_join_dialog_text => 'Join a game with an Invite Code';
@@ -127,7 +127,7 @@ class SEn extends S {
   String get game_endGame => 'End Game';
 
   @override
-  String get game_invite_dialog_title => 'Welcome to today\'s Tic Tac Toe';
+  String get game_invite_dialog_title => 'Welcome to Tic Tac Toe';
 
   @override
   String get game_invite_dialog_subtitle => 'Invite a Teammate to your game';

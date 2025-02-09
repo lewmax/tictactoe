@@ -18,15 +18,17 @@ class S {
   static S? _current;
 
   static S get current {
-    assert(
-        _current != null, 'No instance of S was loaded. Try to initialize the S delegate before accessing S.current.');
+    assert(_current != null,
+        'No instance of S was loaded. Try to initialize the S delegate before accessing S.current.');
     return _current!;
   }
 
   static const AppLocalizationDelegate delegate = AppLocalizationDelegate();
 
   static Future<S> load(Locale locale) {
-    final name = (locale.countryCode?.isEmpty ?? false) ? locale.languageCode : locale.toString();
+    final name = (locale.countryCode?.isEmpty ?? false)
+        ? locale.languageCode
+        : locale.toString();
     final localeName = Intl.canonicalizedLocale(name);
     return initializeMessages(localeName).then((_) {
       Intl.defaultLocale = localeName;
@@ -188,10 +190,10 @@ class S {
     );
   }
 
-  /// `Welcome to today's Tic Tac Toe`
+  /// `Welcome to Tic Tac Toe`
   String get home_join_dialog_title {
     return Intl.message(
-      'Welcome to today\'s Tic Tac Toe',
+      'Welcome to Tic Tac Toe',
       name: 'home_join_dialog_title',
       desc: '',
       args: [],
@@ -448,10 +450,10 @@ class S {
     );
   }
 
-  /// `Welcome to today's Tic Tac Toe`
+  /// `Welcome to Tic Tac Toe`
   String get game_invite_dialog_title {
     return Intl.message(
-      'Welcome to today\'s Tic Tac Toe',
+      'Welcome to Tic Tac Toe',
       name: 'game_invite_dialog_title',
       desc: '',
       args: [],

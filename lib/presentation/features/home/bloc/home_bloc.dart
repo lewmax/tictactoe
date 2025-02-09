@@ -185,7 +185,7 @@ HomeState _getHomeStateBasedOnRepos(
     user: myUser,
     topPlayers: topPlayers,
     gameToOpen: null,
-    datetime: dateManagerRepo.currDayStream.valueOrNull ?? DateTime.now(),
+    datetime: dateManagerRepo.currDayStream.value,
     gamesInProgress: gameRepo.gamesInProgressStream.valueOrNull?.values.toList() ?? [],
     recentGames: gameRepo.recentGamesStream.valueOrNull?.values.toList() ?? [],
     error: null,

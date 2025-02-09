@@ -147,7 +147,7 @@ class OfflineMultiplayerGamePage extends ScreenBlocProviderStateless<OfflineMult
         title: 'New Game',
         isContentCentered: true,
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
-        style: context.textStyles.mulish14Bold.copyWith(color: context.colors.red1),
+        style: context.textStyles.mulish14Bold.copyWith(color: context.colors.accentColor),
         onTap: () {
           bloc.add(const OfflineMultiplayerEvent.started());
         },

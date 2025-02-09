@@ -132,8 +132,8 @@ class GamePage extends ScreenBlocProviderStateless<GameBloc, GameState> with Sna
 
   Widget _cellValue(Cell cell) {
     return switch (cell.cellState) {
-      CellState.owner => const Center(child: Text('x', style: TextStyle(fontSize: 96), textAlign: TextAlign.center)),
-      CellState.opponent => const Center(child: Text('o', style: TextStyle(fontSize: 96), textAlign: TextAlign.center)),
+      CellState.owner => const Center(child: Text('X', style: TextStyle(fontSize: 84), textAlign: TextAlign.center)),
+      CellState.opponent => const Center(child: Text('O', style: TextStyle(fontSize: 84), textAlign: TextAlign.center)),
     };
   }
 

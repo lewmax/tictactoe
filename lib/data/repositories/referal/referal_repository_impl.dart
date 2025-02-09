@@ -39,7 +39,6 @@ final class ReferalRepoImpl implements ReferalRepo {
       title: 'TicTacToe Invitation',
       contentDescription: "Play a game of TicTacToe with me!",
       imageUrl: imageUrl,
-      // expirationDateInMilliSec: DateTime.now().add(1.days).millisecondsSinceEpoch,
     );
 
     final lp = BranchLinkProperties(feature: 'sharing');

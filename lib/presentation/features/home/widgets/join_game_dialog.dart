@@ -47,7 +47,7 @@ class JoinGameDialog extends StatelessWidget {
             const SizedBox(height: 18),
             AppButton(
               title: context.l10n.home_join_dialog_playBtn,
-              color: context.colors.blue1,
+              color: context.colors.primaryColor,
               style: context.textStyles.mulish14Bold.copyWith(color: context.colors.white),
               isContentCentered: true,
               onTap: () {

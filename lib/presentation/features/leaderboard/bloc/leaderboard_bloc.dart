@@ -22,7 +22,7 @@ class LeaderboardBloc extends Bloc<LeaderboardEvent, LeaderboardState> {
   LeaderboardBloc({required LeaderboardRepo leaderboardRepo, required DateManagerRepo dateManagerRepo})
       : _leaderboardRepo = leaderboardRepo,
         _dateManagerRepo = dateManagerRepo,
-        super(LeaderboardState(datetime: dateManagerRepo.currDayStream.valueOrNull ?? DateTime.now())) {
+        super(LeaderboardState(datetime: dateManagerRepo.currDayStream.value)) {
     on<LeaderboardEvent>(
       (event, emit) => event.map(
         dateUpdated: (event) => _dateUpdated(event, emit),

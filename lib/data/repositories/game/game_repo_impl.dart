@@ -15,6 +15,7 @@ import 'package:chat_app/domain/entities/game/game_user.dart';
 import 'package:chat_app/domain/entities/user/user.dart';
 import 'package:chat_app/domain/models/game/game_status.dart';
 import 'package:chat_app/domain/repositories/auth/auth_repo.dart';
+import 'package:chat_app/domain/repositories/date/date_manager_repo.dart';
 import 'package:chat_app/domain/repositories/game/game_repo.dart';
 import 'package:chat_app/domain/repositories/game/recent_game_users_repo.dart';
 import 'package:chat_app/domain/repositories/referal/referal_repository.dart';
@@ -28,16 +29,19 @@ final class GameRepoImpl extends RepositoryValidationMixin with BoardSizeMixin i
   final AuthRepo _authRepo;
   final ReferalRepo _referalRepository;
   final RecentGameUsersRepo _recentGameUsersRepo;
+  final DateManagerRepo _dateManagerRepo;
 
   GameRepoImpl({
     required GameDataSource gameDataSource,
     required AuthRepo authRepo,
     required ReferalRepo referalRepository,
     required RecentGameUsersRepo recentGameUsersRepo,
+    required DateManagerRepo dateManagerRepo,
   })  : _gameDataSource = gameDataSource,
         _authRepo = authRepo,
         _referalRepository = referalRepository,
-        _recentGameUsersRepo = recentGameUsersRepo;
+        _recentGameUsersRepo = recentGameUsersRepo,
+        _dateManagerRepo = dateManagerRepo;
 
   //Games cached
   final _activeGame = BehaviorSubject<GameId?>();
@@ -86,7 +90,7 @@ final class GameRepoImpl extends RepositoryValidationMixin with BoardSizeMixin i
           url: deepLink.url,
           myUser: myUser,
           gameStatus: GameStatus.notStarted,
-          createdAt: DateTime.now(),
+          createdAt: _dateManagerRepo.currDayStream.value,
           endedAt: null,
           teammateUser: null,
           winnerId: null,
@@ -181,7 +185,7 @@ final class GameRepoImpl extends RepositoryValidationMixin with BoardSizeMixin i
   Future<NetworkResponse<void>> terminateGame({required GameId id}) async {
     return handleRequest(
       () async {
-        await _gameDataSource.terminateGame(id: id, endedAt: DateTime.now().toUtc());
+        await _gameDataSource.terminateGame(id: id, endedAt: _dateManagerRepo.currDayStream.value);
         return NetworkResponse.success(null);
       },
     );

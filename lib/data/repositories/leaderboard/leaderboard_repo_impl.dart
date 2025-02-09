@@ -6,6 +6,7 @@ import 'package:chat_app/domain/entities/leaderboard/leaderboard_user.dart';
 import 'package:chat_app/domain/entities/user/user.dart';
 import 'package:chat_app/domain/models/game/game_status.dart';
 import 'package:chat_app/domain/models/leaderboard/user_stats.dart';
+import 'package:chat_app/domain/repositories/date/date_manager_repo.dart';
 import 'package:chat_app/domain/repositories/game/recent_game_users_repo.dart';
 import 'package:chat_app/domain/repositories/leaderboard/leaderboard_repo.dart';
 import 'package:injectable/injectable.dart';
@@ -15,14 +16,21 @@ import 'package:rxdart/rxdart.dart';
 final class LeaderboardRepoImpl extends RepositoryValidationMixin implements LeaderboardRepo {
   final GameDataSource _gameDataSource;
   final RecentGameUsersRepo _recentGameUsersRepo;
+  final DateManagerRepo _dateManagerRepo;
 
-  LeaderboardRepoImpl(this._gameDataSource, this._recentGameUsersRepo);
+  LeaderboardRepoImpl({
+    required GameDataSource gameDataSource,
+    required RecentGameUsersRepo recentGameUsersRepo,
+    required DateManagerRepo dateManagerRepo,
+  })  : _gameDataSource = gameDataSource,
+        _recentGameUsersRepo = recentGameUsersRepo,
+        _dateManagerRepo = dateManagerRepo;
 
   @override
   Future<NetworkResponse<List<LeaderboardUser>>> getLeaderboardUsersPer(GetLeaderboardPeriod period) async {
     return handleRequest(
       () async {
-        final games = await _gameDataSource.getGamesPer(period);
+        final games = await _gameDataSource.getGamesPer(period, _dateManagerRepo.currDayStream.value);
 
         // Create a map to track user statistics
         final userStats = <UserId, UserStats>{};
@@ -89,7 +97,10 @@ final class LeaderboardRepoImpl extends RepositoryValidationMixin implements Lea
 
   @override
   Stream<List<LeaderboardUser>> fetchLeaderboardUsersPer(GetLeaderboardPeriod period) {
-    return _gameDataSource.fetchGamesPer(period).whereNotNull().asyncMap((games) async {
+    return _gameDataSource
+        .fetchGamesPer(period, _dateManagerRepo.currDayStream.value)
+        .whereNotNull()
+        .asyncMap((games) async {
       // Get unique user IDs from finished games
       final uniqueUserIds = games
           .where((game) => game.gameStatus == GameStatus.finished)

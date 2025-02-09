@@ -56,7 +56,7 @@ class InviteDialog extends StatelessWidget {
               title: context.l10n.game_invite_dialog_btn,
               isContentCentered: true,
               style: context.textStyles.mulish14Bold.copyWith(color: context.colors.white),
-              color: context.colors.blue1,
+              color: context.colors.primaryColor,
               onTap: () async {
                 await Share.share(
                   "Play a game of TicTacToe with me! The game invite code is ${code.gameId.rawValue}. ${code.url}",

@@ -11,7 +11,6 @@ import 'package:chat_app/presentation/features/game/offline_script/offline_game_
 import 'package:chat_app/presentation/features/game/online_multiplayer/game_page.dart';
 import 'package:chat_app/presentation/features/home/home_page.dart';
 import 'package:chat_app/presentation/features/leaderboard/leaderboard_screen.dart';
-import 'package:chat_app/presentation/features/profile/delete_account/delete_account.dart';
 import 'package:chat_app/presentation/features/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -29,7 +28,6 @@ class AppRouter extends RootStackRouter {
         AutoRoute(page: SignInEmailRoute.page, path: '/sign-email'),
         AutoRoute(page: ProfileRoute.page, path: '/profile'),
         AutoRoute(page: LeaderboardRoute.page, path: '/leaderboard'),
-        AutoRoute(page: DeleteAccountRoute.page, path: '/delete-account'),
         AutoRoute(page: ForceUpdateRoute.page, path: '/force-update-route'),
         AutoRoute(page: OfflineGameRoute.page, path: '/offline-game'),
         AutoRoute(page: OfflineMultiplayerGameRoute.page, path: '/offline-multiplayer-game'),

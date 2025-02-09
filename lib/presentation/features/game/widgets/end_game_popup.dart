@@ -15,7 +15,7 @@ class EndGameButton extends StatelessWidget {
       title: title,
       isContentCentered: true,
       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
-      style: context.textStyles.mulish14Bold.copyWith(color: context.colors.red1),
+      style: context.textStyles.mulish14Bold.copyWith(color: context.colors.accentColor),
       onTap: () {
         showDialog(
           context: context,
@@ -34,7 +34,7 @@ class EndGameButton extends StatelessWidget {
                 children: [
                   Text(
                     'Confirm End Game?',
-                    style: context.textStyles.mulish16Bold.copyWith(color: context.colors.red1),
+                    style: context.textStyles.mulish16Bold.copyWith(color: context.colors.accentColor),
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 32),
@@ -45,7 +45,7 @@ class EndGameButton extends StatelessWidget {
                         title: 'Confirm',
                         isContentCentered: true,
                         style: context.textStyles.mulish14Bold.copyWith(color: context.colors.blue),
-                        borderColor: context.colors.blue1,
+                        borderColor: context.colors.primaryColor,
                         onTap: () {
                           context.router.maybePop();
                           onTap();

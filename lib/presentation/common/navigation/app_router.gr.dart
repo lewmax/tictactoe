@@ -29,25 +29,6 @@ class AiGameRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [DeleteAccountPage]
-class DeleteAccountRoute extends PageRouteInfo<void> {
-  const DeleteAccountRoute({List<PageRouteInfo>? children})
-      : super(
-          DeleteAccountRoute.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'DeleteAccountRoute';
-
-  static PageInfo page = PageInfo(
-    name,
-    builder: (data) {
-      return const DeleteAccountPage();
-    },
-  );
-}
-
-/// generated route for
 /// [ForceUpdatePage]
 class ForceUpdateRoute extends PageRouteInfo<void> {
   const ForceUpdateRoute({List<PageRouteInfo>? children})
@@ -83,7 +64,8 @@ class GameRoute extends PageRouteInfo<GameRouteArgs> {
   static PageInfo page = PageInfo(
     name,
     builder: (data) {
-      final args = data.argsAs<GameRouteArgs>(orElse: () => const GameRouteArgs());
+      final args =
+          data.argsAs<GameRouteArgs>(orElse: () => const GameRouteArgs());
       return GamePage(gameId: args.gameId);
     },
   );

@@ -19,29 +19,29 @@ class GameDataSource {
 
   Query<Map<String, dynamic>> _recentGamesQuery(UserId id) => _gamesCollection
       .where(Filter.or(Filter('owner.id', isEqualTo: id.rawValue), Filter('opponent.id', isEqualTo: id.rawValue)))
-      .orderBy('createdAt', descending: true);
+      .orderBy('timeCreatedAt', descending: true);
 
-  Query<Map<String, dynamic>> _leaderboardQuery(GetLeaderboardPeriod period) {
+  Query<Map<String, dynamic>> _leaderboardQuery(GetLeaderboardPeriod period, DateTime currTime) {
     final firebasePeriod = period.firebasePeriod;
     Query<Map<String, dynamic>> query = _gamesCollection
         .where('gameStatus', isEqualTo: GameStatus.finished.firebaseStatus)
-        .orderBy('endedAt', descending: true);
+        .orderBy('timeEndedAt', descending: true);
 
     if (firebasePeriod != null) {
-      query = query.where('endedAt', isGreaterThan: DateTime.now().subtract(firebasePeriod));
+      query = query.where('timeEndedAt', isGreaterThan: currTime.subtract(firebasePeriod));
     }
 
     return query;
   }
 
-  Future<List<GameDto>> getGamesPer(GetLeaderboardPeriod period) async {
-    final query = _leaderboardQuery(period);
+  Future<List<GameDto>> getGamesPer(GetLeaderboardPeriod period, DateTime currTime) async {
+    final query = _leaderboardQuery(period, currTime);
     final snapshots = await query.get();
     return snapshots.docs.map((snapshot) => snapshot._gameFromSnapshot()).nonNulls.toList();
   }
 
-  Stream<List<GameDto>?> fetchGamesPer(GetLeaderboardPeriod period) {
-    return _leaderboardQuery(period).snapshots(includeMetadataChanges: true).map((snapshots) {
+  Stream<List<GameDto>?> fetchGamesPer(GetLeaderboardPeriod period, DateTime currTime) {
+    return _leaderboardQuery(period, currTime).snapshots(includeMetadataChanges: true).map((snapshots) {
       if (snapshots.metadata.hasPendingWrites) return null;
 
       return snapshots.docs.map((snapshot) => snapshot._gameFromSnapshot()).nonNulls.toList();
@@ -97,13 +97,13 @@ class GameDataSource {
     return _gameDocById(id).update({
       'boardMap': GameConverter.boardMapToJson(board),
       if (gameStatus != null) 'gameStatus': gameStatus.firebaseStatus,
-      if (endedAt != null) 'endedAt': endedAt,
+      if (endedAt != null) 'timeEndedAt': endedAt,
       if (winnerId != null) 'winnerId': winnerId.rawValue,
     });
   }
 
   Future<void> terminateGame({required GameId id, required DateTime endedAt}) {
-    return _gameDocById(id).update({'gameStatus': GameStatus.userTerminated.firebaseStatus, 'endedAt': endedAt});
+    return _gameDocById(id).update({'gameStatus': GameStatus.userTerminated.firebaseStatus, 'timeEndedAt': endedAt});
   }
 }
 
