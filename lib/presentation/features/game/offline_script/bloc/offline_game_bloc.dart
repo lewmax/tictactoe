@@ -24,11 +24,10 @@ class OfflineGameBloc extends Bloc<OfflineGameEvent, OfflineGameState> with Boar
   OfflineGameBloc(this._authRepo) : super(const OfflineGameState.initial()) {
     on<OfflineGameEvent>(
       (event, emit) async => event.map(
-        started: (_) => _onStarted(emit),
+        started: (event) => _onStarted(event, emit),
         cellTapped: (e) => _onCellTapped(e, emit),
       ),
     );
-    add(const OfflineGameEvent.started());
   }
 
   final AuthRepo _authRepo;
@@ -36,16 +35,19 @@ class OfflineGameBloc extends Bloc<OfflineGameEvent, OfflineGameState> with Boar
   final myRole = CellState.owner;
   final opponentRole = CellState.opponent;
   late final _script = TicTacToeScript(scriptRole: opponentRole, opponentRole: myRole);
-  final difficulty = 0.9;
+  double? difficulty;
 
-  Future<void> _onStarted(Emitter<OfflineGameState> emit) async {
+  Future<void> _onStarted(_Started event, Emitter<OfflineGameState> emit) async {
+    if (event.difficultyLevel != null) difficulty = event.difficultyLevel! / 10;
+    if (difficulty == null) return;
+
     // Randomly decide who goes first
     final isPlayerFirst = Random().nextBool();
     final board = generateEmptyBoard(boardAxisLength);
 
     // If AI goes first, make its move
     if (!isPlayerFirst) {
-      final (cellId, _) = _script.makeMove(board, boardAxisLength, difficulty);
+      final (cellId, _) = _script.makeMove(board, boardAxisLength, difficulty!);
       board[cellId] = Cell(cellId: cellId, cellState: CellState.opponent);
     }
 
@@ -53,7 +55,7 @@ class OfflineGameBloc extends Bloc<OfflineGameEvent, OfflineGameState> with Boar
       OfflineGameState.playing(
         board: board,
         myUser: _authRepo.user?.let((user) => GameUser.fromUser(user, true, true)) ?? _createEmptyUser('Me', true),
-        opponentUser: _createEmptyUser('Opponent', false),
+        opponentUser: _createEmptyUser('Script Opponent', false),
         isGameOver: false,
         winner: null,
       ),
@@ -61,6 +63,7 @@ class OfflineGameBloc extends Bloc<OfflineGameEvent, OfflineGameState> with Boar
   }
 
   void _onCellTapped(_CellTapped event, Emitter<OfflineGameState> emit) {
+    if (difficulty == null) return;
     state.mapOrNull(
       playing: (state) {
         if (state.isGameOver || state.board[event.cellId] != null) return;
@@ -93,7 +96,7 @@ class OfflineGameBloc extends Bloc<OfflineGameEvent, OfflineGameState> with Boar
         }
 
         // Make AI move
-        final (cellId, isWinningMove) = _script.makeMove(newBoard, boardAxisLength, difficulty);
+        final (cellId, isWinningMove) = _script.makeMove(newBoard, boardAxisLength, difficulty!);
         newBoard[cellId] = Cell(cellId: cellId, cellState: CellState.opponent);
 
         // Check if AI won

@@ -117,22 +117,6 @@ class SignUpScreen extends ScreenBlocProviderStateless<SignUpBloc, SignUpState> 
                                 );
                               },
                             ),
-                            // const SizedBox(height: 12),
-                            // blocValueBuilder(
-                            //   getter: (state) => (state.countryCode, state.phoneError),
-                            //   builder: (context, record) {
-                            //     final countryCode = record.$1;
-                            //     final phoneError = record.$2;
-                            //     return PhoneField(
-                            //       countries: _countries,
-                            //       codeChanged: (value) => bloc.add(SignUpEvent.phoneCountryCode(value)),
-                            //       phoneChanged: (value) => bloc.add(SignUpEvent.changePhoneNumber(value)),
-                            //       phoneCountryCode: countryCode,
-                            //       phoneError: phoneError,
-                            //     );
-                            //   },
-                            // ),
-                            // const SizedBox(height: 12),
                             blocValueBuilder(
                               getter: (state) => state.fullNameError,
                               builder: (context, fullNameError) {

@@ -53,9 +53,8 @@ class OfflineMultiplayerGamePage extends ScreenBlocProviderStateless<OfflineMult
                 builder: (context, record) {
                   if (record == null) return const SizedBox.shrink();
 
-                  final myUser = record.$1;
-                  final opponentUser = record.$2;
-                  final result = record.$3;
+                  final (myUser, opponentUser, result) = record;
+
                   return PlayersRowWidget(
                     myUser: myUser,
                     friendUser: opponentUser,

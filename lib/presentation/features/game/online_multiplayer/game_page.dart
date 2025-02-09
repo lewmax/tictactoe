@@ -57,8 +57,7 @@ class GamePage extends ScreenBlocProviderStateless<GameBloc, GameState> with Sna
               blocValueBuilder(
                 getter: (state) => (state.myUser, state.teammateUser),
                 builder: (context, record) {
-                  final myUser = record.$1;
-                  final teammateUser = record.$2;
+                  final (myUser, teammateUser) = record;
 
                   return PlayersRowWidget(
                     myUser: myUser,
@@ -91,8 +90,7 @@ class GamePage extends ScreenBlocProviderStateless<GameBloc, GameState> with Sna
     return blocValueBuilder(
       getter: (state) => (state.board, state is GameStateMyTurn && state.teammateUser != null),
       builder: (context, record) {
-        final board = record.$1;
-        final isMyTurn = record.$2;
+        final (board, isMyTurn) = record;
 
         return SizedBox(
           width: size,

@@ -18,19 +18,19 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$OfflineGameEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function(int? difficultyLevel) started,
     required TResult Function(CellId cellId) cellTapped,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function(int? difficultyLevel)? started,
     TResult? Function(CellId cellId)? cellTapped,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function(int? difficultyLevel)? started,
     TResult Function(CellId cellId)? cellTapped,
     required TResult orElse(),
   }) =>
@@ -58,12 +58,14 @@ mixin _$OfflineGameEvent {
 
 /// @nodoc
 abstract class $OfflineGameEventCopyWith<$Res> {
-  factory $OfflineGameEventCopyWith(OfflineGameEvent value, $Res Function(OfflineGameEvent) then) =
+  factory $OfflineGameEventCopyWith(
+          OfflineGameEvent value, $Res Function(OfflineGameEvent) then) =
       _$OfflineGameEventCopyWithImpl<$Res, OfflineGameEvent>;
 }
 
 /// @nodoc
-class _$OfflineGameEventCopyWithImpl<$Res, $Val extends OfflineGameEvent> implements $OfflineGameEventCopyWith<$Res> {
+class _$OfflineGameEventCopyWithImpl<$Res, $Val extends OfflineGameEvent>
+    implements $OfflineGameEventCopyWith<$Res> {
   _$OfflineGameEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -77,64 +79,97 @@ class _$OfflineGameEventCopyWithImpl<$Res, $Val extends OfflineGameEvent> implem
 
 /// @nodoc
 abstract class _$$StartedImplCopyWith<$Res> {
-  factory _$$StartedImplCopyWith(_$StartedImpl value, $Res Function(_$StartedImpl) then) =
+  factory _$$StartedImplCopyWith(
+          _$StartedImpl value, $Res Function(_$StartedImpl) then) =
       __$$StartedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int? difficultyLevel});
 }
 
 /// @nodoc
-class __$$StartedImplCopyWithImpl<$Res> extends _$OfflineGameEventCopyWithImpl<$Res, _$StartedImpl>
+class __$$StartedImplCopyWithImpl<$Res>
+    extends _$OfflineGameEventCopyWithImpl<$Res, _$StartedImpl>
     implements _$$StartedImplCopyWith<$Res> {
-  __$$StartedImplCopyWithImpl(_$StartedImpl _value, $Res Function(_$StartedImpl) _then) : super(_value, _then);
+  __$$StartedImplCopyWithImpl(
+      _$StartedImpl _value, $Res Function(_$StartedImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of OfflineGameEvent
   /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? difficultyLevel = freezed,
+  }) {
+    return _then(_$StartedImpl(
+      difficultyLevel: freezed == difficultyLevel
+          ? _value.difficultyLevel
+          : difficultyLevel // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$StartedImpl implements _Started {
-  const _$StartedImpl();
+  const _$StartedImpl({required this.difficultyLevel});
+
+  @override
+  final int? difficultyLevel;
 
   @override
   String toString() {
-    return 'OfflineGameEvent.started()';
+    return 'OfflineGameEvent.started(difficultyLevel: $difficultyLevel)';
   }
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is _$StartedImpl);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$StartedImpl &&
+            (identical(other.difficultyLevel, difficultyLevel) ||
+                other.difficultyLevel == difficultyLevel));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, difficultyLevel);
+
+  /// Create a copy of OfflineGameEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$StartedImplCopyWith<_$StartedImpl> get copyWith =>
+      __$$StartedImplCopyWithImpl<_$StartedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function(int? difficultyLevel) started,
     required TResult Function(CellId cellId) cellTapped,
   }) {
-    return started();
+    return started(difficultyLevel);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function(int? difficultyLevel)? started,
     TResult? Function(CellId cellId)? cellTapped,
   }) {
-    return started?.call();
+    return started?.call(difficultyLevel);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function(int? difficultyLevel)? started,
     TResult Function(CellId cellId)? cellTapped,
     required TResult orElse(),
   }) {
     if (started != null) {
-      return started();
+      return started(difficultyLevel);
     }
     return orElse();
   }
@@ -172,21 +207,33 @@ class _$StartedImpl implements _Started {
 }
 
 abstract class _Started implements OfflineGameEvent {
-  const factory _Started() = _$StartedImpl;
+  const factory _Started({required final int? difficultyLevel}) = _$StartedImpl;
+
+  int? get difficultyLevel;
+
+  /// Create a copy of OfflineGameEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$StartedImplCopyWith<_$StartedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$CellTappedImplCopyWith<$Res> {
-  factory _$$CellTappedImplCopyWith(_$CellTappedImpl value, $Res Function(_$CellTappedImpl) then) =
+  factory _$$CellTappedImplCopyWith(
+          _$CellTappedImpl value, $Res Function(_$CellTappedImpl) then) =
       __$$CellTappedImplCopyWithImpl<$Res>;
   @useResult
   $Res call({CellId cellId});
 }
 
 /// @nodoc
-class __$$CellTappedImplCopyWithImpl<$Res> extends _$OfflineGameEventCopyWithImpl<$Res, _$CellTappedImpl>
+class __$$CellTappedImplCopyWithImpl<$Res>
+    extends _$OfflineGameEventCopyWithImpl<$Res, _$CellTappedImpl>
     implements _$$CellTappedImplCopyWith<$Res> {
-  __$$CellTappedImplCopyWithImpl(_$CellTappedImpl _value, $Res Function(_$CellTappedImpl) _then) : super(_value, _then);
+  __$$CellTappedImplCopyWithImpl(
+      _$CellTappedImpl _value, $Res Function(_$CellTappedImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of OfflineGameEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -239,7 +286,7 @@ class _$CellTappedImpl implements _CellTapped {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() started,
+    required TResult Function(int? difficultyLevel) started,
     required TResult Function(CellId cellId) cellTapped,
   }) {
     return cellTapped(cellId);
@@ -248,7 +295,7 @@ class _$CellTappedImpl implements _CellTapped {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
+    TResult? Function(int? difficultyLevel)? started,
     TResult? Function(CellId cellId)? cellTapped,
   }) {
     return cellTapped?.call(cellId);
@@ -257,7 +304,7 @@ class _$CellTappedImpl implements _CellTapped {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
+    TResult Function(int? difficultyLevel)? started,
     TResult Function(CellId cellId)? cellTapped,
     required TResult orElse(),
   }) {
@@ -307,7 +354,8 @@ abstract class _CellTapped implements OfflineGameEvent {
   /// Create a copy of OfflineGameEvent
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CellTappedImplCopyWith<_$CellTappedImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$CellTappedImplCopyWith<_$CellTappedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -315,44 +363,59 @@ mixin _$OfflineGameState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(GameWarning? warning, Map<CellId, Cell?> board, GameUser myUser, GameUser opponentUser,
-            bool isGameOver, CellState? winner)
+    required TResult Function(
+            GameWarning? warning,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser opponentUser,
+            bool isGameOver,
+            CellState? winner)
         playing,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(GameWarning? warning, Map<CellId, Cell?> board, GameUser myUser, GameUser opponentUser,
-            bool isGameOver, CellState? winner)?
+    TResult? Function(
+            GameWarning? warning,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser opponentUser,
+            bool isGameOver,
+            CellState? winner)?
         playing,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(GameWarning? warning, Map<CellId, Cell?> board, GameUser myUser, GameUser opponentUser,
-            bool isGameOver, CellState? winner)?
+    TResult Function(
+            GameWarning? warning,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser opponentUser,
+            bool isGameOver,
+            CellState? winner)?
         playing,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Playing value) playing,
+    required TResult Function(Initial value) initial,
+    required TResult Function(Playing value) playing,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Playing value)? playing,
+    TResult? Function(Initial value)? initial,
+    TResult? Function(Playing value)? playing,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Playing value)? playing,
+    TResult Function(Initial value)? initial,
+    TResult Function(Playing value)? playing,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -360,12 +423,14 @@ mixin _$OfflineGameState {
 
 /// @nodoc
 abstract class $OfflineGameStateCopyWith<$Res> {
-  factory $OfflineGameStateCopyWith(OfflineGameState value, $Res Function(OfflineGameState) then) =
+  factory $OfflineGameStateCopyWith(
+          OfflineGameState value, $Res Function(OfflineGameState) then) =
       _$OfflineGameStateCopyWithImpl<$Res, OfflineGameState>;
 }
 
 /// @nodoc
-class _$OfflineGameStateCopyWithImpl<$Res, $Val extends OfflineGameState> implements $OfflineGameStateCopyWith<$Res> {
+class _$OfflineGameStateCopyWithImpl<$Res, $Val extends OfflineGameState>
+    implements $OfflineGameStateCopyWith<$Res> {
   _$OfflineGameStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -379,14 +444,18 @@ class _$OfflineGameStateCopyWithImpl<$Res, $Val extends OfflineGameState> implem
 
 /// @nodoc
 abstract class _$$InitialImplCopyWith<$Res> {
-  factory _$$InitialImplCopyWith(_$InitialImpl value, $Res Function(_$InitialImpl) then) =
+  factory _$$InitialImplCopyWith(
+          _$InitialImpl value, $Res Function(_$InitialImpl) then) =
       __$$InitialImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$InitialImplCopyWithImpl<$Res> extends _$OfflineGameStateCopyWithImpl<$Res, _$InitialImpl>
+class __$$InitialImplCopyWithImpl<$Res>
+    extends _$OfflineGameStateCopyWithImpl<$Res, _$InitialImpl>
     implements _$$InitialImplCopyWith<$Res> {
-  __$$InitialImplCopyWithImpl(_$InitialImpl _value, $Res Function(_$InitialImpl) _then) : super(_value, _then);
+  __$$InitialImplCopyWithImpl(
+      _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of OfflineGameState
   /// with the given fields replaced by the non-null parameter values.
@@ -394,7 +463,7 @@ class __$$InitialImplCopyWithImpl<$Res> extends _$OfflineGameStateCopyWithImpl<$
 
 /// @nodoc
 
-class _$InitialImpl implements _Initial {
+class _$InitialImpl implements Initial {
   const _$InitialImpl();
 
   @override
@@ -404,7 +473,8 @@ class _$InitialImpl implements _Initial {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is _$InitialImpl);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$InitialImpl);
   }
 
   @override
@@ -414,8 +484,13 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(GameWarning? warning, Map<CellId, Cell?> board, GameUser myUser, GameUser opponentUser,
-            bool isGameOver, CellState? winner)
+    required TResult Function(
+            GameWarning? warning,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser opponentUser,
+            bool isGameOver,
+            CellState? winner)
         playing,
   }) {
     return initial();
@@ -425,8 +500,13 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(GameWarning? warning, Map<CellId, Cell?> board, GameUser myUser, GameUser opponentUser,
-            bool isGameOver, CellState? winner)?
+    TResult? Function(
+            GameWarning? warning,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser opponentUser,
+            bool isGameOver,
+            CellState? winner)?
         playing,
   }) {
     return initial?.call();
@@ -436,8 +516,13 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(GameWarning? warning, Map<CellId, Cell?> board, GameUser myUser, GameUser opponentUser,
-            bool isGameOver, CellState? winner)?
+    TResult Function(
+            GameWarning? warning,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser opponentUser,
+            bool isGameOver,
+            CellState? winner)?
         playing,
     required TResult orElse(),
   }) {
@@ -450,8 +535,8 @@ class _$InitialImpl implements _Initial {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Playing value) playing,
+    required TResult Function(Initial value) initial,
+    required TResult Function(Playing value) playing,
   }) {
     return initial(this);
   }
@@ -459,8 +544,8 @@ class _$InitialImpl implements _Initial {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Playing value)? playing,
+    TResult? Function(Initial value)? initial,
+    TResult? Function(Playing value)? playing,
   }) {
     return initial?.call(this);
   }
@@ -468,8 +553,8 @@ class _$InitialImpl implements _Initial {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Playing value)? playing,
+    TResult Function(Initial value)? initial,
+    TResult Function(Playing value)? playing,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -479,13 +564,14 @@ class _$InitialImpl implements _Initial {
   }
 }
 
-abstract class _Initial implements OfflineGameState {
-  const factory _Initial() = _$InitialImpl;
+abstract class Initial implements OfflineGameState {
+  const factory Initial() = _$InitialImpl;
 }
 
 /// @nodoc
 abstract class _$$PlayingImplCopyWith<$Res> {
-  factory _$$PlayingImplCopyWith(_$PlayingImpl value, $Res Function(_$PlayingImpl) then) =
+  factory _$$PlayingImplCopyWith(
+          _$PlayingImpl value, $Res Function(_$PlayingImpl) then) =
       __$$PlayingImplCopyWithImpl<$Res>;
   @useResult
   $Res call(
@@ -498,9 +584,12 @@ abstract class _$$PlayingImplCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$PlayingImplCopyWithImpl<$Res> extends _$OfflineGameStateCopyWithImpl<$Res, _$PlayingImpl>
+class __$$PlayingImplCopyWithImpl<$Res>
+    extends _$OfflineGameStateCopyWithImpl<$Res, _$PlayingImpl>
     implements _$$PlayingImplCopyWith<$Res> {
-  __$$PlayingImplCopyWithImpl(_$PlayingImpl _value, $Res Function(_$PlayingImpl) _then) : super(_value, _then);
+  __$$PlayingImplCopyWithImpl(
+      _$PlayingImpl _value, $Res Function(_$PlayingImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of OfflineGameState
   /// with the given fields replaced by the non-null parameter values.
@@ -545,7 +634,7 @@ class __$$PlayingImplCopyWithImpl<$Res> extends _$OfflineGameStateCopyWithImpl<$
 
 /// @nodoc
 
-class _$PlayingImpl implements _Playing {
+class _$PlayingImpl implements Playing {
   const _$PlayingImpl(
       {this.warning,
       required final Map<CellId, Cell?> board,
@@ -587,28 +676,42 @@ class _$PlayingImpl implements _Playing {
             (identical(other.warning, warning) || other.warning == warning) &&
             const DeepCollectionEquality().equals(other._board, _board) &&
             (identical(other.myUser, myUser) || other.myUser == myUser) &&
-            (identical(other.opponentUser, opponentUser) || other.opponentUser == opponentUser) &&
-            (identical(other.isGameOver, isGameOver) || other.isGameOver == isGameOver) &&
+            (identical(other.opponentUser, opponentUser) ||
+                other.opponentUser == opponentUser) &&
+            (identical(other.isGameOver, isGameOver) ||
+                other.isGameOver == isGameOver) &&
             (identical(other.winner, winner) || other.winner == winner));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType, warning, const DeepCollectionEquality().hash(_board), myUser, opponentUser, isGameOver, winner);
+      runtimeType,
+      warning,
+      const DeepCollectionEquality().hash(_board),
+      myUser,
+      opponentUser,
+      isGameOver,
+      winner);
 
   /// Create a copy of OfflineGameState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$PlayingImplCopyWith<_$PlayingImpl> get copyWith => __$$PlayingImplCopyWithImpl<_$PlayingImpl>(this, _$identity);
+  _$$PlayingImplCopyWith<_$PlayingImpl> get copyWith =>
+      __$$PlayingImplCopyWithImpl<_$PlayingImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(GameWarning? warning, Map<CellId, Cell?> board, GameUser myUser, GameUser opponentUser,
-            bool isGameOver, CellState? winner)
+    required TResult Function(
+            GameWarning? warning,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser opponentUser,
+            bool isGameOver,
+            CellState? winner)
         playing,
   }) {
     return playing(warning, board, myUser, opponentUser, isGameOver, winner);
@@ -618,19 +721,30 @@ class _$PlayingImpl implements _Playing {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(GameWarning? warning, Map<CellId, Cell?> board, GameUser myUser, GameUser opponentUser,
-            bool isGameOver, CellState? winner)?
+    TResult? Function(
+            GameWarning? warning,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser opponentUser,
+            bool isGameOver,
+            CellState? winner)?
         playing,
   }) {
-    return playing?.call(warning, board, myUser, opponentUser, isGameOver, winner);
+    return playing?.call(
+        warning, board, myUser, opponentUser, isGameOver, winner);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(GameWarning? warning, Map<CellId, Cell?> board, GameUser myUser, GameUser opponentUser,
-            bool isGameOver, CellState? winner)?
+    TResult Function(
+            GameWarning? warning,
+            Map<CellId, Cell?> board,
+            GameUser myUser,
+            GameUser opponentUser,
+            bool isGameOver,
+            CellState? winner)?
         playing,
     required TResult orElse(),
   }) {
@@ -643,8 +757,8 @@ class _$PlayingImpl implements _Playing {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Playing value) playing,
+    required TResult Function(Initial value) initial,
+    required TResult Function(Playing value) playing,
   }) {
     return playing(this);
   }
@@ -652,8 +766,8 @@ class _$PlayingImpl implements _Playing {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Playing value)? playing,
+    TResult? Function(Initial value)? initial,
+    TResult? Function(Playing value)? playing,
   }) {
     return playing?.call(this);
   }
@@ -661,8 +775,8 @@ class _$PlayingImpl implements _Playing {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Playing value)? playing,
+    TResult Function(Initial value)? initial,
+    TResult Function(Playing value)? playing,
     required TResult orElse(),
   }) {
     if (playing != null) {
@@ -672,8 +786,8 @@ class _$PlayingImpl implements _Playing {
   }
 }
 
-abstract class _Playing implements OfflineGameState {
-  const factory _Playing(
+abstract class Playing implements OfflineGameState {
+  const factory Playing(
       {final GameWarning? warning,
       required final Map<CellId, Cell?> board,
       required final GameUser myUser,
@@ -691,5 +805,6 @@ abstract class _Playing implements OfflineGameState {
   /// Create a copy of OfflineGameState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PlayingImplCopyWith<_$PlayingImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$PlayingImplCopyWith<_$PlayingImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

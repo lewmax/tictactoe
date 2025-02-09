@@ -61,8 +61,7 @@ class ResetPasswordScreen extends ScreenBlocProviderStateless<ResetPasswordBloc,
                       blocValueBuilder(
                         getter: (state) => (state.emailError, state is Loading),
                         builder: (context, record) {
-                          final emailError = record.$1;
-                          final loading = record.$2;
+                          final (emailError, loading) = record;
 
                           return TextField(
                             enabled: !loading,

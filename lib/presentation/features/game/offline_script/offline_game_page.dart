@@ -19,6 +19,52 @@ class OfflineGamePage extends ScreenBlocProviderStateless<OfflineGameBloc, Offli
   @override
   OfflineGameBloc createBloc() => locator.get<OfflineGameBloc>();
 
+  Future<int?> _selectDifficulty(BuildContext context) async {
+    final difficulty = ValueNotifier(1);
+
+    return showDialog<int>(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Select Difficulty Level'),
+          content: ValueListenableBuilder(
+            valueListenable: difficulty,
+            builder: (context, value, child) {
+              return Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Slider(
+                    value: value.toDouble(),
+                    min: 1,
+                    max: 10,
+                    divisions: 9,
+                    label: difficulty.value.toString(),
+                    onChanged: (value) => difficulty.value = value.toInt(),
+                  ),
+                  const SizedBox(height: 16),
+                  Text(
+                    'Difficulty: $value',
+                    style: context.textStyles.mulish14Bold,
+                  ),
+                ],
+              );
+            },
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: const Text('Cancel'),
+            ),
+            ElevatedButton(
+              onPressed: () => Navigator.pop(context, difficulty.value),
+              child: const Text('OK'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget buildScreen(BuildContext context, OfflineGameBloc bloc) {
     return MultiBlocListener(
@@ -51,8 +97,7 @@ class OfflineGamePage extends ScreenBlocProviderStateless<OfflineGameBloc, Offli
                 builder: (context, record) {
                   if (record == null) return const SizedBox.shrink();
 
-                  final myUser = record.$1;
-                  final opponentUser = record.$2;
+                  final (myUser, opponentUser) = record;
 
                   return PlayersRowWidget(myUser: myUser, friendUser: opponentUser, sidePadding: 18, playersHeight: 32);
                 },
@@ -79,7 +124,7 @@ class OfflineGamePage extends ScreenBlocProviderStateless<OfflineGameBloc, Offli
     return blocBuilder(
       builder: (context, state) {
         return state.map(
-          initial: (_) => const Center(child: CircularProgressIndicator()),
+          initial: (_) => const SizedBox.shrink(),
           playing: (state) => SizedBox(
             width: size,
             height: size,
@@ -134,13 +179,23 @@ class OfflineGamePage extends ScreenBlocProviderStateless<OfflineGameBloc, Offli
   Widget _newGameButton(BuildContext context, OfflineGameBloc bloc) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 14),
-      child: AppOutlinedButton.text(
-        title: 'New Game',
-        isContentCentered: true,
-        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
-        style: context.textStyles.mulish14Bold.copyWith(color: context.colors.accentColor),
-        onTap: () {
-          bloc.add(const OfflineGameEvent.started());
+      child: blocValueBuilder(
+        getter: (state) => state is Initial,
+        builder: (context, isInitial) {
+          return AppOutlinedButton.text(
+            title: isInitial ? 'Start Game' : 'New Game',
+            isContentCentered: true,
+            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+            style: context.textStyles.mulish14Bold.copyWith(color: context.colors.accentColor),
+            onTap: () async {
+              if (bloc.difficulty == null) {
+                final difficulty = await _selectDifficulty(context);
+                if (difficulty != null) bloc.add(OfflineGameEvent.started(difficultyLevel: difficulty));
+              } else {
+                bloc.add(const OfflineGameEvent.started(difficultyLevel: null));
+              }
+            },
+          );
         },
       ),
     );

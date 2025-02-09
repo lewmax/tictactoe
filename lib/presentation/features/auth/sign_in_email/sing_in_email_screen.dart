@@ -56,8 +56,7 @@ class SignInEmailScreen extends ScreenBlocProviderStateless<SingInEmailBloc, Sin
                       blocValueBuilder(
                         getter: (state) => (state.emailError, state is Loading),
                         builder: (context, record) {
-                          final emailError = record.$1;
-                          final loading = record.$2;
+                          final (emailError, loading) = record;
 
                           return TextField(
                             enabled: !loading,
@@ -74,8 +73,7 @@ class SignInEmailScreen extends ScreenBlocProviderStateless<SingInEmailBloc, Sin
                       blocValueBuilder(
                         getter: (state) => (state.passordError, state is Loading),
                         builder: (context, record) {
-                          final passordError = record.$1;
-                          final loading = record.$2;
+                          final (passordError, loading) = record;
 
                           return PasswordTextfield(
                             enabled: !loading,

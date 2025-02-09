@@ -2,7 +2,7 @@ part of 'offline_game_bloc.dart';
 
 @freezed
 class OfflineGameState with _$OfflineGameState {
-  const factory OfflineGameState.initial() = _Initial;
+  const factory OfflineGameState.initial() = Initial;
   const factory OfflineGameState.playing({
     GameWarning? warning,
     required Map<CellId, Cell?> board,
@@ -10,7 +10,7 @@ class OfflineGameState with _$OfflineGameState {
     required GameUser opponentUser,
     required bool isGameOver,
     required CellState? winner,
-  }) = _Playing;
+  }) = Playing;
 }
 
 // extension on _Playing {

@@ -24,7 +24,11 @@ class TicTacToeScript with GameValidationMixin {
       if (emptyCells.isEmpty) throw Exception('No valid moves available');
 
       final randomCell = emptyCells[Random().nextInt(emptyCells.length)];
-      return (randomCell, false);
+      final newMap = Map.of(board);
+      newMap[randomCell] = Cell(cellId: randomCell, cellState: scriptRole);
+      final isWinningMove = getWinningCellIds(newMap, scriptRole, boardAxisLength).isNotEmpty;
+
+      return (randomCell, isWinningMove);
     }
 
     // Original strategic logic

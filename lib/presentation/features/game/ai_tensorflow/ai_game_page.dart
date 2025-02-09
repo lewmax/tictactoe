@@ -51,8 +51,7 @@ class AiGamePage extends ScreenBlocProviderStateless<AiGameBloc, AiGameState> wi
                 builder: (context, record) {
                   if (record == null) return const SizedBox.shrink();
 
-                  final myUser = record.$1;
-                  final opponentUser = record.$2;
+                  final (myUser, opponentUser) = record;
 
                   return PlayersRowWidget(myUser: myUser, friendUser: opponentUser, sidePadding: 18, playersHeight: 32);
                 },

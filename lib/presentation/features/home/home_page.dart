@@ -98,7 +98,7 @@ class _HomePageState extends BlocedState<HomePage, HomeBloc, HomeState> with Sna
                     padding: EdgeInsets.zero,
                     isContentCentered: true,
                     onTap: () {
-                      _validateUser(context, () => context.router.push(const OfflineMultiplayerGameRoute()));
+                      context.router.push(const OfflineMultiplayerGameRoute());
                     },
                   ),
                 ),
@@ -115,7 +115,7 @@ class _HomePageState extends BlocedState<HomePage, HomeBloc, HomeState> with Sna
                     padding: EdgeInsets.zero,
                     isContentCentered: true,
                     onTap: () {
-                      _validateUser(context, () => context.router.push(const AiGameRoute()));
+                      context.router.push(const AiGameRoute());
                     },
                   ),
                 ),
