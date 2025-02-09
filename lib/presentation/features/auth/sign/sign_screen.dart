@@ -7,7 +7,6 @@ import 'package:chat_app/presentation/common/bloc/screen_bloc_provider_stateless
 import 'package:chat_app/presentation/common/components/loader.dart';
 import 'package:chat_app/presentation/common/layout/expanded_single_child_scroll_view.dart';
 import 'package:chat_app/presentation/common/navigation/app_router.dart';
-import 'package:chat_app/presentation/common/theme/theme.dart';
 import 'package:chat_app/presentation/features/auth/sign/cubit/sign_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:sign_in_button/sign_in_button.dart';
@@ -31,9 +30,9 @@ class SignScreen extends ScreenBlocProviderStateless<SignCubit, SignState> {
   @override
   Widget buildScreen(BuildContext context, SignCubit bloc) {
     return Scaffold(
-      backgroundColor: AppColors.whiteBg,
+      backgroundColor: context.colors.whiteBg,
       appBar: AppBar(
-        backgroundColor: AppColors.whiteBg,
+        backgroundColor: context.colors.whiteBg,
         foregroundColor: Colors.black,
       ),
       body: ExpandedSingleChildScrollView(
@@ -49,7 +48,7 @@ class SignScreen extends ScreenBlocProviderStateless<SignCubit, SignState> {
             const SizedBox(height: 18),
             DecoratedBox(
               decoration: BoxDecoration(
-                color: AppColors.whiteBg,
+                color: context.colors.whiteBg,
                 borderRadius: BorderRadius.circular(2),
               ),
               child: Padding(

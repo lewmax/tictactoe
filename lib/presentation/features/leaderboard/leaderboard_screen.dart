@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:chat_app/core/di/locator.dart';
+import 'package:chat_app/core/utils/extensions/context_extensions.dart';
 import 'package:chat_app/presentation/common/bloc/screen_bloc_provider_statefull.dart';
-import 'package:chat_app/presentation/common/theme/theme.dart';
 import 'package:chat_app/presentation/features/leaderboard/bloc/leaderboard_bloc.dart';
 import 'package:chat_app/presentation/features/leaderboard/widgets/leaderboard_item.dart';
 import 'package:flutter/material.dart';
@@ -24,10 +24,10 @@ class _LeaderboardScreenState extends ScreenBlocProviderStateful<LeaderboardScre
   @override
   Widget buildScreen(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.whiteBg,
+      backgroundColor: context.colors.whiteBg,
       appBar: AppBar(
-        title: Text('Leaderboard', style: mulish18Bold),
-        backgroundColor: AppColors.whiteBg,
+        title: Text('Leaderboard', style: context.textStyles.mulish18Bold),
+        backgroundColor: context.colors.whiteBg,
         centerTitle: true,
         foregroundColor: Colors.black,
       ),
@@ -37,7 +37,7 @@ class _LeaderboardScreenState extends ScreenBlocProviderStateful<LeaderboardScre
           blocValueBuilder(
             getter: (state) => state.datetime,
             builder: (context, datetime) {
-              return Text(DateFormat('MMMM d, yyyy').format(datetime), style: mulish16Bold);
+              return Text(DateFormat('MMMM d, yyyy').format(datetime), style: context.textStyles.mulish16Bold);
             },
           ),
           const SizedBox(height: 18),
@@ -72,12 +72,12 @@ class _LeaderboardScreenState extends ScreenBlocProviderStateful<LeaderboardScre
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('Rank', style: inter16Bold),
+              Text('Rank', style: context.textStyles.mulish16Bold),
               const SizedBox(width: 20),
-              Expanded(child: Text('Player', style: inter16Bold)),
-              SizedBox(width: 52, child: Center(child: Text('Wins', style: inter16Bold))),
-              SizedBox(width: 52, child: Center(child: Text('Loses', style: inter16Bold))),
-              SizedBox(width: 52, child: Center(child: Text('Rate', style: inter16Bold))),
+              Expanded(child: Text('Player', style: context.textStyles.mulish16Bold)),
+              SizedBox(width: 52, child: Center(child: Text('Wins', style: context.textStyles.mulish16Bold))),
+              SizedBox(width: 52, child: Center(child: Text('Loses', style: context.textStyles.mulish16Bold))),
+              SizedBox(width: 52, child: Center(child: Text('Rate', style: context.textStyles.mulish16Bold))),
             ],
           ),
           const SizedBox(height: 8),
@@ -87,6 +87,8 @@ class _LeaderboardScreenState extends ScreenBlocProviderStateful<LeaderboardScre
     );
   }
 
-  Widget _youCouldBeHere() =>
-      Padding(padding: const EdgeInsets.only(left: 32), child: Text('You could be here 🏆', style: mulish18));
+  Widget _youCouldBeHere() => Padding(
+        padding: const EdgeInsets.only(left: 32),
+        child: Text('You could be here 🏆', style: context.textStyles.mulish18),
+      );
 }

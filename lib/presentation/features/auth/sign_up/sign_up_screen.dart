@@ -8,7 +8,6 @@ import 'package:chat_app/presentation/common/components/password_textfield.dart'
 import 'package:chat_app/presentation/common/components/pick_image_modal_bottom.dart';
 import 'package:chat_app/presentation/common/layout/expanded_single_child_scroll_view.dart';
 import 'package:chat_app/presentation/common/navigation/app_router.dart';
-import 'package:chat_app/presentation/common/theme/theme.dart';
 import 'package:chat_app/presentation/features/auth/sign_up/bloc/sign_up_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:useful_extensions/useful_extensions.dart';
@@ -51,7 +50,7 @@ class SignUpScreen extends ScreenBlocProviderStateless<SignUpBloc, SignUpState> 
           backgroundColor: Colors.white,
           foregroundColor: Colors.black,
         ),
-        backgroundColor: AppColors.whiteBg,
+        backgroundColor: context.colors.whiteBg,
         body: ExpandedSingleChildScrollView(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: blocValueBuilder(

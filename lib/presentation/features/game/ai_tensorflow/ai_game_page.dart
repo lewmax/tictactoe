@@ -7,21 +7,20 @@ import 'package:chat_app/domain/models/game/cell_state.dart';
 import 'package:chat_app/presentation/common/bloc/screen_bloc_provider_stateless.dart';
 import 'package:chat_app/presentation/common/components/app_outlined_button.dart';
 import 'package:chat_app/presentation/common/mixins/snackbar_presenter.dart';
-import 'package:chat_app/presentation/common/theme/theme.dart';
-import 'package:chat_app/presentation/features/game/offline/bloc/offline_game_bloc.dart';
+import 'package:chat_app/presentation/features/game/ai_tensorflow/bloc/ai_game_bloc.dart';
 import 'package:chat_app/presentation/features/game/widgets/players_row_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 @RoutePage()
-class OfflineGamePage extends ScreenBlocProviderStateless<OfflineGameBloc, OfflineGameState> with SnackBarPresenter {
-  const OfflineGamePage({super.key});
+class AiGamePage extends ScreenBlocProviderStateless<AiGameBloc, AiGameState> with SnackBarPresenter {
+  const AiGamePage({super.key});
 
   @override
-  OfflineGameBloc createBloc() => locator.get<OfflineGameBloc>();
+  AiGameBloc createBloc() => locator.get<AiGameBloc>();
 
   @override
-  Widget buildScreen(BuildContext context, OfflineGameBloc bloc) {
+  Widget buildScreen(BuildContext context, AiGameBloc bloc) {
     return MultiBlocListener(
       listeners: [
         blocValueListener(
@@ -36,16 +35,16 @@ class OfflineGamePage extends ScreenBlocProviderStateless<OfflineGameBloc, Offli
       child: PopScope(
         onPopInvokedWithResult: (_, __) => ScaffoldMessenger.of(context).clearSnackBars(),
         child: Scaffold(
-          backgroundColor: AppColors.whiteBg,
+          backgroundColor: context.colors.whiteBg,
           appBar: AppBar(
             title: context.icons.ticTacToe.image(width: 65),
             centerTitle: true,
-            backgroundColor: AppColors.whiteBg,
+            backgroundColor: context.colors.whiteBg,
             foregroundColor: Colors.black,
           ),
           body: Column(
             children: [
-              _divider(),
+              _divider(context),
               const SizedBox(height: 8),
               blocValueBuilder(
                 getter: (state) => state.mapOrNull(playing: (state) => (state.myUser, state.opponentUser)),
@@ -59,7 +58,7 @@ class OfflineGamePage extends ScreenBlocProviderStateless<OfflineGameBloc, Offli
                 },
               ),
               const SizedBox(height: 6),
-              _divider(),
+              _divider(context),
               _boardWidget(context, bloc),
               const SizedBox(height: 6),
               _newGameButton(context, bloc),
@@ -70,9 +69,9 @@ class OfflineGamePage extends ScreenBlocProviderStateless<OfflineGameBloc, Offli
     );
   }
 
-  Divider _divider() => const Divider(color: AppColors.grey1, height: 0, thickness: 1);
+  Divider _divider(BuildContext context) => Divider(color: context.colors.grey1, height: 0, thickness: 1);
 
-  Widget _boardWidget(BuildContext context, OfflineGameBloc bloc) {
+  Widget _boardWidget(BuildContext context, AiGameBloc bloc) {
     final size = context.screenWidth;
     const betweenItemsPadding = 6.0;
     final cellSize = size / bloc.boardAxisLength - betweenItemsPadding * 2;
@@ -80,7 +79,7 @@ class OfflineGamePage extends ScreenBlocProviderStateless<OfflineGameBloc, Offli
     return blocBuilder(
       builder: (context, state) {
         return state.map(
-          initial: (_) => const Center(child: CircularProgressIndicator()),
+          loading: (_) => const Center(child: CircularProgressIndicator()),
           playing: (state) => SizedBox(
             width: size,
             height: size,
@@ -108,9 +107,9 @@ class OfflineGamePage extends ScreenBlocProviderStateless<OfflineGameBloc, Offli
 
   Widget _cell(BuildContext context, MapEntry<CellId, Cell?> entry, bool isMyTurn) {
     final color = switch (entry.value) {
-      null => AppColors.grey,
-      WinnerCell() => AppColors.green,
-      Cell() => AppColors.grey,
+      null => context.colors.grey,
+      WinnerCell() => context.colors.green,
+      Cell() => context.colors.grey,
     };
     return Material(
       color: color,
@@ -118,8 +117,7 @@ class OfflineGamePage extends ScreenBlocProviderStateless<OfflineGameBloc, Offli
       child: InkWell(
         hoverColor: color,
         borderRadius: BorderRadius.circular(10),
-        onTap:
-            isMyTurn && entry.value == null ? () => blocOf(context).add(OfflineGameEvent.cellTapped(entry.key)) : null,
+        onTap: isMyTurn && entry.value == null ? () => blocOf(context).add(AiGameEvent.cellTapped(entry.key)) : null,
         child: entry.value == null ? null : _cellValue(entry.value!),
       ),
     );
@@ -132,16 +130,16 @@ class OfflineGamePage extends ScreenBlocProviderStateless<OfflineGameBloc, Offli
     };
   }
 
-  Widget _newGameButton(BuildContext context, OfflineGameBloc bloc) {
+  Widget _newGameButton(BuildContext context, AiGameBloc bloc) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 14),
       child: AppOutlinedButton.text(
         title: 'New Game',
         isContentCentered: true,
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
-        style: mulish14Bold.copyWith(color: AppColors.red1),
+        style: context.textStyles.mulish14Bold.copyWith(color: context.colors.red1),
         onTap: () {
-          bloc.add(const OfflineGameEvent.started());
+          bloc.add(const AiGameEvent.started());
         },
       ),
     );

@@ -56,10 +56,14 @@ import '../../presentation/features/auth/sign_in_email/bloc/sing_in_email_bloc.d
     as _i304;
 import '../../presentation/features/auth/sign_up/bloc/sign_up_bloc.dart'
     as _i981;
-import '../../presentation/features/game/ai/bloc/ai_game_bloc.dart' as _i640;
-import '../../presentation/features/game/offline/bloc/offline_game_bloc.dart'
-    as _i99;
-import '../../presentation/features/game/online/bloc/game_bloc.dart' as _i984;
+import '../../presentation/features/game/ai_tensorflow/bloc/ai_game_bloc.dart'
+    as _i799;
+import '../../presentation/features/game/offline_multiplayer/bloc/offline_multiplayer_bloc.dart'
+    as _i257;
+import '../../presentation/features/game/offline_script/bloc/offline_game_bloc.dart'
+    as _i460;
+import '../../presentation/features/game/online_multiplayer/bloc/game_bloc.dart'
+    as _i350;
 import '../../presentation/features/home/bloc/home_bloc.dart' as _i635;
 import '../../presentation/features/leaderboard/bloc/leaderboard_bloc.dart'
     as _i972;
@@ -84,6 +88,8 @@ Future<_i174.GetIt> $configure(
   final appStorageModule = _$AppStorageModule();
   gh.factory<_i627.FirebaseRemoteConfig>(
       () => firebaseModule.firebaseRemoteConfig());
+  gh.factory<_i257.OfflineMultiplayerBloc>(
+      () => _i257.OfflineMultiplayerBloc());
   await gh.singletonAsync<_i460.SharedPreferences>(
     () => appStorageModule.sharedPreferences,
     preResolve: true,
@@ -137,13 +143,13 @@ Future<_i174.GetIt> $configure(
         referalRepository: gh<_i1067.ReferalRepo>(),
         recentGameUsersRepo: gh<_i723.RecentGameUsersRepo>(),
       ));
-  gh.factory<_i99.OfflineGameBloc>(
-      () => _i99.OfflineGameBloc(gh<_i628.AuthRepo>()));
-  gh.factoryParam<_i984.GameBloc, _i719.GameId?, dynamic>((
+  gh.factory<_i460.OfflineGameBloc>(
+      () => _i460.OfflineGameBloc(gh<_i628.AuthRepo>()));
+  gh.factoryParam<_i350.GameBloc, _i719.GameId?, dynamic>((
     _gameId,
     _,
   ) =>
-      _i984.GameBloc(
+      _i350.GameBloc(
         gh<_i878.GameRepo>(),
         gh<_i628.AuthRepo>(),
         _gameId,
@@ -162,7 +168,7 @@ Future<_i174.GetIt> $configure(
   gh.factory<_i548.DeleteAccountBloc>(
       () => _i548.DeleteAccountBloc(gh<_i628.AuthRepo>()));
   gh.factory<_i930.ProfileBloc>(() => _i930.ProfileBloc(gh<_i628.AuthRepo>()));
-  gh.factory<_i640.AiGameBloc>(() => _i640.AiGameBloc(
+  gh.factory<_i799.AiGameBloc>(() => _i799.AiGameBloc(
         gh<_i1000.AiGameService>(),
         gh<_i628.AuthRepo>(),
       ));

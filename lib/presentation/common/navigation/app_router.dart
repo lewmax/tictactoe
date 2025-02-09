@@ -5,9 +5,10 @@ import 'package:chat_app/presentation/features/auth/sign/sign_screen.dart';
 import 'package:chat_app/presentation/features/auth/sign_in_email/sing_in_email_screen.dart';
 import 'package:chat_app/presentation/features/auth/sign_up/sign_up_screen.dart';
 import 'package:chat_app/presentation/features/force_update/force_update_page.dart';
-import 'package:chat_app/presentation/features/game/ai/ai_game_page.dart';
-import 'package:chat_app/presentation/features/game/offline/offline_game_page.dart';
-import 'package:chat_app/presentation/features/game/online/game_page.dart';
+import 'package:chat_app/presentation/features/game/ai_tensorflow/ai_game_page.dart';
+import 'package:chat_app/presentation/features/game/offline_multiplayer/offline_multiplayer_page.dart';
+import 'package:chat_app/presentation/features/game/offline_script/offline_game_page.dart';
+import 'package:chat_app/presentation/features/game/online_multiplayer/game_page.dart';
 import 'package:chat_app/presentation/features/home/home_page.dart';
 import 'package:chat_app/presentation/features/leaderboard/leaderboard_screen.dart';
 import 'package:chat_app/presentation/features/profile/delete_account/delete_account.dart';
@@ -31,6 +32,7 @@ class AppRouter extends RootStackRouter {
         AutoRoute(page: DeleteAccountRoute.page, path: '/delete-account'),
         AutoRoute(page: ForceUpdateRoute.page, path: '/force-update-route'),
         AutoRoute(page: OfflineGameRoute.page, path: '/offline-game'),
+        AutoRoute(page: OfflineMultiplayerGameRoute.page, path: '/offline-multiplayer-game'),
         AutoRoute(page: AiGameRoute.page, path: '/ai-game'),
       ];
 }

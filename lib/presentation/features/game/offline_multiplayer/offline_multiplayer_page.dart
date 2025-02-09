@@ -7,21 +7,21 @@ import 'package:chat_app/domain/models/game/cell_state.dart';
 import 'package:chat_app/presentation/common/bloc/screen_bloc_provider_stateless.dart';
 import 'package:chat_app/presentation/common/components/app_outlined_button.dart';
 import 'package:chat_app/presentation/common/mixins/snackbar_presenter.dart';
-import 'package:chat_app/presentation/common/theme/theme.dart';
-import 'package:chat_app/presentation/features/game/ai/bloc/ai_game_bloc.dart';
+import 'package:chat_app/presentation/features/game/offline_multiplayer/bloc/offline_multiplayer_bloc.dart';
 import 'package:chat_app/presentation/features/game/widgets/players_row_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 @RoutePage()
-class AiGamePage extends ScreenBlocProviderStateless<AiGameBloc, AiGameState> with SnackBarPresenter {
-  const AiGamePage({super.key});
+class OfflineMultiplayerGamePage extends ScreenBlocProviderStateless<OfflineMultiplayerBloc, OfflineMultiplayerState>
+    with SnackBarPresenter {
+  const OfflineMultiplayerGamePage({super.key});
 
   @override
-  AiGameBloc createBloc() => locator.get<AiGameBloc>();
+  OfflineMultiplayerBloc createBloc() => locator.get<OfflineMultiplayerBloc>();
 
   @override
-  Widget buildScreen(BuildContext context, AiGameBloc bloc) {
+  Widget buildScreen(BuildContext context, OfflineMultiplayerBloc bloc) {
     return MultiBlocListener(
       listeners: [
         blocValueListener(
@@ -36,30 +36,37 @@ class AiGamePage extends ScreenBlocProviderStateless<AiGameBloc, AiGameState> wi
       child: PopScope(
         onPopInvokedWithResult: (_, __) => ScaffoldMessenger.of(context).clearSnackBars(),
         child: Scaffold(
-          backgroundColor: AppColors.whiteBg,
+          backgroundColor: context.colors.whiteBg,
           appBar: AppBar(
             title: context.icons.ticTacToe.image(width: 65),
             centerTitle: true,
-            backgroundColor: AppColors.whiteBg,
+            backgroundColor: context.colors.whiteBg,
             foregroundColor: Colors.black,
           ),
           body: Column(
             children: [
-              _divider(),
+              _divider(context),
               const SizedBox(height: 8),
               blocValueBuilder(
-                getter: (state) => state.mapOrNull(playing: (state) => (state.myUser, state.opponentUser)),
+                getter: (state) =>
+                    state.mapOrNull(playing: (state) => (state.myUser, state.opponentUser, state.result)),
                 builder: (context, record) {
                   if (record == null) return const SizedBox.shrink();
 
                   final myUser = record.$1;
                   final opponentUser = record.$2;
-
-                  return PlayersRowWidget(myUser: myUser, friendUser: opponentUser, sidePadding: 18, playersHeight: 32);
+                  final result = record.$3;
+                  return PlayersRowWidget(
+                    myUser: myUser,
+                    friendUser: opponentUser,
+                    sidePadding: 18,
+                    playersHeight: 32,
+                    result: result,
+                  );
                 },
               ),
               const SizedBox(height: 6),
-              _divider(),
+              _divider(context),
               _boardWidget(context, bloc),
               const SizedBox(height: 6),
               _newGameButton(context, bloc),
@@ -70,9 +77,9 @@ class AiGamePage extends ScreenBlocProviderStateless<AiGameBloc, AiGameState> wi
     );
   }
 
-  Divider _divider() => const Divider(color: AppColors.grey1, height: 0, thickness: 1);
+  Divider _divider(BuildContext context) => Divider(color: context.colors.grey1, height: 0, thickness: 1);
 
-  Widget _boardWidget(BuildContext context, AiGameBloc bloc) {
+  Widget _boardWidget(BuildContext context, OfflineMultiplayerBloc bloc) {
     final size = context.screenWidth;
     const betweenItemsPadding = 6.0;
     final cellSize = size / bloc.boardAxisLength - betweenItemsPadding * 2;
@@ -80,7 +87,7 @@ class AiGamePage extends ScreenBlocProviderStateless<AiGameBloc, AiGameState> wi
     return blocBuilder(
       builder: (context, state) {
         return state.map(
-          loading: (_) => const Center(child: CircularProgressIndicator()),
+          initial: (_) => const Center(child: CircularProgressIndicator()),
           playing: (state) => SizedBox(
             width: size,
             height: size,
@@ -95,7 +102,7 @@ class AiGamePage extends ScreenBlocProviderStateless<AiGameBloc, AiGameState> wi
                     (entry) => SizedBox(
                       width: cellSize,
                       height: cellSize,
-                      child: _cell(context, entry, state.myUser.isMyNextTurn),
+                      child: _cell(context, entry, canPlace: !state.isGameOver),
                     ),
                   )
                   .toList(),
@@ -106,11 +113,11 @@ class AiGamePage extends ScreenBlocProviderStateless<AiGameBloc, AiGameState> wi
     );
   }
 
-  Widget _cell(BuildContext context, MapEntry<CellId, Cell?> entry, bool isMyTurn) {
+  Widget _cell(BuildContext context, MapEntry<CellId, Cell?> entry, {required bool canPlace}) {
     final color = switch (entry.value) {
-      null => AppColors.grey,
-      WinnerCell() => AppColors.green,
-      Cell() => AppColors.grey,
+      null => context.colors.grey,
+      WinnerCell() => context.colors.green,
+      Cell() => context.colors.grey,
     };
     return Material(
       color: color,
@@ -118,7 +125,9 @@ class AiGamePage extends ScreenBlocProviderStateless<AiGameBloc, AiGameState> wi
       child: InkWell(
         hoverColor: color,
         borderRadius: BorderRadius.circular(10),
-        onTap: isMyTurn && entry.value == null ? () => blocOf(context).add(AiGameEvent.cellTapped(entry.key)) : null,
+        onTap: canPlace && entry.value == null
+            ? () => blocOf(context).add(OfflineMultiplayerEvent.cellTapped(entry.key))
+            : null,
         child: entry.value == null ? null : _cellValue(entry.value!),
       ),
     );
@@ -131,16 +140,16 @@ class AiGamePage extends ScreenBlocProviderStateless<AiGameBloc, AiGameState> wi
     };
   }
 
-  Widget _newGameButton(BuildContext context, AiGameBloc bloc) {
+  Widget _newGameButton(BuildContext context, OfflineMultiplayerBloc bloc) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 14),
       child: AppOutlinedButton.text(
         title: 'New Game',
         isContentCentered: true,
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
-        style: mulish14Bold.copyWith(color: AppColors.red1),
+        style: context.textStyles.mulish14Bold.copyWith(color: context.colors.red1),
         onTap: () {
-          bloc.add(const AiGameEvent.started());
+          bloc.add(const OfflineMultiplayerEvent.started());
         },
       ),
     );

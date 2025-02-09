@@ -8,8 +8,7 @@ import 'package:chat_app/domain/models/game/cell_state.dart';
 import 'package:chat_app/domain/models/game/game_error.dart';
 import 'package:chat_app/presentation/common/bloc/screen_bloc_provider_stateless.dart';
 import 'package:chat_app/presentation/common/mixins/snackbar_presenter.dart';
-import 'package:chat_app/presentation/common/theme/theme.dart';
-import 'package:chat_app/presentation/features/game/online/bloc/game_bloc.dart';
+import 'package:chat_app/presentation/features/game/online_multiplayer/bloc/game_bloc.dart';
 import 'package:chat_app/presentation/features/game/widgets/end_game_popup.dart';
 import 'package:chat_app/presentation/features/game/widgets/invite_dialog.dart';
 import 'package:chat_app/presentation/features/game/widgets/players_row_widget.dart';
@@ -44,16 +43,16 @@ class GamePage extends ScreenBlocProviderStateless<GameBloc, GameState> with Sna
       child: PopScope(
         onPopInvokedWithResult: (_, __) => ScaffoldMessenger.of(context).clearSnackBars(),
         child: Scaffold(
-          backgroundColor: AppColors.whiteBg,
+          backgroundColor: context.colors.whiteBg,
           appBar: AppBar(
             title: context.icons.ticTacToe.image(width: 65),
             centerTitle: true,
-            backgroundColor: AppColors.whiteBg,
+            backgroundColor: context.colors.whiteBg,
             foregroundColor: Colors.black,
           ),
           body: Column(
             children: [
-              _divider(),
+              _divider(context),
               const SizedBox(height: 8),
               blocValueBuilder(
                 getter: (state) => (state.myUser, state.teammateUser),
@@ -71,7 +70,7 @@ class GamePage extends ScreenBlocProviderStateless<GameBloc, GameState> with Sna
                 },
               ),
               const SizedBox(height: 6),
-              _divider(),
+              _divider(context),
               _boardWidget(context),
               const SizedBox(height: 6),
               _terminateBtn(),
@@ -82,7 +81,7 @@ class GamePage extends ScreenBlocProviderStateless<GameBloc, GameState> with Sna
     );
   }
 
-  Divider _divider() => const Divider(color: AppColors.grey1, height: 0, thickness: 1);
+  Divider _divider(BuildContext context) => Divider(color: context.colors.grey1, height: 0, thickness: 1);
 
   Widget _boardWidget(BuildContext context) {
     final size = context.screenWidth;
@@ -115,9 +114,9 @@ class GamePage extends ScreenBlocProviderStateless<GameBloc, GameState> with Sna
 
   Widget _cell(BuildContext context, MapEntry<CellId, Cell?> entry, bool isMyTurn) {
     final color = switch (entry.value) {
-      null => AppColors.grey,
-      WinnerCell() => AppColors.green,
-      Cell() => AppColors.grey,
+      null => context.colors.grey,
+      WinnerCell() => context.colors.green,
+      Cell() => context.colors.grey,
     };
     return Material(
       color: color,

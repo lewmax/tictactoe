@@ -159,6 +159,25 @@ class OfflineGameRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [OfflineMultiplayerGamePage]
+class OfflineMultiplayerGameRoute extends PageRouteInfo<void> {
+  const OfflineMultiplayerGameRoute({List<PageRouteInfo>? children})
+      : super(
+          OfflineMultiplayerGameRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'OfflineMultiplayerGameRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const OfflineMultiplayerGamePage();
+    },
+  );
+}
+
+/// generated route for
 /// [ProfileScreen]
 class ProfileRoute extends PageRouteInfo<void> {
   const ProfileRoute({List<PageRouteInfo>? children})

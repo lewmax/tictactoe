@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:chat_app/presentation/common/theme/theme.dart';
+import 'package:chat_app/core/utils/extensions/context_extensions.dart';
 import 'package:flutter/material.dart';
 
 class CirleUserImage extends StatelessWidget {
@@ -25,11 +25,11 @@ class CirleUserImage extends StatelessWidget {
             : FileImage(File(image!));
 
     return CircleAvatar(
-      backgroundColor: AppColors.blue,
+      backgroundColor: context.colors.blue,
       backgroundImage: backgroundImage,
       radius: radius,
       child: image == null
-          ? Text(name?[0] ?? 'U', style: paytone16.copyWith(color: Colors.white, fontSize: textSize))
+          ? Text(name?[0] ?? 'U', style: context.textStyles.mulish16.copyWith(color: context.colors.white, fontSize: textSize))
           : null,
     );
   }

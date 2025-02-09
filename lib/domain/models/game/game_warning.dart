@@ -47,10 +47,11 @@ class GameWarningTeammatesTurn extends GameWarning {
 }
 
 class GameWarningFinishedSuccess extends GameWarning {
-  const GameWarningFinishedSuccess();
+  const GameWarningFinishedSuccess({this.winner});
+  final String? winner;
 
   @override
-  String get warning => "Congrats, you have won the game!";
+  String get warning => winner == null ? "Congrats, you have won the game!" : "Congrats, $winner has won the game!";
 }
 
 class GameWarningFinishedFail extends GameWarning {

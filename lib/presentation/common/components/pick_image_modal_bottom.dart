@@ -3,7 +3,6 @@
 import 'package:chat_app/core/utils/extensions/context_extensions.dart';
 import 'package:chat_app/core/utils/image_picker_utils.dart';
 import 'package:chat_app/presentation/common/components/app_button.dart';
-import 'package:chat_app/presentation/common/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:image_picker/image_picker.dart';
@@ -42,7 +41,7 @@ class PickImageModalBottom extends StatelessWidget {
               onTap: () {
                 _pickFile(CallbackType.camera, context);
               },
-              color: AppColors.blue,
+              color: context.colors.blue,
               title: context.l10n.avatar_make_photo,
             ),
           ),
@@ -53,7 +52,7 @@ class PickImageModalBottom extends StatelessWidget {
               onTap: () {
                 _pickFile(CallbackType.library, context);
               },
-              color: AppColors.blue,
+              color: context.colors.blue,
               title: context.l10n.avatar_chose_from_gallery,
             ),
           ),

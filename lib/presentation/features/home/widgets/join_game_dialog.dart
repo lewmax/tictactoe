@@ -3,7 +3,6 @@ import 'package:chat_app/core/utils/extensions/context_extensions.dart';
 import 'package:chat_app/domain/entities/game/game.dart';
 import 'package:chat_app/domain/entities/referal/deep_link.dart';
 import 'package:chat_app/presentation/common/components/app_button.dart';
-import 'package:chat_app/presentation/common/theme/theme.dart';
 import 'package:flutter/material.dart';
 
 class JoinGameDialog extends StatelessWidget {
@@ -29,26 +28,26 @@ class JoinGameDialog extends StatelessWidget {
           children: [
             Text(
               context.l10n.home_join_dialog_title,
-              style: mulish16ExtraBold,
+              style: context.textStyles.mulish16ExtraBold,
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 18),
-            Text(context.l10n.home_join_dialog_text, style: mulish15Bold, textAlign: TextAlign.center),
+            Text(context.l10n.home_join_dialog_text, style: context.textStyles.mulish15Bold, textAlign: TextAlign.center),
             TextField(
               controller: controller,
-              style: mulish15Medium.copyWith(color: AppColors.grey1),
+              style: context.textStyles.mulish15Medium.copyWith(color: context.colors.grey1),
               decoration: InputDecoration(
                 hintText: context.l10n.home_join_dialog_hint,
                 labelText: context.l10n.home_join_dialog_hint,
-                hintStyle: mulish15Medium.copyWith(color: AppColors.grey2),
-                labelStyle: mulish15Medium.copyWith(color: AppColors.grey2),
+                hintStyle: context.textStyles.mulish15Medium.copyWith(color: context.colors.grey2),
+                labelStyle: context.textStyles.mulish15Medium.copyWith(color: context.colors.grey2),
               ),
             ),
             const SizedBox(height: 18),
             AppButton(
               title: context.l10n.home_join_dialog_playBtn,
-              color: AppColors.blue1,
-              style: inter14Bold.copyWith(color: AppColors.white),
+              color: context.colors.blue1,
+              style: context.textStyles.mulish14Bold.copyWith(color: context.colors.white),
               isContentCentered: true,
               onTap: () {
                 final text = controller.text.trim();
@@ -67,10 +66,10 @@ class JoinGameDialog extends StatelessWidget {
               child: Text(
                 context.l10n.home_join_dialog_dontHaveInviteCode,
                 textAlign: TextAlign.center,
-                style: mulish18.copyWith(
-                  color: AppColors.blue,
+                style: context.textStyles.mulish18.copyWith(
+                  color: context.colors.blue,
                   decoration: TextDecoration.underline,
-                  decorationColor: AppColors.blue,
+                  decorationColor: context.colors.blue,
                 ),
               ),
             ),

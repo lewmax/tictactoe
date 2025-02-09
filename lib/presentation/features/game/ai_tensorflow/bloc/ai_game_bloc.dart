@@ -56,7 +56,7 @@ class AiGameBloc extends Bloc<AiGameEvent, AiGameState> with BoardSizeMixin, Gam
       AiGameState.playing(
         board: board,
         myUser: _authRepo.user?.let((user) => GameUser.fromUser(user, true, true)) ?? _createEmptyUser('Me', true),
-        opponentUser: _createEmptyUser('Opponent', false),
+        opponentUser: _createEmptyUser('AI Opponent', false),
         isGameOver: false,
         winner: null,
       ),

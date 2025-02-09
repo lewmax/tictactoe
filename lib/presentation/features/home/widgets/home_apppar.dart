@@ -23,7 +23,7 @@ class _HomeApppar extends BlocedWidget<HomeBloc, HomeState> implements Preferred
                     return user == null
                         ? InkWell(
                             onTap: () => context.router.push(SignRoute(onSignedIn: null)),
-                            child: Text(context.l10n.home_signIn, style: mulish18.copyWith(color: AppColors.blue)),
+                            child: Text(context.l10n.home_signIn, style: context.textStyles.mulish18.copyWith(color: context.colors.blue)),
                           )
                         : GestureDetector(
                             onTap: () => context.router.push(const ProfileRoute()),

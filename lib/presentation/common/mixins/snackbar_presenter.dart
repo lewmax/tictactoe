@@ -1,5 +1,5 @@
+import 'package:chat_app/core/utils/extensions/context_extensions.dart';
 import 'package:chat_app/core/utils/logger.dart';
-import 'package:chat_app/presentation/common/theme/theme.dart';
 import 'package:flutter/material.dart';
 
 mixin SnackBarPresenter {
@@ -15,10 +15,10 @@ mixin SnackBarPresenter {
     ScaffoldMessenger.of(context)
         .showSnackBar(
           SnackBar(
-            content: Text(message, style: mulish14.copyWith(color: AppColors.white)),
+            content: Text(message, style: context.textStyles.mulish14.copyWith(color: context.colors.white)),
             duration: durration,
             behavior: SnackBarBehavior.floating,
-            backgroundColor: isError ? AppColors.red1 : AppColors.black1,
+            backgroundColor: isError ? context.colors.red : context.colors.black,
             margin: EdgeInsets.only(bottom: height),
           ),
         )

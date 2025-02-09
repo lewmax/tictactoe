@@ -9,7 +9,6 @@ import 'package:chat_app/presentation/common/components/circle_user_image.dart';
 import 'package:chat_app/presentation/common/layout/expanded_single_child_scroll_view.dart';
 import 'package:chat_app/presentation/common/mixins/snackbar_presenter.dart';
 import 'package:chat_app/presentation/common/navigation/app_router.dart';
-import 'package:chat_app/presentation/common/theme/theme.dart';
 import 'package:chat_app/presentation/features/home/bloc/home_bloc.dart';
 import 'package:chat_app/presentation/features/home/widgets/game_in_progress_widget.dart';
 import 'package:chat_app/presentation/features/home/widgets/home_leaderboard_widget.dart';
@@ -18,7 +17,7 @@ import 'package:chat_app/presentation/features/home/widgets/recent_game_widget.d
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-part 'bloc/bloc_listener.dart';
+part 'bloc_listener.dart';
 part 'widgets/home_apppar.dart';
 
 @RoutePage()
@@ -44,7 +43,6 @@ class _HomePageState extends BlocedState<HomePage, HomeBloc, HomeState> with Sna
   void _validateNavigationToGamePage(
     BuildContext context, {
     required GameId? gameId,
-    required bool isFromMatchingScreen,
   }) {
     context.router
         .pushAndPopUntil(GameRoute(gameId: gameId), predicate: (route) => route.settings.name == HomeRoute.name);
@@ -56,8 +54,7 @@ class _HomePageState extends BlocedState<HomePage, HomeBloc, HomeState> with Sna
       context: context,
       builder: (context) => JoinGameDialog(
         controller: controller,
-        onJoinGame: (context, gameId) =>
-            _validateNavigationToGamePage(context, gameId: gameId, isFromMatchingScreen: false),
+        onJoinGame: (context, gameId) => _validateNavigationToGamePage(context, gameId: gameId),
       ),
     );
   }
@@ -67,7 +64,7 @@ class _HomePageState extends BlocedState<HomePage, HomeBloc, HomeState> with Sna
     return MultiBlocListener(
       listeners: listeners(),
       child: Scaffold(
-        backgroundColor: AppColors.whiteBg,
+        backgroundColor: context.colors.whiteBg,
         appBar: const _HomeApppar(),
         body: ExpandedSingleChildScrollView(
           child: Column(
@@ -78,13 +75,13 @@ class _HomePageState extends BlocedState<HomePage, HomeBloc, HomeState> with Sna
                 child: SizedBox(
                   height: 53,
                   child: AppButton(
-                    title: 'Play with Script',
-                    style: mulish17Bold.copyWith(color: AppColors.white),
-                    color: AppColors.red2,
+                    title: 'Play with a Friend Online',
+                    style: context.textStyles.mulish17Bold.copyWith(color: context.colors.white),
+                    color: context.colors.blue1,
                     padding: EdgeInsets.zero,
                     isContentCentered: true,
                     onTap: () {
-                      context.router.push(const OfflineGameRoute());
+                      _validateUser(context, () => _validateNavigationToGamePage(context, gameId: null));
                     },
                   ),
                 ),
@@ -95,16 +92,13 @@ class _HomePageState extends BlocedState<HomePage, HomeBloc, HomeState> with Sna
                 child: SizedBox(
                   height: 53,
                   child: AppButton(
-                    title: 'Play with a Friend',
-                    style: mulish17Bold.copyWith(color: AppColors.white),
-                    color: AppColors.blue1,
+                    title: 'Play with a Friend Offline',
+                    style: context.textStyles.mulish17Bold.copyWith(color: context.colors.white),
+                    color: context.colors.red2,
                     padding: EdgeInsets.zero,
                     isContentCentered: true,
                     onTap: () {
-                      _validateUser(
-                        context,
-                        () => _validateNavigationToGamePage(context, gameId: null, isFromMatchingScreen: false),
-                      );
+                      _validateUser(context, () => context.router.push(const OfflineMultiplayerGameRoute()));
                     },
                   ),
                 ),
@@ -116,8 +110,8 @@ class _HomePageState extends BlocedState<HomePage, HomeBloc, HomeState> with Sna
                   height: 53,
                   child: AppButton(
                     title: 'Play with AI',
-                    style: mulish17Bold.copyWith(color: AppColors.white),
-                    color: AppColors.red2,
+                    style: context.textStyles.mulish17Bold.copyWith(color: context.colors.white),
+                    color: context.colors.blue1,
                     padding: EdgeInsets.zero,
                     isContentCentered: true,
                     onTap: () {
@@ -127,14 +121,31 @@ class _HomePageState extends BlocedState<HomePage, HomeBloc, HomeState> with Sna
                 ),
               ),
               const SizedBox(height: 20),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 39),
+                child: SizedBox(
+                  height: 53,
+                  child: AppButton(
+                    title: 'Play with Script',
+                    style: context.textStyles.mulish17Bold.copyWith(color: context.colors.white),
+                    color: context.colors.red2,
+                    padding: EdgeInsets.zero,
+                    isContentCentered: true,
+                    onTap: () {
+                      context.router.push(const OfflineGameRoute());
+                    },
+                  ),
+                ),
+              ),
+              const SizedBox(height: 20),
               GestureDetector(
                 onTap: () => _validateUser(context, () => onJoinTapped(context)),
                 child: Text(
                   context.l10n.home_playInviteCode,
-                  style: mulish18.copyWith(
-                    color: AppColors.blue,
+                  style: context.textStyles.mulish18.copyWith(
+                    color: context.colors.blue,
                     decoration: TextDecoration.underline,
-                    decorationColor: AppColors.blue,
+                    decorationColor: context.colors.blue,
                   ),
                 ),
               ),
@@ -191,14 +202,14 @@ class _HomePageState extends BlocedState<HomePage, HomeBloc, HomeState> with Sna
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Text('We love feedback!', style: mulish16),
+        Text('We love feedback!', style: context.textStyles.mulish16),
         Material(
           color: Colors.transparent,
           child: InkWell(
             onTap: () => bloc.add(const HomeEvent.sendFeedback()),
             child: Padding(
               padding: const EdgeInsets.all(6),
-              child: Text('Contact us', style: mulish16.copyWith(color: AppColors.blue)),
+              child: Text('Contact us', style: context.textStyles.mulish16.copyWith(color: context.colors.blue)),
             ),
           ),
         ),
@@ -213,12 +224,12 @@ class _HomePageState extends BlocedState<HomePage, HomeBloc, HomeState> with Sna
         color: Colors.white,
         child: Column(
           children: [
-            const Divider(height: 0, thickness: 1, color: AppColors.grey4),
+            Divider(height: 0, thickness: 1, color: context.colors.grey4),
             const SizedBox(height: 15),
-            Text(context.l10n.home_yourRecentGames, style: paytone18, textAlign: TextAlign.center),
+            Text(context.l10n.home_yourRecentGames, style: context.textStyles.mulish18, textAlign: TextAlign.center),
             const SizedBox(height: 12),
             ...recentGames.map((game) => RecentGameWidget(game: game)),
-            const Divider(height: 0, thickness: 1, color: AppColors.grey4),
+            Divider(height: 0, thickness: 1, color: context.colors.grey4),
           ],
         ),
       ),
@@ -232,13 +243,13 @@ class _HomePageState extends BlocedState<HomePage, HomeBloc, HomeState> with Sna
         color: Colors.white,
         child: Column(
           children: [
-            const Divider(height: 0, thickness: 1, color: AppColors.grey4),
+            Divider(height: 0, thickness: 1, color: context.colors.grey4),
             const SizedBox(height: 15),
-            Text(context.l10n.home_gamesInProgress, style: paytone18, textAlign: TextAlign.center),
+            Text(context.l10n.home_gamesInProgress, style: context.textStyles.mulish18, textAlign: TextAlign.center),
             const SizedBox(height: 12),
             ...gamesInProgress.map((game) => GameInProgressWidget(game: game)),
             const SizedBox(height: 15),
-            const Divider(height: 0, thickness: 1, color: AppColors.grey4),
+            Divider(height: 0, thickness: 1, color: context.colors.grey4),
           ],
         ),
       ),

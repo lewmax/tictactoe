@@ -7,7 +7,6 @@ import 'package:chat_app/presentation/common/components/circle_user_image.dart';
 import 'package:chat_app/presentation/common/components/pick_image_modal_bottom.dart';
 import 'package:chat_app/presentation/common/layout/expanded_single_child_scroll_view.dart';
 import 'package:chat_app/presentation/common/navigation/app_router.dart';
-import 'package:chat_app/presentation/common/theme/theme.dart';
 import 'package:chat_app/presentation/features/profile/bloc/profile_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -78,7 +77,7 @@ class _ProfileScreenState extends ScreenBlocProviderStateful<ProfileScreen, Prof
       ],
       child: Scaffold(
         appBar: AppBar(
-          title: Text(context.l10n.profile_title, style: mulish20Bold),
+          title: Text(context.l10n.profile_title, style: context.textStyles.mulish20Bold),
           centerTitle: true,
           backgroundColor: Colors.white,
           foregroundColor: Colors.black,
@@ -92,7 +91,7 @@ class _ProfileScreenState extends ScreenBlocProviderStateful<ProfileScreen, Prof
                   getter: (state) => state.map(failure: (_) => null, success: (state) => state),
                   builder: (context, state) {
                     if (state == null) {
-                      return Center(child: Text(context.l10n.profile_noInfo, style: mulish16));
+                      return Center(child: Text(context.l10n.profile_noInfo, style: context.textStyles.mulish16));
                     }
 
                     return IgnorePointer(ignoring: state.loading, child: _userinfo(context, bloc, state));
@@ -127,14 +126,20 @@ class _ProfileScreenState extends ScreenBlocProviderStateful<ProfileScreen, Prof
           children: [
             GestureDetector(
               onTap: () => pickImage(context, bloc),
-              child: Text(context.l10n.profile_pickAvatar, style: mulish14.copyWith(color: AppColors.blue)),
+              child: Text(
+                context.l10n.profile_pickAvatar,
+                style: context.textStyles.mulish14.copyWith(color: context.colors.blue),
+              ),
             ),
             if (state.image != null)
               Padding(
                 padding: const EdgeInsets.only(left: 14),
                 child: GestureDetector(
                   onTap: () => bloc.add(const ProfileEvent.editImage(null)),
-                  child: Text(context.l10n.profile_removeAvatar, style: mulish14.copyWith(color: Colors.red)),
+                  child: Text(
+                    context.l10n.profile_removeAvatar,
+                    style: context.textStyles.mulish14.copyWith(color: context.colors.red),
+                  ),
                 ),
               ),
           ],
@@ -151,7 +156,7 @@ class _ProfileScreenState extends ScreenBlocProviderStateful<ProfileScreen, Prof
           ),
         ),
         const SizedBox(height: 18),
-        Text(state.email, style: mulish16),
+        Text(state.email, style: context.textStyles.mulish16),
         // const SizedBox(height: 12),
         // Text('+${state.phone}', style: context.textStyles.profilePhone),
         const SizedBox(height: 40),
@@ -159,7 +164,10 @@ class _ProfileScreenState extends ScreenBlocProviderStateful<ProfileScreen, Prof
           onTap: () {
             bloc.add(const ProfileEvent.logout());
           },
-          child: Text(context.l10n.profile_log_out, style: mulish14Semi.copyWith(color: AppColors.red1)),
+          child: Text(
+            context.l10n.profile_log_out,
+            style: context.textStyles.mulish14Semi.copyWith(color: context.colors.red1),
+          ),
         ),
         const SizedBox(height: 18),
         const Spacer(),
@@ -183,8 +191,8 @@ class _ProfileScreenState extends ScreenBlocProviderStateful<ProfileScreen, Prof
         const Spacer(),
         AppButton(
           title: context.l10n.profile_saveBtn,
-          color: AppColors.blue1,
-          style: mulish14.copyWith(color: AppColors.white),
+          color: context.colors.blue1,
+          style: context.textStyles.mulish14.copyWith(color: context.colors.white),
           onTap: state.loading || !bloc.shouldSave ? null : () => bloc.add(const ProfileEvent.save()),
           loading: state.loading,
           isContentCentered: true,
@@ -194,5 +202,5 @@ class _ProfileScreenState extends ScreenBlocProviderStateful<ProfileScreen, Prof
     );
   }
 
-  Divider _divider(BuildContext context) => const Divider(color: AppColors.grey9, height: 0, thickness: 1);
+  Divider _divider(BuildContext context) => Divider(color: context.colors.grey9, height: 0, thickness: 1);
 }

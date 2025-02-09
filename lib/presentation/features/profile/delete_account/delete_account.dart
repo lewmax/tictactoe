@@ -1,11 +1,11 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:chat_app/core/di/locator.dart';
+import 'package:chat_app/core/utils/extensions/context_extensions.dart';
 import 'package:chat_app/data/repositories/auth/auth_repo_impl.dart';
 import 'package:chat_app/presentation/common/bloc/screen_bloc_provider_statefull.dart';
 import 'package:chat_app/presentation/common/components/loader.dart';
 import 'package:chat_app/presentation/common/components/password_textfield.dart';
 import 'package:chat_app/presentation/common/mixins/snackbar_presenter.dart';
-import 'package:chat_app/presentation/common/theme/theme.dart';
 import 'package:chat_app/presentation/features/profile/delete_account/bloc/delete_account_bloc.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -48,7 +48,7 @@ class _DeleteAccountPageState
       ],
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Profile', style: mulish20Bold),
+          title: Text('Profile', style: context.textStyles.mulish20Bold),
           centerTitle: true,
           backgroundColor: Colors.white,
           foregroundColor: Colors.black,
@@ -76,7 +76,10 @@ class _DeleteAccountPageState
                           onTap: () {
                             bloc.add(DeleteAccountEvent.deleteAccount(password));
                           },
-                          child: Text('Delete Account', style: mulish14Semi.copyWith(color: AppColors.red1)),
+                          child: Text(
+                            'Delete Account',
+                            style: context.textStyles.mulish14Semi.copyWith(color: context.colors.red1),
+                          ),
                         ),
                       ),
                     ],

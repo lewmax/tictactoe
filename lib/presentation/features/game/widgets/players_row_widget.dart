@@ -1,6 +1,7 @@
+import 'package:chat_app/core/utils/extensions/context_extensions.dart';
 import 'package:chat_app/domain/entities/game/game_user.dart';
 import 'package:chat_app/presentation/common/components/circle_user_image.dart';
-import 'package:chat_app/presentation/common/theme/theme.dart';
+import 'package:chat_app/presentation/features/game/offline_multiplayer/bloc/offline_multiplayer_bloc.dart';
 import 'package:chat_app/presentation/features/game/widgets/users_row_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -10,6 +11,7 @@ class PlayersRowWidget extends StatelessWidget {
   final double playersHeight;
   final GameUser? myUser;
   final GameUser? friendUser;
+  final Result? result;
 
   const PlayersRowWidget({
     super.key,
@@ -18,6 +20,7 @@ class PlayersRowWidget extends StatelessWidget {
     required this.playersHeight,
     required this.myUser,
     required this.friendUser,
+    this.result,
   });
 
   @override
@@ -35,16 +38,11 @@ class PlayersRowWidget extends StatelessWidget {
               children: [
                 _userImage(context, myUser),
                 const SizedBox(width: 12),
-                Expanded(
-                  child: Text(
-                    myUser?.name ?? '',
-                    style: mulish14Semi,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                ),
+                Expanded(child: Text(myUser?.name ?? '', style: context.textStyles.mulish14Semi, overflow: TextOverflow.ellipsis)),
               ],
             ),
           ),
+          if (result != null) Text('${result?.player1Wins} - ${result?.player2Wins}', style: context.textStyles.mulish17Bold),
           Expanded(
             flex: 7,
             child: Align(
@@ -66,7 +64,7 @@ class PlayersRowWidget extends StatelessWidget {
           padding: const EdgeInsets.only(left: 5),
           child: DecoratedBox(
             decoration: BoxDecoration(
-              border: Border.all(color: AppColors.green1, width: 3),
+              border: Border.all(color: context.colors.green1, width: 3),
               borderRadius: BorderRadius.circular(100),
             ),
             child: Padding(
@@ -80,7 +78,7 @@ class PlayersRowWidget extends StatelessWidget {
             width: 14,
             height: 14,
             decoration: BoxDecoration(
-              color: AppColors.green1,
+              color: context.colors.green1,
               border: Border.all(color: Colors.white, width: 1.3),
               borderRadius: BorderRadius.circular(3),
             ),

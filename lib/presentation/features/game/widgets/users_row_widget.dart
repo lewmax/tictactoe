@@ -2,8 +2,7 @@ import 'package:chat_app/core/utils/extensions/context_extensions.dart';
 import 'package:chat_app/domain/entities/game/game_user.dart';
 import 'package:chat_app/presentation/common/bloc/bloced_widget.dart';
 import 'package:chat_app/presentation/common/components/circle_user_image.dart';
-import 'package:chat_app/presentation/common/theme/theme.dart';
-import 'package:chat_app/presentation/features/game/online/bloc/game_bloc.dart';
+import 'package:chat_app/presentation/features/game/online_multiplayer/bloc/game_bloc.dart';
 import 'package:flutter/material.dart';
 
 class UsersRowWidget extends BlocedWidget<GameBloc, GameState> {
@@ -28,8 +27,8 @@ class UsersRowWidget extends BlocedWidget<GameBloc, GameState> {
                 const SizedBox(width: 10),
                 Text(
                   context.l10n.game_invite,
-                  style: mulish14Semi.copyWith(
-                    color: AppColors.blue1,
+                  style: context.textStyles.mulish14Semi.copyWith(
+                    color: context.colors.blue1,
                     decorationColor: Colors.blue,
                     decoration: TextDecoration.underline,
                   ),
@@ -45,7 +44,7 @@ class UsersRowWidget extends BlocedWidget<GameBloc, GameState> {
               Flexible(
                 child: Text(
                   friendUser?.name ?? '',
-                  style: mulish14Semi,
+                  style: context.textStyles.mulish14Semi,
                   overflow: TextOverflow.ellipsis,
                 ),
               ),
@@ -61,7 +60,7 @@ class UsersRowWidget extends BlocedWidget<GameBloc, GameState> {
           padding: const EdgeInsets.only(left: 5),
           child: DecoratedBox(
             decoration: BoxDecoration(
-              border: Border.all(color: AppColors.green1, width: 3),
+              border: Border.all(color: context.colors.green1, width: 3),
               borderRadius: BorderRadius.circular(100),
             ),
             child: Padding(
@@ -75,7 +74,7 @@ class UsersRowWidget extends BlocedWidget<GameBloc, GameState> {
             width: 14,
             height: 14,
             decoration: BoxDecoration(
-              color: AppColors.green1,
+              color: context.colors.green1,
               border: Border.all(color: Colors.white, width: 1.3),
               borderRadius: BorderRadius.circular(3),
             ),

@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:chat_app/core/utils/extensions/context_extensions.dart';
 import 'package:chat_app/presentation/common/components/app_outlined_button.dart';
-import 'package:chat_app/presentation/common/theme/theme.dart';
 import 'package:flutter/material.dart';
 
 class EndGameButton extends StatelessWidget {
@@ -15,7 +15,7 @@ class EndGameButton extends StatelessWidget {
       title: title,
       isContentCentered: true,
       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
-      style: mulish14Bold.copyWith(color: AppColors.red1),
+      style: context.textStyles.mulish14Bold.copyWith(color: context.colors.red1),
       onTap: () {
         showDialog(
           context: context,
@@ -34,7 +34,7 @@ class EndGameButton extends StatelessWidget {
                 children: [
                   Text(
                     'Confirm End Game?',
-                    style: mulish16Bold.copyWith(color: AppColors.red1),
+                    style: context.textStyles.mulish16Bold.copyWith(color: context.colors.red1),
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 32),
@@ -44,8 +44,8 @@ class EndGameButton extends StatelessWidget {
                       AppOutlinedButton.text(
                         title: 'Confirm',
                         isContentCentered: true,
-                        style: mulish14Bold.copyWith(color: AppColors.blue),
-                        borderColor: AppColors.blue1,
+                        style: context.textStyles.mulish14Bold.copyWith(color: context.colors.blue),
+                        borderColor: context.colors.blue1,
                         onTap: () {
                           context.router.maybePop();
                           onTap();
@@ -55,8 +55,8 @@ class EndGameButton extends StatelessWidget {
                       AppOutlinedButton.text(
                         title: 'Cancel',
                         isContentCentered: true,
-                        style: mulish14Bold.copyWith(color: AppColors.blue),
-                        borderColor: AppColors.blue,
+                        style: context.textStyles.mulish14Bold.copyWith(color: context.colors.blue),
+                        borderColor: context.colors.blue,
                         onTap: () {
                           context.router.maybePop();
                         },

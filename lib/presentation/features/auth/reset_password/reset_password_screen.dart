@@ -6,7 +6,6 @@ import 'package:chat_app/presentation/common/components/app_button.dart';
 import 'package:chat_app/presentation/common/layout/expanded_single_child_scroll_view.dart';
 import 'package:chat_app/presentation/common/mixins/snackbar_presenter.dart';
 import 'package:chat_app/presentation/common/navigation/app_router.dart';
-import 'package:chat_app/presentation/common/theme/theme.dart';
 import 'package:chat_app/presentation/features/auth/reset_password/bloc/reset_password_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:useful_extensions/useful_extensions.dart';
@@ -44,7 +43,7 @@ class ResetPasswordScreen extends ScreenBlocProviderStateless<ResetPasswordBloc,
           backgroundColor: Colors.white,
           foregroundColor: Colors.black,
         ),
-        backgroundColor: AppColors.whiteBg,
+        backgroundColor: context.colors.whiteBg,
         body: ExpandedSingleChildScrollView(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Column(

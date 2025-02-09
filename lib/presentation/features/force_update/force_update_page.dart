@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:chat_app/core/utils/extensions/context_extensions.dart';
 import 'package:chat_app/presentation/common/components/app_button.dart';
-import 'package:chat_app/presentation/common/theme/theme.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()
@@ -17,14 +17,14 @@ class ForceUpdatePage extends StatelessWidget {
           children: [
             Text(
               'Update the game to enjoy the new and improved version of the Team Word!',
-              style: mulish18,
+              style: context.textStyles.mulish18,
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 24),
             AppButton(
               title: 'Update',
-              style: mulish18,
-              color: AppColors.blue,
+              style: context.textStyles.mulish18,
+              color: context.colors.blue,
               isContentCentered: true,
               onTap: () {
                 // final config = locator<AppConfigRepo>().getAppConfig();

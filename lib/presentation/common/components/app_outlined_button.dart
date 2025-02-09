@@ -1,5 +1,5 @@
+import 'package:chat_app/core/utils/extensions/context_extensions.dart';
 import 'package:chat_app/presentation/common/components/loader.dart';
-import 'package:chat_app/presentation/common/theme/theme.dart';
 import 'package:flutter/material.dart';
 
 class AppOutlinedButton extends StatelessWidget {
@@ -39,14 +39,14 @@ class AppOutlinedButton extends StatelessWidget {
     final content = Padding(padding: padding, child: loading ? const AppLoader() : child);
     return DecoratedBox(
       decoration: BoxDecoration(
-        border: Border.all(color: borderColor ?? AppColors.grey6),
+        border: Border.all(color: borderColor ?? context.colors.grey),
         borderRadius: BorderRadius.circular(8),
       ),
       child: Padding(
         padding: const EdgeInsets.all(1),
         child: Material(
           borderRadius: BorderRadius.circular(8),
-          color: onTap == null ? AppColors.grey8 : color,
+          color: onTap == null ? context.colors.grey : color,
           child: InkWell(
             borderRadius: BorderRadius.circular(8),
             onTap: onTap,

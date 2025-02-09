@@ -1,4 +1,4 @@
-part of '../home_page.dart';
+part of 'home_page.dart';
 
 mixin HomePageMixin on BlocedState<HomePage, HomeBloc, HomeState> {
   _HomePageState get thisScreenGetter;
@@ -16,7 +16,7 @@ mixin HomePageMixin on BlocedState<HomePage, HomeBloc, HomeState> {
           getter: (state) => state.mapOrNull(user: (state) => state.gameToOpen),
           listener: (_, gameToOpen) {
             if (gameToOpen == null) return;
-            thisScreenGetter._validateNavigationToGamePage(context, gameId: gameToOpen, isFromMatchingScreen: false);
+            thisScreenGetter._validateNavigationToGamePage(context, gameId: gameToOpen);
           },
         ),
       ];

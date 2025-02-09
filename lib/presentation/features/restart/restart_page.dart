@@ -1,5 +1,5 @@
+import 'package:chat_app/core/utils/extensions/context_extensions.dart';
 import 'package:chat_app/presentation/common/components/app_button.dart';
-import 'package:chat_app/presentation/common/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:restart_app/restart_app.dart';
 
@@ -17,12 +17,13 @@ class RestartPage extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text('Some issues happened, try to restart the app!!!', style: mulish18, textAlign: TextAlign.center),
+                Text('Some issues happened, try to restart the app!!!',
+                    style: context.textStyles.mulish18, textAlign: TextAlign.center,),
                 const SizedBox(height: 24),
                 AppButton(
                   title: 'Restart',
-                  style: mulish17Bold.copyWith(color: AppColors.white),
-                  color: AppColors.blue1,
+                  style: context.textStyles.mulish17Bold.copyWith(color: context.colors.white),
+                  color: context.colors.blue1,
                   isContentCentered: true,
                   onTap: () {
                     Restart.restartApp(

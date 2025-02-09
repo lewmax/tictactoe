@@ -20,10 +20,21 @@ class $AssetsIconsGen {
   List<AssetGenImage> get values => [ticTacToe];
 }
 
+class $AssetsTfliteGen {
+  const $AssetsTfliteGen();
+
+  /// File path: assets/tflite/tic_tac_toe_model.tflite
+  String get ticTacToeModel => 'assets/tflite/tic_tac_toe_model.tflite';
+
+  /// List of all assets
+  List<String> get values => [ticTacToeModel];
+}
+
 class Assets {
   Assets._();
 
   static const $AssetsIconsGen icons = $AssetsIconsGen();
+  static const $AssetsTfliteGen tflite = $AssetsTfliteGen();
 }
 
 class AssetGenImage {

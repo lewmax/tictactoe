@@ -20,17 +20,21 @@ extension BuildContextExt on BuildContext {
 
   bool get isKeyboardOpened => MediaQuery.of(this).viewInsets.bottom > 140;
 
+  TextStyles get textStyles => TextStyles.instance();
+
+  AppColors get colors => AppColors.instance();
+
   Flushbar showSnackBar(BuildContext context, {required String text, Color? bgColor, int durationMillisecs = 2000}) {
     final snack = Flushbar(
       messageText: Row(
         children: [
-          Expanded(child: Text(text, style: mulish14.copyWith(color: AppColors.white))),
+          Expanded(child: Text(text, style: textStyles.mulish14.copyWith(color: colors.white))),
         ],
       ),
       margin: const EdgeInsets.fromLTRB(16, 0, 16, 16),
       padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 16.0),
       borderRadius: BorderRadius.circular(12.0),
-      backgroundColor: bgColor ?? AppColors.black1,
+      backgroundColor: bgColor ?? colors.black1,
       duration: durationMillisecs.milliseconds,
       flushbarPosition: FlushbarPosition.TOP,
       animationDuration: 1.milliseconds,
