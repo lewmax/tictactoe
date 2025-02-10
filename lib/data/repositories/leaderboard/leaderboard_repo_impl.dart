@@ -11,6 +11,7 @@ import 'package:chat_app/domain/repositories/game/recent_game_users_repo.dart';
 import 'package:chat_app/domain/repositories/leaderboard/leaderboard_repo.dart';
 import 'package:injectable/injectable.dart';
 import 'package:rxdart/rxdart.dart';
+import 'package:useful_extensions/useful_extensions.dart';
 
 @LazySingleton(as: LeaderboardRepo)
 final class LeaderboardRepoImpl extends RepositoryValidationMixin implements LeaderboardRepo {
@@ -156,10 +157,10 @@ final class LeaderboardRepoImpl extends RepositoryValidationMixin implements Lea
           wins: stats.wins,
           losses: stats.losses,
           draws: stats.draws,
-          winRate: stats.wins / (stats.wins + stats.losses),
+          winRate: stats.wins / (stats.wins + stats.losses).let((result) => result == 0 ? 1 : result),
         );
       }).toList()
-        ..sort((a, b) => b.winRate.compareTo(a.winRate));
+        ..sort((a, b) => b.wins.compareTo(a.wins));
     });
   }
 
